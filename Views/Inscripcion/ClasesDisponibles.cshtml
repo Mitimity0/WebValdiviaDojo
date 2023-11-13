@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Inscripción";
+}
+
+
+<section class="container py-5">
+    <div class="container-fluid border marketing">
+        <h1 class="display-6 text-center py-3">Horario de nuestras clases</h1>
+        <div class="row py-3">
+
+            <div class="container d-flex justify-content-center mt-5">
+                <form class="col-10" method="post">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <!--  Titulo  -->
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Puedes filtrar por las clases disponibles
+                                </button>
+                            </h2>
+
+                            <!--  Cuerpo del acordion  -->
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="py-1">
+                                        <label for="p_id_clase">Selecciona una clase</label>
+                                        <select class="form-select" aria-label="" name="p_id_clase">
+                                            <option value="" selected>Mostrar todos</option>
+                                            @foreach (var clase in ViewBag.Clases)
+                                            {
+                                                <option value="@clase.id_clase" @(clase.id_clase.ToString() == ViewBag.SelectedClase ? "selected" : "")>@clase.nombre</option>
+                                            }
+                                        </select>
+                                    </div>
+                                    <div class="py-1">
+                                        <label for="p_id_clase">Selecciona un rango de edad</label>
+                                        <select class="form-select" aria-label="" name="p_id_nivel">
+                                            <option value="" selected>Mostrar todos</option>
+                                            @foreach (var niv in ViewBag.clasesNivel)
+                                            {
+                                                <option value="@niv.id_nivel" @(niv.id_nivel.ToString() == ViewBag.SelectedNivel ? "selected" : "")>@niv.nombre</option>
+                                            }
+                                        </select>
+                                    </div>
+                                    <div class="py-1 justify-content-end">
+                                        <button class="btn btn-primary" type="submit">Filtrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <table class="table table-hover py-5" id="horarioTable">
+            @if (ViewBag.horarios == null || ViewBag.horarios.Count == 0)
+            {
+                <h4>No hay clases disponibles</h4>
+            }
+            else
+            {
+                <!-- Cabecera tabla -->
+                <thead>
+                    <tr>
+                        <th scope="col">Horario</th>
+                        <th scope="col">Clase</th>
+                        <th scope="col">Rango de edad</th>
+                        <th scope="col">Día</th>
+                    </tr>
+                </thead>
+                <!-- Cuerpo tabla -->
+                <tbody>
+                    @foreach (var horario in ViewBag.horarios)
+                    {
+                        if (horario != null)
+                        {
+                            <tr data-clase="@horario.id_clase">
+                                <td>@(horario.hora_ini) - @(horario.hora_fin)</td>
+                                <td>@(horario.nom_clase)</td>
+                                <td>@(horario.nom_nivel)</td>
+                                <td>@(horario.dia)</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            }
+        </table>
+
+    </div>
+</section>
+
+

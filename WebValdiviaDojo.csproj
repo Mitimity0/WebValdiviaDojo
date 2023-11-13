@@ -128,6 +128,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InscripcionController.cs" />
     <Compile Include="Controllers\SesionController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -215,6 +216,7 @@
     <Content Include="Views\Sesion\NuevoUsuario.cshtml" />
     <Content Include="Views\Sesion\Login.cshtml" />
     <Content Include="Views\Usuario\Usuario.cshtml" />
+    <Content Include="Views\Inscripcion\ClasesDisponibles.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
