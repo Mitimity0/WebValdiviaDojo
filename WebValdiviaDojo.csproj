@@ -184,6 +184,9 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
@@ -220,6 +223,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Img\Usuario\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Cinturon\" />
     <Folder Include="Views\Clase\" />

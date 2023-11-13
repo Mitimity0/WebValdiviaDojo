@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/WS_ValdiviaDojo/WS_Dojo?xsd=1" namespace="http://ws/" />
     </xsd:schema>
   </types>
-  <message name="Login">
-    <part name="parameters" element="tns:Login" />
+  <message name="ListadoClaseNivel">
+    <part name="parameters" element="tns:ListadoClaseNivel" />
   </message>
-  <message name="LoginResponse">
-    <part name="parameters" element="tns:LoginResponse" />
+  <message name="ListadoClaseNivelResponse">
+    <part name="parameters" element="tns:ListadoClaseNivelResponse" />
   </message>
   <message name="ListadoGenero">
     <part name="parameters" element="tns:ListadoGenero" />
@@ -29,22 +29,22 @@
   <message name="CrearUsuarioResponse">
     <part name="parameters" element="tns:CrearUsuarioResponse" />
   </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
   <message name="ListadoClase">
     <part name="parameters" element="tns:ListadoClase" />
   </message>
   <message name="ListadoClaseResponse">
     <part name="parameters" element="tns:ListadoClaseResponse" />
   </message>
-  <message name="ListadoClaseNivel">
-    <part name="parameters" element="tns:ListadoClaseNivel" />
-  </message>
-  <message name="ListadoClaseNivelResponse">
-    <part name="parameters" element="tns:ListadoClaseNivelResponse" />
-  </message>
   <portType name="WS_Dojo">
-    <operation name="Login">
-      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
-      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
+    <operation name="ListadoClaseNivel">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelResponse" message="tns:ListadoClaseNivelResponse" />
     </operation>
     <operation name="ListadoGenero">
       <input wsam:Action="http://ws/WS_Dojo/ListadoGeneroRequest" message="tns:ListadoGenero" />
@@ -58,18 +58,18 @@
       <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
       <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
     </operation>
+    <operation name="Login">
+      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
+    </operation>
     <operation name="ListadoClase">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
     </operation>
-    <operation name="ListadoClaseNivel">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelResponse" message="tns:ListadoClaseNivelResponse" />
-    </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Login">
+    <operation name="ListadoClaseNivel">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +105,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoClase">
+    <operation name="Login">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -114,7 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoClaseNivel">
+    <operation name="ListadoClase">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

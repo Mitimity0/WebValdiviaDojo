@@ -8,22 +8,21 @@
             </div>
 
             <div class="form-floating mb-4">
-                <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" required>
-                <label for="floatingInput">Correo</label>
+                <input type="email" class="form-control" name="p_correo" placeholder="nombre@ejemplo.com" required>
+                <label for="p_correo">Correo</label>
             </div>
 
             <div class="form-floating mb-4">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required>
-                <label for="floatingPassword">Contraseña</label>
+                <input type="password" class="form-control" name="p_pass" placeholder="Contraseña" required>
+                <label for="p_pass">Contraseña</label>
             </div>
 
             <div class="py-3"></div>
             <button class="btn btn-primary mb-4" type="submit">Ingresar</button>
         </form>
     </div>
-    @if (ViewBag.Mensaje!=null)
+    @if (ViewBag.Mensaje != null)
     {
         @ViewBag.Mensaje
     }
-
 </div>

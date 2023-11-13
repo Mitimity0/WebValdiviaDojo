@@ -120,16 +120,24 @@
                 </div>
             </div>
 
-                <!--  Direccion  -->
-                <div class="form-floating mb-4">
-                    <input type="text" class="form-control" name="direccion" placeholder="">
-                    <label for="direccion">Direccion</label>
-                </div>
+            <!--  Direccion  -->
+            <div class="form-floating mb-4">
+                <input type="text" class="form-control" name="dire" placeholder="">
+                <label for="direccion">Direccion</label>
+            </div>
 
-                <!--  Enviar informacion  -->
-                <div class="py-3"></div>
-                <button class="btn btn-primary mb-4" type="submit">Crear Cuenta</button>
+            <!--  Enviar informacion  -->
+            <div class="py-3"></div>
+            <button class="btn btn-primary mb-4" type="submit">Crear Cuenta</button>
         </form>
     </div>
 </div>
-@ViewBag.Mensaje
+
+@if (ViewBag.Usuario != null)
+{
+    foreach (var x in @ViewBag.Usuario)
+    {
+        @x.rut
+    }
+}
+

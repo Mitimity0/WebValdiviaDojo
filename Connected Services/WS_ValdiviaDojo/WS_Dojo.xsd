@@ -83,7 +83,30 @@
   </xs:complexType>
   <xs:complexType name="LoginResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="APaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="altura" type="xs:string" />
+      <xs:element minOccurs="0" name="celular" type="xs:string" />
+      <xs:element minOccurs="0" name="celularEmer" type="xs:string" />
+      <xs:element minOccurs="0" name="cinturon" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="DV" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="FNacimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="genero" type="xs:string" />
+      <xs:element name="id_cinturon" type="xs:int" />
+      <xs:element name="id_genero" type="xs:int" />
+      <xs:element minOccurs="0" name="id_tipo_usu" type="xs:string" />
+      <xs:element minOccurs="0" name="PNombre" type="xs:string" />
+      <xs:element minOccurs="0" name="peso" type="xs:string" />
+      <xs:element name="rut" type="xs:int" />
+      <xs:element minOccurs="0" name="rutaIma" type="xs:string" />
+      <xs:element minOccurs="0" name="SNombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoClase">

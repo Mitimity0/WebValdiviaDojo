@@ -31,19 +31,35 @@
                         <li class="nav-item">@Html.ActionLink("Inscríbete aquí", "ClasesDisponibles", "Inscripcion", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
                         <li class="nav-item nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Menu Administrador</li>
                     </ul>
-                    <!--  Inicio sesion  -->
-                    <div class="text-end">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li>@Html.ActionLink("Iniciar Sesión", "Login", "Sesion", null, new { @class = "btn btn-outline-light me-2" })</li>
-                            <li>@Html.ActionLink("Crear Usuario", "NuevoUsuario", "Sesion", null, new { @class = "btn btn-outline-light me-2" })</li>
-                        </ul>
-                    </div>
+                    <!--  Sesion  -->
+                    @{
+                        var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+                    }
+
+                    @if (usuario != null)
+                    {
+                        <li class="nav-item">
+                            <span class="navbar-text">¡Hola, @usuario.rut!</span>
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Cerrar Sesión", "CerrarSesion", "Sesion", null, new { @class = "nav-link" })
+                        </li>
+                    }
+                    else
+                    {
+                        <div class="text-end">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li>@Html.ActionLink("Iniciar Sesión", "Login", "Sesion", null, new { @class = "btn btn-outline-light me-2" })</li>
+                                <li>@Html.ActionLink("Crear Usuario", "NuevoUsuario", "Sesion", null, new { @class = "btn btn-outline-light me-2" })</li>
+                            </ul>
+                        </div>
+                    }
 
                 </div>
             </div>
         </nav>
     </head>
-    
+
     <main style="flex-grow:1;">
         @RenderBody()
     </main>
@@ -85,4 +101,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
-
