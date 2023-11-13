@@ -23,6 +23,12 @@
   <message name="ListadoHorarioResponse">
     <part name="parameters" element="tns:ListadoHorarioResponse" />
   </message>
+  <message name="CrearUsuario">
+    <part name="parameters" element="tns:CrearUsuario" />
+  </message>
+  <message name="CrearUsuarioResponse">
+    <part name="parameters" element="tns:CrearUsuarioResponse" />
+  </message>
   <message name="ListadoClase">
     <part name="parameters" element="tns:ListadoClase" />
   </message>
@@ -34,18 +40,6 @@
   </message>
   <message name="ListadoClaseNivelResponse">
     <part name="parameters" element="tns:ListadoClaseNivelResponse" />
-  </message>
-  <message name="CrearCredencial">
-    <part name="parameters" element="tns:CrearCredencial" />
-  </message>
-  <message name="CrearCredencialResponse">
-    <part name="parameters" element="tns:CrearCredencialResponse" />
-  </message>
-  <message name="CrearUsuario">
-    <part name="parameters" element="tns:CrearUsuario" />
-  </message>
-  <message name="CrearUsuarioResponse">
-    <part name="parameters" element="tns:CrearUsuarioResponse" />
   </message>
   <portType name="WS_Dojo">
     <operation name="Login">
@@ -60,6 +54,10 @@
       <input wsam:Action="http://ws/WS_Dojo/ListadoHorarioRequest" message="tns:ListadoHorario" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoHorarioResponse" message="tns:ListadoHorarioResponse" />
     </operation>
+    <operation name="CrearUsuario">
+      <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
+      <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
+    </operation>
     <operation name="ListadoClase">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
@@ -67,14 +65,6 @@
     <operation name="ListadoClaseNivel">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelResponse" message="tns:ListadoClaseNivelResponse" />
-    </operation>
-    <operation name="CrearCredencial">
-      <input wsam:Action="http://ws/WS_Dojo/CrearCredencialRequest" message="tns:CrearCredencial" />
-      <output wsam:Action="http://ws/WS_Dojo/CrearCredencialResponse" message="tns:CrearCredencialResponse" />
-    </operation>
-    <operation name="CrearUsuario">
-      <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
-      <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
@@ -106,6 +96,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="CrearUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="ListadoClase">
       <soap:operation soapAction="" />
       <input>
@@ -116,24 +115,6 @@
       </output>
     </operation>
     <operation name="ListadoClaseNivel">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CrearCredencial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CrearUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

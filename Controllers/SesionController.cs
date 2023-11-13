@@ -33,17 +33,18 @@ namespace WebValdiviaDojo.Controllers
         }
 
         [HttpPost]
-        public ActionResult NuevoUsuario(String correo, String pass,String rut, String dv, String pnombre, String snombre, String apater, String amater, String celular, String celularemer, String fechanac, String gene, String dire)
+        public ActionResult NuevoUsuario(String correo, String pass, int rut, String dv, String pnombre, String snombre, String apater, String amater, String celular, String celularemer, string fechanac, int gene, String dire)
         {
-            WS_DojoClient cliente = new WS_DojoClient();
             List<genero> generos = ListarGenero();
             ViewBag.generos = generos;
+
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            ViewBag.Mensaje = fechanac;
             try
             {
-                
-                var usu = cliente.CrearUsuario(rut, dv, pnombre, snombre, apater, amater, fechanac, celular, celularemer, dire,null,null, gene,"4","1");
-                var cre = cliente.CrearCredencial(correo, pass, rut);
-                ViewBag.Mensaje = "Usuario Creado"+cre+" - "+usu;
+                var usu = cliente.CrearUsuario(correo, pass, rut, dv, pnombre, snombre, apater, amater, fechanac, celular, celularemer, dire,null,null, gene,4,1);
+                ViewBag.Mensaje = correo+ pass+ rut+ dv+ pnombre+ snombre+ apater+ amater+fechanac+celular+celularemer+dire+null+null+gene+4+1;
                 return View();
             }
             catch (Exception ex)
@@ -54,6 +55,7 @@ namespace WebValdiviaDojo.Controllers
             {
                 cliente.Close();
             }
+            
             return View();
         }
 

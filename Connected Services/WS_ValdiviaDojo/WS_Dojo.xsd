@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://ws/" targetNamespace="http://ws/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="CrearCredencial" type="tns:CrearCredencial" />
-  <xs:element name="CrearCredencialResponse" type="tns:CrearCredencialResponse" />
   <xs:element name="CrearUsuario" type="tns:CrearUsuario" />
   <xs:element name="CrearUsuarioResponse" type="tns:CrearUsuarioResponse" />
   <xs:element name="ListadoClase" type="tns:ListadoClase" />
@@ -16,7 +14,9 @@
   <xs:element name="LoginResponse" type="tns:LoginResponse" />
   <xs:complexType name="CrearUsuario">
     <xs:sequence>
-      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:int" />
       <xs:element minOccurs="0" name="dv" type="xs:string" />
       <xs:element minOccurs="0" name="p_nom" type="xs:string" />
       <xs:element minOccurs="0" name="s_nom" type="xs:string" />
@@ -28,9 +28,9 @@
       <xs:element minOccurs="0" name="dire" type="xs:string" />
       <xs:element minOccurs="0" name="peso" type="xs:string" />
       <xs:element minOccurs="0" name="alt" type="xs:string" />
-      <xs:element minOccurs="0" name="genero" type="xs:string" />
-      <xs:element minOccurs="0" name="t_usu" type="xs:string" />
-      <xs:element minOccurs="0" name="cint" type="xs:string" />
+      <xs:element minOccurs="0" name="genero" type="xs:int" />
+      <xs:element minOccurs="0" name="t_usu" type="xs:int" />
+      <xs:element minOccurs="0" name="cint" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="CrearUsuarioResponse">
@@ -82,18 +82,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="LoginResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="CrearCredencial">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="pass" type="xs:string" />
-      <xs:element minOccurs="0" name="rut" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="CrearCredencialResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

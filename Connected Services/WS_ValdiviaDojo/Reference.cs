@@ -43,6 +43,15 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse> ListadoHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearUsuarioRequest", ReplyAction="http://ws/WS_Dojo/CrearUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse CrearUsuario(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearUsuarioRequest", ReplyAction="http://ws/WS_Dojo/CrearUsuarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse> CrearUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoClaseRequest", ReplyAction="http://ws/WS_Dojo/ListadoClaseResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -59,24 +68,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/ListadoClaseNivelResponse")]
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelResponse> ListadoClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearCredencialRequest", ReplyAction="http://ws/WS_Dojo/CrearCredencialResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialResponse CrearCredencial(WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearCredencialRequest", ReplyAction="http://ws/WS_Dojo/CrearCredencialResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialResponse> CrearCredencialAsync(WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearUsuarioRequest", ReplyAction="http://ws/WS_Dojo/CrearUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse CrearUsuario(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearUsuarioRequest", ReplyAction="http://ws/WS_Dojo/CrearUsuarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse> CrearUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -460,6 +451,139 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearUsuario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class CrearUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string pass;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dv;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nom;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string s_nom;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string a_pat;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string a_mat;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string f_nac;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cel_em;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dire;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string peso;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string alt;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int genero;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int t_usu;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int cint;
+        
+        public CrearUsuarioRequest() {
+        }
+        
+        public CrearUsuarioRequest(
+                    string correo, 
+                    string pass, 
+                    int rut, 
+                    string dv, 
+                    string p_nom, 
+                    string s_nom, 
+                    string a_pat, 
+                    string a_mat, 
+                    string f_nac, 
+                    string cel, 
+                    string cel_em, 
+                    string dire, 
+                    string peso, 
+                    string alt, 
+                    int genero, 
+                    int t_usu, 
+                    int cint) {
+            this.correo = correo;
+            this.pass = pass;
+            this.rut = rut;
+            this.dv = dv;
+            this.p_nom = p_nom;
+            this.s_nom = s_nom;
+            this.a_pat = a_pat;
+            this.a_mat = a_mat;
+            this.f_nac = f_nac;
+            this.cel = cel;
+            this.cel_em = cel_em;
+            this.dire = dire;
+            this.peso = peso;
+            this.alt = alt;
+            this.genero = genero;
+            this.t_usu = t_usu;
+            this.cint = cint;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearUsuarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class CrearUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public CrearUsuarioResponse() {
+        }
+        
+        public CrearUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoClase", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class ListadoClaseRequest {
         
@@ -509,158 +633,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         public ListadoClaseNivelResponse(WebValdiviaDojo.WS_ValdiviaDojo.clasesNivel[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearCredencial", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class CrearCredencialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string pass;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string rut;
-        
-        public CrearCredencialRequest() {
-        }
-        
-        public CrearCredencialRequest(string correo, string pass, string rut) {
-            this.correo = correo;
-            this.pass = pass;
-            this.rut = rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearCredencialResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class CrearCredencialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public CrearCredencialResponse() {
-        }
-        
-        public CrearCredencialResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearUsuario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class CrearUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dv;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nom;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string s_nom;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string a_pat;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string a_mat;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string f_nac;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cel;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cel_em;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dire;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=10)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string peso;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=11)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string alt;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=12)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string genero;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=13)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string t_usu;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=14)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cint;
-        
-        public CrearUsuarioRequest() {
-        }
-        
-        public CrearUsuarioRequest(string rut, string dv, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, string genero, string t_usu, string cint) {
-            this.rut = rut;
-            this.dv = dv;
-            this.p_nom = p_nom;
-            this.s_nom = s_nom;
-            this.a_pat = a_pat;
-            this.a_mat = a_mat;
-            this.f_nac = f_nac;
-            this.cel = cel;
-            this.cel_em = cel_em;
-            this.dire = dire;
-            this.peso = peso;
-            this.alt = alt;
-            this.genero = genero;
-            this.t_usu = t_usu;
-            this.cint = cint;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearUsuarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class CrearUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public CrearUsuarioResponse() {
-        }
-        
-        public CrearUsuarioResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -764,6 +736,95 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.CrearUsuario(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request) {
+            return base.Channel.CrearUsuario(request);
+        }
+        
+        public int CrearUsuario(
+                    string correo, 
+                    string pass, 
+                    int rut, 
+                    string dv, 
+                    string p_nom, 
+                    string s_nom, 
+                    string a_pat, 
+                    string a_mat, 
+                    string f_nac, 
+                    string cel, 
+                    string cel_em, 
+                    string dire, 
+                    string peso, 
+                    string alt, 
+                    int genero, 
+                    int t_usu, 
+                    int cint) {
+            WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest();
+            inValue.correo = correo;
+            inValue.pass = pass;
+            inValue.rut = rut;
+            inValue.dv = dv;
+            inValue.p_nom = p_nom;
+            inValue.s_nom = s_nom;
+            inValue.a_pat = a_pat;
+            inValue.a_mat = a_mat;
+            inValue.f_nac = f_nac;
+            inValue.cel = cel;
+            inValue.cel_em = cel_em;
+            inValue.dire = dire;
+            inValue.peso = peso;
+            inValue.alt = alt;
+            inValue.genero = genero;
+            inValue.t_usu = t_usu;
+            inValue.cint = cint;
+            WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).CrearUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.CrearUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request) {
+            return base.Channel.CrearUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse> CrearUsuarioAsync(
+                    string correo, 
+                    string pass, 
+                    int rut, 
+                    string dv, 
+                    string p_nom, 
+                    string s_nom, 
+                    string a_pat, 
+                    string a_mat, 
+                    string f_nac, 
+                    string cel, 
+                    string cel_em, 
+                    string dire, 
+                    string peso, 
+                    string alt, 
+                    int genero, 
+                    int t_usu, 
+                    int cint) {
+            WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest();
+            inValue.correo = correo;
+            inValue.pass = pass;
+            inValue.rut = rut;
+            inValue.dv = dv;
+            inValue.p_nom = p_nom;
+            inValue.s_nom = s_nom;
+            inValue.a_pat = a_pat;
+            inValue.a_mat = a_mat;
+            inValue.f_nac = f_nac;
+            inValue.cel = cel;
+            inValue.cel_em = cel_em;
+            inValue.dire = dire;
+            inValue.peso = peso;
+            inValue.alt = alt;
+            inValue.genero = genero;
+            inValue.t_usu = t_usu;
+            inValue.cint = cint;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).CrearUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoClase(WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseRequest request) {
             return base.Channel.ListadoClase(request);
         }
@@ -803,84 +864,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelResponse> ListadoClaseNivelAsync() {
             WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelRequest();
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoClaseNivelAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.CrearCredencial(WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialRequest request) {
-            return base.Channel.CrearCredencial(request);
-        }
-        
-        public int CrearCredencial(string correo, string pass, string rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialRequest();
-            inValue.correo = correo;
-            inValue.pass = pass;
-            inValue.rut = rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).CrearCredencial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.CrearCredencialAsync(WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialRequest request) {
-            return base.Channel.CrearCredencialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialResponse> CrearCredencialAsync(string correo, string pass, string rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.CrearCredencialRequest();
-            inValue.correo = correo;
-            inValue.pass = pass;
-            inValue.rut = rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).CrearCredencialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.CrearUsuario(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request) {
-            return base.Channel.CrearUsuario(request);
-        }
-        
-        public int CrearUsuario(string rut, string dv, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, string genero, string t_usu, string cint) {
-            WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest();
-            inValue.rut = rut;
-            inValue.dv = dv;
-            inValue.p_nom = p_nom;
-            inValue.s_nom = s_nom;
-            inValue.a_pat = a_pat;
-            inValue.a_mat = a_mat;
-            inValue.f_nac = f_nac;
-            inValue.cel = cel;
-            inValue.cel_em = cel_em;
-            inValue.dire = dire;
-            inValue.peso = peso;
-            inValue.alt = alt;
-            inValue.genero = genero;
-            inValue.t_usu = t_usu;
-            inValue.cint = cint;
-            WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).CrearUsuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.CrearUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request) {
-            return base.Channel.CrearUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse> CrearUsuarioAsync(string rut, string dv, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, string genero, string t_usu, string cint) {
-            WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest();
-            inValue.rut = rut;
-            inValue.dv = dv;
-            inValue.p_nom = p_nom;
-            inValue.s_nom = s_nom;
-            inValue.a_pat = a_pat;
-            inValue.a_mat = a_mat;
-            inValue.f_nac = f_nac;
-            inValue.cel = cel;
-            inValue.cel_em = cel_em;
-            inValue.dire = dire;
-            inValue.peso = peso;
-            inValue.alt = alt;
-            inValue.genero = genero;
-            inValue.t_usu = t_usu;
-            inValue.cint = cint;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).CrearUsuarioAsync(inValue);
         }
     }
 }
