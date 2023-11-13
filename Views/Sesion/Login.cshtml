@@ -1,0 +1,29 @@
+﻿@{ ViewBag.Title = "Iniciar Sesión"; }
+
+<div class="py-5 col-md-12">
+    <div class="row py-5 justify-content-center">
+        <form class="card col-md-4" method="post">
+            <div class="text-center py-4">
+                <h4 class="display-6">Iniciar Sesión</h4>
+            </div>
+
+            <div class="form-floating mb-4">
+                <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" required>
+                <label for="floatingInput">Correo</label>
+            </div>
+
+            <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" required>
+                <label for="floatingPassword">Contraseña</label>
+            </div>
+
+            <div class="py-3"></div>
+            <button class="btn btn-primary mb-4" type="submit">Ingresar</button>
+        </form>
+    </div>
+    @if (ViewBag.Mensaje!=null)
+    {
+        @ViewBag.Mensaje
+    }
+
+</div>

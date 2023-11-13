@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "Usuario";
+}
+<div class="py-5 col-md-12">
+    <div class="row py-5 justify-content-center">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="text-center py-4">
+                <h4 class="display-8">Agregar Usuario</h4>
+            </div>
+            <form class="d-flex mb-4" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar Usuario" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Buscar</button>
+            </form>
+            <form class="row g-4 align-items-center" method="post">
+                <!--Rut-->
+                <div class="col-2">
+                    <label for="rut" class="col-form-label">Rut</label>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="rut" class="form-control" aria-describedby="" placeholder="12345678">
+                </div>
+                <!--Fecha de nacimiento-->
+                <div class="col-3">
+                    <label for="fechanac" class="col-form-label">Fecha de nacimiento</label>
+                </div>
+                <div class="col-3">
+                    <input type="date" id="fechanac" class="form-control" aria-describedby="" placeholder="">
+                </div>
+                <!--Primer Nombre-->
+                <div class="col-2">
+                    <label for="pnombre" class="col-form-label">Primer Nombre</label>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="pnombre" class="form-control" aria-describedby="" placeholder="Christian">
+                </div>
+                <!--Segundo Nombre-->
+                <div class="col-2">
+                    <label for="snombre" class="col-form-label">Segundo Nombre</label>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="snombre" class="form-control" aria-describedby="" placeholder="Adolfo">
+                </div>
+                <!--Apellido Paterno-->
+                <div class="col-2">
+                    <label for="appaterno" class="col-form-label">Apellido Paterno</label>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="appaterno" class="form-control" aria-describedby="" placeholder="Ortiz">
+                </div>
+                <!--Apellido Materno-->
+                <div class="col-2">
+                    <label for="apmaterno" class="col-form-label">Apellido Materno</label>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="apmaterno" class="form-control" aria-describedby="" placeholder="Vargas">
+                </div>
+                <!--Celular-->
+                <div class="col-2">
+                    <label for="celular" class="col-form-label">Celular</label>
+                </div>
+                <div class="col-4">
+                    <input type="number" id="celular" class="form-control" aria-describedby="" placeholder="988888888">
+                </div>
+                <!--Celular Emergencia-->
+                <div class="col-3">
+                    <label for="celularemer" class="col-form-label">Celular de Emergencia</label>
+                </div>
+                <div class="col-3">
+                    <input type="number" id="celularemer" class="form-control" aria-describedby="" placeholder="988888888">
+                </div>
+                <!--Direccion-->
+                <div class="col-3">
+                    <label for="direccion" class="col-form-label">Direccion</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" id="direccion" class="form-control" aria-describedby="" placeholder="Avenida concha y toro 0000, Puente alto">
+                </div>
+                <!--Peso-->
+                <div class="col-2">
+                    <label for="peso" class="col-form-label">Peso</label>
+                </div>
+                <div class="col-4">
+                    <input type="number" id="peso" class="form-control" aria-describedby="" placeholder="80" min="20" max="180">
+                </div>
+                <!--Altura-->
+                <div class="col-2">
+                    <label for="altura" class="col-form-label">Peso</label>
+                </div>
+                <div class="col-4">
+                    <input type="number" id="altura" class="form-control" aria-describedby="" placeholder="170" min="100" max="230">
+                </div>
+                <!--File IMAGEN-->
+                <div class="mb-4">
+                    <label for="formFile" class="form-label">Imagen de Usuario</label>
+                    <input class="form-control" type="file" id="imagen">
+                </div>
+                <div class="justify-content-center">
+                    <button class="btn btn-danger mb-4" type="submit">Agregar</button>
+                    <button class="btn btn-danger mb-4" type="">Modificar</button>
+                    <button class="btn btn-danger mb-4" type="">Eliminar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

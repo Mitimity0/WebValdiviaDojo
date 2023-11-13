@@ -1,0 +1,139 @@
+﻿@{ ViewBag.Title = "Tienda"; }
+<!-- Sección carrito -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="SeccionCarrito" aria-labelledby="offcanvasRightLabel">
+    <!-- Título -->
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <!-- Contenido -->
+    <div class="offcanvas-body">
+        <!-- Contenido del carrito -->
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: Imagen Referencial" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c" />
+                        <text fill="#eceeef" dy=".3em"></text>
+                    </svg>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-title">Nombre del artículo</p>
+
+
+                        <!-- Cantidad  -->
+
+                        <div class="mb-3">
+                            <p class="card-text">Cantidad</p>
+                            <input class="form-control text-center" type="number" min="0" max="10" value="1">
+                        </div>
+
+                        <p class="card-text"><small class="text-muted">Precio acumulado</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total a pagar y botón de pago (pegado abajo) -->
+        <div class="mt-auto">
+            <small class="text-muted">Total a pagar: </small>
+            <button class="btn btn-primary btn-block">Ir a pagar</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--  Listado de productos  -->
+<article class="py-5">
+    <!--  Menu de filtros  -->
+    <nav class="navbar navbar-light sticky-top container rounded" style="background-color: #e3f2fd;>
+        <div class="container-fluid">
+            <p class="navbar-brand">Filtros</p>
+            <!--  Botones  -->
+            <div class="justify-content-end">
+                <button class="btn btn-primary me-2 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-filter"></i></span>
+                </button>
+                <!--  Boton carrito  -->
+                <li class="btn btn-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight">Ir al Carrito</li>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Todo</a>
+                    <a class="nav-link" href="#">Canilleras</a>
+                    <a class="nav-link" href="#">Protecciones</a>
+                    <!-- Agrega más categorías de productos aquí -->
+                </div>
+
+                <!-- Opciones de filtrado adicional -->
+                <div class="navbar-nav ml-auto">
+                    <label for="ordenar">Ordenar por:</label>
+                    <select class="form-select" id="ordenar">
+                        <option value="precio_asc">Precio: Menor a Mayor</option>
+                        <option value="precio_desc">Precio: Mayor a Menor</option>
+                        <!-- Agrega más opciones de ordenamiento aquí -->
+                    </select>
+
+                    <label for="marca">Marca:</label>
+                    <select class="form-select" id="marca">
+                        <option value="marca1">Marca 1</option>
+                        <option value="marca2">Marca 2</option>
+                        <!-- Agrega más opciones de marca aquí -->
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container bg-ligth album py-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            @{ for (int i = 0; i < 20; i++)
+                { <!--  Carta  -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <!-- Imagen de la tarjeta -->
+                            <svg width="100%" height="225" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100%" height="100%" fill="#55595c" />
+                                <text x="35%" y="50%" fill="#eceeef">Imagen del producto</text>
+                            </svg>
+                            <!-- Contenido de la tarjeta -->
+                            <div class="card-body ">
+                                <p class="card-text">Nombre</p>
+                                <small class="text-muted">Presentación: resentacion</small>
+                                <div class="pagination justify-content-end">
+                                    <button type="button" class="py-2 btn btn-sm btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> } }
+        </div>
+    </div>
+    <!-- Navegación de paginación -->
+    <nav class="p-5">
+        <ul class="pagination justify-content-center">
+            <li class="page-item @(ViewBag.Pagina == 1 ? "disabled" : "")">
+                <a class="page-link" href="" aria-label="Anterior">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @{ int totalPages = 3;
+                            for (int i = 1; i <= totalPages; i++)
+                            {
+                <li class="page-item">
+                    <a class="page-link" href="">@i</a>
+                </li> } }
+            <li class="page-item">
+                <a class="page-link" href="" aria-label="Siguiente">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</article>

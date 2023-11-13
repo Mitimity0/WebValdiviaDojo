@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Nuevo Usuario";
+}
+
+<div class="py-5 col-12">
+    <div class="row justify-content-center">
+        <form class="card col-10" method="post">
+            <!--  Titulo  -->
+            <div class="text-center py-4">
+                <h4 class="display-6">Nueva cuenta</h4>
+            </div>
+            <!--  Correo  -->
+            <div class="col">
+                <div class="form-floating mb-4">
+                    <input type="email" class="form-control" name="correo" placeholder="" required>
+                    <label for="email">Correo</label>
+                </div>
+            </div>
+            <!--  Contraseña  -->
+            <div class="row g-2">
+                <div class="col">
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" name="pass" placeholder="" required>
+                        <label for="pass">Contraseña</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" name="passCon" placeholder="" required>
+                        <label for="passCon">Confirmar contraseña</label>
+                    </div>
+                </div>
+            </div>
+            <!--  RUT  -->
+            <div class="row g-2">
+                <div class="col-10">
+                    <div class="form-floating mb-4">
+                        <input type="number" class="form-control" name="rut" placeholder="" required>
+                        <label for="rut">RUT sin DV ni puntos</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="dv" placeholder="" required>
+                        <label for="dv">DV</label>
+                    </div>
+                </div>
+            </div>
+
+            <!--  NOMBRES  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+
+                        <input type="text" class="form-control" name="pnombre" placeholder="" required>
+                        <label for="pnombre">Primer nombre</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="snombre" placeholder="" required>
+                        <label for="snombre">Segundo nombre</label>
+                    </div>
+                </div>
+            </div>
+            <!--  Apellidos  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="apater" placeholder="" required>
+                        <label for="appaterno">Apellido paterno</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="amater" placeholder="" required>
+                        <label for="apmaterno">Apellido materno</label>
+                    </div>
+                </div>
+            </div>
+            <!--  Celulares  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="number" class="form-control" name="celular" placeholder="" required>
+                        <label for="celular">Celular</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="number" class="form-control" name="celularemer" placeholder="" required>
+                        <label for="celularemer">Celular Emergencia</label>
+                    </div>
+                </div>
+            </div>
+            <!--  Fecha Nacimiento-genero  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="date" class="form-control" name="fechanac" placeholder="">
+                        <label for="fechanac">Fecha de nacimiento</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <select class="form-select" name="gene" required>
+                            <option selected disabled value="">Seleccione su genero</option>
+                            @foreach (var genero in ViewBag.generos)
+                            {
+                                <option value="@genero.id_genero">@genero.nombre</option>
+                            }
+                        </select>
+
+
+                        <div class="invalid-tooltip">
+                            Ingrese una de las opciones
+                        </div>
+                        <label for="gene">Genero</label>
+                    </div>
+                </div>
+            </div>
+
+                <!--  Direccion  -->
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" name="direccion" placeholder="">
+                    <label for="direccion">Direccion</label>
+                </div>
+
+                <!--  Enviar informacion  -->
+                <div class="py-3"></div>
+                <button class="btn btn-primary mb-4" type="submit">Crear Cuenta</button>
+        </form>
+    </div>
+</div>

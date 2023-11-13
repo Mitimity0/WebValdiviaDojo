@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<section class="container py-5">
+    <div class="container-fluid border marketing">
+        <h1 class="display-6 text-center py-3">Horario de nuestras clases</h1>
+        <div class="row py-3">
+
+            <form class="col-lg-6" method="post">
+                <div class="col-lg-6">
+                    <p class="lead">Puedes filtrar por las clases disponibles</p>
+
+                </div>
+
+                <div class="py-1">
+                    <select class="form-select flex-row-reverse" aria-label="Default select example" name="p_id_clase">
+                        <option value="" selected>Selecciona una clase</option>
+                        @foreach (var clase in ViewBag.Clases)
+                        {
+                            <option value="@clase.id_clase">@clase.nombre</option>
+                        }
+                    </select>
+                </div>
+                <div class="py-1">
+                    <select class="form-select flex-row-reverse" aria-label="Default select example" name="p_id_nivel">
+                        <option value="" selected>Selecciona un rango de edad</option>
+                        @foreach (var niv in ViewBag.clasesNivel)
+                        {
+                            <option value="@niv.id_nivel">@niv.nombre</option>
+                        }
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit">Filtrar</button>
+            </form>
+        </div>
+
+        <table class="table table-hover py-5" id="horarioTable">
+            <!-- Cabecera tabla -->
+            <thead>
+                <tr>
+                    <th scope="col">Horario</th>
+                    <th scope="col">Clase</th>
+                    <th scope="col">Rango de edad</th>
+                    <th scope="col">Dia</th>
+                </tr>
+            </thead>
+            <!-- Cuerpo tabla -->
+            <tbody>
+                @foreach (var horario in ViewBag.horarios)
+                {
+                    <tr data-clase="@horario.id_clase">
+                        <td>@(horario.hora_ini) - @(horario.hora_fin)</td>
+                        <td>@(horario.nom_clase)</td>
+                        <td>@(horario.nom_nivel)</td>
+                        <td>@(horario.dia)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

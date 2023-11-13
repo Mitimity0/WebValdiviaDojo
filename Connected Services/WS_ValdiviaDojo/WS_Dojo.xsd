@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws/" targetNamespace="http://ws/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CrearCredencial" type="tns:CrearCredencial" />
+  <xs:element name="CrearCredencialResponse" type="tns:CrearCredencialResponse" />
+  <xs:element name="CrearUsuario" type="tns:CrearUsuario" />
+  <xs:element name="CrearUsuarioResponse" type="tns:CrearUsuarioResponse" />
+  <xs:element name="ListadoClase" type="tns:ListadoClase" />
+  <xs:element name="ListadoClaseNivel" type="tns:ListadoClaseNivel" />
+  <xs:element name="ListadoClaseNivelResponse" type="tns:ListadoClaseNivelResponse" />
+  <xs:element name="ListadoClaseResponse" type="tns:ListadoClaseResponse" />
+  <xs:element name="ListadoGenero" type="tns:ListadoGenero" />
+  <xs:element name="ListadoGeneroResponse" type="tns:ListadoGeneroResponse" />
+  <xs:element name="ListadoHorario" type="tns:ListadoHorario" />
+  <xs:element name="ListadoHorarioResponse" type="tns:ListadoHorarioResponse" />
+  <xs:element name="Login" type="tns:Login" />
+  <xs:element name="LoginResponse" type="tns:LoginResponse" />
+  <xs:complexType name="CrearUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+      <xs:element minOccurs="0" name="dv" type="xs:string" />
+      <xs:element minOccurs="0" name="p_nom" type="xs:string" />
+      <xs:element minOccurs="0" name="s_nom" type="xs:string" />
+      <xs:element minOccurs="0" name="a_pat" type="xs:string" />
+      <xs:element minOccurs="0" name="a_mat" type="xs:string" />
+      <xs:element minOccurs="0" name="f_nac" type="xs:string" />
+      <xs:element minOccurs="0" name="cel" type="xs:string" />
+      <xs:element minOccurs="0" name="cel_em" type="xs:string" />
+      <xs:element minOccurs="0" name="dire" type="xs:string" />
+      <xs:element minOccurs="0" name="peso" type="xs:string" />
+      <xs:element minOccurs="0" name="alt" type="xs:string" />
+      <xs:element minOccurs="0" name="genero" type="xs:string" />
+      <xs:element minOccurs="0" name="t_usu" type="xs:string" />
+      <xs:element minOccurs="0" name="cint" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListadoClaseNivel">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListadoClaseNivelResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:clasesNivel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clasesNivel">
+    <xs:sequence>
+      <xs:element name="id_nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListadoHorario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_clase" type="xs:string" />
+      <xs:element minOccurs="0" name="p_nivel" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListadoHorarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:horario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dia" type="xs:string" />
+      <xs:element minOccurs="0" name="hora_fin" type="xs:string" />
+      <xs:element minOccurs="0" name="hora_ini" type="xs:string" />
+      <xs:element name="id_clase" type="xs:int" />
+      <xs:element name="id_horario" type="xs:int" />
+      <xs:element name="id_nivel" type="xs:int" />
+      <xs:element minOccurs="0" name="nom_clase" type="xs:string" />
+      <xs:element minOccurs="0" name="nom_nivel" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearCredencial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element minOccurs="0" name="rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearCredencialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListadoClase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListadoClaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:clases" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clases">
+    <xs:sequence>
+      <xs:element name="id_clase" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListadoGenero">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListadoGeneroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:genero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="genero">
+    <xs:sequence>
+      <xs:element name="id_genero" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
