@@ -44,11 +44,13 @@ namespace WebValdiviaDojo.Controllers
             // Manejar el caso en el que no se encuentre información del usuario
             return RedirectToAction("NuevoUsuario");
         }
+
         public ActionResult CerrarSesion()
         {
             // Limpiar la sesión
             HttpContext.Session.Clear();
 
+            ViewBag.Mensaje = "Ha finalizado su sesión";
             // Redirigir a la página de inicio
             return View("~/Views/Home/Index.cshtml");
         }
@@ -76,13 +78,21 @@ namespace WebValdiviaDojo.Controllers
             try
             {
                 var usu = cliente.CrearUsuario(correo, pass, rut, dv, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular, celularemer, dire, null, null, gene, 4, 1);
-
-                return View();
+                // Una vez creado el usuario, intentamos iniciar sesión automáticamente
+                var resultado = IniciarSesion(correo, pass);
+                if (resultado != null && resultado.Any())
+                {
+                    var primerUsuario = resultado.First();
+                    HttpContext.Session["Usuario"] = primerUsuario;
+                    TempData["Usuario"] = primerUsuario;
+                }
+                ViewBag.Mensaje = "Su cuenta ha sido creada exitosamente.";
+                return RedirectToAction("MostrarDatosUsuario");
             }
 
             catch (Exception ex)
             {
-                ViewBag.Mensaje = "Error al llamar al servicio web: " + ex.Message;
+                ViewBag.Mensaje = "No se ha podido registrar su cuenta.";
             }
             finally
             {

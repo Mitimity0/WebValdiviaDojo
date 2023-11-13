@@ -4,7 +4,7 @@
 
 <div class="py-5 col-12">
     <div class="row justify-content-center">
-        <form class="card col-10" method="post">
+        <form class="card col-8" method="post">
             <!--  Titulo  -->
             <div class="text-center py-4">
                 <h4 class="display-6">Nueva cuenta</h4>
@@ -132,12 +132,4 @@
         </form>
     </div>
 </div>
-
-@if (ViewBag.Usuario != null)
-{
-    foreach (var x in @ViewBag.Usuario)
-    {
-        @x.rut
-    }
-}
 

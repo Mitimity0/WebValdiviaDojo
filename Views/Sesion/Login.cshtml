@@ -19,10 +19,16 @@
 
             <div class="py-3"></div>
             <button class="btn btn-primary mb-4" type="submit">Ingresar</button>
+            @if (ViewBag.Mensaje != null)
+            {
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
+                    <div>
+                        @ViewBag.Mensaje
+                    </div>
+                </div>
+            }
         </form>
     </div>
-    @if (ViewBag.Mensaje != null)
-    {
-        @ViewBag.Mensaje
-    }
+
 </div>

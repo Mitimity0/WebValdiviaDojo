@@ -152,6 +152,8 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Img\Publicidad\image.png" />
+    <Content Include="Img\Publicidad\Shihan.png" />
+    <Content Include="Img\Usuario\default.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.genero.datasource">
@@ -223,7 +225,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Img\Usuario\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Cinturon\" />
     <Folder Include="Views\Clase\" />
