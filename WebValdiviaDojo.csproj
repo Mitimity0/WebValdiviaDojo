@@ -133,6 +133,7 @@
     <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Controllers\SesionController.cs" />
     <Compile Include="Controllers\TipoEventoController.cs" />
+    <Compile Include="Controllers\TipoProductoController.cs" />
     <Compile Include="Controllers\TipoUsuarioController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -235,6 +236,7 @@
     <Content Include="Views\TipoEvento\TipoEvento.cshtml" />
     <Content Include="Views\Evento\Evento.cshtml" />
     <Content Include="Views\Producto\Producto.cshtml" />
+    <Content Include="Views\TipoProducto\TipoProducto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
