@@ -12,6 +12,8 @@
   <xs:element name="ListadoHorarioResponse" type="tns:ListadoHorarioResponse" />
   <xs:element name="Login" type="tns:Login" />
   <xs:element name="LoginResponse" type="tns:LoginResponse" />
+  <xs:element name="ModUsuario" type="tns:ModUsuario" />
+  <xs:element name="ModUsuarioResponse" type="tns:ModUsuarioResponse" />
   <xs:complexType name="CrearUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="correo" type="xs:string" />
@@ -73,6 +75,30 @@
       <xs:element name="id_nivel" type="xs:int" />
       <xs:element minOccurs="0" name="nom_clase" type="xs:string" />
       <xs:element minOccurs="0" name="nom_nivel" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rut" type="xs:int" />
+      <xs:element minOccurs="0" name="p_nom" type="xs:string" />
+      <xs:element minOccurs="0" name="s_nom" type="xs:string" />
+      <xs:element minOccurs="0" name="a_pat" type="xs:string" />
+      <xs:element minOccurs="0" name="a_mat" type="xs:string" />
+      <xs:element minOccurs="0" name="f_nac" type="xs:string" />
+      <xs:element minOccurs="0" name="cel" type="xs:string" />
+      <xs:element minOccurs="0" name="cel_em" type="xs:string" />
+      <xs:element minOccurs="0" name="dire" type="xs:string" />
+      <xs:element minOccurs="0" name="peso" type="xs:string" />
+      <xs:element minOccurs="0" name="alt" type="xs:string" />
+      <xs:element minOccurs="0" name="p_img" type="xs:string" />
+      <xs:element minOccurs="0" name="genero" type="xs:int" />
+      <xs:element minOccurs="0" name="t_usu" type="xs:int" />
+      <xs:element minOccurs="0" name="cint" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Login">

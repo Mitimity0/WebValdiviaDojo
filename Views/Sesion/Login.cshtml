@@ -2,7 +2,7 @@
 
 <div class="py-5 col-md-12">
     <div class="row py-5 justify-content-center">
-        <form class="card col-md-4" method="post">
+        <form class="card col-md-4" method="post" enctype="multipart/form-data">
             <div class="text-center py-4">
                 <h4 class="display-6">Iniciar Sesión</h4>
             </div>
@@ -19,15 +19,6 @@
 
             <div class="py-3"></div>
             <button class="btn btn-primary mb-4" type="submit">Ingresar</button>
-            @if (ViewBag.Mensaje != null)
-            {
-                <div class="alert alert-danger d-flex align-items-center" role="alert">
-                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
-                    <div>
-                        @ViewBag.Mensaje
-                    </div>
-                </div>
-            }
         </form>
     </div>
 

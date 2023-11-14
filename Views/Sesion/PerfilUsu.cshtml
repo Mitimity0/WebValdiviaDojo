@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "Perfil";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+}
+
+@if (usuario != null)
+{
+    <div class="py-5 col-12">
+        <div class="row justify-content-center">
+            <form class="card col-8" method="post" enctype="multipart/form-data">
+                <!--  Titulo  -->
+                <div class="text-center py-4">
+                    <h4 class="display-6">Mi perfil</h4>
+                </div>
+                <div class="container">
+                    <img src="@Url.Content(usuario.rutaIma)" class="img-fluid justify-content-between align-self-center mx-auto d-block" />
+                    <input type="file" class="justify-content-between align-self-center mx-auto d-block" name="imagen" value="" />
+                </div>
+                <!--  RUT  -->
+                <div class="row g-2">
+                    <div class="col-10">
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" name="rut" value="@usuario.rut" required>
+                            <label for="rut">RUT sin DV ni puntos</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" name="dv" value="@usuario.DV" required>
+                            <label for="dv">DV</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  NOMBRES  -->
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+
+                            <input type="text" class="form-control" name="pnombre" value="@usuario.PNombre" required>
+                            <label for="pnombre">Primer nombre</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" name="snombre" value="@usuario.SNombre" required>
+                            <label for="snombre">Segundo nombre</label>
+                        </div>
+                    </div>
+                </div>
+                <!--  Apellidos  -->
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" name="apater" value="@usuario.APaterno" required>
+                            <label for="appaterno">Apellido paterno</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" name="amater" value="@usuario.AMaterno" required>
+                            <label for="apmaterno">Apellido materno</label>
+                        </div>
+                    </div>
+                </div>
+                <!--  Celulares  -->
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" name="celular" value="@usuario.celular" required>
+                            <label for="celular">Celular</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" name="celularemer" value="@usuario.celularEmer" required>
+                            <label for="celularemer">Celular Emergencia</label>
+                        </div>
+                    </div>
+                </div>
+                <!--  Fecha Nacimiento-genero  -->
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+                            <input type="date" class="form-control" name="fechanac" value="@usuario.FNacimiento">
+                            <label for="fechanac">Fecha de nacimiento</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                    </div>
+                </div>
+
+                <!--  Direccion  -->
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" name="dire" value="@usuario.direccion">
+                    <label for="direccion">Direccion</label>
+                </div>
+                <!--  Fisico  -->
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" name="peso" value="" required>
+                            <label for="celular">peso</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" name="altura" value="" required>
+                            <label for="celularemer">altura</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--    -->
+                <div class="row g-2">
+                    <div class="col-4">
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" name="p_gen" value="@usuario.id_genero" required>
+                            <label for="p_gen"></label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" name="p_t_usu" value="@usuario.id_tipo_usu" required>
+                            <label for="p_t_usu">altura</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-floating mb-4">
+                            <input type="number" class="form-control" name="p_cin" value="@usuario.id_cinturon" required>
+                            <label for="p_cin">ID cinturon</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Enviar informacion  -->
+                <div class="py-3"></div>
+                <button class="btn btn-primary mb-4" type="submit">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
+
+}
+
+
+

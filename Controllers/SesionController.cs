@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using WebValdiviaDojo.WS_ValdiviaDojo;
 
@@ -8,6 +10,80 @@ namespace WebValdiviaDojo.Controllers
 {
     public class SesionController : Controller
     {
+        public ActionResult PerfilUsu()
+        {
+
+            // Obtener la ruta de la carpeta "Usuario"
+            string rutaCarpetaUsuario = Server.MapPath("~/Img/Usuario/");
+
+            // Verificar si la carpeta "Usuario" existe, si no, crearla
+            if (!Directory.Exists(rutaCarpetaUsuario))
+            {
+                Directory.CreateDirectory(rutaCarpetaUsuario);
+            }
+
+            // Obtener la lista de archivos en la carpeta "Usuario"
+            string[] archivos = Directory.GetFiles(rutaCarpetaUsuario);
+
+            // Pasar la lista de archivos a la vista
+            ViewBag.Archivos = archivos;
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult PerfilUsu(HttpPostedFileBase imagen, int rut, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, string dire, string peso, string altura, DateTime fechanac, string ruta_img, int p_gen, int p_t_usu, int p_cin)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            //
+            try
+            {
+                if (imagen != null && imagen.ContentLength > 0)
+                {
+                    // Nombre específico para la imagen (puedes personalizarlo según tus necesidades)
+                    string nombreArchivo = rut + ".png";
+
+                    // Ruta completa del archivo
+                    string rutaCarpetaUsuario = Server.MapPath("~/Img/Usuario/");
+
+                    // Verificar si la carpeta "Usuario" existe, si no, crearla
+                    if (!Directory.Exists(rutaCarpetaUsuario))
+                    {
+                        Directory.CreateDirectory(rutaCarpetaUsuario);
+                    }
+
+                    string ruta = Path.Combine(rutaCarpetaUsuario, nombreArchivo);
+
+                    // Verificar si el archivo ya existe
+                    if (System.IO.File.Exists(ruta))
+                    {
+                        // Si existe, eliminar el archivo existente
+                        System.IO.File.Delete(ruta);
+                    }
+
+                    // Guardar la nueva imagen con el nombre específico
+                    imagen.SaveAs(ruta);
+
+                    ViewBag.Mensaje = "Imagen subida exitosamente." + ruta;
+                    ruta_img = "~/Img/Usuario/" + rut + ".png";
+                }
+
+                int resultado = cliente.ModUsuario(rut, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular,celularemer,dire,peso,altura, ruta_img, p_gen, p_t_usu,p_cin);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return View();
+        }
+
+
+
         public ActionResult Login()
         {
             return View();

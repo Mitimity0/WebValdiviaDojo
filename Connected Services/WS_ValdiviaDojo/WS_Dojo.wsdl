@@ -41,6 +41,12 @@
   <message name="ListadoClaseResponse">
     <part name="parameters" element="tns:ListadoClaseResponse" />
   </message>
+  <message name="ModUsuario">
+    <part name="parameters" element="tns:ModUsuario" />
+  </message>
+  <message name="ModUsuarioResponse">
+    <part name="parameters" element="tns:ModUsuarioResponse" />
+  </message>
   <portType name="WS_Dojo">
     <operation name="ListadoClaseNivel">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
@@ -65,6 +71,10 @@
     <operation name="ListadoClase">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
+    </operation>
+    <operation name="ModUsuario">
+      <input wsam:Action="http://ws/WS_Dojo/ModUsuarioRequest" message="tns:ModUsuario" />
+      <output wsam:Action="http://ws/WS_Dojo/ModUsuarioResponse" message="tns:ModUsuarioResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
@@ -115,6 +125,15 @@
       </output>
     </operation>
     <operation name="ListadoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
