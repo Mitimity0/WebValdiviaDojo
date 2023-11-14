@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Producto";
+}
+
+<div class="py-5 col-md-12">
+    <div class="row py-5 justify-content-center">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="text-center py-4">
+                <h4 class="display-8">Agregar Producto</h4>
+            </div>
+            <form class="d-flex mb-4" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar Producto" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Buscar</button>
+            </form>
+            <form class="row g-4 align-items-center" method="post">
+                <!--id producto-->
+                <div class="col-2">
+                    <label for="idproducto" class="col-form-label">Id del producto</label>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="rut" class="form-control" aria-describedby="" placeholder="1">
+                </div>
+                <!--Nombre del producto-->
+                <div class="col-2">
+                    <label for="nomprod" class="col-form-label">Nombre del producto</label>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="nomprod" class="form-control" aria-describedby="" placeholder="">
+                </div>
+                <!--Descripcion-->
+                <div class="col-3">
+                    <label for="descripcionp" class="col-form-label">Descripcion</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" id="descripcionp" class="form-control" aria-describedby="" placeholder="">
+                </div>
+                <!--Precio normal-->
+                <div class="col-2">
+                    <label for="precio" class="col-form-label">Precio</label>
+                </div>
+                <div class="col-4">
+                    <input type="number" id="precio" class="form-control" aria-describedby="" placeholder="9990">
+                </div>
+                <!--Stock-->
+                <div class="col-2">
+                    <label for="stock" class="col-form-label">Stock</label>
+                </div>
+                <div class="col-4">
+                    <input type="number" id="stock" class="form-control" aria-describedby="" placeholder="0">
+                </div>
+                <div class="justify-content-center">
+                    <button class="btn btn-danger mb-4" type="submit">Agregar</button>
+                    <button class="btn btn-danger mb-4" type="">Modificar</button>
+                    <button class="btn btn-danger mb-4" type="">Eliminar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+
