@@ -237,12 +237,12 @@
     <Content Include="Views\Evento\Evento.cshtml" />
     <Content Include="Views\Producto\Producto.cshtml" />
     <Content Include="Views\TipoProducto\TipoProducto.cshtml" />
+    <Content Include="Views\Clase\Clase.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Cinturon\" />
-    <Folder Include="Views\Clase\" />
     <Folder Include="Views\Credencial\" />
     <Folder Include="Views\Encuesta\" />
     <Folder Include="Views\Horario\" />
