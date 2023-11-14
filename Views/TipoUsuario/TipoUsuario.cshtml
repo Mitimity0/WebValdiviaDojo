@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "TipoUsuario";
+}
+<div class="py-5 col-md-12">
+    <div class="row py-5 justify-content-center">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="text-center py-4">
+                <h4 class="display-8">Agregar Tipo de Usuario</h4>
+            </div>
+            <form class="d-flex mb-4" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar Tipo de usuario" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Buscar</button>
+            </form>
+            <form class="row g-4 align-items-center" method="post">
+                <!--Id tipo usuario-->
+                <div class="col-2">
+                    <label for="idtipo" class="col-form-label">Id tipo usuario</label>
+                </div>
+                <div class="col-4">
+                    <input type="number" id="idtipo" class="form-control" aria-describedby="" placeholder="1">
+                </div>
+                <!--Nombre Tipo Usuario-->
+                <div class="col-3">
+                    <label for="nomtipo" class="col-form-label">Nombre del tipo usuario</label>
+                </div>
+                <div class="col-3">
+                    <input type="text" id="nomtipo" class="form-control" aria-describedby="" placeholder="">
+                </div>
+                <div class="justify-content-center">
+                    <button class="btn btn-danger mb-4" type="submit">Agregar</button>
+                    <button class="btn btn-danger mb-4" type="">Modificar</button>
+                    <button class="btn btn-danger mb-4" type="">Eliminar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+

@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Evento";
+}
+<div class="py-5 col-md-12">
+    <div class="row py-5 justify-content-center">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="text-center py-4">
+                <h4 class="display-8">Agregar Tipo de Evento</h4>
+            </div>
+            <form class="d-flex mb-4" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar evento" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Buscar</button>
+            </form>
+            <form class="row g-4 align-items-center" method="post">
+                <!--Id evento-->
+                <div class="col-2">
+                    <label for="idevento" class="col-form-label">Id evento</label>
+                </div>
+                <div class="col-4">
+                    <input type="number" id="idevento" class="form-control" aria-describedby="" placeholder="1">
+                </div>
+                <!--Nombre evento-->
+                <div class="col-2">
+                    <label for="nomevento" class="col-form-label">Nombre del evento</label>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="nomevento" class="form-control" aria-describedby="" placeholder="">
+                </div>
+                <!--Descripcion-->
+                <div class="col-6">
+                    <label for="descripcion" class="col-form-label">Descripcion</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="descripcion" class="form-control" aria-describedby="" placeholder="">
+                </div>
+                <!--Direccion-->
+                <div class="col-3">
+                    <label for="direccioneven" class="col-form-label">Direccion</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" id="direccioneven" class="form-control" aria-describedby="" placeholder="Avenida concha y toro 0000, Puente alto">
+                </div>
+                <!--Fecha-->
+                <div class="col-3">
+                    <label for="fecha" class="col-form-label">Fecha del evento</label>
+                </div>
+                <div class="col-3">
+                    <input type="date" id="fecha" class="form-control" aria-describedby="" placeholder="">
+                </div>
+                <div class="justify-content-center">
+                    <button class="btn btn-danger mb-4" type="submit">Agregar</button>
+                    <button class="btn btn-danger mb-4" type="">Modificar</button>
+                    <button class="btn btn-danger mb-4" type="">Eliminar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+
