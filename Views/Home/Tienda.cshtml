@@ -42,8 +42,7 @@
         <!-- Total a pagar y botón de pago (pegado abajo) -->
         <div class="mt-auto">
             <small class="text-muted">Total a pagar: </small>
-            <a class="nav-item">@Html.ActionLink("Ir a pagar", "Pago", "Compra", null, new { @class = "btn btn-outline-light me-2" })</a>
-            <button class="btn btn-primary btn-block">Ir a pagar</button>
+            <a class="nav-item">@Html.ActionLink("Ir a pagar", "Pago", "Compra", null, new { @class = "btn btn-danger me-2" })</a>
         </div>
     </div>
 </div>
@@ -55,16 +54,16 @@
 <!--  Listado de productos  -->
 <article class="py-5">
     <!--  Menu de filtros  -->
-    <nav class="navbar navbar-light sticky-top container rounded" style="background-color: #e3f2fd;>
+    <nav class="navbar navbar-light sticky-top container rounded" style="background-color: #F9A1A1;>
         <div class="container-fluid">
             <p class="navbar-brand">Filtros</p>
             <!--  Botones  -->
             <div class="justify-content-end">
-                <button class="btn btn-primary me-2 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="btn btn-danger me-2 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span><i class="fa-solid fa-filter"></i></span>
                 </button>
                 <!--  Boton carrito  -->
-                <li class="btn btn-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight">Ir al Carrito</li>
+                <li class="btn btn-danger me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight">Ir al Carrito</li>
 
             </div>
 
@@ -122,7 +121,7 @@
     <nav class="p-5">
         <ul class="pagination justify-content-center">
             <li class="page-item @(ViewBag.Pagina == 1 ? "disabled" : "")">
-                <a class="page-link" href="" aria-label="Anterior">
+                <a class="page-link bg-danger text-light" href="" aria-label="Anterior">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
@@ -130,10 +129,10 @@
                             for (int i = 1; i <= totalPages; i++)
                             {
                 <li class="page-item">
-                    <a class="page-link" href="">@i</a>
+                    <a class="page-link bg-danger text-light" href="">@i</a>
                 </li> } }
             <li class="page-item">
-                <a class="page-link" href="" aria-label="Siguiente">
+                <a class="page-link bg-danger text-light" href="" aria-label="Siguiente">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>
