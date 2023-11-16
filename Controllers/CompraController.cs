@@ -13,5 +13,10 @@ namespace WebValdiviaDojo.Controllers
         {
             return View();
         }
+
+        public ActionResult ConfirmacionCompra()
+        {
+            return View();
+        }
     }
 }
