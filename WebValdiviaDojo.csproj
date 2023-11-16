@@ -127,6 +127,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InscripcionController.cs" />
@@ -238,6 +239,9 @@
     <Content Include="Views\Producto\Producto.cshtml" />
     <Content Include="Views\TipoProducto\TipoProducto.cshtml" />
     <Content Include="Views\Clase\Clase.cshtml" />
+    <Content Include="Views\Compra\Compra.cshtml" />
+    <Content Include="Views\Compra\Pago.cshtml" />
+    <Content Include="Views\Compra\ConfirmacionCompra.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
