@@ -142,6 +142,8 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
     public partial class observacion : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private string comentarioField;
+        
         private string dia_semanaField;
         
         private string fecha_asistenciaField;
@@ -154,10 +156,20 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         private string nombre_nivelField;
         
-        private string observacion1Field;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string comentario {
+            get {
+                return this.comentarioField;
+            }
+            set {
+                this.comentarioField = value;
+                this.RaisePropertyChanged("comentario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string dia_semana {
             get {
                 return this.dia_semanaField;
@@ -169,7 +181,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string fecha_asistencia {
             get {
                 return this.fecha_asistenciaField;
@@ -181,7 +193,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public string hora {
             get {
                 return this.horaField;
@@ -193,7 +205,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int id_asistencia {
             get {
                 return this.id_asistenciaField;
@@ -205,7 +217,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -217,7 +229,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public string nombre_nivel {
             get {
                 return this.nombre_nivelField;
@@ -225,18 +237,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             set {
                 this.nombre_nivelField = value;
                 this.RaisePropertyChanged("nombre_nivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("observacion", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string observacion1 {
-            get {
-                return this.observacion1Field;
-            }
-            set {
-                this.observacion1Field = value;
-                this.RaisePropertyChanged("observacion1");
             }
         }
         

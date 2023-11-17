@@ -35,7 +35,6 @@
                         <li class="nav-item">@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = (ViewBag.Title == "" ? "nav-link active" : "nav-link") })</li>
                         <li class="nav-item">@Html.ActionLink("Tienda", "Tienda", "Home", null, new { @class = (ViewBag.Title == "Tienda" ? "nav-link active" : "nav-link") })</li>
                         <li class="nav-item">@Html.ActionLink("Inscríbete aquí", "ClasesDisponibles", "Inscripcion", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
-                        <li class="nav-item">@Html.ActionLink("Clase Inscrita", "ClaseInscrita", "Clase", null, new { @class = (ViewBag.Title == "ClaseInscrita" ? "nav-link active" : "nav-link") })</li>
                         @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
                         {
                             <li class="nav-item nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
@@ -55,7 +54,7 @@
                             </a>
 
                             <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                                <li>@Html.ActionLink("Mis Clases", "ClaseInscrita", "Clase", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Mis Clases", "ClaseInscrita", "Clase", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
                                 <li>@Html.ActionLink("Perfil", "PerfilUsu", "Sesion", null, new { @class = "dropdown-item" })</li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "Sesion", null, new { @class = "dropdown-item" })</li>

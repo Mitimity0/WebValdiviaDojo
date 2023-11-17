@@ -28,13 +28,13 @@
   </xs:complexType>
   <xs:complexType name="observacion">
     <xs:sequence>
+      <xs:element minOccurs="0" name="comentario" type="xs:string" />
       <xs:element minOccurs="0" name="dia_semana" type="xs:string" />
       <xs:element minOccurs="0" name="fecha_asistencia" type="xs:string" />
       <xs:element minOccurs="0" name="hora" type="xs:string" />
       <xs:element name="id_asistencia" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="nombre_nivel" type="xs:string" />
-      <xs:element minOccurs="0" name="observacion" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="CrearUsuario">
