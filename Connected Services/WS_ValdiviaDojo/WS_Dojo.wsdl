@@ -17,23 +17,23 @@
   <message name="ListadoGeneroResponse">
     <part name="parameters" element="tns:ListadoGeneroResponse" />
   </message>
-  <message name="ListadoHorario">
-    <part name="parameters" element="tns:ListadoHorario" />
-  </message>
-  <message name="ListadoHorarioResponse">
-    <part name="parameters" element="tns:ListadoHorarioResponse" />
-  </message>
   <message name="CrearUsuario">
     <part name="parameters" element="tns:CrearUsuario" />
   </message>
   <message name="CrearUsuarioResponse">
     <part name="parameters" element="tns:CrearUsuarioResponse" />
   </message>
-  <message name="Login">
-    <part name="parameters" element="tns:Login" />
+  <message name="ModUsuario">
+    <part name="parameters" element="tns:ModUsuario" />
   </message>
-  <message name="LoginResponse">
-    <part name="parameters" element="tns:LoginResponse" />
+  <message name="ModUsuarioResponse">
+    <part name="parameters" element="tns:ModUsuarioResponse" />
+  </message>
+  <message name="ListadoHorario">
+    <part name="parameters" element="tns:ListadoHorario" />
+  </message>
+  <message name="ListadoHorarioResponse">
+    <part name="parameters" element="tns:ListadoHorarioResponse" />
   </message>
   <message name="ListadoClase">
     <part name="parameters" element="tns:ListadoClase" />
@@ -41,11 +41,17 @@
   <message name="ListadoClaseResponse">
     <part name="parameters" element="tns:ListadoClaseResponse" />
   </message>
-  <message name="ModUsuario">
-    <part name="parameters" element="tns:ModUsuario" />
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
   </message>
-  <message name="ModUsuarioResponse">
-    <part name="parameters" element="tns:ModUsuarioResponse" />
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="ListadoObser">
+    <part name="parameters" element="tns:ListadoObser" />
+  </message>
+  <message name="ListadoObserResponse">
+    <part name="parameters" element="tns:ListadoObserResponse" />
   </message>
   <portType name="WS_Dojo">
     <operation name="ListadoClaseNivel">
@@ -56,25 +62,29 @@
       <input wsam:Action="http://ws/WS_Dojo/ListadoGeneroRequest" message="tns:ListadoGenero" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoGeneroResponse" message="tns:ListadoGeneroResponse" />
     </operation>
-    <operation name="ListadoHorario">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoHorarioRequest" message="tns:ListadoHorario" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoHorarioResponse" message="tns:ListadoHorarioResponse" />
-    </operation>
     <operation name="CrearUsuario">
       <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
       <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
     </operation>
-    <operation name="Login">
-      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
-      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
+    <operation name="ModUsuario">
+      <input wsam:Action="http://ws/WS_Dojo/ModUsuarioRequest" message="tns:ModUsuario" />
+      <output wsam:Action="http://ws/WS_Dojo/ModUsuarioResponse" message="tns:ModUsuarioResponse" />
+    </operation>
+    <operation name="ListadoHorario">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoHorarioRequest" message="tns:ListadoHorario" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoHorarioResponse" message="tns:ListadoHorarioResponse" />
     </operation>
     <operation name="ListadoClase">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
     </operation>
-    <operation name="ModUsuario">
-      <input wsam:Action="http://ws/WS_Dojo/ModUsuarioRequest" message="tns:ModUsuario" />
-      <output wsam:Action="http://ws/WS_Dojo/ModUsuarioResponse" message="tns:ModUsuarioResponse" />
+    <operation name="Login">
+      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="ListadoObser">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoObserRequest" message="tns:ListadoObser" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoObserResponse" message="tns:ListadoObserResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
@@ -97,15 +107,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoHorario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="CrearUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -115,7 +116,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Login">
+    <operation name="ModUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListadoHorario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -133,7 +143,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ModUsuario">
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListadoObser">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

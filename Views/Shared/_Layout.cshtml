@@ -55,9 +55,7 @@
                             </a>
 
                             <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                                <li><a class="dropdown-item" href="#">New project...</a></li>
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>@Html.ActionLink("Mis Clases", "ClaseInscrita", "Clase", null, new { @class = "dropdown-item" })</li>
                                 <li>@Html.ActionLink("Perfil", "PerfilUsu", "Sesion", null, new { @class = "dropdown-item" })</li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "Sesion", null, new { @class = "dropdown-item" })</li>
