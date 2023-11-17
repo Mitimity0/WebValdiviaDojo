@@ -35,6 +35,7 @@
                         <li class="nav-item">@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = (ViewBag.Title == "" ? "nav-link active" : "nav-link") })</li>
                         <li class="nav-item">@Html.ActionLink("Tienda", "Tienda", "Home", null, new { @class = (ViewBag.Title == "Tienda" ? "nav-link active" : "nav-link") })</li>
                         <li class="nav-item">@Html.ActionLink("Inscríbete aquí", "ClasesDisponibles", "Inscripcion", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
+                        <li class="nav-item">@Html.ActionLink("Clase Inscrita", "ClaseInscrita", "Clase", null, new { @class = (ViewBag.Title == "ClaseInscrita" ? "nav-link active" : "nav-link") })</li>
                         @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
                         {
                             <li class="nav-item nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
@@ -136,7 +137,7 @@
                 <a class="nav-item">@Html.ActionLink("Producto", "Producto", "Producto", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Tipo Producto", "TipoProducto", "TipoProducto", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Horario", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
-                <a class="nav-item">@Html.ActionLink("Clase", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
+                <a class="nav-item">@Html.ActionLink("Clase", "Clase", "Clase", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Cinturon", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Encuesta", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
             </div>

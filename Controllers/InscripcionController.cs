@@ -40,7 +40,6 @@ namespace WebValdiviaDojo.Controllers
         }
 
 
-
         /*  */
         public List<horario> Listarhorario(String id_clase, String id_nivel)
         {
