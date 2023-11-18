@@ -163,6 +163,7 @@
     <Content Include="Img\logo_clases.png" />
     <Content Include="Img\Publicidad\image.png" />
     <Content Include="Img\Publicidad\logo.jpeg" />
+    <Content Include="Img\Publicidad\logoSinFondo.png" />
     <Content Include="Img\Publicidad\Shihan.jpg" />
     <Content Include="Img\Usuario\default.png" />
     <Content Include="Scripts\bootstrap.js" />
