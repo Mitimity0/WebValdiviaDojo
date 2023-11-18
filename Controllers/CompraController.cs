@@ -9,6 +9,11 @@ namespace WebValdiviaDojo.Controllers
     public class CompraController : Controller
     {
         // GET: Compra
+        public ActionResult Compra()
+        {
+            return View();
+        }
+
         public ActionResult Pago()
         {
             return View();
