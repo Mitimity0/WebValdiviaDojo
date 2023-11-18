@@ -159,6 +159,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Img\confirmacion.png" />
+    <Content Include="Img\logo.ico" />
     <Content Include="Img\logo_clases.png" />
     <Content Include="Img\Publicidad\image.png" />
     <Content Include="Img\Publicidad\logo.jpeg" />
