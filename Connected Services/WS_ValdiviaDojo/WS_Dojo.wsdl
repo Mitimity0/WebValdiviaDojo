@@ -11,17 +11,11 @@
   <message name="ListadoClaseNivelResponse">
     <part name="parameters" element="tns:ListadoClaseNivelResponse" />
   </message>
-  <message name="ListadoGenero">
-    <part name="parameters" element="tns:ListadoGenero" />
+  <message name="ListadoProdGen">
+    <part name="parameters" element="tns:ListadoProdGen" />
   </message>
-  <message name="ListadoGeneroResponse">
-    <part name="parameters" element="tns:ListadoGeneroResponse" />
-  </message>
-  <message name="CrearUsuario">
-    <part name="parameters" element="tns:CrearUsuario" />
-  </message>
-  <message name="CrearUsuarioResponse">
-    <part name="parameters" element="tns:CrearUsuarioResponse" />
+  <message name="ListadoProdGenResponse">
+    <part name="parameters" element="tns:ListadoProdGenResponse" />
   </message>
   <message name="ModUsuario">
     <part name="parameters" element="tns:ModUsuario" />
@@ -29,11 +23,23 @@
   <message name="ModUsuarioResponse">
     <part name="parameters" element="tns:ModUsuarioResponse" />
   </message>
+  <message name="CrearUsuario">
+    <part name="parameters" element="tns:CrearUsuario" />
+  </message>
+  <message name="CrearUsuarioResponse">
+    <part name="parameters" element="tns:CrearUsuarioResponse" />
+  </message>
   <message name="ListadoHorario">
     <part name="parameters" element="tns:ListadoHorario" />
   </message>
   <message name="ListadoHorarioResponse">
     <part name="parameters" element="tns:ListadoHorarioResponse" />
+  </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
   </message>
   <message name="ListadoClase">
     <part name="parameters" element="tns:ListadoClase" />
@@ -41,11 +47,17 @@
   <message name="ListadoClaseResponse">
     <part name="parameters" element="tns:ListadoClaseResponse" />
   </message>
-  <message name="Login">
-    <part name="parameters" element="tns:Login" />
+  <message name="ListadoProdEspe">
+    <part name="parameters" element="tns:ListadoProdEspe" />
   </message>
-  <message name="LoginResponse">
-    <part name="parameters" element="tns:LoginResponse" />
+  <message name="ListadoProdEspeResponse">
+    <part name="parameters" element="tns:ListadoProdEspeResponse" />
+  </message>
+  <message name="ListadoGenero">
+    <part name="parameters" element="tns:ListadoGenero" />
+  </message>
+  <message name="ListadoGeneroResponse">
+    <part name="parameters" element="tns:ListadoGeneroResponse" />
   </message>
   <message name="ListadoObser">
     <part name="parameters" element="tns:ListadoObser" />
@@ -58,29 +70,37 @@
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelResponse" message="tns:ListadoClaseNivelResponse" />
     </operation>
-    <operation name="ListadoGenero">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoGeneroRequest" message="tns:ListadoGenero" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoGeneroResponse" message="tns:ListadoGeneroResponse" />
-    </operation>
-    <operation name="CrearUsuario">
-      <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
-      <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
+    <operation name="ListadoProdGen">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoProdGenRequest" message="tns:ListadoProdGen" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoProdGenResponse" message="tns:ListadoProdGenResponse" />
     </operation>
     <operation name="ModUsuario">
       <input wsam:Action="http://ws/WS_Dojo/ModUsuarioRequest" message="tns:ModUsuario" />
       <output wsam:Action="http://ws/WS_Dojo/ModUsuarioResponse" message="tns:ModUsuarioResponse" />
     </operation>
+    <operation name="CrearUsuario">
+      <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
+      <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
+    </operation>
     <operation name="ListadoHorario">
       <input wsam:Action="http://ws/WS_Dojo/ListadoHorarioRequest" message="tns:ListadoHorario" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoHorarioResponse" message="tns:ListadoHorarioResponse" />
+    </operation>
+    <operation name="Login">
+      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
     </operation>
     <operation name="ListadoClase">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
     </operation>
-    <operation name="Login">
-      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
-      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
+    <operation name="ListadoProdEspe">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoProdEspeRequest" message="tns:ListadoProdEspe" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoProdEspeResponse" message="tns:ListadoProdEspeResponse" />
+    </operation>
+    <operation name="ListadoGenero">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoGeneroRequest" message="tns:ListadoGenero" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoGeneroResponse" message="tns:ListadoGeneroResponse" />
     </operation>
     <operation name="ListadoObser">
       <input wsam:Action="http://ws/WS_Dojo/ListadoObserRequest" message="tns:ListadoObser" />
@@ -98,16 +118,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoGenero">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CrearUsuario">
+    <operation name="ListadoProdGen">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -125,7 +136,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="CrearUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="ListadoHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -143,7 +172,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Login">
+    <operation name="ListadoProdEspe">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListadoGenero">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

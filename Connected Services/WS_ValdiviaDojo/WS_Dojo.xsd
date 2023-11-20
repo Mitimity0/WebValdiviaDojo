@@ -12,10 +12,43 @@
   <xs:element name="ListadoHorarioResponse" type="tns:ListadoHorarioResponse" />
   <xs:element name="ListadoObser" type="tns:ListadoObser" />
   <xs:element name="ListadoObserResponse" type="tns:ListadoObserResponse" />
+  <xs:element name="ListadoProdEspe" type="tns:ListadoProdEspe" />
+  <xs:element name="ListadoProdEspeResponse" type="tns:ListadoProdEspeResponse" />
+  <xs:element name="ListadoProdGen" type="tns:ListadoProdGen" />
+  <xs:element name="ListadoProdGenResponse" type="tns:ListadoProdGenResponse" />
   <xs:element name="Login" type="tns:Login" />
   <xs:element name="LoginResponse" type="tns:LoginResponse" />
   <xs:element name="ModUsuario" type="tns:ModUsuario" />
   <xs:element name="ModUsuarioResponse" type="tns:ModUsuarioResponse" />
+  <xs:complexType name="ListadoProdEspe">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListadoProdEspeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prodEspe" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prodEspe">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPCION" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_FIN" type="xs:string" />
+      <xs:element minOccurs="0" name="FECHA_IN" type="xs:string" />
+      <xs:element name="ID_DESC_PROD" type="xs:int" />
+      <xs:element name="ID_PRODUCTO" type="xs:int" />
+      <xs:element name="ID_TALLA" type="xs:int" />
+      <xs:element name="ID_TIPO_PROD" type="xs:int" />
+      <xs:element minOccurs="0" name="IMG_PROD" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE_PRODUCTO" type="xs:string" />
+      <xs:element minOccurs="0" name="NOM_TIPO_PROD" type="xs:string" />
+      <xs:element name="PORC_DESC" type="xs:int" />
+      <xs:element name="PRECIO_NORMAL" type="xs:int" />
+      <xs:element name="STOCK" type="xs:int" />
+      <xs:element name="VALOR_DESC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ListadoObser">
     <xs:sequence>
       <xs:element minOccurs="0" name="p_rut" type="xs:int" />
@@ -35,6 +68,25 @@
       <xs:element name="id_asistencia" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="nombre_nivel" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListadoProdGen">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListadoProdGenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prodGeneral" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prodGeneral">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="IMG_PROD" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre_producto" type="xs:string" />
+      <xs:element name="PORC_DESC" type="xs:int" />
+      <xs:element name="PRECIO_NORMAL" type="xs:int" />
+      <xs:element name="STOCK" type="xs:int" />
+      <xs:element name="VALOR_DESC" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="CrearUsuario">

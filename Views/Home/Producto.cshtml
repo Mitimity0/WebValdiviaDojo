@@ -1,0 +1,30 @@
+﻿@{
+    
+}
+<div class="container py-5">
+    <div class="card py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="http://placekitten.com/400/252" class="img-fluid justify-content-between align-self-center mx-auto d-block border" alt="">
+                </div>
+
+                <div class="col-md-6  text-center ">
+                    <h3 class="display-4 py-2">@ViewBag.ProdEsp[0].NOMBRE_PRODUCTO</h3>
+                    <p class="lead">@ViewBag.ProdEsp[0].DESCRIPCION</p>
+                    <h4 class="lead">Precio normal: <span>@string.Format("${0:N0}", ViewBag.ProdEsp[0].PRECIO_NORMAL)</span></h4>
+                    <h5 class="container">
+                        @foreach (var x in ViewBag.ProdEsp)
+                        {
+                            <button class="btn btn-default border" data-toggle="tooltip" value="@x.ID_TALLA" title="@x.NOMBRE">@x.NOMBRE</button>
+                        }
+                    </h5>
+                    <br />
+                    <div class="action">
+                        <button class="btn btn-danger" type="button">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
