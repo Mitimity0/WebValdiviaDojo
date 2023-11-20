@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://ws/" targetNamespace="http://ws/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AgDetalleCom" type="tns:AgDetalleCom" />
+  <xs:element name="AgDetalleComResponse" type="tns:AgDetalleComResponse" />
   <xs:element name="CrearUsuario" type="tns:CrearUsuario" />
   <xs:element name="CrearUsuarioResponse" type="tns:CrearUsuarioResponse" />
+  <xs:element name="ListadoCarrito" type="tns:ListadoCarrito" />
+  <xs:element name="ListadoCarritoResponse" type="tns:ListadoCarritoResponse" />
   <xs:element name="ListadoClase" type="tns:ListadoClase" />
   <xs:element name="ListadoClaseNivel" type="tns:ListadoClaseNivel" />
   <xs:element name="ListadoClaseNivelResponse" type="tns:ListadoClaseNivelResponse" />
@@ -70,6 +74,34 @@
       <xs:element minOccurs="0" name="nombre_nivel" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListadoCarrito">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListadoCarritoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:carrito" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="carrito">
+    <xs:sequence>
+      <xs:element name="CANTIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="DESCRIPCION" type="xs:string" />
+      <xs:element name="ID_DESC_PROD" type="xs:int" />
+      <xs:element name="ID_PRODUCTO" type="xs:int" />
+      <xs:element name="ID_TALLA" type="xs:int" />
+      <xs:element name="ID_TIPO_PROD" type="xs:int" />
+      <xs:element minOccurs="0" name="IMG_PROD" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE" type="xs:string" />
+      <xs:element minOccurs="0" name="NOMBRE_PRODUCTO" type="xs:string" />
+      <xs:element name="PORC_DESC" type="xs:int" />
+      <xs:element name="PRECIO_NORMAL" type="xs:int" />
+      <xs:element name="RUT" type="xs:int" />
+      <xs:element name="STOCK" type="xs:int" />
+      <xs:element name="VALOR_DESC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ListadoProdGen">
     <xs:sequence />
   </xs:complexType>
@@ -87,6 +119,18 @@
       <xs:element name="PRECIO_NORMAL" type="xs:int" />
       <xs:element name="STOCK" type="xs:int" />
       <xs:element name="VALOR_DESC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgDetalleCom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_prod" type="xs:int" />
+      <xs:element minOccurs="0" name="p_cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgDetalleComResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="CrearUsuario">

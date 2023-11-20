@@ -1,4 +1,7 @@
-﻿@{ ViewBag.Title = "Tienda"; }
+﻿@{ 
+    ViewBag.Title = "Tienda";
+    var total = 0;
+}
 
 <!-- Sección carrito -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="SeccionCarrito" aria-labelledby="offcanvasRightLabel">
@@ -15,7 +18,7 @@
                 <!-- Contenedor con altura máxima y scroll -->
                 <div class="carrito-container overflow-auto" style="max-height: 650px;">
                     <!-- Contenido del carrito -->
-                    @for (int i = 0; i < 10; i++)
+                    @foreach (var c in ViewBag.Carrito)
                     {
                         <div class="card mb-3">
                             <div class="row g-0">
@@ -27,17 +30,32 @@
                                         <text fill="#eceeef" dy=".3em"></text>
                                     </svg>
                                 </div>
+
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <p class="card-title">Nombre del artículo</p>
+                                        <p class="card-title">@c.NOMBRE_PRODUCTO</p>
+                                        <p class="card-text">@c.DESCRIPCION</p>
+                                        <p class="card-text">Talla: @c.NOMBRE</p>
 
                                         <!-- Cantidad  -->
-                                        <div class="mb-3">
-                                            <p class="card-text">Cantidad</p>
-                                            <input class="form-control text-center" type="number" min="0" max="10" value="1">
+                                        <div class="mb-3 col-12">
+                                            <p class="card-text">CANTIDAD</p>
+                                            <input class="form-control text-center col-4" type="number" min="0" max="@c.STOCK" value="@c.CANTIDAD">
                                         </div>
+                                        @if (c.VALOR_DESC != 0)
+                                        {
+                                            <p class="card-text"><small class="text-muted text-decoration-line-through">Precio normal: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small></p>
+                                            <p class="card-text"><small class="text-muted">Precio oferta: @string.Format("${0:N0}", c.VALOR_DESC)</small></p>
+                                            { total += c.VALOR_DESC; }
+                                        }
+                                        else
+                                        {
+                                            <p class="card-text">
+                                                <small class="text-muted">Precio: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small>
 
-                                        <p class="card-text"><small class="text-muted">Precio acumulado</small></p>
+                                            </p>
+                                            { total += c.PRECIO_NORMAL; }
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -48,9 +66,10 @@
         </div>
         <!-- Total a pagar y botón de pago (pegado abajo) -->
         <div class="sticky-bottom py-5">
-            <small class="text-muted">Total a pagar: </small>
-            <a class="nav-item btn btn-danger me-2" href="@Url.Action("Pago", "Compra")">Ir a pagar</a>
-        </div>
+            
+            <p class="card-text py-5">Total a pagar: @string.Format("${0:N0}", total)</p>
+                <a class="nav-item btn btn-danger me-2" href="@Url.Action("Pago", "Compra")">Ir a pagar</a>
+            </div>
     </div>
 </div>
 
@@ -59,48 +78,7 @@
 
 <!--  Listado de productos  -->
 <article class="py-5">
-    <!--  Menu de filtros  -->
-    <nav class="navbar navbar-light sticky-top container rounded" style="background-color: #F9A1A1;">
-        <div class="container-fluid">
-            <button class="btn btn-danger me-2 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span>Filtros<i class="fa-solid fa-filter"></i></span>
-            </button>
 
-            <!--  Botones  -->
-            <div class="justify-content-end">
-
-                <!--  Boton carrito  -->
-                <li class="btn btn-danger me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight">Ir al Carrito</li>
-
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Todo</a>
-                    <a class="nav-link" href="#">Canilleras</a>
-                    <a class="nav-link" href="#">Protecciones</a>
-                    <!-- Agrega más categorías de productos aquí -->
-                </div>
-
-                <!-- Opciones de filtrado adicional -->
-                <div class="navbar-nav ml-auto">
-                    <label for="ordenar">Ordenar por:</label>
-                    <select class="form-select" id="ordenar">
-                        <option value="precio_asc">Precio: Menor a Mayor</option>
-                        <option value="precio_desc">Precio: Mayor a Menor</option>
-                        <!-- Agrega más opciones de ordenamiento aquí -->
-                    </select>
-
-                    <label for="marca">Marca:</label>
-                    <select class="form-select" id="marca">
-                        <option value="marca1">Marca 1</option>
-                        <option value="marca2">Marca 2</option>
-                        <!-- Agrega más opciones de marca aquí -->
-                    </select>
-                </div>
-            </div>
-        </div>
-    </nav>
     <!--    Seccion de productos    -->
     @{
         // Configuración de paginación

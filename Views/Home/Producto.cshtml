@@ -1,6 +1,7 @@
 ﻿@{
-    
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
 }
+
 <div class="container py-5">
     <div class="card py-5">
         <div class="container-fluid">
@@ -9,20 +10,37 @@
                     <img src="http://placekitten.com/400/252" class="img-fluid justify-content-between align-self-center mx-auto d-block border" alt="">
                 </div>
 
-                <div class="col-md-6  text-center ">
+                <div class="col-md-6 text-center">
                     <h3 class="display-4 py-2">@ViewBag.ProdEsp[0].NOMBRE_PRODUCTO</h3>
                     <p class="lead">@ViewBag.ProdEsp[0].DESCRIPCION</p>
                     <h4 class="lead">Precio normal: <span>@string.Format("${0:N0}", ViewBag.ProdEsp[0].PRECIO_NORMAL)</span></h4>
+
+                    <form method="post" id="addToCartForm">
+                        @if (usuario != null)
+                        {
+                            <!-- Campo oculto para enviar el valor de p_rut -->
+                            <input type="hidden" name="p_rut" value="@usuario.rut">
+                        }
+                        else
+                        {
+                            <p>Debe iniciar sesión para agregar al carrito.</p>
+                        }
+
                     <h5 class="container">
                         @foreach (var x in ViewBag.ProdEsp)
                         {
-                            <button class="btn btn-default border" data-toggle="tooltip" value="@x.ID_TALLA" title="@x.NOMBRE">@x.NOMBRE</button>
+                            <label class="btn btn-default border">
+                                <input type="radio" name="p_talla" value="@x.ID_PRODUCTO" autocomplete="off">
+                                @x.NOMBRE
+                            </label>
                         }
                     </h5>
-                    <br />
-                    <div class="action">
-                        <button class="btn btn-danger" type="button">Añadir al carrito</button>
-                    </div>
+
+                        <br />
+                        <div class="action">
+                            <button class="btn btn-danger" type="submit">Añadir al carrito</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
