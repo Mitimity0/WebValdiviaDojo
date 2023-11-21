@@ -15,23 +15,39 @@ namespace WebValdiviaDojo.Controllers
 
         public ActionResult Index()
         {
+            List<comentario> ob = ListarComentario();
+            ViewBag.comentario = ob;
             return View();
         }
 
-        public ActionResult Tienda(int v_rut)
+        public ActionResult Tienda(int? v_rut)
         {
-            List<carrito> car = ListarCarrito(v_rut);
-            List<prodGeneral> ob = ListarProdGen();
+            int rut = v_rut ?? 0;
 
-            ViewBag.Carrito = car;
+            if (rut == 0)
+            {
+                ViewBag.Mensaje = "Para realizar una compra debe iniciar sesión";
+            }
+            else
+            {
+                List<carrito> car = ListarCarrito(rut);
+                ViewBag.Carrito = car;
+            }
+
+            List<prodGeneral> ob = ListarProdGen();
             ViewBag.ProdGen = ob;
+
             return View();
         }
+
+
 
         public ActionResult Contact()
         {
             return View();
         }
+
+
         public ActionResult Producto(string v_nom)
         {
             List<prodEspe> esp = ListarProdEspe(v_nom);
@@ -66,9 +82,7 @@ namespace WebValdiviaDojo.Controllers
             {
                 cliente.Close();
             }
-            // Realiza una redirección a la acción que carga la vista Tienda.cshtml
             return RedirectToAction("Tienda", new { v_rut= p_rut });
-            //return View("~/Views/Home/Tienda.cshtml");
         }
 
         //
@@ -117,6 +131,27 @@ namespace WebValdiviaDojo.Controllers
             try
             {
                 return cliente.ListadoCarrito(p_rut).ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+
+
+        //lISTAR COMENTARIOS
+        public List<comentario> ListarComentario()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaComentario(1).ToList();
             }
             catch (Exception ex)
             {

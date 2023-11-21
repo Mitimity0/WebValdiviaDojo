@@ -1,7 +1,25 @@
 ﻿@{
     var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
 }
-
+<!-- Modal -->
+<div class="modal fade" id="ModalIniciarSesion" tabindex="-1" aria-labelledby="ModalIniciarSesion" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ModalIniciarSesion">No se puede añadir al carrito</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Debe iniciar sesión para agregar al carrito.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Ir a iniciar sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    -->
 <div class="container py-5">
     <div class="card py-5">
         <div class="container-fluid">
@@ -16,30 +34,31 @@
                     <h4 class="lead">Precio normal: <span>@string.Format("${0:N0}", ViewBag.ProdEsp[0].PRECIO_NORMAL)</span></h4>
 
                     <form method="post" id="addToCartForm">
+                        <h5 class="container">
+                            @foreach (var x in ViewBag.ProdEsp)
+                            {
+                                <label class="btn btn-default border">
+                                    <input type="radio" name="p_talla" value="@x.ID_PRODUCTO" autocomplete="off" required>
+                                    @x.NOMBRE
+                                </label>
+                            }
+                        </h5>
+                        <br />
                         @if (usuario != null)
                         {
                             <!-- Campo oculto para enviar el valor de p_rut -->
                             <input type="hidden" name="p_rut" value="@usuario.rut">
+                            <div class="action">
+                                <button class="btn btn-danger" type="submit">Añadir al carrito</button>
+                            </div>
                         }
                         else
                         {
-                            <p>Debe iniciar sesión para agregar al carrito.</p>
+                            <div class="action">
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalIniciarSesion">Añadir al carrito</button>
+                            </div>
                         }
 
-                    <h5 class="container">
-                        @foreach (var x in ViewBag.ProdEsp)
-                        {
-                            <label class="btn btn-default border">
-                                <input type="radio" name="p_talla" value="@x.ID_PRODUCTO" autocomplete="off">
-                                @x.NOMBRE
-                            </label>
-                        }
-                    </h5>
-
-                        <br />
-                        <div class="action">
-                            <button class="btn btn-danger" type="submit">Añadir al carrito</button>
-                        </div>
                     </form>
                 </div>
             </div>

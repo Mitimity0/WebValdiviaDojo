@@ -5,71 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/WS_ValdiviaDojo/WS_Dojo?xsd=1" namespace="http://ws/" />
     </xsd:schema>
   </types>
-  <message name="ListadoCarrito">
-    <part name="parameters" element="tns:ListadoCarrito" />
-  </message>
-  <message name="ListadoCarritoResponse">
-    <part name="parameters" element="tns:ListadoCarritoResponse" />
-  </message>
-  <message name="AgDetalleCom">
-    <part name="parameters" element="tns:AgDetalleCom" />
-  </message>
-  <message name="AgDetalleComResponse">
-    <part name="parameters" element="tns:AgDetalleComResponse" />
-  </message>
   <message name="ListadoClaseNivel">
     <part name="parameters" element="tns:ListadoClaseNivel" />
   </message>
   <message name="ListadoClaseNivelResponse">
     <part name="parameters" element="tns:ListadoClaseNivelResponse" />
-  </message>
-  <message name="ListadoProdGen">
-    <part name="parameters" element="tns:ListadoProdGen" />
-  </message>
-  <message name="ListadoProdGenResponse">
-    <part name="parameters" element="tns:ListadoProdGenResponse" />
-  </message>
-  <message name="ModUsuario">
-    <part name="parameters" element="tns:ModUsuario" />
-  </message>
-  <message name="ModUsuarioResponse">
-    <part name="parameters" element="tns:ModUsuarioResponse" />
-  </message>
-  <message name="CrearUsuario">
-    <part name="parameters" element="tns:CrearUsuario" />
-  </message>
-  <message name="CrearUsuarioResponse">
-    <part name="parameters" element="tns:CrearUsuarioResponse" />
-  </message>
-  <message name="ListadoHorario">
-    <part name="parameters" element="tns:ListadoHorario" />
-  </message>
-  <message name="ListadoHorarioResponse">
-    <part name="parameters" element="tns:ListadoHorarioResponse" />
-  </message>
-  <message name="Login">
-    <part name="parameters" element="tns:Login" />
-  </message>
-  <message name="LoginResponse">
-    <part name="parameters" element="tns:LoginResponse" />
-  </message>
-  <message name="ListadoClase">
-    <part name="parameters" element="tns:ListadoClase" />
-  </message>
-  <message name="ListadoClaseResponse">
-    <part name="parameters" element="tns:ListadoClaseResponse" />
-  </message>
-  <message name="ListadoProdEspe">
-    <part name="parameters" element="tns:ListadoProdEspe" />
-  </message>
-  <message name="ListadoProdEspeResponse">
-    <part name="parameters" element="tns:ListadoProdEspeResponse" />
-  </message>
-  <message name="ListadoGenero">
-    <part name="parameters" element="tns:ListadoGenero" />
-  </message>
-  <message name="ListadoGeneroResponse">
-    <part name="parameters" element="tns:ListadoGeneroResponse" />
   </message>
   <message name="ListadoObser">
     <part name="parameters" element="tns:ListadoObser" />
@@ -77,76 +17,158 @@
   <message name="ListadoObserResponse">
     <part name="parameters" element="tns:ListadoObserResponse" />
   </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="ListadoCarrito">
+    <part name="parameters" element="tns:ListadoCarrito" />
+  </message>
+  <message name="ListadoCarritoResponse">
+    <part name="parameters" element="tns:ListadoCarritoResponse" />
+  </message>
+  <message name="ListadoProdGen">
+    <part name="parameters" element="tns:ListadoProdGen" />
+  </message>
+  <message name="ListadoProdGenResponse">
+    <part name="parameters" element="tns:ListadoProdGenResponse" />
+  </message>
+  <message name="ListadoProdEspe">
+    <part name="parameters" element="tns:ListadoProdEspe" />
+  </message>
+  <message name="ListadoProdEspeResponse">
+    <part name="parameters" element="tns:ListadoProdEspeResponse" />
+  </message>
+  <message name="AgDetalleCom">
+    <part name="parameters" element="tns:AgDetalleCom" />
+  </message>
+  <message name="AgDetalleComResponse">
+    <part name="parameters" element="tns:AgDetalleComResponse" />
+  </message>
+  <message name="ListadoGenero">
+    <part name="parameters" element="tns:ListadoGenero" />
+  </message>
+  <message name="ListadoGeneroResponse">
+    <part name="parameters" element="tns:ListadoGeneroResponse" />
+  </message>
+  <message name="ListadoHorario">
+    <part name="parameters" element="tns:ListadoHorario" />
+  </message>
+  <message name="ListadoHorarioResponse">
+    <part name="parameters" element="tns:ListadoHorarioResponse" />
+  </message>
+  <message name="ModUsuario">
+    <part name="parameters" element="tns:ModUsuario" />
+  </message>
+  <message name="ModUsuarioResponse">
+    <part name="parameters" element="tns:ModUsuarioResponse" />
+  </message>
+  <message name="ListadoClase">
+    <part name="parameters" element="tns:ListadoClase" />
+  </message>
+  <message name="ListadoClaseResponse">
+    <part name="parameters" element="tns:ListadoClaseResponse" />
+  </message>
+  <message name="CrearUsuario">
+    <part name="parameters" element="tns:CrearUsuario" />
+  </message>
+  <message name="CrearUsuarioResponse">
+    <part name="parameters" element="tns:CrearUsuarioResponse" />
+  </message>
+  <message name="ModComentario">
+    <part name="parameters" element="tns:ModComentario" />
+  </message>
+  <message name="ModComentarioResponse">
+    <part name="parameters" element="tns:ModComentarioResponse" />
+  </message>
+  <message name="AgreComentario">
+    <part name="parameters" element="tns:AgreComentario" />
+  </message>
+  <message name="AgreComentarioResponse">
+    <part name="parameters" element="tns:AgreComentarioResponse" />
+  </message>
+  <message name="EliComentario">
+    <part name="parameters" element="tns:EliComentario" />
+  </message>
+  <message name="EliComentarioResponse">
+    <part name="parameters" element="tns:EliComentarioResponse" />
+  </message>
+  <message name="ListaComentario">
+    <part name="parameters" element="tns:ListaComentario" />
+  </message>
+  <message name="ListaComentarioResponse">
+    <part name="parameters" element="tns:ListaComentarioResponse" />
+  </message>
   <portType name="WS_Dojo">
-    <operation name="ListadoCarrito">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoCarritoRequest" message="tns:ListadoCarrito" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoCarritoResponse" message="tns:ListadoCarritoResponse" />
-    </operation>
-    <operation name="AgDetalleCom">
-      <input wsam:Action="http://ws/WS_Dojo/AgDetalleComRequest" message="tns:AgDetalleCom" />
-      <output wsam:Action="http://ws/WS_Dojo/AgDetalleComResponse" message="tns:AgDetalleComResponse" />
-    </operation>
     <operation name="ListadoClaseNivel">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelResponse" message="tns:ListadoClaseNivelResponse" />
-    </operation>
-    <operation name="ListadoProdGen">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoProdGenRequest" message="tns:ListadoProdGen" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoProdGenResponse" message="tns:ListadoProdGenResponse" />
-    </operation>
-    <operation name="ModUsuario">
-      <input wsam:Action="http://ws/WS_Dojo/ModUsuarioRequest" message="tns:ModUsuario" />
-      <output wsam:Action="http://ws/WS_Dojo/ModUsuarioResponse" message="tns:ModUsuarioResponse" />
-    </operation>
-    <operation name="CrearUsuario">
-      <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
-      <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
-    </operation>
-    <operation name="ListadoHorario">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoHorarioRequest" message="tns:ListadoHorario" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoHorarioResponse" message="tns:ListadoHorarioResponse" />
-    </operation>
-    <operation name="Login">
-      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
-      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
-    </operation>
-    <operation name="ListadoClase">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
-    </operation>
-    <operation name="ListadoProdEspe">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoProdEspeRequest" message="tns:ListadoProdEspe" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoProdEspeResponse" message="tns:ListadoProdEspeResponse" />
-    </operation>
-    <operation name="ListadoGenero">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoGeneroRequest" message="tns:ListadoGenero" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoGeneroResponse" message="tns:ListadoGeneroResponse" />
     </operation>
     <operation name="ListadoObser">
       <input wsam:Action="http://ws/WS_Dojo/ListadoObserRequest" message="tns:ListadoObser" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoObserResponse" message="tns:ListadoObserResponse" />
     </operation>
+    <operation name="Login">
+      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="ListadoCarrito">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoCarritoRequest" message="tns:ListadoCarrito" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoCarritoResponse" message="tns:ListadoCarritoResponse" />
+    </operation>
+    <operation name="ListadoProdGen">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoProdGenRequest" message="tns:ListadoProdGen" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoProdGenResponse" message="tns:ListadoProdGenResponse" />
+    </operation>
+    <operation name="ListadoProdEspe">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoProdEspeRequest" message="tns:ListadoProdEspe" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoProdEspeResponse" message="tns:ListadoProdEspeResponse" />
+    </operation>
+    <operation name="AgDetalleCom">
+      <input wsam:Action="http://ws/WS_Dojo/AgDetalleComRequest" message="tns:AgDetalleCom" />
+      <output wsam:Action="http://ws/WS_Dojo/AgDetalleComResponse" message="tns:AgDetalleComResponse" />
+    </operation>
+    <operation name="ListadoGenero">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoGeneroRequest" message="tns:ListadoGenero" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoGeneroResponse" message="tns:ListadoGeneroResponse" />
+    </operation>
+    <operation name="ListadoHorario">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoHorarioRequest" message="tns:ListadoHorario" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoHorarioResponse" message="tns:ListadoHorarioResponse" />
+    </operation>
+    <operation name="ModUsuario">
+      <input wsam:Action="http://ws/WS_Dojo/ModUsuarioRequest" message="tns:ModUsuario" />
+      <output wsam:Action="http://ws/WS_Dojo/ModUsuarioResponse" message="tns:ModUsuarioResponse" />
+    </operation>
+    <operation name="ListadoClase">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
+    </operation>
+    <operation name="CrearUsuario">
+      <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
+      <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
+    </operation>
+    <operation name="ModComentario">
+      <input wsam:Action="http://ws/WS_Dojo/ModComentarioRequest" message="tns:ModComentario" />
+      <output wsam:Action="http://ws/WS_Dojo/ModComentarioResponse" message="tns:ModComentarioResponse" />
+    </operation>
+    <operation name="AgreComentario">
+      <input wsam:Action="http://ws/WS_Dojo/AgreComentarioRequest" message="tns:AgreComentario" />
+      <output wsam:Action="http://ws/WS_Dojo/AgreComentarioResponse" message="tns:AgreComentarioResponse" />
+    </operation>
+    <operation name="EliComentario">
+      <input wsam:Action="http://ws/WS_Dojo/EliComentarioRequest" message="tns:EliComentario" />
+      <output wsam:Action="http://ws/WS_Dojo/EliComentarioResponse" message="tns:EliComentarioResponse" />
+    </operation>
+    <operation name="ListaComentario">
+      <input wsam:Action="http://ws/WS_Dojo/ListaComentarioRequest" message="tns:ListaComentario" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaComentarioResponse" message="tns:ListaComentarioResponse" />
+    </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="ListadoCarrito">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgDetalleCom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="ListadoClaseNivel">
       <soap:operation soapAction="" />
       <input>
@@ -156,34 +178,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoProdGen">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CrearUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListadoHorario">
+    <operation name="ListadoObser">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -201,7 +196,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoClase">
+    <operation name="ListadoCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListadoProdGen">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -219,6 +223,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="AgDetalleCom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="ListadoGenero">
       <soap:operation soapAction="" />
       <input>
@@ -228,7 +241,70 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoObser">
+    <operation name="ListadoHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListadoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgreComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListaComentario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

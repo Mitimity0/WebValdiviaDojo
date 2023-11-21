@@ -127,6 +127,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AdmController.cs" />
     <Compile Include="Controllers\ClaseController.cs" />
     <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\EventoController.cs" />
@@ -231,6 +232,21 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.comentario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ModComentarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
@@ -268,7 +284,6 @@
     <Content Include="Views\TipoUsuario\TipoUsuario.cshtml" />
     <Content Include="Views\TipoEvento\TipoEvento.cshtml" />
     <Content Include="Views\Evento\Evento.cshtml" />
-    <Content Include="Views\Producto\Producto.cshtml" />
     <Content Include="Views\TipoProducto\TipoProducto.cshtml" />
     <Content Include="Views\Clase\Clase.cshtml" />
     <Content Include="Views\Compra\Compra.cshtml" />
@@ -276,12 +291,12 @@
     <Content Include="Views\Compra\ConfirmacionCompra.cshtml" />
     <Content Include="Views\Clase\ClaseInscrita.cshtml" />
     <Content Include="Views\Home\Producto.cshtml" />
+    <Content Include="Views\Adm\Producto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Cinturon\" />
-    <Folder Include="Views\Credencial\" />
     <Folder Include="Views\Encuesta\" />
     <Folder Include="Views\Horario\" />
   </ItemGroup>

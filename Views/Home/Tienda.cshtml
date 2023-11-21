@@ -18,58 +18,73 @@
                 <!-- Contenedor con altura máxima y scroll -->
                 <div class="carrito-container overflow-auto" style="max-height: 650px;">
                     <!-- Contenido del carrito -->
-                    @foreach (var c in ViewBag.Carrito)
+                    @if (ViewBag.Carrito != null)
                     {
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img"
-                                         aria-label="Placeholder: Imagen Referencial" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#55595c" />
-                                        <text fill="#eceeef" dy=".3em"></text>
-                                    </svg>
-                                </div>
+                        foreach (var c in ViewBag.Carrito)
+                        {
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img"
+                                             aria-label="Placeholder: Imagen Referencial" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                            <title>Placeholder</title>
+                                            <rect width="100%" height="100%" fill="#55595c" />
+                                            <text fill="#eceeef" dy=".3em"></text>
+                                        </svg>
+                                    </div>
 
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <p class="card-title">@c.NOMBRE_PRODUCTO</p>
-                                        <p class="card-text">@c.DESCRIPCION</p>
-                                        <p class="card-text">Talla: @c.NOMBRE</p>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <p class="card-title">@c.NOMBRE_PRODUCTO</p>
+                                            <p class="card-text">@c.DESCRIPCION</p>
+                                            <p class="card-text">Talla: @c.NOMBRE</p>
 
-                                        <!-- Cantidad  -->
-                                        <div class="mb-3 col-12">
-                                            <p class="card-text">CANTIDAD</p>
-                                            <input class="form-control text-center col-4" type="number" min="0" max="@c.STOCK" value="@c.CANTIDAD">
+                                            <!-- Cantidad  -->
+                                            <div class="mb-3 col-12">
+                                                <p class="card-text">CANTIDAD</p>
+                                                <input class="form-control text-center col-4" type="number" min="0" max="@c.STOCK" value="@c.CANTIDAD">
+                                            </div>
+                                            @if (c.VALOR_DESC != 0)
+                                            {
+                                                <p class="card-text"><small class="text-muted text-decoration-line-through">Precio normal: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small></p>
+                                                <p class="card-text"><small class="text-muted">Precio oferta: @string.Format("${0:N0}", c.VALOR_DESC)</small></p>
+                                                { total += c.VALOR_DESC; }
+                                            }
+                                            else
+                                            {
+                                                <p class="card-text">
+                                                    <small class="text-muted">Precio: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small>
+
+                                                </p>
+                                                { total += c.PRECIO_NORMAL; }
+                                            }
                                         </div>
-                                        @if (c.VALOR_DESC != 0)
-                                        {
-                                            <p class="card-text"><small class="text-muted text-decoration-line-through">Precio normal: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small></p>
-                                            <p class="card-text"><small class="text-muted">Precio oferta: @string.Format("${0:N0}", c.VALOR_DESC)</small></p>
-                                            { total += c.VALOR_DESC; }
-                                        }
-                                        else
-                                        {
-                                            <p class="card-text">
-                                                <small class="text-muted">Precio: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small>
-
-                                            </p>
-                                            { total += c.PRECIO_NORMAL; }
-                                        }
                                     </div>
                                 </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="mb-3">
+                            <div class="row g-0">
+                                <h3 class="display-6">Debe ingrear un producto al carrito...</h3>
                             </div>
                         </div>
                     }
                 </div>
             </div>
         </div>
-        <!-- Total a pagar y botón de pago (pegado abajo) -->
-        <div class="sticky-bottom py-5">
-            
-            <p class="card-text py-5">Total a pagar: @string.Format("${0:N0}", total)</p>
+        @if (ViewBag.Carrito != null)
+        {
+            <!-- Total a pagar y botón de pago (pegado abajo) -->
+            <div class="sticky-bottom py-5">
+
+                <p class="card-text py-5">Total a pagar: @string.Format("${0:N0}", total)</p>
                 <a class="nav-item btn btn-danger me-2" href="@Url.Action("Pago", "Compra")">Ir a pagar</a>
             </div>
+
+        }
     </div>
 </div>
 

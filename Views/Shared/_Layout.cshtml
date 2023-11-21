@@ -34,10 +34,10 @@
                     <!-- Enlaces de navegación -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left:80px">
                         <li class="nav-item">@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = (ViewBag.Title == "" ? "nav-link active" : "nav-link") })</li>
-                        @if (usuario != null)
-                        {
-                            <li class="nav-item">@Html.ActionLink("Tienda", "Tienda", "Home", new { v_rut = @usuario.rut }, new { @class = (ViewBag.Title == "Tienda" ? "nav-link active" : "nav-link") })</li>
-                        }
+                        <li class="nav-item">
+                            @Html.ActionLink("Tienda", "Tienda", "Home", new { v_rut = usuario?.rut ?? 0 }, new { @class = (ViewBag.Title == "Tienda" ? "nav-link active" : "nav-link") })
+                        </li>
+
 
                         <li class="nav-item">@Html.ActionLink("Inscríbete aquí", "ClasesDisponibles", "Inscripcion", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
                         @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
@@ -78,8 +78,7 @@
                     @if (ViewBag.Title == "Tienda")
                     {
                         <!--  Carrito  -->
-
-                        <li class="btn btn-danger btn-outline-light me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight">Ir al Carrito</li>
+                        <li class="btn btn-danger btn-outline-light me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> Ir al Carrito</li>
                     }
                 </div>
             </div>
