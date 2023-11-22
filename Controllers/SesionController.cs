@@ -61,15 +61,14 @@ namespace WebValdiviaDojo.Controllers
                         // Si existe, eliminar el archivo existente
                         System.IO.File.Delete(ruta);
                     }
-
                     // Guardar la nueva imagen con el nombre específico
                     imagen.SaveAs(ruta);
 
                     ViewBag.Mensaje = "Imagen subida exitosamente." + ruta;
-                    ruta_img = "~/Img/Usuario/" + rut + ".png";
+                    
                 }
 
-                int resultado = cliente.ModUsuario(rut, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular,celularemer,dire,peso,altura, ruta_img, p_gen, p_t_usu,p_cin);
+                int resultado = cliente.ModUsuario(rut, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular,celularemer,dire,peso,altura, "~/Img/Usuario/" + rut + ".png", p_gen, p_t_usu,p_cin);
             }
             catch (Exception ex)
             {

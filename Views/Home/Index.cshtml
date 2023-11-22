@@ -5,6 +5,7 @@
 <!-- Agrega la biblioteca Leaflet -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
+
 <!-- Carrusel Principal -->
 <div id="carouselPrincipal" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -49,9 +50,6 @@
     </button>
 </div>
 
-
-
-
 <!-- Contenido -->
 <div class="container body-content">
     <!-- Informacion -->
@@ -69,63 +67,72 @@
             </p>
         </div>
     </section>
-
     <!--  Comentarios  -->
-    <section class="container-fluid bg-light border marketing py-5">
+
+    <section class="container-fluid marketing py-5">
         <h1 class="display-6 text-center">Como ha sido la experiencia en nuestro dojo</h1>
         <div class="row">
             <div class="offset-md-1 col-md-10">
-                <div id="carouselComentario" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        @{ int totalComentarios = 8;
-                            int comentariosPorSlide = 3;
-                            int totalSlides = (int)Math.Ceiling((double)totalComentarios / comentariosPorSlide); }
-
-                        @for (int slide = 0; slide < totalSlides; slide++)
-                        {
-                            <div class="carousel-item @(slide == 0 ? "active" : "")">
-                                <div class="row">
-                                    @for (int comentario = slide * comentariosPorSlide; comentario < (slide + 1) * comentariosPorSlide && comentario < totalComentarios; comentario++)
-                                    {
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="card text-center mb-1 py-3">
-                                                <div class="glyphicon-align-justify">
-                                                    <svg class="bd-placeholder-img rounded-circle" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 100x100" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                                        <title>Placeholder</title>
-                                                        <rect width="100%" height="100%" fill="#777" />
-                                                        <text x="50%" y="50%" fill="#777" dy=".3em">100x100</text>
-                                                    </svg>
-                                                </div>
-                                                <div class="card-body px-3">
-                                                    <div class="py-3">
-                                                        @for (int i = 0; i < 3; i++)
-                                                        {
-                                                            <i class="fa-solid fa-star"></i>}
-                                                        @for (int i = 0; i < 2; i++)
-                                                        {
-                                                            <i class="fa-regular fa-star"></i>}
+                @if (ViewBag.comentario != null && ViewBag.comentario.Count > 0)
+                {
+                    <div id="carouselComentario" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            @for (int i = 0; i < ViewBag.comentario.Count; i +=3)
+                            {
+                                <div class="carousel-item @(i == 0 ? "active" : "")">
+                                    <div class="row">
+                                        @for (int j = i; j < i + 3 && j < ViewBag.comentario.Count; j++)
+                                        {
+                                            var comentario = ViewBag.comentario[j];
+                                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                <div class="card text-center mb-1 py-3">
+                                                    <div class="glyphicon-align-justify">
+                                                        <img class="bd-placeholder-img rounded-circle" width="100" height="100" src="@Url.Content(comentario.IMG_USU)" alt="Alternate Text" />
+                                                        <!-- Tu imagen o contenido específico del comentario -->
                                                     </div>
-                                                    <h5 class="card-title">Nombre @(comentario)</h5>
-                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                    <div class="card-body px-3">
+                                                        <div class="py-3">
+                                                            @for (int star = 0; star < 5; star++)
+                                                            {
+                                                                if (star < comentario.VALORACION)
+                                                                {
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <i class="fa-regular fa-star"></i>
+                                                                }
+                                                            }
+                                                        </div>
+                                                        <h5 class="card-title">@comentario.nombre</h5>
+                                                        <p class="card-text">@comentario.COMENTARIO</p>
+
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>}
+                                        }
+                                    </div>
                                 </div>
-                            </div>}
+                            }
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselComentario" data-bs-slide="prev">
+                            <i class="fa-solid fa-chevron-left text-dark"></i> <!-- Ícono izquierdo -->
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselComentario" data-bs-slide="next">
+                            <i class="fa-solid fa-chevron-right text-dark"></i> <!-- Ícono derecho -->
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselComentario" data-bs-slide="prev">
-                        <i class="fa-solid fa-chevron-left text-dark"></i> <!-- Ícono izquierdo -->
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselComentario" data-bs-slide="next">
-                        <i class="fa-solid fa-chevron-right text-dark"></i> <!-- Ícono derecho -->
-                    </button>
-                </div>
+                }
+                else
+                {
+                    <p class="lead text-center">Lo sentimos, de momento no se han encontrado comentarios disponibles</p>
+                }
             </div>
         </div>
     </section>
     <!-- Mapa -->
     <section class="py-5">
-        <div class="row g-0 bg-light border position-relative">
+        <div class="row g-0 border position-relative">
             <div class="col-md-6 mb-md-0 p-md-4">
                 <div id="map" style="height: 200px; width: 100%;" class="rounded"></div>
             </div>
@@ -136,8 +143,6 @@
         </div>
     </section>
 </div>
-
-
 
 
 <!-- Script para el mapa -->

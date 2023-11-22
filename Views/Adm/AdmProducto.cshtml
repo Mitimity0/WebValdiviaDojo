@@ -1,6 +1,5 @@
-﻿
-@{
-    ViewBag.Title = "Producto";
+﻿@{
+    ViewBag.Title = "Adm Producto";
 }
 
 <div class="py-5 col-md-12">
@@ -8,25 +7,13 @@
         <div class="col-3"></div>
         <div class="col-6">
             <div class="text-center py-4">
-                <h4 class="display-8">Agregar Producto</h4>
+                <h4 class="display-6">Agregar Producto</h4>
             </div>
-            <form class="d-flex mb-4" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar Producto" aria-label="Search">
-                <button class="btn btn-outline-danger" type="submit">Buscar</button>
-            </form>
+
             <form class="row g-4 align-items-center" method="post">
-                <!--id producto-->
-                <div class="col-2">
-                    <label for="idproducto" class="col-form-label">Id del producto</label>
-                </div>
-                <div class="col-4">
-                    <input type="text" id="rut" class="form-control" aria-describedby="" placeholder="1">
-                </div>
                 <!--Nombre del producto-->
-                <div class="col-2">
+                <div class="col-6">
                     <label for="nomprod" class="col-form-label">Nombre del producto</label>
-                </div>
-                <div class="col-4">
                     <input type="text" id="nomprod" class="form-control" aria-describedby="" placeholder="">
                 </div>
                 <!--Descripcion-->
@@ -35,6 +22,11 @@
                 </div>
                 <div class="col-9">
                     <input type="text" id="descripcionp" class="form-control" aria-describedby="" placeholder="">
+                </div>
+
+                <div class="mb-3">
+                    <label for="in_sol" class="form-label">Solicitud</label>
+                    <textarea class="form-control" id="in_sol" rows="3"></textarea>
                 </div>
                 <!--Precio normal-->
                 <div class="col-2">
@@ -70,3 +62,15 @@
     </div>
 </div>
 
+<!--id producto-->
+<div class="col-2">
+    <label for="idproducto" class="col-form-label">Id del producto</label>
+</div>
+<div class="col-4">
+    <input type="text" id="rut" class="form-control" aria-describedby="" placeholder="1">
+</div>
+
+<form class="d-flex mb-4" role="search">
+    <input class="form-control me-2" type="search" placeholder="Buscar Producto" aria-label="Search">
+    <button class="btn btn-outline-danger" type="submit">Buscar</button>
+</form>

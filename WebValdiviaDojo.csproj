@@ -247,6 +247,21 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ModComentarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.solicitud.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
@@ -291,7 +306,8 @@
     <Content Include="Views\Compra\ConfirmacionCompra.cshtml" />
     <Content Include="Views\Clase\ClaseInscrita.cshtml" />
     <Content Include="Views\Home\Producto.cshtml" />
-    <Content Include="Views\Adm\Producto.cshtml" />
+    <Content Include="Views\Adm\AdmProducto.cshtml" />
+    <Content Include="Views\Adm\AdmSolicitud.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
