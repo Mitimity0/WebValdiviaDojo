@@ -87,6 +87,7 @@ namespace WebValdiviaDojo.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Login(String p_correo, String p_pass)
         {

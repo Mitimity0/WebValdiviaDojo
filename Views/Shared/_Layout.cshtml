@@ -78,6 +78,7 @@
 
                             <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                                 <li>@Html.ActionLink("Mis Clases", "ClaseInscrita", "Clase", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Solicitud", "EnvioSolicitud", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
                                 <li>@Html.ActionLink("Perfil", "PerfilUsu", "Sesion", null, new { @class = "dropdown-item" })</li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "Sesion", null, new { @class = "dropdown-item" })</li>

@@ -1,0 +1,37 @@
+﻿@{
+}
+<section class="py-5 col-12">
+    <!-- Tipo_Solicitud -->
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="text-center py-4">
+                <h4 class="display-6">Enviar Solicitud</h4>
+            </div>
+            <!-- FORMULARIO -->
+            <form asp-action="EnvioSolicitud" asp-controller="Alumno" method="post" enctype="multipart/form-data">
+                <!-- Tipo solicitud -->
+                <div class="mb-3">
+                    <label for="p_tipo" class="form-label">Tipo de solicitud</label>
+                    <select class="form-select" id="p_tipo" name="p_tipo" aria-label="Tipo de solicitud" required>
+                        <option value="" selected>Seleccione el tipo de solicitud</option>
+                        @foreach (var x in ViewBag.tpSolicitud)
+                        {
+                            <option value="@x.ID_TIPO_SOL">@x.NOMBRE_TIPO_SOL</option>
+                        }
+                    </select>
+                </div>
+                <!-- Solicitud -->
+                <div class="mb-3">
+                    <label for="p_sol" class="form-label">Solicitud</label>
+                    <textarea class="form-control" id="p_sol" name="p_sol" rows="3" required></textarea>
+                </div>
+                <!-- Rut -->
+                <input type="number" id="p_rut" name="p_rut" value="@ViewBag.rut" class="d-none" required>
+                <!-- Botón de envío -->
+                <div class="mb-3 justify-content-center">
+                    <button type="submit" class="btn btn-danger">Enviar solicitud</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

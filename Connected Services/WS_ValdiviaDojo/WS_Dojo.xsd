@@ -14,8 +14,12 @@
   <xs:element name="EliSolicitudResponse" type="tns:EliSolicitudResponse" />
   <xs:element name="ListaComentario" type="tns:ListaComentario" />
   <xs:element name="ListaComentarioResponse" type="tns:ListaComentarioResponse" />
+  <xs:element name="ListaEstado" type="tns:ListaEstado" />
+  <xs:element name="ListaEstadoResponse" type="tns:ListaEstadoResponse" />
   <xs:element name="ListaSolicitud" type="tns:ListaSolicitud" />
   <xs:element name="ListaSolicitudResponse" type="tns:ListaSolicitudResponse" />
+  <xs:element name="ListaTipoSolicitud" type="tns:ListaTipoSolicitud" />
+  <xs:element name="ListaTipoSolicitudResponse" type="tns:ListaTipoSolicitudResponse" />
   <xs:element name="ListadoCarrito" type="tns:ListadoCarrito" />
   <xs:element name="ListadoCarritoResponse" type="tns:ListadoCarritoResponse" />
   <xs:element name="ListadoClase" type="tns:ListadoClase" />
@@ -80,6 +84,20 @@
       <xs:element name="VALOR_DESC" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListaTipoSolicitud">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListaTipoSolicitudResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoSolicitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoSolicitud">
+    <xs:sequence>
+      <xs:element name="ID_TIPO_SOL" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRE_TIPO_SOL" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="CrearUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="correo" type="xs:string" />
@@ -104,6 +122,20 @@
   <xs:complexType name="CrearUsuarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaEstado">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListaEstadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:estado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado">
+    <xs:sequence>
+      <xs:element name="id_estado" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_estado" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListaComentario">
@@ -142,9 +174,9 @@
   </xs:complexType>
   <xs:complexType name="ListaSolicitud">
     <xs:sequence>
-      <xs:element minOccurs="0" name="p_id_tipo" type="xs:int" />
-      <xs:element minOccurs="0" name="p_estado" type="xs:int" />
-      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
+      <xs:element minOccurs="0" name="p_id_tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="p_estado" type="xs:string" />
+      <xs:element minOccurs="0" name="p_rut" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListaSolicitudResponse">
@@ -162,7 +194,7 @@
       <xs:element minOccurs="0" name="nombre_tipo_sol" type="xs:string" />
       <xs:element minOccurs="0" name="resultado" type="xs:string" />
       <xs:element name="rut" type="xs:int" />
-      <xs:element minOccurs="0" name="solicitud" type="xs:string" />
+      <xs:element minOccurs="0" name="soli" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoProdEspe">
@@ -397,6 +429,16 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="EliComentario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliComentarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ListadoGenero">
     <xs:sequence />
   </xs:complexType>
@@ -409,16 +451,6 @@
     <xs:sequence>
       <xs:element name="id_genero" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="EliComentario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="p_id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="EliComentarioResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
