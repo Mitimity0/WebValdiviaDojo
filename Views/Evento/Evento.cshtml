@@ -8,14 +8,29 @@
             <div class="text-center py-4">
                 <h4 class="display-6">Proximos ventos</h4>
             </div>
-            <div class="card mb-3">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
+            @if (ViewBag.even != null)
+            {
+                foreach (var x in ViewBag.even)
+                {
+                    <div class="card mb-3">
+                        <img src="" height="100" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@x.NOMBRE_EVENTO</h5>
+                            <p class="card-text">@x.DESCRIPCION_EVENTO</p>
+                            <p class="card-text"><small class="text-muted">@x.FECHA_HORA</small></p>
+                        </div>
+                        <form action="" method="post">
+                            <input type="number" name="p_id_ev" value="@x.ID_EVENTO" class="d-none" />
+                            <button type="submit" class="btn btn-danger">Participar</button>
+                        </form>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No hay eventos para mostrar</p>
+            }
+
         </div>
     </div>
 </div>

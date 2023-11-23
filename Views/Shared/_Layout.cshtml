@@ -49,9 +49,16 @@
                         <li class="nav-item">
                             @Html.ActionLink("Tienda", "Tienda", "Home", new { v_rut = usuario?.rut ?? 0 }, new { @class = (ViewBag.Title == "Tienda" ? "nav-link active" : "nav-link") })
                         </li>
-
-
                         <li class="nav-item">@Html.ActionLink("Inscríbete aquí", "ClasesDisponibles", "Inscripcion", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
+                        @if (usuario != null)
+                        {
+                            <li class="nav-item">@Html.ActionLink("Eventos", "Evento", "Evento", new { v_rut = @usuario.rut }, new { @class = (ViewBag.Title == "Evento" ? "nav-link active" : "nav-link") })</li>
+                        }
+
+
+
+
+
                         @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
                         {
                             <li class="nav-item nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
@@ -180,3 +187,4 @@
 
 </body>
 </html>
+

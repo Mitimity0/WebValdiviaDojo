@@ -275,6 +275,21 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.evento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.tipoEvento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
