@@ -48,15 +48,21 @@
                                             {
                                                 <p class="card-text"><small class="text-muted text-decoration-line-through">Precio normal: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small></p>
                                                 <p class="card-text"><small class="text-muted">Precio oferta: @string.Format("${0:N0}", c.VALOR_DESC)</small></p>
-                                                { total += c.VALOR_DESC; }
+                                                for (int i = 0; i < @c.CANTIDAD; i++)
+                                                {
+                                                    total += c.VALOR_DESC;
+                                                }
+
                                             }
                                             else
                                             {
                                                 <p class="card-text">
                                                     <small class="text-muted">Precio: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small>
-
                                                 </p>
-                                                { total += c.PRECIO_NORMAL; }
+                                                for (int i = 0; i < @c.CANTIDAD; i++)
+                                                {
+                                                    total += c.PRECIO_NORMAL;
+                                                }
                                             }
                                         </div>
                                     </div>

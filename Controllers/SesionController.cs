@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using 
 using WebValdiviaDojo.WS_ValdiviaDojo;
 
 namespace WebValdiviaDojo.Controllers
@@ -30,6 +31,15 @@ namespace WebValdiviaDojo.Controllers
 
             return View();
         }
+        [HttpPost]
+        public ActionResult CrearCuenta(UsuarioModel usuario)
+        {
+
+
+            // Resto del código para crear la cuenta
+        }
+
+
 
         [HttpPost]
         public ActionResult PerfilUsu(HttpPostedFileBase imagen, int rut, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, string dire, string peso, string altura, DateTime fechanac, string ruta_img, int p_gen, int p_t_usu, int p_cin)
@@ -41,32 +51,25 @@ namespace WebValdiviaDojo.Controllers
             {
                 if (imagen != null && imagen.ContentLength > 0)
                 {
-                    // Nombre específico para la imagen (puedes personalizarlo según tus necesidades)
                     string nombreArchivo = rut + ".png";
-
-                    // Ruta completa del archivo
                     string rutaCarpetaUsuario = Server.MapPath("~/Img/Usuario/");
-
-                    // Verificar si la carpeta "Usuario" existe, si no, crearla
                     if (!Directory.Exists(rutaCarpetaUsuario))
                     {
                         Directory.CreateDirectory(rutaCarpetaUsuario);
                     }
-
                     string ruta = Path.Combine(rutaCarpetaUsuario, nombreArchivo);
-
-                    // Verificar si el archivo ya existe
                     if (System.IO.File.Exists(ruta))
                     {
-                        // Si existe, eliminar el archivo existente
                         System.IO.File.Delete(ruta);
                     }
-                    // Guardar la nueva imagen con el nombre específico
                     imagen.SaveAs(ruta);
-
-                    ViewBag.Mensaje = "Imagen subida exitosamente." + ruta;
-                    
                 }
+                if (!EsRutValido(usuario.Rut, usuario.Dv))
+                {
+                    ModelState.AddModelError("rut", "El RUT ingresado no es válido.");
+                    return View(usuario);
+                }
+
 
                 int resultado = cliente.ModUsuario(rut, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular,celularemer,dire,peso,altura, "~/Img/Usuario/" + rut + ".png", p_gen, p_t_usu,p_cin);
             }
@@ -216,6 +219,19 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
-
+        private bool EsRutValido(int rut, string dv)
+        {
+            try
+            {
+                // Utiliza la clase Rut para validar el RUT
+                var rutChileno = new Rut(rut, dv);
+                return rutChileno.IsValid;
+            }
+            catch (ArgumentException)
+            {
+                // Se lanzará una excepción si el formato del RUT es incorrecto
+                return false;
+            }
+        }
     }
 }
