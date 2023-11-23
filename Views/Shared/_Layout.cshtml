@@ -34,38 +34,31 @@
         <!--  <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient">  -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
             <div class="container container-fluid">
-                <!--  Titulo  -->
-                <img src="~/Img/Publicidad/logoSinFondo.png" class="img-fluid justify-content-between align-self-center mx-auto d-block" width="40" style="padding:5px" />
-                <a>@Html.ActionLink("Valdivia Dojo ", "Index", "Home", null, new { @class = "navbar-brand navbar-nav me-auto" })</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#NavPrincipalSup"
                         aria-controls="NavPrincipalSup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!--  Titulo  -->
+                <img src="~/Img/Publicidad/logoSinFondo.png" class="img-fluid justify-content-between align-self-center mx-auto d-block" width="40" style="padding:5px" />
 
                 <div class="collapse navbar-collapse" id="NavPrincipalSup">
                     <!-- Enlaces de navegación -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left:80px">
                         <li class="nav-item">@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = (ViewBag.Title == "" ? "nav-link active" : "nav-link") })</li>
-                        <li class="nav-item">
-                            @Html.ActionLink("Tienda", "Tienda", "Home", new { v_rut = usuario?.rut ?? 0 }, new { @class = (ViewBag.Title == "Tienda" ? "nav-link active" : "nav-link") })
-                        </li>
+                        <li class="nav-item">@Html.ActionLink("Tienda", "Tienda", "Home", new { v_rut = usuario?.rut ?? 0 }, new { @class = (ViewBag.Title == "Tienda" ? "nav-link active" : "nav-link") })</li>
                         <li class="nav-item">@Html.ActionLink("Inscríbete aquí", "ClasesDisponibles", "Inscripcion", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
+                        <!--  Menu alumno  -->
                         @if (usuario != null)
                         {
                             <li class="nav-item">@Html.ActionLink("Eventos", "Evento", "Evento", new { v_rut = @usuario.rut }, new { @class = (ViewBag.Title == "Evento" ? "nav-link active" : "nav-link") })</li>
                         }
-
-
-
-
-
+                        <!--  Menu administrador  -->
                         @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
                         {
                             <li class="nav-item nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
                                 Menu Administrador
                             </li>
                         }
-
                     </ul>
                     <!--  Sesion  -->
                     @if (usuario != null)
@@ -94,6 +87,7 @@
                     }
                     else
                     {
+                        <!--  Boton de sesion  -->
                         <div class="text-end">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li>@Html.ActionLink("Iniciar Sesión", "Login", "Sesion", null, new { @class = "btn btn-outline-light me-2" })</li>
@@ -101,12 +95,11 @@
                             </ul>
                         </div>
                     }
+                    <!--  Carrito  -->
                     @if (ViewBag.Title == "Tienda")
                     {
-                        <ul>
-                            <!--  Carrito  -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="btn btn-danger btn-outline-light me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> Ir al Carrito</li>
-
                         </ul>
                     }
                 </div>
@@ -165,12 +158,35 @@
 
         <div class="offcanvas-body">
             <div class="btn-group-vertical d-grid gap-2">
+                <!--  Producto  -->
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuProd" data-bs-toggle="dropdown" aria-expanded="false">Productos</button>
+                    <ul class="dropdown-menu" aria-labelledby="MenuProd">
+                        <li>@Html.ActionLink("Nuevo producto", "AdmAddProd", "Adm", null, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Administrar productos", "AdmProducto", "Adm", null, new { @class = "dropdown-item" })</li>
+                    </ul>
+                </div>
+                <!--  Solicitud  -->
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuProd" data-bs-toggle="dropdown" aria-expanded="false">Solicitud</button>
+                    <ul class="dropdown-menu" aria-labelledby="MenuProd">
+                        <li>@Html.ActionLink("Administrar Solicitudes", "AdmSolicitud", "Adm", null, new { @class = "dropdown-item" })</li>
+                    </ul>
+                </div>
+                <!--  Eventos  -->
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuProd" data-bs-toggle="dropdown" aria-expanded="false">Solicitud</button>
+                    <ul class="dropdown-menu" aria-labelledby="MenuProd">
+                        <li>@Html.ActionLink("Administrar Solicitudes", "AdmSolicitud", "Adm", null, new { @class = "dropdown-item" })</li>
+                    </ul>
+                </div>
+
                 <a class="nav-item">@Html.ActionLink("Usuario", "Usuario", "Usuario", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Tipo Usuario", "TipoUsuario", "TipoUsuario", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Evento", "Evento", "Evento", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Tipo Evento", "TipoEvento", "TipoEvento", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Credencial", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
-                <a class="nav-item">@Html.ActionLink("Producto", "Producto", "Producto", null, new { @class = "btn btn-outline-light me-2" })</a>
+
                 <a class="nav-item">@Html.ActionLink("Tipo Producto", "TipoProducto", "TipoProducto", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Horario", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Clase", "Clase", "Clase", null, new { @class = "btn btn-outline-light me-2" })</a>

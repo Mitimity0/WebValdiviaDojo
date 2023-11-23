@@ -1,24 +1,23 @@
 ﻿@{
     ViewBag.Title = "Nuevo producto";
 }
+
 <div class="py-5 col-12">
     <div class="row justify-content-center">
         <form class="card col-8" method="post" enctype="multipart/form-data">
             <!--  Titulo  -->
             <div class="text-center py-4">
-                <h4 class="display-6">Mi perfil</h4>
+                <h4 class="display-6">Agregar producto</h4>
             </div>
-            <div class="container">
-                <img src="" class=" justify-content-between align-self-center mx-auto d-block" width="300" height="300" />
-
-                <input type="file" class=" py-5 align-self-center mx-auto d-block" name="imagen" value="" />
+            <div class="text-center">
+                <label for="imagen">Imagen del producto (.jpg)</label>
+                <input type="file" class="align-self-center mx-auto d-block py-3" name="imagen" value="" />
             </div>
 
             <!--  NOMBRE  -->
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-
                         <input type="text" class="form-control" name="p_nom" value="" required>
                         <label for="p_nom">Nombre producto</label>
                     </div>
@@ -52,7 +51,10 @@
                         <label for="p_tipo_prod" class="form-label">Tipo de producto</label>
                         <select class="form-select" id="p_tipo_prod" name="p_tipo_prod" aria-label="Tipo de producto" required>
                             <option value="" selected>Seleccione el tipo de producto</option>
-                            <option value="1">opcion</option>
+                            @foreach (var tp in ViewBag.TipoProducto)
+                            {
+                                <option value="@tp.id_tipo_prod">@tp.nombre_tipo_prod</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -60,8 +62,27 @@
                     <div class="mb-3">
                         <label for="p_desc" class="form-label">Promocion de descuento (opcional)</label>
                         <select class="form-select" id="p_desc" name="p_desc" aria-label="Descuento">
-                            <option value="" selected>Seleccione el descuento</option>
-                            <option value="1">opcion</option>
+                            @if (ViewBag.Descuento != null)
+                            {
+                                <option value="" selected>Seleccione el descuento</option>
+                                foreach (var des in ViewBag.Descuento)
+                                {
+                                    if (@des.VALOR_DESC != null)
+                                    {
+                                        <option value="@des.ID_DESC_PROD"> @des.VALOR_DESC hasta: @des.FECHA_FIN</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@des.ID_DESC_PROD">@des.PORC_DESC % hasta: @des.FECHA_FIN</option>
+                                    }
+
+                                }
+                            }
+                            else
+                            {
+                                <option value="" selected>No hay descuentos disponibles.</option>
+                            }
+
                         </select>
                     </div>
                 </div>
@@ -69,8 +90,11 @@
                     <div class="mb-3">
                         <label for="p_talla" class="form-label">Talla</label>
                         <select class="form-select" id="p_talla" name="p_talla" aria-label="Talla" required>
-                            <option value="" selected>Seleccione el tipo de solicitud</option>
-                            <option value="1">opcion</option>
+                            <option value="" selected>Seleccione la talla</option>
+                            @foreach (var tal in ViewBag.Talla)
+                            {
+                                <option value="@tal.id_talla">@tal.nom_talla</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -78,7 +102,7 @@
 
             <!--  Enviar informacion  -->
             <div class="py-3"></div>
-            <button class="btn btn-danger mb-4" type="submit">Actualizar cuenta</button>
+            <button class="btn btn-danger mb-4" type="submit">Agregar producto</button>
         </form>
     </div>
 </div>
