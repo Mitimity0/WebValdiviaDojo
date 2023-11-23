@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Nuevo producto";
+}
+<div class="py-5 col-12">
+    <div class="row justify-content-center">
+        <form class="card col-8" method="post" enctype="multipart/form-data">
+            <!--  Titulo  -->
+            <div class="text-center py-4">
+                <h4 class="display-6">Mi perfil</h4>
+            </div>
+            <div class="container">
+                <img src="" class=" justify-content-between align-self-center mx-auto d-block" width="300" height="300" />
+
+                <input type="file" class=" py-5 align-self-center mx-auto d-block" name="imagen" value="" />
+            </div>
+
+            <!--  NOMBRE  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+
+                        <input type="text" class="form-control" name="p_nom" value="" required>
+                        <label for="p_nom">Nombre producto</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_des" value="" required>
+                        <label for="p_des">Descripcion</label>
+                    </div>
+                </div>
+            </div>
+            <!--  precio/stock  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="number" class="form-control" name="p_precio" value="" required>
+                        <label for="p_precio">Precio normal</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="number" class="form-control" name="p_stock" value="" required>
+                        <label for="p_stock">Stock</label>
+                    </div>
+                </div>
+            </div>
+            <!--  tipos  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="p_tipo_prod" class="form-label">Tipo de producto</label>
+                        <select class="form-select" id="p_tipo_prod" name="p_tipo_prod" aria-label="Tipo de producto" required>
+                            <option value="" selected>Seleccione el tipo de producto</option>
+                            <option value="1">opcion</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="p_desc" class="form-label">Promocion de descuento (opcional)</label>
+                        <select class="form-select" id="p_desc" name="p_desc" aria-label="Descuento">
+                            <option value="" selected>Seleccione el descuento</option>
+                            <option value="1">opcion</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="p_talla" class="form-label">Talla</label>
+                        <select class="form-select" id="p_talla" name="p_talla" aria-label="Talla" required>
+                            <option value="" selected>Seleccione el tipo de solicitud</option>
+                            <option value="1">opcion</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Enviar informacion  -->
+            <div class="py-3"></div>
+            <button class="btn btn-danger mb-4" type="submit">Actualizar cuenta</button>
+        </form>
+    </div>
+</div>

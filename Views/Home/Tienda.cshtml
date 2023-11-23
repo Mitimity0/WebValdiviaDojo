@@ -25,12 +25,7 @@
                             <div class="card mb-3">
                                 <div class="row g-0">
                                     <div class="col-md-4">
-                                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img"
-                                             aria-label="Placeholder: Imagen Referencial" preserveAspectRatio="xMidYMid slice" focusable="false">
-                                            <title>Placeholder</title>
-                                            <rect width="100%" height="100%" fill="#55595c" />
-                                            <text fill="#eceeef" dy=".3em"></text>
-                                        </svg>
+                                        <img src="@Url.Content(c.IMG_PROD)" class="bd-placeholder-img card-img-top" width="100%" height="200" />
                                     </div>
 
                                     <div class="col-md-8">
@@ -124,10 +119,7 @@
                 <div class="col">
                     <div class="card shadow-sm">
                         <!-- Imagen de la tarjeta -->
-                        <svg width="100%" height="225" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100%" height="100%" fill="#55595c" />
-                            <text x="35%" y="50%" fill="#eceeef">Imagen del producto</text>
-                        </svg>
+                        <img src="@Url.Content(x.IMG_PROD)" width="100%" height="225" />
                         <!-- Contenido de la tarjeta -->
                         <div class="card-body">
                             <p class="card-text">@x.nombre_producto</p>

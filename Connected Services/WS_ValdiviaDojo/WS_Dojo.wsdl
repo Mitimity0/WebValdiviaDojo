@@ -143,6 +143,12 @@
   <message name="ListadoClaseNivelResponse">
     <part name="parameters" element="tns:ListadoClaseNivelResponse" />
   </message>
+  <message name="AgProducto">
+    <part name="parameters" element="tns:AgProducto" />
+  </message>
+  <message name="AgProductoResponse">
+    <part name="parameters" element="tns:AgProductoResponse" />
+  </message>
   <message name="ListadoTipoEvento">
     <part name="parameters" element="tns:ListadoTipoEvento" />
   </message>
@@ -247,6 +253,10 @@
     <operation name="ListadoClaseNivel">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelResponse" message="tns:ListadoClaseNivelResponse" />
+    </operation>
+    <operation name="AgProducto">
+      <input wsam:Action="http://ws/WS_Dojo/AgProductoRequest" message="tns:AgProducto" />
+      <output wsam:Action="http://ws/WS_Dojo/AgProductoResponse" message="tns:AgProductoResponse" />
     </operation>
     <operation name="ListadoTipoEvento">
       <input wsam:Action="http://ws/WS_Dojo/ListadoTipoEventoRequest" message="tns:ListadoTipoEvento" />
@@ -458,6 +468,15 @@
       </output>
     </operation>
     <operation name="ListadoClaseNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

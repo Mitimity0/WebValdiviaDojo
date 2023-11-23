@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -14,6 +15,55 @@ namespace WebValdiviaDojo.Controllers
         {
             return View();
         }
+        public ActionResult AdmAddProd()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AdmAddProd(HttpPostedFileBase imagen,string p_nom, string p_des, int p_precio,int p_stock, string p_tipo_prod, string p_desc, string p_talla )
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                if (imagen != null && imagen.ContentLength > 0)
+                {
+                    // Nombre específico para la imagen (puedes personalizarlo según tus necesidades)
+                    string nombreArchivo = p_nom + ".png";
+
+                    // Ruta completa del archivo
+                    string rutaCarpetaProd = Server.MapPath("~/Img/GaleriaProductos/");
+
+                    // Verificar si la carpeta "Usuario" existe, si no, crearla
+                    if (!Directory.Exists(rutaCarpetaProd))
+                    {
+                        Directory.CreateDirectory(rutaCarpetaProd);
+                    }
+
+                    string ruta = Path.Combine(rutaCarpetaProd, nombreArchivo);
+
+                    // Verificar si el archivo ya existe
+                    if (System.IO.File.Exists(ruta))
+                    {
+                        // Si existe, eliminar el archivo existente
+                        System.IO.File.Delete(ruta);
+                    }
+                    // Guardar la nueva imagen con el nombre específico
+                    imagen.SaveAs(ruta);
+                }
+                cliente.AgProducto(p_nom, p_des, p_precio, p_stock, p_tipo_prod, p_desc, p_talla);
+                ViewBag.Mensaje = "Producto registrado exitosamente.";
+            }
+            catch
+            {
+                ViewBag.Mensaje = "Ha ocurrido un error al agregar producto";
+                throw;
+            }
+
+            return View();
+        }
+
+                        
 
         public ActionResult AdmSolicitud()
         {
@@ -126,9 +176,5 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
-
-
-
-
     }
 }

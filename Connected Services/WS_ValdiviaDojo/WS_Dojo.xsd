@@ -4,6 +4,8 @@
   <xs:element name="AgDetalleComResponse" type="tns:AgDetalleComResponse" />
   <xs:element name="AgParticipacion" type="tns:AgParticipacion" />
   <xs:element name="AgParticipacionResponse" type="tns:AgParticipacionResponse" />
+  <xs:element name="AgProducto" type="tns:AgProducto" />
+  <xs:element name="AgProductoResponse" type="tns:AgProductoResponse" />
   <xs:element name="AgreComentario" type="tns:AgreComentario" />
   <xs:element name="AgreComentarioResponse" type="tns:AgreComentarioResponse" />
   <xs:element name="AgreSolicitud" type="tns:AgreSolicitud" />
@@ -50,6 +52,22 @@
   <xs:element name="ModSolicitudResponse" type="tns:ModSolicitudResponse" />
   <xs:element name="ModUsuario" type="tns:ModUsuario" />
   <xs:element name="ModUsuarioResponse" type="tns:ModUsuarioResponse" />
+  <xs:complexType name="AgProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_nom" type="xs:string" />
+      <xs:element minOccurs="0" name="p_des" type="xs:string" />
+      <xs:element minOccurs="0" name="p_pre_nor" type="xs:int" />
+      <xs:element minOccurs="0" name="p_strock" type="xs:int" />
+      <xs:element minOccurs="0" name="p_id_tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="p_id_desc" type="xs:string" />
+      <xs:element minOccurs="0" name="p_talla" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgProductoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ListadoObser">
     <xs:sequence>
       <xs:element minOccurs="0" name="p_rut" type="xs:int" />
