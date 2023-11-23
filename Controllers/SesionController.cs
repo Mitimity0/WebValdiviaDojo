@@ -32,7 +32,7 @@ namespace WebValdiviaDojo.Controllers
         }
 
         [HttpPost]
-        public ActionResult PerfilUsu(HttpPostedFileBase imagen, int rut, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, string dire, string peso, string altura, DateTime fechanac, string ruta_img, int p_gen, int p_t_usu, int p_cin)
+        public ActionResult PerfilUsu(HttpPostedFileBase imagen, int rut, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, string dire, string peso, string altura, DateTime fechanac, int p_gen, int p_t_usu, int p_cin)
         {
             WS_DojoClient cliente = new WS_DojoClient();
 
@@ -166,7 +166,7 @@ namespace WebValdiviaDojo.Controllers
                 return RedirectToAction("MostrarDatosUsuario");
             }
 
-            catch (Exception ex)
+            catch
             {
                 ViewBag.Mensaje = "No se ha podido registrar su cuenta.";
             }
