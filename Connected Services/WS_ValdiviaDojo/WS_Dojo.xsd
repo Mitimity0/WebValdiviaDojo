@@ -4,6 +4,10 @@
   <xs:element name="AgDetalleComResponse" type="tns:AgDetalleComResponse" />
   <xs:element name="AgMensualidad" type="tns:AgMensualidad" />
   <xs:element name="AgMensualidadResponse" type="tns:AgMensualidadResponse" />
+  <xs:element name="AgOrdenCompra" type="tns:AgOrdenCompra" />
+  <xs:element name="AgOrdenCompraResponse" type="tns:AgOrdenCompraResponse" />
+  <xs:element name="AgPago" type="tns:AgPago" />
+  <xs:element name="AgPagoResponse" type="tns:AgPagoResponse" />
   <xs:element name="AgParticipacion" type="tns:AgParticipacion" />
   <xs:element name="AgParticipacionResponse" type="tns:AgParticipacionResponse" />
   <xs:element name="AgProducto" type="tns:AgProducto" />
@@ -28,6 +32,14 @@
   <xs:element name="ListaComentarioResponse" type="tns:ListaComentarioResponse" />
   <xs:element name="ListaEstado" type="tns:ListaEstado" />
   <xs:element name="ListaEstadoResponse" type="tns:ListaEstadoResponse" />
+  <xs:element name="ListaMatricula" type="tns:ListaMatricula" />
+  <xs:element name="ListaMatriculaResponse" type="tns:ListaMatriculaResponse" />
+  <xs:element name="ListaMensualidad" type="tns:ListaMensualidad" />
+  <xs:element name="ListaMensualidadResponse" type="tns:ListaMensualidadResponse" />
+  <xs:element name="ListaMetodoPago" type="tns:ListaMetodoPago" />
+  <xs:element name="ListaMetodoPagoResponse" type="tns:ListaMetodoPagoResponse" />
+  <xs:element name="ListaOrdenCompra" type="tns:ListaOrdenCompra" />
+  <xs:element name="ListaOrdenCompraResponse" type="tns:ListaOrdenCompraResponse" />
   <xs:element name="ListaSolicitud" type="tns:ListaSolicitud" />
   <xs:element name="ListaSolicitudResponse" type="tns:ListaSolicitudResponse" />
   <xs:element name="ListaTipoProd" type="tns:ListaTipoProd" />
@@ -258,6 +270,16 @@
       <xs:element minOccurs="0" name="SNombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="AgOrdenCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgOrdenCompraResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ModSolicitud">
     <xs:sequence>
       <xs:element minOccurs="0" name="p_id" type="xs:int" />
@@ -287,6 +309,27 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListaMensualidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaMensualidadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mensualidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mensualidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FECHA_VENCIMIENTO" type="xs:string" />
+      <xs:element name="ID_CLASE" type="xs:int" />
+      <xs:element name="ID_ESTADO" type="xs:int" />
+      <xs:element name="ID_MENSUALIDAD" type="xs:int" />
+      <xs:element name="ID_NIVEL" type="xs:int" />
+      <xs:element name="MONTO_PAGAR" type="xs:int" />
+      <xs:element name="RUT" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="EliComentario">
     <xs:sequence>
       <xs:element minOccurs="0" name="p_id" type="xs:int" />
@@ -309,6 +352,20 @@
     <xs:sequence>
       <xs:element name="id_genero" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaMetodoPago">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListaMetodoPagoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:metodoPago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="metodoPago">
+    <xs:sequence>
+      <xs:element name="id_metodo" type="xs:int" />
+      <xs:element minOccurs="0" name="NOM_METODO_PAGO" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoProdGen">
@@ -463,6 +520,27 @@
       <xs:element name="VALOR_DESC" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ListaOrdenCompra">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaOrdenCompraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ordenCompra" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ordenCompra">
+    <xs:sequence>
+      <xs:element name="CANTIDAD" type="xs:int" />
+      <xs:element minOccurs="0" name="FECHA" type="xs:string" />
+      <xs:element name="ID_ORDEN" type="xs:int" />
+      <xs:element name="ID_PRODUCTO" type="xs:int" />
+      <xs:element name="MONTO_TOTAL" type="xs:int" />
+      <xs:element name="NRO_COMPRA" type="xs:int" />
+      <xs:element name="RUT" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="EliSolicitud">
     <xs:sequence>
       <xs:element minOccurs="0" name="p_id" type="xs:int" />
@@ -485,6 +563,20 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="DES_EVENTO" type="xs:string" />
       <xs:element name="ID_TIPO_EVENTO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgPago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_metodo" type="xs:string" />
+      <xs:element minOccurs="0" name="p_pagado" type="xs:string" />
+      <xs:element minOccurs="0" name="p_id_matricula" type="xs:string" />
+      <xs:element minOccurs="0" name="p_id_mensualidad" type="xs:string" />
+      <xs:element minOccurs="0" name="p_nro_compra" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgPagoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoCarrito">
@@ -599,6 +691,25 @@
     <xs:sequence>
       <xs:element name="id_talla" type="xs:int" />
       <xs:element minOccurs="0" name="nom_talla" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaMatricula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaMatriculaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:matricula" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="matricula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FECHA_MATRICULA" type="xs:string" />
+      <xs:element name="ID_ESTADO" type="xs:int" />
+      <xs:element name="ID_MATRICULA" type="xs:int" />
+      <xs:element name="MONTO_MATRICULA" type="xs:int" />
+      <xs:element name="RUT" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListaTipoProd">

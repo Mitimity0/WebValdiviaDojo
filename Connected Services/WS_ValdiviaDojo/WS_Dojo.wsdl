@@ -215,6 +215,42 @@
   <message name="ListadoClaseNivelResponse">
     <part name="parameters" element="tns:ListadoClaseNivelResponse" />
   </message>
+  <message name="ListaMetodoPago">
+    <part name="parameters" element="tns:ListaMetodoPago" />
+  </message>
+  <message name="ListaMetodoPagoResponse">
+    <part name="parameters" element="tns:ListaMetodoPagoResponse" />
+  </message>
+  <message name="ListaMatricula">
+    <part name="parameters" element="tns:ListaMatricula" />
+  </message>
+  <message name="ListaMatriculaResponse">
+    <part name="parameters" element="tns:ListaMatriculaResponse" />
+  </message>
+  <message name="AgPago">
+    <part name="parameters" element="tns:AgPago" />
+  </message>
+  <message name="AgPagoResponse">
+    <part name="parameters" element="tns:AgPagoResponse" />
+  </message>
+  <message name="AgOrdenCompra">
+    <part name="parameters" element="tns:AgOrdenCompra" />
+  </message>
+  <message name="AgOrdenCompraResponse">
+    <part name="parameters" element="tns:AgOrdenCompraResponse" />
+  </message>
+  <message name="ListaOrdenCompra">
+    <part name="parameters" element="tns:ListaOrdenCompra" />
+  </message>
+  <message name="ListaOrdenCompraResponse">
+    <part name="parameters" element="tns:ListaOrdenCompraResponse" />
+  </message>
+  <message name="ListaMensualidad">
+    <part name="parameters" element="tns:ListaMensualidad" />
+  </message>
+  <message name="ListaMensualidadResponse">
+    <part name="parameters" element="tns:ListaMensualidadResponse" />
+  </message>
   <portType name="WS_Dojo">
     <operation name="Login">
       <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
@@ -355,6 +391,30 @@
     <operation name="ListadoClaseNivel">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelResponse" message="tns:ListadoClaseNivelResponse" />
+    </operation>
+    <operation name="ListaMetodoPago">
+      <input wsam:Action="http://ws/WS_Dojo/ListaMetodoPagoRequest" message="tns:ListaMetodoPago" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaMetodoPagoResponse" message="tns:ListaMetodoPagoResponse" />
+    </operation>
+    <operation name="ListaMatricula">
+      <input wsam:Action="http://ws/WS_Dojo/ListaMatriculaRequest" message="tns:ListaMatricula" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaMatriculaResponse" message="tns:ListaMatriculaResponse" />
+    </operation>
+    <operation name="AgPago">
+      <input wsam:Action="http://ws/WS_Dojo/AgPagoRequest" message="tns:AgPago" />
+      <output wsam:Action="http://ws/WS_Dojo/AgPagoResponse" message="tns:AgPagoResponse" />
+    </operation>
+    <operation name="AgOrdenCompra">
+      <input wsam:Action="http://ws/WS_Dojo/AgOrdenCompraRequest" message="tns:AgOrdenCompra" />
+      <output wsam:Action="http://ws/WS_Dojo/AgOrdenCompraResponse" message="tns:AgOrdenCompraResponse" />
+    </operation>
+    <operation name="ListaOrdenCompra">
+      <input wsam:Action="http://ws/WS_Dojo/ListaOrdenCompraRequest" message="tns:ListaOrdenCompra" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaOrdenCompraResponse" message="tns:ListaOrdenCompraResponse" />
+    </operation>
+    <operation name="ListaMensualidad">
+      <input wsam:Action="http://ws/WS_Dojo/ListaMensualidadRequest" message="tns:ListaMensualidad" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaMensualidadResponse" message="tns:ListaMensualidadResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
@@ -666,6 +726,60 @@
       </output>
     </operation>
     <operation name="ListadoClaseNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListaMetodoPago">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListaMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgPago">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgOrdenCompra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListaOrdenCompra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListaMensualidad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

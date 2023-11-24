@@ -2,47 +2,117 @@
 @{
     ViewBag.Title = "Pago";
 }
-<div class="col-md-12">
+<div class="col-md-12 py-5">
     <div class="row justify-content-center py-3">
-        <div class="col-3"></div>
         <div class="col-6">
-            <div class="card text-center">
-                <div class="card-header">
-                    Proceso de pago
+            @if (ViewBag.Men != null)
+            {
+                <div class="text-center card">
+                    <div class="card-header">
+                        Proceso de pago de mensualidad
+                    </div>
+                    <div class="card-body ">
+                        <!--  titulo  -->
+                        <p class="py-5 lead">Total a pagar: @string.Format("${0:N0}", ViewBag.Monto) </p>
+                        <!--  FORMULARIO  -->
+                        <form class="row col-12" action="@Url.Action("IngresarPago", "Compra")" method="post">
+                            <div class="col-6">
+                                <input type="text" class="d-none" name="v_men" value="@ViewBag.Men" />
+                                <input type="text" class="d-none" name="v_mat" value="@ViewBag.Mat" />
+                                <input type="text" class="d-none" name="v_nro" value="@ViewBag.Nro" />
+                                <select class="form-select" id="p_metodo" name="p_metodo" required>
+                                    <option value="" selected>Metodo pago</option>
+                                    @foreach (var x in ViewBag.MetodoPago)
+                                    {
+                                        <option value="@x.id_metodo">@x.NOM_METODO_PAGO</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" name="v_monto" value="@ViewBag.Monto" readonly required />
+                                    <label for="total">Total a pagar</label>
+                                </div>
+                            </div>
+                            <div class="justify-content-center py-3 col-12">
+                                <button type="submit" class="btn btn-danger me-2 col-4">Pagar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-text">Total a pagar</p>
-                    <h5 class="card-title">$9990</h5>
-                    <form>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Rut</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                        <div class="input-group mb-3">
+            }
+            @if (ViewBag.Mat != null)
+            {
+                <div class="text-center card">
+                    <h3 class="display-6">Proceso de pago de Matricula</h3>
+                    <div class="card-body">
+                        <!--  FORMULARIO  -->
+                        <form class="row col-12" action="@Url.Action("IngresarPago", "Compra")" method="post">
+                            <div class="col-6">
+                                <input type="text" class="d-none" name="v_men" value="@ViewBag.Men" />
+                                <input type="text" class="d-none" name="v_mat" value="@ViewBag.Mat" />
+                                <input type="text" class="d-none" name="v_nro" value="@ViewBag.Nro" />
+                                <select class="form-select" id="p_metodo" name="p_metodo" required>
+                                    <option value="" selected>Metodo pago</option>
+                                    @foreach (var x in ViewBag.MetodoPago)
+                                    {
+                                        <option value="@x.id_metodo">@x.NOM_METODO_PAGO</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" name="v_monto" value="@ViewBag.Monto" readonly required />
+                                    <label for="total">Total a pagar</label>
+                                </div>
+                            </div>
+                            <div class="justify-content-center py-3 col-12">
+                                <button type="submit" class="btn btn-danger me-2 col-4">Pagar</button>
+                            </div>
+                        </form>
 
-
-                            <label class="input-group-text" for="inputGroupSelect01">Tipo de metodo</label>
-                            <select class="form-select" id="inputGroupSelect01">
-                                <option selected>Elegir</option>
-                                <option value="1">Tarjeta</option>
-                                <option value="2">Efectivo</option>
-                            </select>
-
-
-                        </div>
-                        <a class="nav-item">@Html.ActionLink("Pagar", "ConfirmacionCompra", "Compra", null, new { @class = "btn btn-danger me-2" })</a>
-                    </form>
+                    </div>
                 </div>
-                <div class="card-footer text-body-secondary">
-                    
+            }
+            @if (ViewBag.Nro != null)
+            {
+                <div class="card text-center">
+                    <div class="card-header">
+                        Proceso de pago de Compra
+                    </div>
+                    <div class="card-body">
+                        <!--  titulo  -->
+                        <p class="py-5 lead">Total a pagar: @string.Format("${0:N0}", ViewBag.Monto) </p>
+                        <!--  FORMULARIO  -->
+                        <form class="row col-12" action="@Url.Action("IngresarPago", "Compra")" method="post">
+                            <div class="col-6">
+                                <input type="text" class="d-none" name="v_men" value="@ViewBag.Men" />
+                                <input type="text" class="d-none" name="v_mat" value="@ViewBag.Mat" />
+                                <input type="text" class="d-none" name="v_nro" value="@ViewBag.Nro" />
+                                <select class="form-select" id="p_metodo" name="p_metodo" required>
+                                    <option value="" selected>Metodo pago</option>
+                                    @foreach (var x in ViewBag.MetodoPago)
+                                    {
+                                        <option value="@x.id_metodo">@x.NOM_METODO_PAGO</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" name="v_monto" value="@ViewBag.Monto" readonly required />
+                                    <label for="total">Total a pagar</label>
+                                </div>
+                            </div>
+                            <div class="justify-content-center py-3 col-12">
+                                <button type="submit" class="btn btn-danger me-2 col-4">Pagar</button>
+                            </div>
+                        </form>
+
+                    </div>
                 </div>
-            </div>
-            
+            }
         </div>
-        
-        <div class="col-3"></div>
     </div>
-    
 </div>
 
 
