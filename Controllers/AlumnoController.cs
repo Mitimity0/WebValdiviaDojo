@@ -9,7 +9,7 @@ namespace WebValdiviaDojo.Controllers
 {
     public class AlumnoController : Controller
     {
-        // GET: Alumno
+        //
         public ActionResult EnvioSolicitud(int? v_rut)
         {
             int rut = v_rut ?? 0;

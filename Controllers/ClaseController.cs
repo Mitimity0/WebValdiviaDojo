@@ -22,9 +22,6 @@ namespace WebValdiviaDojo.Controllers
             ViewBag.observacion = ob;
 
             return View();
-
-
-
         }
 
         public List<observacion> ListarObservacion(int p_rut)
@@ -45,8 +42,5 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
-
-
-
     }
 }

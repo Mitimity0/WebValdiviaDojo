@@ -24,6 +24,8 @@ namespace WebValdiviaDojo.Controllers
             ViewBag.ProdEsp = esp;
             return View();
         }
+
+
         // ADMINISTRAR PRODUCTO POST
         [HttpPost]
         public ActionResult AdmProducto(HttpPostedFileBase imagen, int p_id, string p_nom, string p_des, int p_precio, int p_stock, string p_tipo_prod, string p_desc, string p_talla)
@@ -69,6 +71,8 @@ namespace WebValdiviaDojo.Controllers
             ViewBag.Talla = ta;
             return View();
         }
+
+
         //AGREGAR PRODUCTO POST
         [HttpPost]
         public ActionResult AdmAddProd(HttpPostedFileBase imagen,string p_nom, string p_des, int p_precio,int p_stock, string p_tipo_prod, string p_desc, string p_talla )
@@ -189,7 +193,6 @@ namespace WebValdiviaDojo.Controllers
                 // Verificar si el archivo existe antes de intentar eliminarlo
                 if (System.IO.File.Exists(ruta))
                 {
-                    // Si existe, eliminar el archivo
                     System.IO.File.Delete(ruta);
                 }
 
@@ -335,5 +338,6 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
+
     }
 }

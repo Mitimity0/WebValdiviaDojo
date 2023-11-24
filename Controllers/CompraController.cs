@@ -15,6 +15,7 @@ namespace WebValdiviaDojo.Controllers
             List<matricula> mat = ListarMatricula(v_rut);
             List<mensualidad> men = ListarMensualidad(v_rut);
             List<ordenCompra> ord = ListarOrdenCompra(v_rut);
+
             ViewBag.Matricula = mat;
             ViewBag.Mensualidad = men;
             ViewBag.OrdenCompra = ord;
@@ -28,12 +29,19 @@ namespace WebValdiviaDojo.Controllers
             ViewBag.Carrito = car;
             return View();
         }
-        [HttpPost]
-        public ActionResult OrdenCompra(int p_total,int v_rut)
+
+        public ActionResult NuevaOrdenCompra(int v_rut)
         {
-            List<carrito> car = ListarCarrito(v_rut);
-            ViewBag.Carrito = car;
-            return View();
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgOrdenCompra(v_rut);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            return RedirectToAction("PagosPendientes",new { v_rut= v_rut });
         }
         //
 

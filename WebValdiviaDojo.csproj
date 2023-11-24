@@ -134,7 +134,6 @@
     <Compile Include="Controllers\EventoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InscripcionController.cs" />
-    <Compile Include="Controllers\ProductoController.cs" />
     <Compile Include="Controllers\SesionController.cs" />
     <Compile Include="Controllers\TipoEventoController.cs" />
     <Compile Include="Controllers\TipoProductoController.cs" />
@@ -396,7 +395,7 @@
     <Content Include="Views\TipoEvento\TipoEvento.cshtml" />
     <Content Include="Views\Evento\Evento.cshtml" />
     <Content Include="Views\TipoProducto\TipoProducto.cshtml" />
-    <Content Include="Views\Clase\Clase.cshtml" />
+    <Content Include="Views\Clase\AdministrarClase.cshtml" />
     <Content Include="Views\Compra\OrdenCompra.cshtml" />
     <Content Include="Views\Compra\Pago.cshtml" />
     <Content Include="Views\Compra\ConfirmacionCompra.cshtml" />
@@ -413,7 +412,6 @@
     <Folder Include="Img\GaleriaEvento\" />
     <Folder Include="Img\GaleriaProductos\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Cinturon\" />
     <Folder Include="Views\Encuesta\" />
     <Folder Include="Views\Horario\" />
   </ItemGroup>

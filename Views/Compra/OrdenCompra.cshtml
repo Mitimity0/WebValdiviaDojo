@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="sticky-bottom py-5">
                                     <p class="card-text py-5">Total a pagar: @string.Format("${0:N0}", @total)</p>
-                                    <a class="nav-item btn btn-danger me-2">Ir a pagar</a>
+                                    <a>@Html.ActionLink("Ir a pagar", "NuevaOrdenCompra", "Compra", new { v_rut= usuario.rut}, new { @class = "btn btn-danger me-2" })</a>
                                 </div>
                             }
                             else
