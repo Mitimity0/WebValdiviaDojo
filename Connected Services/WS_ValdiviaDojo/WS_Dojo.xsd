@@ -141,6 +141,18 @@
       <xs:element minOccurs="0" name="nombre_estado" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="AgreSolicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_sol" type="xs:string" />
+      <xs:element minOccurs="0" name="p_tipo" type="xs:int" />
+      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgreSolicitudResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="AgreDescuento">
     <xs:sequence>
       <xs:element minOccurs="0" name="p_fecha_inicio" type="xs:string" />
@@ -150,18 +162,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="AgreDescuentoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AgreSolicitud">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="p_sol" type="xs:string" />
-      <xs:element minOccurs="0" name="p_tipo" type="xs:int" />
-      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AgreSolicitudResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -191,7 +191,6 @@
       <xs:element minOccurs="0" name="dire" type="xs:string" />
       <xs:element minOccurs="0" name="peso" type="xs:string" />
       <xs:element minOccurs="0" name="alt" type="xs:string" />
-      <xs:element minOccurs="0" name="p_img" type="xs:string" />
       <xs:element minOccurs="0" name="genero" type="xs:int" />
       <xs:element minOccurs="0" name="t_usu" type="xs:int" />
       <xs:element minOccurs="0" name="cint" type="xs:int" />
@@ -259,20 +258,6 @@
       <xs:element minOccurs="0" name="SNombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ModDescuento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="p_id" type="xs:int" />
-      <xs:element minOccurs="0" name="p_fecha_inicio" type="xs:string" />
-      <xs:element minOccurs="0" name="p_fecha_fin" type="xs:string" />
-      <xs:element minOccurs="0" name="p_valor_desc" type="xs:int" />
-      <xs:element minOccurs="0" name="p_porc_desc" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ModDescuentoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="ModSolicitud">
     <xs:sequence>
       <xs:element minOccurs="0" name="p_id" type="xs:int" />
@@ -284,6 +269,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ModSolicitudResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModDescuento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_id" type="xs:int" />
+      <xs:element minOccurs="0" name="p_fecha_inicio" type="xs:string" />
+      <xs:element minOccurs="0" name="p_fecha_fin" type="xs:string" />
+      <xs:element minOccurs="0" name="p_valor_desc" type="xs:int" />
+      <xs:element minOccurs="0" name="p_porc_desc" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModDescuentoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -312,20 +311,6 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ListaTipoSolicitud">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="ListaTipoSolicitudResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoSolicitud" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="tipoSolicitud">
-    <xs:sequence>
-      <xs:element name="ID_TIPO_SOL" type="xs:int" />
-      <xs:element minOccurs="0" name="NOMBRE_TIPO_SOL" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="ListadoProdGen">
     <xs:sequence />
   </xs:complexType>
@@ -343,6 +328,20 @@
       <xs:element name="PRECIO_NORMAL" type="xs:int" />
       <xs:element name="STOCK" type="xs:int" />
       <xs:element name="VALOR_DESC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaTipoSolicitud">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListaTipoSolicitudResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoSolicitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoSolicitud">
+    <xs:sequence>
+      <xs:element name="ID_TIPO_SOL" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRE_TIPO_SOL" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoDescuento">
@@ -464,6 +463,16 @@
       <xs:element name="VALOR_DESC" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="EliSolicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliSolicitudResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ListadoTipoEvento">
     <xs:sequence />
   </xs:complexType>
@@ -476,16 +485,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="DES_EVENTO" type="xs:string" />
       <xs:element name="ID_TIPO_EVENTO" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="EliSolicitud">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="p_id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="EliSolicitudResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoCarrito">
@@ -616,6 +615,20 @@
       <xs:element minOccurs="0" name="nombre_tipo_prod" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="AgMensualidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_fech" type="xs:string" />
+      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
+      <xs:element minOccurs="0" name="p_clase" type="xs:int" />
+      <xs:element minOccurs="0" name="p_estado" type="xs:int" />
+      <xs:element minOccurs="0" name="p_nivel" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgMensualidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="ListadoEvento">
     <xs:sequence />
   </xs:complexType>
@@ -633,20 +646,6 @@
       <xs:element name="ID_TIPO_EVENTO" type="xs:int" />
       <xs:element minOccurs="0" name="IMG_EVENTO" type="xs:string" />
       <xs:element minOccurs="0" name="NOMBRE_EVENTO" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AgMensualidad">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="p_fech" type="xs:string" />
-      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
-      <xs:element minOccurs="0" name="p_clase" type="xs:int" />
-      <xs:element minOccurs="0" name="p_estado" type="xs:int" />
-      <xs:element minOccurs="0" name="p_nivel" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AgMensualidadResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoClase">

@@ -12,6 +12,10 @@ namespace WebValdiviaDojo.Controllers
         //
         public ActionResult OrdenCompra(int v_rut)
         {
+            if (v_rut==null)
+            {
+                View("~/Views/Home/Index.cshtml");
+            }
             List<carrito> car = ListarCarrito(v_rut);
             ViewBag.Carrito = car;
             return View();

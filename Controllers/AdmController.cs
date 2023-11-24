@@ -79,7 +79,7 @@ namespace WebValdiviaDojo.Controllers
                 if (imagen != null && imagen.ContentLength > 0)
                 {
                     // Nombre específico para la imagen (puedes personalizarlo según tus necesidades)
-                    string nombreArchivo = p_nom + ".jpg";
+                    string nombreArchivo = p_nom + ".png";
                     // Ruta completa del archivo
                     string rutaCarpetaProd = Server.MapPath("~/Img/GaleriaProductos/");
 
@@ -181,7 +181,7 @@ namespace WebValdiviaDojo.Controllers
                 string rutaCarpetaProd = Server.MapPath("~/Img/GaleriaProductos/");
 
                 // Nombre específico para la imagen
-                string nombreArchivo = p_nom + ".jpg";
+                string nombreArchivo = p_nom + ".png";
 
                 // Ruta completa del archivo
                 string ruta = Path.Combine(rutaCarpetaProd, nombreArchivo);

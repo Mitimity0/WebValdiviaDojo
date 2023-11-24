@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Compra";
     var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
-    int total=0;
+    int total = 0;
 }
 
 <div class="col-md-12">
@@ -19,21 +19,21 @@
 
                             @if (ViewBag.Carrito != null)
                             {
-                                foreach (var c in ViewBag.Carrito)
-                                {
-                                    <div class="card mb-3">
-                                        <div class="row g-0">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">Nombre</th>
-                                                        <th scope="col">Talla</th>
-                                                        <th scope="col">Cantidad</th>
-                                                        <th scope="col">Precio normal C/U</th>
-                                                        <th scope="col">Precio oferta C/U</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Nombre</th>
+                                                    <th scope="col">Talla</th>
+                                                    <th scope="col">Cantidad</th>
+                                                    <th scope="col">Precio normal C/U</th>
+                                                    <th scope="col">Precio oferta C/U</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var c in ViewBag.Carrito)
+                                                {
                                                     <tr>
                                                         <td>@c.NOMBRE_PRODUCTO</td>
                                                         <td>@c.NOMBRE</td>
@@ -53,16 +53,18 @@
                                                         {
                                                             <td>@string.Format("${0:N0}", c.PRECIO_NORMAL)</td>
                                                             <td>--</td>
-                                                            { total = (c.PRECIO_NORMAL * @c.CANTIDAD); }
+                                                            { total += (c.PRECIO_NORMAL * @c.CANTIDAD); }
                                                         }
                                                     </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                                }
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <p class="card-text">Total a pagar</p>
-                                    <h5 class="card-title">@string.Format("${0:N0}", @total)</h5>
-                                }
+                                </div>
+                                <div class="sticky-bottom py-5">
+                                    <p class="card-text py-5">Total a pagar: @string.Format("${0:N0}", @total)</p>
+                                    <a class="nav-item btn btn-danger me-2">Ir a pagar</a>
+                                </div>
                             }
                             else
                             {
@@ -75,16 +77,6 @@
 
                         </div>
                     </div>
-
-                    <!-- Total a pagar y botón de pago (pegado abajo) -->
-                    @if (ViewBag.Carrito != null)
-                    {
-                        <div class="sticky-bottom py-5">
-                            <p class="card-text py-5">Total a pagar:</p>
-                            <a class="nav-item btn btn-danger me-2" href="@Url.Action("Pago", "Compra")">Ir a pagar</a>
-                        </div>
-                    }
-
                 </div>
             </div>
         </div>

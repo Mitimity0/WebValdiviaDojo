@@ -64,11 +64,12 @@ namespace WebValdiviaDojo.Controllers
                     // Guardar la nueva imagen con el nombre específico
                     imagen.SaveAs(ruta);
 
-                    ViewBag.Mensaje = "Imagen subida exitosamente." + ruta;
+                    ViewBag.Mensaje = "Imagen cambiada exitosamente.";
                     
                 }
 
-                int resultado = cliente.ModUsuario(rut, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular,celularemer,dire,peso,altura, "~/Img/Usuario/" + rut + ".png", p_gen, p_t_usu,p_cin);
+                int resultado = cliente.ModUsuario(rut, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular,celularemer,dire,peso,altura, p_gen, p_t_usu,p_cin);
+                ViewBag.Mensaje = "Datos actualizados exitosamente, estos se veran reflejados al reiniciar su sesion.";
             }
             catch (Exception ex)
             {
