@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Compra";
     var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+    int total=0;
 }
 
 <div class="col-md-12">
@@ -12,9 +13,6 @@
                     Proceso de Compra
                 </div>
                 <div class="card-body justify-content-center">
-                    <p class="card-text">Total a pagar</p>
-                    <h5 class="card-title">$9990</h5>
-
                     <!-- Productos del carrito de compra -->
                     <div class="offcanvas-body">
                         <div class="carrito-container overflow-auto" style="max-height: 650px;">
@@ -31,6 +29,8 @@
                                                         <th scope="col">Nombre</th>
                                                         <th scope="col">Talla</th>
                                                         <th scope="col">Cantidad</th>
+                                                        <th scope="col">Precio normal C/U</th>
+                                                        <th scope="col">Precio oferta C/U</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -40,18 +40,28 @@
                                                         <td>@c.CANTIDAD</td>
                                                         @if (c.VALOR_DESC != 0)
                                                         {
+                                                            <td>@string.Format("${0:N0}", c.PRECIO_NORMAL)</td>
+                                                            <td>@string.Format("${0:N0}", (c.PRECIO_NORMAL - c.VALOR_DESC))</td>
+                                                            { total = ((c.PRECIO_NORMAL - c.VALOR_DESC) * @c.CANTIDAD); }
+                                                        }
+                                                        @if (c.PORC_DESC != 0)
+                                                        {
                                                             <td>Precio normal @string.Format("${0:N0}", c.PRECIO_NORMAL)</td>
                                                             <td>@string.Format("${0:N0}", c.VALOR_DESC)</td>
                                                         }
                                                         else
                                                         {
                                                             <td>@string.Format("${0:N0}", c.PRECIO_NORMAL)</td>
+                                                            <td>--</td>
+                                                            { total = (c.PRECIO_NORMAL * @c.CANTIDAD); }
                                                         }
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
+                                    <p class="card-text">Total a pagar</p>
+                                    <h5 class="card-title">@string.Format("${0:N0}", @total)</h5>
                                 }
                             }
                             else

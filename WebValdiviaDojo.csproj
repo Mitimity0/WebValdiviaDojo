@@ -367,7 +367,7 @@
     <Content Include="Views\Evento\Evento.cshtml" />
     <Content Include="Views\TipoProducto\TipoProducto.cshtml" />
     <Content Include="Views\Clase\Clase.cshtml" />
-    <Content Include="Views\Compra\Compra.cshtml" />
+    <Content Include="Views\Compra\OrdenCompra.cshtml" />
     <Content Include="Views\Compra\Pago.cshtml" />
     <Content Include="Views\Compra\ConfirmacionCompra.cshtml" />
     <Content Include="Views\Clase\ClaseInscrita.cshtml" />
