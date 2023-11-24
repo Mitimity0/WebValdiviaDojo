@@ -320,6 +320,15 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliProductoRequest", ReplyAction="http://ws/WS_Dojo/EliProductoResponse")]
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse> EliProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgMensualidadRequest", ReplyAction="http://ws/WS_Dojo/AgMensualidadResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse AgMensualidad(WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgMensualidadRequest", ReplyAction="http://ws/WS_Dojo/AgMensualidadResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse> AgMensualidadAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest request);
     }
     
     /// <remarks/>
@@ -3779,6 +3788,62 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgMensualidad", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgMensualidadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_fech;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_clase;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_estado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_nivel;
+        
+        public AgMensualidadRequest() {
+        }
+        
+        public AgMensualidadRequest(string p_fech, int p_rut, int p_clase, int p_estado, int p_nivel) {
+            this.p_fech = p_fech;
+            this.p_rut = p_rut;
+            this.p_clase = p_clase;
+            this.p_estado = p_estado;
+            this.p_nivel = p_nivel;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgMensualidadResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgMensualidadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgMensualidadResponse() {
+        }
+        
+        public AgMensualidadResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WS_DojoChannel : WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo, System.ServiceModel.IClientChannel {
     }
@@ -4746,6 +4811,37 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest();
             inValue.p_id = p_id;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgMensualidad(WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest request) {
+            return base.Channel.AgMensualidad(request);
+        }
+        
+        public int AgMensualidad(string p_fech, int p_rut, int p_clase, int p_estado, int p_nivel) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest();
+            inValue.p_fech = p_fech;
+            inValue.p_rut = p_rut;
+            inValue.p_clase = p_clase;
+            inValue.p_estado = p_estado;
+            inValue.p_nivel = p_nivel;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgMensualidad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgMensualidadAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest request) {
+            return base.Channel.AgMensualidadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse> AgMensualidadAsync(string p_fech, int p_rut, int p_clase, int p_estado, int p_nivel) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest();
+            inValue.p_fech = p_fech;
+            inValue.p_rut = p_rut;
+            inValue.p_clase = p_clase;
+            inValue.p_estado = p_estado;
+            inValue.p_nivel = p_nivel;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgMensualidadAsync(inValue);
         }
     }
 }

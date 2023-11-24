@@ -1,96 +1,128 @@
 ﻿@{
     ViewBag.Title = "Inscripción";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
 }
 
 
-<section class="container py-5">
-    <div class="container-fluid border marketing">
-        <h1 class="display-6 text-center py-3">Horario de nuestras clases</h1>
-        <div class="row py-3">
+<section class="container py-3">
+    <div class="container-fluid">
+        <div class="border marketing">
+            <h1 class="display-6 text-center py-3">Horario de nuestras clases</h1>
+            <div class="row py-3">
 
-            <div class="container d-flex justify-content-center mt-5">
-                <form class="col-10" method="post">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <!--  Titulo  -->
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="background-color: #F9A1A1">
-                                    Puedes filtrar por las clases disponibles
-                                </button>
-                            </h2>
-
-                            <!--  Cuerpo del acordion  -->
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <div class="py-1">
-                                        <label for="p_id_clase">Selecciona una clase</label>
-                                        <select class="form-select" aria-label="" name="p_id_clase">
-                                            <option value="" selected>Mostrar todos</option>
-                                            @foreach (var clase in ViewBag.Clases)
-                                            {
-                                                <option value="@clase.id_clase" @(clase.id_clase.ToString() == ViewBag.SelectedClase ? "selected" : "")>@clase.nombre</option>
-                                            }
-                                        </select>
-                                    </div>
-                                    <div class="py-1">
-                                        <label for="p_id_clase">Selecciona un rango de edad</label>
-                                        <select class="form-select" aria-label="" name="p_id_nivel">
-                                            <option value="" selected>Mostrar todos</option>
-                                            @foreach (var niv in ViewBag.clasesNivel)
-                                            {
-                                                <option value="@niv.id_nivel" @(niv.id_nivel.ToString() == ViewBag.SelectedNivel ? "selected" : "")>@niv.nombre</option>
-                                            }
-                                        </select>
-                                    </div>
-                                    <div class="py-1 justify-content-end">
-                                        <button class="btn btn-danger" type="submit">Filtrar</button>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="container d-flex justify-content-center mt-2">
+                    <form class="row" method="get">
+                        <div class="col-6">
+                            <label for="p_id_clase">Selecciona una clase</label>
+                            <select class="form-select col-12" aria-label="" name="p_id_clase">
+                                <option value="" selected>Mostrar todos</option>
+                                @foreach (var clase in ViewBag.Clases)
+                                {
+                                    <option value="@clase.id_clase" @(clase.id_clase.ToString() == ViewBag.SelectedClase ? "selected" : "")>@clase.nombre</option>
+                                }
+                            </select>
                         </div>
-                    </div>
-                </form>
-            </div>
+                        <div class="col-6">
+                            <label for="p_id_clase">Selecciona un rango de edad</label>
+                            <select class="form-select " aria-label="" name="p_id_nivel">
+                                <option value="" selected>Mostrar todos</option>
+                                @foreach (var niv in ViewBag.clasesNivel)
+                                {
+                                    <option value="@niv.id_nivel" @(niv.id_nivel.ToString() == ViewBag.SelectedNivel ? "selected" : "")>@niv.nombre</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="py-3 justify-content-end">
+                            <button class="btn btn-danger" type="submit">Filtrar</button>
+                        </div>
+                    </form>
+                </div>
 
+            </div>
         </div>
 
-        <table class="table table-hover py-5" id="horarioTable">
-            @if (ViewBag.horarios == null || ViewBag.horarios.Count == 0)
-            {
-                <h4>No hay clases disponibles</h4>
-            }
-            else
-            {
-                <!-- Cabecera tabla -->
-                <thead>
-                    <tr>
-                        <th scope="col">Horario</th>
-                        <th scope="col">Clase</th>
-                        <th scope="col">Rango de edad</th>
-                        <th scope="col">Día</th>
-                        <th scope="col">Seleccion</th>
-                    </tr>
-                </thead>
-                <!-- Cuerpo tabla -->
-                <tbody>
-                    @foreach (var horario in ViewBag.horarios)
-                    {
-                        if (horario != null)
+
+
+
+        @if (ViewBag.horarios != null || ViewBag.horarios.Count > 0)
+        {
+            <div class="py-3">
+                <div class="border marketing col-12 ">
+                    <form class="py-5 row container d-flex justify-content-center" action="/" method="post">
+
+                        @if (usuario != null)
                         {
-                    <tr data-clase="@horario.id_clase">
-                        <td>@(horario.hora_ini) - @(horario.hora_fin)</td>
-                        <td>@(horario.nom_clase)</td>
-                        <td>@(horario.nom_nivel)</td>
-                        <td>@(horario.dia)</td>
-                        <td><a class="nav-item">@Html.ActionLink("Inscribir", "Clase", "Clase", null, new { @class = "btn btn-danger me-2" })</a></td>
-                    </tr>
+                            if (ViewBag.SelectedClase == "" || ViewBag.SelectedNivel == "")
+                            {
+                                <button name="enviar" class="btn btn-danger me-2 col-4 disabled">Inscribirme</button>
+                            }
+                            else
+                            {
+                                <a>@Html.ActionLink("Inscribirme", "AgregarMensual", "Inscripcion", new { p_id_clase= @ViewBag.SelectedClase, p_id_nivel= @ViewBag.SelectedNivel, p_rut= @usuario.rut }, new { @class = "btn btn-danger me-2 col-4" })</a>
+                            }
+
                         }
-                    }
-                </tbody>
-            }
-        </table>
+                        else
+                        {
+                            <button name="enviar" type="button" data-bs-toggle="modal" data-bs-target="#ModalInicioSesion" class="btn btn-danger me-2 col-4">Inscribirme</button>
+                        }
+                        <label for="enviar" class="text-center lead py-3">Para poder inscribirte debes filtrar por clase y el nivel deseados.</label>
+
+
+                    </form>
+                    <table class="table table-hover py-5" id="horarioTable">
+                        <!-- Cabecera tabla -->
+                        <thead>
+                            <tr>
+                                <th scope="col">Horario</th>
+                                <th scope="col">Clase</th>
+                                <th scope="col">Rango de edad</th>
+                                <th scope="col">Día</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo tabla -->
+                        <tbody>
+                            @foreach (var horario in ViewBag.horarios)
+                            {
+                                if (horario != null)
+                                {
+                                    <tr data-clase="@horario.id_clase">
+                                        <td>@(horario.hora_ini) - @(horario.hora_fin)</td>
+                                        <td>@(horario.nom_clase)</td>
+                                        <td>@(horario.nom_nivel)</td>
+                                        <td>@(horario.dia)</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+        else
+        {
+            <h4>No hay clases disponibles</h4>
+        }
 
     </div>
+
 </section>
 
-
+<!-- Modal -->
+<div class="modal fade" id="ModalInicioSesion" tabindex="-1" aria-labelledby="ModalInicioSesion" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalInicioSesion">Advertencia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Para inscribirse debe ingresar sesión.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mas tarde</button>
+                <button type="button">@Html.ActionLink("Iniciar Sesión", "Login", "Sesion", null, new { @class = "btn btn-primary" })</button>
+            </div>
+        </div>
+    </div>
+</div>

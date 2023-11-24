@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://ws/" targetNamespace="http://ws/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="AgDetalleCom" type="tns:AgDetalleCom" />
   <xs:element name="AgDetalleComResponse" type="tns:AgDetalleComResponse" />
+  <xs:element name="AgMensualidad" type="tns:AgMensualidad" />
+  <xs:element name="AgMensualidadResponse" type="tns:AgMensualidadResponse" />
   <xs:element name="AgParticipacion" type="tns:AgParticipacion" />
   <xs:element name="AgParticipacionResponse" type="tns:AgParticipacionResponse" />
   <xs:element name="AgProducto" type="tns:AgProducto" />
@@ -631,6 +633,20 @@
       <xs:element name="ID_TIPO_EVENTO" type="xs:int" />
       <xs:element minOccurs="0" name="IMG_EVENTO" type="xs:string" />
       <xs:element minOccurs="0" name="NOMBRE_EVENTO" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgMensualidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_fech" type="xs:string" />
+      <xs:element minOccurs="0" name="p_rut" type="xs:int" />
+      <xs:element minOccurs="0" name="p_clase" type="xs:int" />
+      <xs:element minOccurs="0" name="p_estado" type="xs:int" />
+      <xs:element minOccurs="0" name="p_nivel" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgMensualidadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoClase">

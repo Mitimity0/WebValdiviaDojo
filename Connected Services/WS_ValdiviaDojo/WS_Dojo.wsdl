@@ -209,6 +209,12 @@
   <message name="EliProductoResponse">
     <part name="parameters" element="tns:EliProductoResponse" />
   </message>
+  <message name="AgMensualidad">
+    <part name="parameters" element="tns:AgMensualidad" />
+  </message>
+  <message name="AgMensualidadResponse">
+    <part name="parameters" element="tns:AgMensualidadResponse" />
+  </message>
   <portType name="WS_Dojo">
     <operation name="ListadoTalla">
       <input wsam:Action="http://ws/WS_Dojo/ListadoTallaRequest" message="tns:ListadoTalla" />
@@ -345,6 +351,10 @@
     <operation name="EliProducto">
       <input wsam:Action="http://ws/WS_Dojo/EliProductoRequest" message="tns:EliProducto" />
       <output wsam:Action="http://ws/WS_Dojo/EliProductoResponse" message="tns:EliProductoResponse" />
+    </operation>
+    <operation name="AgMensualidad">
+      <input wsam:Action="http://ws/WS_Dojo/AgMensualidadRequest" message="tns:AgMensualidad" />
+      <output wsam:Action="http://ws/WS_Dojo/AgMensualidadResponse" message="tns:AgMensualidadResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
@@ -647,6 +657,15 @@
       </output>
     </operation>
     <operation name="EliProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgMensualidad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

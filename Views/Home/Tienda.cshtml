@@ -1,6 +1,7 @@
 ﻿@{ 
     ViewBag.Title = "Tienda";
     var total = 0;
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
 }
 
 <!-- Sección carrito -->
@@ -82,7 +83,7 @@
             <div class="sticky-bottom py-5">
 
                 <p class="card-text py-5">Total a pagar: @string.Format("${0:N0}", total)</p>
-                <a class="nav-item btn btn-danger me-2" href="@Url.Action("Pago", "Compra")">Ir a pagar</a>
+                <a>@Html.ActionLink("Compra", "Compra", "Compra", new { v_rut = @usuario.rut }, new { @class = "nav-item btn btn-danger me-2" })</a>
             </div>
 
         }
