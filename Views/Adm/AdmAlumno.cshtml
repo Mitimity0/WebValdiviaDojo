@@ -1,0 +1,243 @@
+﻿@{
+    ViewBag.Title = "Administrar Alumno";
+}
+<div class="py-5 col-12">
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <div class="text-center py-4">
+                <h4 class="display-6">Administrar tipos de usuario</h4>
+            </div>
+            <!---->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">RUT</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Cinturon</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Fecha Nacimiento</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Celular</th>
+                        <th scope="col">Celular emergencia</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Operaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in ViewBag.Usuarios)
+                    {
+                        <tr>
+                            <td>@x.rut - @x.DV</td>
+                            <td>@x.PNombre @x.SNombre @x.APaterno @x.AMaterno</td>
+                            <td>@x.cinturon</td>
+                            @using System.Globalization
+                            @{ DateTime fechaNacimiento;
+                                if (DateTime.TryParseExact(x.FNacimiento, "yyyy-MM-dd HH:mm:ss.f", CultureInfo.InvariantCulture, DateTimeStyles.None, out fechaNacimiento))
+                                {
+                                    DateTime hoy = DateTime.Now;
+                                    int diferenciaAnios = hoy.Year - fechaNacimiento.Year;
+                                    if (hoy.Month < fechaNacimiento.Month || (hoy.Month == fechaNacimiento.Month && hoy.Day < fechaNacimiento.Day))
+                                    {
+                                        diferenciaAnios--;
+                                    }
+                                    <td>@diferenciaAnios años.</td>
+                                }
+                                else
+                                {
+                                    <p>--</p>
+                                }
+                            }
+                            <td>@fechaNacimiento.ToString("dd/MM/yyyy")</td>
+                            <td>@x.direccion</td>
+                            <td>@x.celular</td>
+                            <td>@x.celularEmer</td>
+                            <td>@x.correo</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <!-- Modal Modificar-->
+                        <form action="@Url.Action("ModUsuario", "Adm")" method="post">
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="LabelEliminar">Modificar producto</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <!--input invisibles-->
+                                        <div class="modal-body">
+                                            <!--  RUT  -->
+                                            <div class="row g-2">
+                                                <div class="col-10">
+                                                    <div class="form-floating mb-4" style="display: none;">
+                                                        <input type="number" class="form-control" name="rut" value="@x.rut" required>
+                                                        <label for="rut">RUT</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2" style="display: none;">
+                                                    <div class="form-floating">
+                                                        <input type="text" class="form-control" name="dv" value="@x.DV" required>
+                                                        <label for="dv">DV</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--  NOMBRES  -->
+                                            <div class="row g-2">
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="text" class="form-control" name="pnombre" value="@x.PNombre" required>
+                                                        <label for="pnombre">Primer nombre</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="text" class="form-control" name="snombre" value="@x.SNombre" required>
+                                                        <label for="snombre">Segundo nombre</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  Apellidos  -->
+                                            <div class="row g-2">
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="text" class="form-control" name="apater" value="@x.APaterno" required>
+                                                        <label for="appaterno">Apellido paterno</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="text" class="form-control" name="amater" value="@x.AMaterno" required>
+                                                        <label for="apmaterno">Apellido materno</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  Celulares  -->
+                                            <div class="row g-2">
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="number" class="form-control" name="celular" value="@x.celular">
+                                                        <label for="celular">Celular</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="number" class="form-control" name="celularemer" value="@x.celularEmer">
+                                                        <label for="celularemer">Celular Emergencia</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  Fecha Nacimiento-genero  -->
+                                            <div class="row g-2">
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="datetime-local" class="form-control" name="fechanac" value="@x.FNacimiento" required>
+                                                        <label for="fechanac">Fecha de nacimiento</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                </div>
+                                            </div>
+
+                                            <!--  Direccion  -->
+                                            <div class="form-floating mb-4">
+                                                <input type="text" class="form-control" name="dire" value="@x.direccion" required>
+                                                <label for="direccion">Direccion</label>
+                                            </div>
+                                            <!--  Fisico  -->
+                                            <div class="row g-2 d-none">
+                                                <div class="col-6">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="text" class="form-control" name="peso" value="@x.peso">
+                                                        <label for="peso">Peso</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 d-none">
+                                                    <div class="form-floating mb-4">
+                                                        <input type="text" class="form-control" name="altura" value="@x.altura">
+                                                        <label for="altura">Altura</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--    -->
+                                            <div class="row g-2" style="">
+                                                <div class="col-4">
+                                                    <label for="p_t_usu">Genero</label>
+                                                    <select class="form-select " aria-label="" name="p_gen" required>
+                                                        <option value="" selected>Genero</option>
+                                                        @foreach (var gen in ViewBag.Genero)
+                                                        {
+                                                            <option value="@gen.id_genero" @(gen.id_genero.ToString() == @x.id_genero.ToString() ? "selected" : "")>@gen.nombre</option>
+                                                        }
+                                                    </select>
+
+                                                </div>
+                                                <div class="col-4" style="">
+                                                    <label for="p_t_usu">Tipo usuario</label>
+                                                    <select class="form-select " aria-label="" name="p_t_usu" required>
+                                                        <option value="" selected>Tipo de usuario</option>
+                                                        @foreach (var tp in ViewBag.TipoUsuario)
+                                                        {
+                                                            <option value="@tp.id_tipo_usu" @(tp.id_tipo_usu.ToString() == @x.id_tipo_usu.ToString() ? "selected" : "")>@tp.nombre_tipo_usu</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                                <div class="col-4" style="">
+                                                    <label for="p_t_usu">Cinturon</label>
+                                                    <select class="form-select " aria-label="" name="p_cin" required>
+                                                        <option value="" selected>Cinturon</option>
+                                                        @foreach (var cin in ViewBag.Cinturon)
+                                                        {
+                                                            <option value="@cin.id_cinturon" @(cin.id_cinturon.ToString() == @x.id_cinturon.ToString() ? "selected" : "")>@cin.nombre_cinturon - @cin.color_cinturon</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Modificar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+
+
+                        <!-- Modal Eliminar-->
+                        <form asp-action="ElimSolicitud" asp-controller="Adm" method="post">
+                            <div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="LabelEliminar">Modificar solicitud</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Esta seguro que quiere eliminar la solicitud de</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit">@Html.ActionLink("Eliminar", "EliminarProducto", "Adm", null, new { @class = "btn btn-primary" })</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

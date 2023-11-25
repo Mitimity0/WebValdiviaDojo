@@ -70,6 +70,12 @@
   <xs:element name="ListadoTallaResponse" type="tns:ListadoTallaResponse" />
   <xs:element name="ListadoTipoEvento" type="tns:ListadoTipoEvento" />
   <xs:element name="ListadoTipoEventoResponse" type="tns:ListadoTipoEventoResponse" />
+  <xs:element name="ListarCinturon" type="tns:ListarCinturon" />
+  <xs:element name="ListarCinturonResponse" type="tns:ListarCinturonResponse" />
+  <xs:element name="ListarTipoUsuarios" type="tns:ListarTipoUsuarios" />
+  <xs:element name="ListarTipoUsuariosResponse" type="tns:ListarTipoUsuariosResponse" />
+  <xs:element name="ListarUsuarios" type="tns:ListarUsuarios" />
+  <xs:element name="ListarUsuariosResponse" type="tns:ListarUsuariosResponse" />
   <xs:element name="Login" type="tns:Login" />
   <xs:element name="LoginResponse" type="tns:LoginResponse" />
   <xs:element name="ModComentario" type="tns:ModComentario" />
@@ -117,6 +123,20 @@
       <xs:element name="id_asistencia" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="nombre_nivel" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarTipoUsuarios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarTipoUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoUsuario">
+    <xs:sequence>
+      <xs:element name="id_tipo_usu" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_tipo_usu" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="EliProducto">
@@ -176,6 +196,37 @@
   <xs:complexType name="AgreDescuentoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarUsuarios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="APaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="altura" type="xs:string" />
+      <xs:element minOccurs="0" name="celular" type="xs:string" />
+      <xs:element minOccurs="0" name="celularEmer" type="xs:string" />
+      <xs:element minOccurs="0" name="cinturon" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="DV" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="FNacimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="genero" type="xs:string" />
+      <xs:element name="id_cinturon" type="xs:int" />
+      <xs:element name="id_genero" type="xs:int" />
+      <xs:element minOccurs="0" name="id_tipo_usu" type="xs:string" />
+      <xs:element minOccurs="0" name="PNombre" type="xs:string" />
+      <xs:element minOccurs="0" name="peso" type="xs:string" />
+      <xs:element name="rut" type="xs:int" />
+      <xs:element minOccurs="0" name="rutaIma" type="xs:string" />
+      <xs:element minOccurs="0" name="SNombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="AgDetalleCom">
@@ -245,29 +296,6 @@
   <xs:complexType name="LoginResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="usuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AMaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="APaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="altura" type="xs:string" />
-      <xs:element minOccurs="0" name="celular" type="xs:string" />
-      <xs:element minOccurs="0" name="celularEmer" type="xs:string" />
-      <xs:element minOccurs="0" name="cinturon" type="xs:string" />
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="DV" type="xs:string" />
-      <xs:element minOccurs="0" name="direccion" type="xs:string" />
-      <xs:element minOccurs="0" name="FNacimiento" type="xs:string" />
-      <xs:element minOccurs="0" name="genero" type="xs:string" />
-      <xs:element name="id_cinturon" type="xs:int" />
-      <xs:element name="id_genero" type="xs:int" />
-      <xs:element minOccurs="0" name="id_tipo_usu" type="xs:string" />
-      <xs:element minOccurs="0" name="PNombre" type="xs:string" />
-      <xs:element minOccurs="0" name="peso" type="xs:string" />
-      <xs:element name="rut" type="xs:int" />
-      <xs:element minOccurs="0" name="rutaIma" type="xs:string" />
-      <xs:element minOccurs="0" name="SNombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="AgOrdenCompra">
@@ -710,6 +738,21 @@
       <xs:element name="ID_MATRICULA" type="xs:int" />
       <xs:element name="MONTO_MATRICULA" type="xs:int" />
       <xs:element name="RUT" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarCinturon">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarCinturonResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cinturon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cinturon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="color_cinturon" type="xs:string" />
+      <xs:element name="id_cinturon" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_cinturon" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListaTipoProd">

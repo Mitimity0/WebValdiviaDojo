@@ -245,11 +245,29 @@
   <message name="ListaOrdenCompraResponse">
     <part name="parameters" element="tns:ListaOrdenCompraResponse" />
   </message>
+  <message name="ListarUsuarios">
+    <part name="parameters" element="tns:ListarUsuarios" />
+  </message>
+  <message name="ListarUsuariosResponse">
+    <part name="parameters" element="tns:ListarUsuariosResponse" />
+  </message>
+  <message name="ListarTipoUsuarios">
+    <part name="parameters" element="tns:ListarTipoUsuarios" />
+  </message>
+  <message name="ListarTipoUsuariosResponse">
+    <part name="parameters" element="tns:ListarTipoUsuariosResponse" />
+  </message>
   <message name="ListaMensualidad">
     <part name="parameters" element="tns:ListaMensualidad" />
   </message>
   <message name="ListaMensualidadResponse">
     <part name="parameters" element="tns:ListaMensualidadResponse" />
+  </message>
+  <message name="ListarCinturon">
+    <part name="parameters" element="tns:ListarCinturon" />
+  </message>
+  <message name="ListarCinturonResponse">
+    <part name="parameters" element="tns:ListarCinturonResponse" />
   </message>
   <portType name="WS_Dojo">
     <operation name="Login">
@@ -412,9 +430,21 @@
       <input wsam:Action="http://ws/WS_Dojo/ListaOrdenCompraRequest" message="tns:ListaOrdenCompra" />
       <output wsam:Action="http://ws/WS_Dojo/ListaOrdenCompraResponse" message="tns:ListaOrdenCompraResponse" />
     </operation>
+    <operation name="ListarUsuarios">
+      <input wsam:Action="http://ws/WS_Dojo/ListarUsuariosRequest" message="tns:ListarUsuarios" />
+      <output wsam:Action="http://ws/WS_Dojo/ListarUsuariosResponse" message="tns:ListarUsuariosResponse" />
+    </operation>
+    <operation name="ListarTipoUsuarios">
+      <input wsam:Action="http://ws/WS_Dojo/ListarTipoUsuariosRequest" message="tns:ListarTipoUsuarios" />
+      <output wsam:Action="http://ws/WS_Dojo/ListarTipoUsuariosResponse" message="tns:ListarTipoUsuariosResponse" />
+    </operation>
     <operation name="ListaMensualidad">
       <input wsam:Action="http://ws/WS_Dojo/ListaMensualidadRequest" message="tns:ListaMensualidad" />
       <output wsam:Action="http://ws/WS_Dojo/ListaMensualidadResponse" message="tns:ListaMensualidadResponse" />
+    </operation>
+    <operation name="ListarCinturon">
+      <input wsam:Action="http://ws/WS_Dojo/ListarCinturonRequest" message="tns:ListarCinturon" />
+      <output wsam:Action="http://ws/WS_Dojo/ListarCinturonResponse" message="tns:ListarCinturonResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
@@ -779,7 +809,34 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="ListarUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarTipoUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="ListaMensualidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarCinturon">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

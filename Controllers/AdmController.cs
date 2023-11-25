@@ -25,6 +25,43 @@ namespace WebValdiviaDojo.Controllers
             return View();
         }
 
+        //ADMINISTRAR ALUMNOS 
+        public ActionResult AdmAlumno()
+        {
+            List<usuario> usus = ListarUsuarios();
+            List<tipoUsuario> tpu = ListarTipoUsu();
+            List<genero> gen = ListarGenero();
+            List<cinturon> cin = ListarCinturon();
+            ViewBag.Usuarios = usus;
+            ViewBag.TipoUsuario = tpu;
+            ViewBag.Genero = gen;
+            ViewBag.Cinturon = cin;
+
+            return View();
+        }
+
+        public ActionResult ModUsuario(int rut, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, string dire, string peso, string altura, DateTime fechanac, int p_gen, int p_t_usu, int p_cin)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            //
+            try
+            {
+                int resultado = cliente.ModUsuario(rut, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular, celularemer, dire, peso, altura, p_gen, p_t_usu, p_cin);
+                ViewBag.Mensaje = "Datos actualizados exitosamente";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return RedirectToAction("AdmAlumno");
+        }
+
+
 
         // ADMINISTRAR PRODUCTO POST
         [HttpPost]
@@ -176,6 +213,7 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmSolicitud");
         }
 
+
         public ActionResult EliminarProducto(int p_id,string p_nom)
         {
             WS_DojoClient cliente = new WS_DojoClient();
@@ -229,6 +267,26 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
+
+        public List<usuario> ListarUsuarios()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListarUsuarios().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+
         public List<tipoProducto> ListarTipoProd()
         {
             WS_DojoClient cliente = new WS_DojoClient();
@@ -327,6 +385,60 @@ namespace WebValdiviaDojo.Controllers
             try
             {
                 return cliente.ListadoTalla().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+        public List<tipoUsuario> ListarTipoUsu()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListarTipoUsuarios().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+        public List<cinturon> ListarCinturon()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListarCinturon().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+        public List<genero> ListarGenero()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListadoGenero().ToList();
             }
             catch (Exception ex)
             {
