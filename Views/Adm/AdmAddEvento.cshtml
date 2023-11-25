@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Nuevo Evento";
+}
+
+<div class="py-5 col-12">
+    <div class="row justify-content-center">
+        <form class="card col-8" method="post" enctype="multipart/form-data">
+            <!--  Titulo  -->
+            <div class="text-center py-4">
+                <h4 class="display-6">Agregar Evento</h4>
+            </div>
+
+            <!--
+    <div class="text-center">
+        <label for="imagen">Imagen del producto (.jpg)</label>
+        <input type="file" class="align-self-center mx-auto d-block py-3" name="imagen" value="" />
+    </div>
+    -->
+            <!--  NOMBRE DEL EVENTO  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_nom" value="" required>
+                        <label for="p_nom">Nombre Evento</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_des" value="" required>
+                        <label for="p_des">Descripcion</label>
+                    </div>
+                </div>
+            </div>
+            <!--  Direccion  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_dire" value="" required>
+                        <label for="p_dire">Direccion</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="date" class="form-control" name="p_hora" value="" required>
+                        <label for="p_hora">Hora del evento</label>
+                    </div>
+                </div>
+            </div>
+            <!--  TIPO DE EVENTO  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="p_t_eve" class="form-label">Tipo de evento</label>
+                        <select class="form-select" id="p_t_eve" name="p_t_eve" aria-label="Tipo de evento" required>
+                            <option value="" selected>Seleccione el tipo de evento</option>
+                            @foreach (var x in ViewBag.TipoEvento)
+                            {
+                                <option value="@x.ID_TIPO_EVENTO">@x.DES_EVENTO</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--  Enviar informacion  -->
+            <div class="py-3"></div>
+            <button class="btn btn-danger mb-4" type="submit">Agregar evento</button>
+        </form>
+    </div>
+</div>
+

@@ -371,6 +371,9 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
@@ -418,6 +421,8 @@
     <Content Include="Views\Adm\AdmAddProd.cshtml" />
     <Content Include="Views\Compra\PagosPendientes.cshtml" />
     <Content Include="Views\Adm\AdmAlumno.cshtml" />
+    <Content Include="Views\Adm\AdmAddEvento.cshtml" />
+    <Content Include="Views\Adm\AdmEvento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

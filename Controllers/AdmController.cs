@@ -193,6 +193,51 @@ namespace WebValdiviaDojo.Controllers
             return View();
         }
 
+        //ADMINISTRAR EVENTOS
+        public ActionResult AdmEvento()
+        {
+            List<evento> ev = ListarEvento();
+            List<tipoEvento> tpev = ListarTipoEvento();
+            ViewBag.TipoEvento = tpev;
+            ViewBag.Evento = ev;
+            return View();
+        }
+
+        //AGREGAR PRODUCTO GET
+        public ActionResult AdmAddEvento()
+        {
+            List<tipoEvento> tpev = ListarTipoEvento();
+            ViewBag.TipoEvento = tpev;
+            return View();
+        }
+
+
+        //AGREGAR EVENTOS POST
+        [HttpPost]
+        public ActionResult AdmAddEvento(string p_nom, string p_des, string p_dire, string p_hora, string p_t_eve)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgEvento(p_nom, p_des, p_dire, p_hora, p_t_eve);
+                ViewBag.Mensaje = "Evento registrado exitosamente.";
+            }
+            catch
+            {
+                ViewBag.Mensaje = "Ha ocurrido un error al agregar evento";
+                throw;
+            }
+
+            return RedirectToAction("AdmAddEvento");
+        }
+
+
+
+
+
+
+
+
         //FUNCIONES
         public ActionResult EliminarSolicitud(int p_id_sol)
         {
@@ -450,6 +495,48 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
+
+        public List<tipoEvento> ListarTipoEvento()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListadoTipoEvento().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+
+        public List<evento> ListarEvento()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListadoEvento().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+
+
+
+
 
     }
 }
