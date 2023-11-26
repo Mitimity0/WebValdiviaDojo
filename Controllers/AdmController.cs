@@ -231,6 +231,35 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmAddEvento");
         }
 
+        //ADMIN CLASE GET
+        public ActionResult AdmAddClase()
+        {
+            List<clases> cls = ListarClases();
+            List<clasesNivel> clsniv = ListarClasesNivel();
+
+            ViewBag.Clase = cls;
+            ViewBag.ClaseNivel = clsniv;
+            return View();
+        }
+
+        //ADMIN CLASE POST
+        [HttpPost]
+        public ActionResult AdmAddClase(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgHorario(p_dia_semana, p_hora_inicio, p_hora_fin, p_id_clase, p_id_nivel);
+                ViewBag.Mensaje = "Horario registrado exitosamente.";
+            }
+            catch
+            {
+                ViewBag.Mensaje = "Ha ocurrido un error al agregar horario";
+                throw;
+            }
+
+            return RedirectToAction("AdmAddClase");
+        }
 
 
 
@@ -534,9 +563,37 @@ namespace WebValdiviaDojo.Controllers
             }
         }
 
+        public List<clases> ListarClases()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
 
+            try
+            {
+                return cliente.ListadoClase().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
 
+            return null;
+        }
 
+        public List<clasesNivel> ListarClasesNivel()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListadoClaseNivel().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+
+            return null;
+        }
 
     }
 }

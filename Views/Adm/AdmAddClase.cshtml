@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Nueva Clase";
+}
+
+<div class="py-5 col-12">
+    <div class="row justify-content-center">
+        <form class="card col-8" method="post" enctype="multipart/form-data">
+            <!--  Titulo  -->
+            <div class="text-center py-4">
+                <h4 class="display-6">Agregar Clase</h4>
+            </div>
+            <!--  Dia de la semana  -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_dia_semana" value="" required>
+                        <label for="p_dia_semana">Dia de la semana</label>
+                    </div>
+                </div>
+            </div>
+            <!--  Hora inicio / Hora fin -->
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_hora_inicio" value="" required>
+                        <label for="p_hora_ini">Hora Inicio</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_hora_fin" value="" required>
+                        <label for="p_hora_fin">Hora Fin</label>
+                    </div>
+                </div>
+            </div>
+            <!--  CLASE / NIVEL -->
+            <div class="row g-2">
+                <!--Clase-->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="p_id_clase" class="form-label">Clase</label>
+                        <select class="form-select" id="p_id_clase" name="p_id_clase" aria-label="Clase" required>
+                            <option value="" selected>Seleccione la clase</option>
+                            <!--Traeremos las clases para seleccionar-->
+                            @foreach (var cls in ViewBag.Clase)
+                            {
+                                <option value="@cls.id_clase">@cls.nombre</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <!--Nivel-->
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="p_nivel" class="form-label">Nivel</label>
+                        <select class="form-select" id="p_id_nivel" name="p_id_nivel" aria-label="Nivel" required>
+                            <option value="" selected>Seleccione el nivel</option>
+                            <!--Traeremos los niveles para seleccionar-->
+                            @foreach (var clsniv in ViewBag.ClaseNivel)
+                            {
+                                <option value="@clsniv.id_nivel">@clsniv.nombre</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Enviar informacion  -->
+            <div class="py-3"></div>
+            <button class="btn btn-danger mb-4" type="submit">Agregar Clase</button>
+        </form>
+    </div>
+</div>
+

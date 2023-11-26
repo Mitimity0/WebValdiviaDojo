@@ -78,6 +78,12 @@
                                 <th scope="col">Clase</th>
                                 <th scope="col">Rango de edad</th>
                                 <th scope="col">Día</th>
+                                @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
+                                {
+                                <th scope="col">Agregar</th>
+                                <th scope="col">Eliminar</th>
+                                }
+
                             </tr>
                         </thead>
                         <!-- Cuerpo tabla -->
@@ -86,12 +92,26 @@
                             {
                                 if (horario != null)
                                 {
-                                    <tr data-clase="@horario.id_clase">
-                                        <td>@(horario.hora_ini) - @(horario.hora_fin)</td>
-                                        <td>@(horario.nom_clase)</td>
-                                        <td>@(horario.nom_nivel)</td>
-                                        <td>@(horario.dia)</td>
-                                    </tr>
+                            <tr data-clase="@horario.id_clase">
+                                <td>@(horario.hora_ini) - @(horario.hora_fin)</td>
+                                <td>@(horario.nom_clase)</td>
+                                <td>@(horario.nom_nivel)</td>
+                                <td>@(horario.dia)</td>
+                                <!--Dentro de esta misma lista podriamos agregar el boton eliminar y agregar,
+    si se elimina se sale de esta lista automaticamente
+    Sino, se agrega y manda al boton agregar-->
+
+                                @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
+                                {
+                                <td>@Html.ActionLink("Agregar Clase", "AdmAddClase", "Clase", null, new { @class = "btn btn-danger text-light" })</td>
+                                <td>@Html.ActionLink("Eliminar Clase", "", "", null, new { @class = "btn btn-danger text-light" })</td>
+                                }
+
+
+
+
+
+                            </tr>
                                 }
                             }
                         </tbody>

@@ -374,6 +374,12 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
@@ -409,7 +415,6 @@
     <Content Include="Views\Sesion\PerfilUsu.cshtml" />
     <Content Include="Views\TipoUsuario\TipoUsuario.cshtml" />
     <Content Include="Views\Evento\Evento.cshtml" />
-    <Content Include="Views\Clase\AdministrarClase.cshtml" />
     <Content Include="Views\Compra\OrdenCompra.cshtml" />
     <Content Include="Views\Compra\Pago.cshtml" />
     <Content Include="Views\Compra\ConfirmacionCompra.cshtml" />
@@ -423,6 +428,7 @@
     <Content Include="Views\Adm\AdmAlumno.cshtml" />
     <Content Include="Views\Adm\AdmAddEvento.cshtml" />
     <Content Include="Views\Adm\AdmEvento.cshtml" />
+    <Content Include="Views\Adm\AdmAddClase.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

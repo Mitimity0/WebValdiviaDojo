@@ -182,11 +182,19 @@
                         <li>@Html.ActionLink("Administrar Eventos", "AdmEvento", "Adm", null, new { @class = "dropdown-item" })</li>
                     </ul>
                 </div>
+                <!--Clase-->
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuClase" data-bs-toggle="dropdown" aria-expanded="false">Clase</button>
+                    <ul class="dropdown-menu" aria-labelledby="MenuProd">
+                        <li>@Html.ActionLink("Nueva Clase", "AdmAddClase", "Adm", null, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Administrar Clases", "ClasesDisponibles", "Inscripcion", null, new { @class = "dropdown-item" })</li>
+                    </ul>
+                </div>
+
 
                 <a class="nav-item">@Html.ActionLink("Usuario", "Usuario", "Usuario", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Credencial", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Horario", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
-                <a class="nav-item">@Html.ActionLink("Clase", "Clase", "Clase", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Encuesta", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>
             </div>
         </div>
