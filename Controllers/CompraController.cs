@@ -14,7 +14,7 @@ namespace WebValdiviaDojo.Controllers
         {
             List<matricula> mat = ListarMatricula(v_rut);
             List<mensualidad> men = ListarMensualidad(v_rut);
-            List<ordenCompra> ord = ListarOrdenCompra(v_rut);
+            List<ordenCompra> ord = ListarOrdenCompra(v_rut,"3");
 
             ViewBag.Matricula = mat;
             ViewBag.Mensualidad = men;
@@ -166,13 +166,13 @@ namespace WebValdiviaDojo.Controllers
             }
         }
         //Listar Orden compra 
-        public List<ordenCompra> ListarOrdenCompra(string p_rut)
+        public List<ordenCompra> ListarOrdenCompra(string p_rut, string p_id_compra)
         {
             WS_DojoClient cliente = new WS_DojoClient();
 
             try
             {
-                return cliente.ListaOrdenCompra(p_rut).ToList();
+                return cliente.ListaOrdenCompra(p_rut, p_id_compra).ToList();
             }
             catch (Exception ex)
             {
