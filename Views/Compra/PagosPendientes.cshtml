@@ -32,7 +32,7 @@
                                     <tr>
                                         <td>@mat.FECHA_MATRICULA</td>
                                         <td>@mat.MONTO_MATRICULA</td>
-                                        <td>@mat.ID_ESTADO</td>
+                                        <td>@mat.nombre_estado</td>
                                         <td>@Html.ActionLink("Ir a pagar", "Pago", "Compra", new { v_monto = @mat.MONTO_MATRICULA, v_mat = @mat.ID_MATRICULA, v_men = "", v_nro = "" }, new { @class = "dropdown-item" })</td>
                                     </tr>
                                 }
@@ -58,19 +58,28 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th scope="col">Clase</th>
+                                    <th scope="col">Rango edad</th>
                                     <th scope="col">Fecha de vencimiento</th>
                                     <th scope="col">Monto a pagar</th>
+
+                                    <th scope="col">Estado</th>
                                     <th scope="col">Opciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach (var men in ViewBag.Mensualidad)
                                 {
-                                    <tr>
-                                        <td>@men.FECHA_VENCIMIENTO</td>
-                                        <td>@men.MONTO_PAGAR</td>
-                                        <td>@Html.ActionLink("Ir a pagar", "Pago", "Compra", new { v_monto = @men.MONTO_PAGAR, v_mat = "", v_men = men.ID_MENSUALIDAD, v_nro = "" }, new { @class = "dropdown-item" })</td>
-                                    </tr>
+                                <tr>
+                                    <td>@men.nombre</td>
+                                    <td>@men.nombre_nivel</td>
+                                    <td>@men.FECHA_VENCIMIENTO</td>
+                                    <td>@men.MONTO_PAGAR</td>
+
+
+                                    <td>@men.nombre_estado</td>
+                                    <td>@Html.ActionLink("Ir a pagar", "Pago", "Compra", new { v_monto = @men.MONTO_PAGAR, v_mat = "", v_men = men.ID_MENSUALIDAD, v_nro = "" }, new { @class = "dropdown-item" })</td>
+                                </tr>
                                 }
                             </tbody>
                         </table>

@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Observacion de clase";
+}
+@if (ViewBag.observacion != null)
+{
+    <section class="container py-5 col-12">
+        <div class="row col-12 py-5 mx-auto justify-content-center container-fluid border marketing">
+            <div class="text-center py-4">
+                <h2 class="display-5">Clases de hoy</h2>
+            </div>
+            <table class="table table-hover py-5">
+                <thead>
+                    <tr>
+                        <th scope="col">Clase</th>
+                        <th scope="col">Nivel</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Comentario</th>
+                        <th scope="col">Alumno</th>
+                        <th scope="col">Observacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in ViewBag.observacion)
+                    {
+                        <tr>
+                            <td>@x.nombre</td>
+                            <td>@x.nombre_nivel</td>
+                            <td>@x.hora</td>
+                            <td>@DateTime.Parse(x.fecha_asistencia).ToString("dd/MM/yyyy")</td>
+                            <td>@x.dia_semana</td>
+                            <td>@x.comentario</td>
+                            <td>@x.nombre_us</td>
+                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Comentar</button></td>
+                        </tr>
+                        <!-- Modal Modificar-->
+                        <form action="@Url.Action("ComentarObserva", "Clase")" method="post">
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="LabelEliminar">Comentar Observacion</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <!--input invisibles-->
+                                        <input class="d-none" name="p_rut" value="@x.rut" type="number" />
+                                        <input class="d-none" name="p_id" value="@x.id_asistencia" type="number" />
+
+                                        <div class="modal-body">
+                                            <!--  NOMBRES  -->
+                                            <div class="row g-2">
+                                                <div class="mb-3">
+                                                    <label for="p_observacion" class="form-label">Ingresar comentario</label>
+                                                    <textarea class="form-control" name="p_observacion" rows="3">@x.comentario</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Comentar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+}
+else
+{
+    <div class="py-5 col-12">
+        <div class="row col-6 py-5 justify-content-center">
+            <div class="text-center py-4">
+                <h4 class="display-6">No se han encontrado Clases Registradas</h4>
+            </div>
+        </div>
+    </div>
+}
+

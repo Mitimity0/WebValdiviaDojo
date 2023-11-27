@@ -12,8 +12,8 @@ namespace WebValdiviaDojo.Controllers
         //
         public ActionResult PagosPendientes(string v_rut)
         {
-            List<matricula> mat = ListarMatricula(v_rut);
-            List<mensualidad> men = ListarMensualidad(v_rut);
+            List<matricula> mat = ListarMatricula(v_rut, "3");
+            List<mensualidad> men = ListarMensualidad(v_rut, "3");
             List<ordenCompra> ord = ListarOrdenCompra(v_rut,"3");
 
             ViewBag.Matricula = mat;
@@ -128,13 +128,13 @@ namespace WebValdiviaDojo.Controllers
             }
         }
         //Listar Matricula 
-        public List<matricula> ListarMatricula(string p_rut)
+        public List<matricula> ListarMatricula(string p_rut,string p_id_estado)
         {
             WS_DojoClient cliente = new WS_DojoClient();
 
             try
             {
-                return cliente.ListaMatricula(p_rut).ToList();
+                return cliente.ListaMatricula(p_rut, p_id_estado).ToList();
             }
             catch (Exception ex)
             {
@@ -147,13 +147,13 @@ namespace WebValdiviaDojo.Controllers
             }
         }
         //Listar Mensualidad 
-        public List<mensualidad> ListarMensualidad(string p_rut)
+        public List<mensualidad> ListarMensualidad(string p_rut,string p_id_estado)
         {
             WS_DojoClient cliente = new WS_DojoClient();
 
             try
             {
-                return cliente.ListaMensualidad(p_rut).ToList();
+                return cliente.ListaMensualidad(p_rut, p_id_estado).ToList();
             }
             catch (Exception ex)
             {
