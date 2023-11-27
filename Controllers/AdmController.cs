@@ -388,7 +388,7 @@ namespace WebValdiviaDojo.Controllers
         {
             List<tipoSolicitud> tipo = ListarTipoSolicitud();
 
-            ViewBag.TipoEvento = tipo;
+            ViewBag.TipoSolicitud = tipo;
             return View();
         }
 
