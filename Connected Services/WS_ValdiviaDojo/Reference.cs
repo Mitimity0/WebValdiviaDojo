@@ -4134,16 +4134,16 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_valor_desc;
+        public string p_valor_desc;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_porc_desc;
+        public string p_porc_desc;
         
         public ModDescuentoRequest() {
         }
         
-        public ModDescuentoRequest(int p_id, string p_fecha_inicio, string p_fecha_fin, int p_valor_desc, int p_porc_desc) {
+        public ModDescuentoRequest(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
             this.p_id = p_id;
             this.p_fecha_inicio = p_fecha_inicio;
             this.p_fecha_fin = p_fecha_fin;
@@ -5302,16 +5302,16 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_valor_desc;
+        public string p_valor_desc;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_porc_desc;
+        public string p_porc_desc;
         
         public AgreDescuentoRequest() {
         }
         
-        public AgreDescuentoRequest(string p_fecha_inicio, string p_fecha_fin, int p_valor_desc, int p_porc_desc) {
+        public AgreDescuentoRequest(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
             this.p_fecha_inicio = p_fecha_inicio;
             this.p_fecha_fin = p_fecha_fin;
             this.p_valor_desc = p_valor_desc;
@@ -6147,7 +6147,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ModDescuento(request);
         }
         
-        public int ModDescuento(int p_id, string p_fecha_inicio, string p_fecha_fin, int p_valor_desc, int p_porc_desc) {
+        public int ModDescuento(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
             WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest();
             inValue.p_id = p_id;
             inValue.p_fecha_inicio = p_fecha_inicio;
@@ -6163,7 +6163,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ModDescuentoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse> ModDescuentoAsync(int p_id, string p_fecha_inicio, string p_fecha_fin, int p_valor_desc, int p_porc_desc) {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse> ModDescuentoAsync(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
             WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest();
             inValue.p_id = p_id;
             inValue.p_fecha_inicio = p_fecha_inicio;
@@ -6875,7 +6875,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.AgreDescuento(request);
         }
         
-        public int AgreDescuento(string p_fecha_inicio, string p_fecha_fin, int p_valor_desc, int p_porc_desc) {
+        public int AgreDescuento(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
             WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest();
             inValue.p_fecha_inicio = p_fecha_inicio;
             inValue.p_fecha_fin = p_fecha_fin;
@@ -6890,7 +6890,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.AgreDescuentoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse> AgreDescuentoAsync(string p_fecha_inicio, string p_fecha_fin, int p_valor_desc, int p_porc_desc) {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse> AgreDescuentoAsync(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
             WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest();
             inValue.p_fecha_inicio = p_fecha_inicio;
             inValue.p_fecha_fin = p_fecha_fin;

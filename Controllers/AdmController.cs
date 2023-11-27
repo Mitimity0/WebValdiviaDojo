@@ -24,6 +24,13 @@ namespace WebValdiviaDojo.Controllers
             ViewBag.ProdEsp = esp;
             return View();
         }
+        public ActionResult AdmDescuentos()
+        {
+            List<descuentoProd> des = ListarDescuento();
+            ViewBag.Descuento = des;
+            return View();
+        }
+
 
         //ADMINISTRAR ALUMNOS 
         public ActionResult AdmAlumno()
@@ -574,24 +581,6 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
-        public List<descuentoProd> ListarDescuento()
-        {
-            WS_DojoClient cliente = new WS_DojoClient();
-
-            try
-            {
-                return cliente.ListadoDescuento().ToList();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
-                return null;
-            }
-            finally
-            {
-                cliente.Close();
-            }
-        }
 
         public List<tipoSolicitud> ListarTipoSolicitud()
         {
@@ -789,6 +778,66 @@ namespace WebValdiviaDojo.Controllers
 
             return null;
         }
+        /*
+         * 
+         *                  ADMINISTRAR DESCUENTOS
+         * 
+         */
+        public List<descuentoProd> ListarDescuento()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListadoDescuento().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+        //agregar descuento
+        public ActionResult AgDescuento(DateTime p_fecha_inicio, DateTime p_fecha_fin, string p_valor_desc, string p_porc_desc)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgreDescuento(p_fecha_inicio.ToString("dd/MM/yyyy"),p_fecha_fin.ToString("dd/MM/yyyy"), p_valor_desc, p_porc_desc);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return RedirectToAction("AdmDescuentos");
+        }
+        //Modificar descuento
+        public ActionResult ModDescuento(int p_id, DateTime p_fecha_inicio, DateTime p_fecha_fin, string p_valor_desc, string p_porc_desc)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModDescuento(p_id,p_fecha_inicio.ToString("dd/MM/yyyy"), p_fecha_fin.ToString("dd/MM/yyyy"), p_valor_desc, p_porc_desc);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return RedirectToAction("AdmDescuentos");
+        }
+
 
     }
 }
