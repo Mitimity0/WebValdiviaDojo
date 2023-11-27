@@ -219,16 +219,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="EliTipoSoli">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="p_id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="EliTipoSoliResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="Login">
     <xs:sequence>
       <xs:element minOccurs="0" name="correo" type="xs:string" />
@@ -238,6 +228,16 @@
   <xs:complexType name="LoginResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliTipoSoli">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliTipoSoliResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListaMensualidad">
@@ -779,20 +779,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="AgPago">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="p_metodo" type="xs:string" />
-      <xs:element minOccurs="0" name="p_pagado" type="xs:string" />
-      <xs:element minOccurs="0" name="p_id_matricula" type="xs:string" />
-      <xs:element minOccurs="0" name="p_id_mensualidad" type="xs:string" />
-      <xs:element minOccurs="0" name="p_nro_compra" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="AgPagoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="ListadoTipoEvento">
     <xs:sequence />
   </xs:complexType>
@@ -805,6 +791,20 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="DES_EVENTO" type="xs:string" />
       <xs:element name="ID_TIPO_EVENTO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgPago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_metodo" type="xs:string" />
+      <xs:element minOccurs="0" name="p_pagado" type="xs:string" />
+      <xs:element minOccurs="0" name="p_id_matricula" type="xs:string" />
+      <xs:element minOccurs="0" name="p_id_mensualidad" type="xs:string" />
+      <xs:element minOccurs="0" name="p_nro_compra" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgPagoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListadoCarrito">
