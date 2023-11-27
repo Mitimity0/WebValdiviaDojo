@@ -318,6 +318,70 @@ namespace WebValdiviaDojo.Controllers
             return View();
         }
 
+        //ADM TIPO EVENTO GET
+        public ActionResult AdmTipoEvento()
+        {
+            List<tipoEvento> tipo = ListarTipoEvento();
+
+            ViewBag.TipoEvento = tipo;
+            return View();
+        }
+
+        //AGREGAR TIPO EVENTO GET
+        public ActionResult AdmAddTipoEve()
+        {
+            return View();
+        }
+
+        //AGREGAR TIPO EVENTO POST
+        [HttpPost]
+        public ActionResult AdmAddTipoEve(string p_nom)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgTipoEvento(p_nom);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmAddTipoEve");
+        }
+
+        [HttpPost]
+        //MODIFICAR TIPO EVENTO
+        public ActionResult ModTipoEve(int p_id,string p_nom)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModTipoEve(p_id,p_nom);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoEvento");
+        }
+
+        //ELIMINAR TIPO EVENTO
+        public ActionResult EliTipoEve(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliTipoEve(p_id);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoEvento");
+        }
 
 
 

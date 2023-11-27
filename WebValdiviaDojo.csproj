@@ -386,6 +386,15 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
@@ -437,6 +446,8 @@
     <Content Include="Views\Adm\AdmAddClase.cshtml" />
     <Content Include="Views\Adm\AdmUsuario.cshtml" />
     <Content Include="Views\Adm\AdmTipoUsuario.cshtml" />
+    <Content Include="Views\Adm\AdmAddTipoEve.cshtml" />
+    <Content Include="Views\Adm\AdmTipoEvento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
