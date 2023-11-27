@@ -206,6 +206,7 @@ namespace WebValdiviaDojo.Controllers
         //AGREGAR EVENTOS GET
         public ActionResult AdmAddEvento()
         {
+
             List<tipoEvento> tpev = ListarTipoEvento();
             ViewBag.TipoEvento = tpev;
             return View();
@@ -214,12 +215,12 @@ namespace WebValdiviaDojo.Controllers
 
         //AGREGAR EVENTOS POST
         [HttpPost]
-        public ActionResult AdmAddEvento(string p_nom, string p_des, string p_dire, string p_hora, int p_t_eve)
+        public ActionResult AdmAddEvento(string p_nom, string p_des, string p_dire, DateTime p_hora, int p_t_eve)
         {
             WS_DojoClient cliente = new WS_DojoClient();
             try
             {
-                cliente.AgEvento(p_nom, p_des, p_dire, p_hora, p_t_eve);
+                cliente.AgEvento(p_nom, p_des, p_dire, p_hora.ToString("dd/MM/yyyy hh:mm"), p_t_eve);
                 ViewBag.Mensaje = "Evento registrado exitosamente.";
             }
             catch
@@ -230,6 +231,42 @@ namespace WebValdiviaDojo.Controllers
 
             return RedirectToAction("AdmAddEvento");
         }
+        //MODIFICAR EVENTOS
+        [HttpPost]
+        public ActionResult ModEvento(int p_id,string p_nom, string p_des, string p_dire, DateTime p_hora, string p_t_eve)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModEvento(p_id,p_nom, p_des, p_dire, p_hora.ToString("dd/MM/yyyy hh:mm"), p_t_eve);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmEvento");
+        }
+        //ELIMINAR EVENTOS
+        public ActionResult EliEvento(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliEvento(p_id);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmEvento");
+        }
+
+
+
+
+
 
         //ADMIN CLASE GET
         public ActionResult AdmAddClase()

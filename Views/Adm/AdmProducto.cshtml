@@ -114,7 +114,7 @@
                                                                             }
                                                                             else
                                                                             {
-                                                                                <option value="@des.ID_DESC_PROD"@(des.PORC_DESC == @x.ID_DESC_PROD ? "selected" : "")>@des.PORC_DESC % hasta: @des.FECHA_FIN</option>
+                                                                                <option value="@des.ID_DESC_PROD" @(des.PORC_DESC == @x.ID_DESC_PROD ? "selected" : "")>@des.PORC_DESC % hasta: @des.FECHA_FIN</option>
                                                                             }
 
                                                                         }
@@ -143,31 +143,31 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                        <button type="submit" class ="btn btn-primary">Modificar</button>
+                                                        <button type="submit" class="btn btn-primary">Modificar</button>
                                                     </div>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
-
-
-
-
-                                <!-- Modal Eliminar-->
-                                <form asp-action="ElimSolicitud" asp-controller="Adm" method="post">
+                                <!--    ELIMINAR PRODUCTO    -->
+                                <form method="post">
                                     <div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
+                                                <!--  TITULO  -->
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="LabelEliminar">Modificar solicitud</h5>
+                                                    <h5 class="modal-title" id="LabelEliminar">Eiminar producto</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
+                                                <!--  CUERPO  -->
                                                 <div class="modal-body">
-                                                    <p>Esta seguro que quiere eliminar la solicitud de</p>
+                                                    <p>Esta seguro que quiere eliminar el producto @x.NOMBRE_PRODUCTO</p>
                                                 </div>
+                                                <!--  BOTONES  -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliminarProducto", "Adm", new { p_id = @x.ID_PRODUCTO,p_nom= @x.NOMBRE_PRODUCTO }, new { @class = "btn btn-primary" })</button>
+                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliminarProducto", "Adm", new { p_id = @x.ID_PRODUCTO, p_nom = @x.NOMBRE_PRODUCTO }, new { @class = "btn btn-primary" })</button>
                                                 </div>
                                             </div>
                                         </div>

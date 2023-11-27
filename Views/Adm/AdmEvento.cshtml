@@ -27,23 +27,116 @@
                         <tbody>
                             @foreach (var x in ViewBag.Evento)
                             {
-                            <tr>
-                                <td>@x.NOMBRE_EVENTO</td>
-                                <td>@x.DESCRIPCION_EVENTO</td>
-                                <td>@x.DIRECCION</td>
-                                <td>@x.FECHA_HORA</td>
-                                @foreach (var te in ViewBag.TipoEvento)
-                                {
-                                    if (x.ID_TIPO_EVENTO == te.ID_TIPO_EVENTO)
+                                <tr>
+                                    <td>@x.NOMBRE_EVENTO</td>
+                                    <td>@x.DESCRIPCION_EVENTO</td>
+                                    <td>@x.DIRECCION</td>
+                                    <td>@x.FECHA_HORA</td>
+                                    @foreach (var te in ViewBag.TipoEvento)
                                     {
-                                        <td>@te.DES_EVENTO</td>
+                                        if (x.ID_TIPO_EVENTO == te.ID_TIPO_EVENTO)
+                                        {
+                                            <td>@te.DES_EVENTO</td>
+                                        }
                                     }
-                                } 
 
-                                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
-                                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
-                            </tr>
+                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
+                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
+                                </tr>
 
+                                <!-- Modal Modificar-->
+                                <form action="@Url.Action("ModEvento", "Adm")" method="post">
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Modificar Evento</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <!--  NOMBRE DEL EVENTO  -->
+                                                    <div class="row g-2">
+                                                        <div class="col-6">
+                                                            <div class="form-floating mb-4">
+                                                                <input type="text" class="form-control" name="p_nom" value="@x.NOMBRE_EVENTO" required>
+                                                                <label for="p_nom">Nombre Evento</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="form-floating mb-4">
+                                                                <input type="text" class="form-control" name="p_des" value="@x.DESCRIPCION_EVENTO" required>
+                                                                <label for="p_des">Descripcion</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--  Direccion  -->
+                                                    <div class="row g-2">
+                                                        <div class="col-6">
+                                                            <div class="form-floating mb-4">
+                                                                <input type="text" class="form-control" name="p_dire" value="@x.DIRECCION" required>
+                                                                <label for="p_dire">Direccion</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="form-floating mb-4">
+                                                                <input type="datetime-local" class="form-control" name="p_hora" value="@x.FECHA_HORA" required>
+                                                                <label for="p_hora">Hora del evento</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--  TIPO DE EVENTO  -->
+                                                    <div class="row g-2">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="p_t_eve" class="form-label">Tipo de evento</label>
+                                                                <select class="form-select" id="p_t_eve" name="p_t_eve" aria-label="Tipo de evento" required>
+                                                                    <option value="" selected>Seleccione el tipo de evento</option>
+                                                                    @foreach (var t in ViewBag.TipoEvento)
+                                                                    {
+                                                                        <option value="@t.ID_TIPO_EVENTO" @(t.ID_TIPO_EVENTO.ToString() == @x.ID_TIPO_EVENTO.ToString() ? "selected" : "") >@t.DES_EVENTO</option>
+                                                                    }
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--input invisibles-->
+                                                    <input type="number" name="p_id" id="p_id" value="@x.ID_EVENTO" class="d-none" required />
+
+                                                    <!--  Enviar informacion  -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                        <button type="submit" class="btn btn-primary">Modificar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <!--    ELIMINAR EVENTO    -->
+                                <form asp-action="ElimSolicitud" asp-controller="Adm" method="post">
+                                    <div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <!--  TITULO  -->
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="LabelEliminar">Modificar solicitud</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <!--  CUERPO  -->
+                                                <div class="modal-body">
+                                                    <p>Esta seguro que quiere eliminar el evento @x.NOMBRE_EVENTO</p>
+                                                </div>
+                                                <!--  BOTONES  -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliEvento", "Adm", new { p_id = @x.ID_EVENTO }, new { @class = "btn btn-primary" })</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             }
                         </tbody>
                     </table>
