@@ -671,7 +671,7 @@
       <xs:element minOccurs="0" name="p_des" type="xs:string" />
       <xs:element minOccurs="0" name="p_dire" type="xs:string" />
       <xs:element minOccurs="0" name="p_hora" type="xs:string" />
-      <xs:element minOccurs="0" name="p_t_eve" type="xs:string" />
+      <xs:element minOccurs="0" name="p_t_eve" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="AgEventoResponse">

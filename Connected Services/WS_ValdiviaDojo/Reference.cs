@@ -4561,12 +4561,12 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_t_eve;
+        public int p_t_eve;
         
         public AgEventoRequest() {
         }
         
-        public AgEventoRequest(string p_nom, string p_des, string p_dire, string p_hora, string p_t_eve) {
+        public AgEventoRequest(string p_nom, string p_des, string p_dire, string p_hora, int p_t_eve) {
             this.p_nom = p_nom;
             this.p_des = p_des;
             this.p_dire = p_dire;
@@ -5955,7 +5955,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.AgEvento(request);
         }
         
-        public int AgEvento(string p_nom, string p_des, string p_dire, string p_hora, string p_t_eve) {
+        public int AgEvento(string p_nom, string p_des, string p_dire, string p_hora, int p_t_eve) {
             WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest();
             inValue.p_nom = p_nom;
             inValue.p_des = p_des;
@@ -5971,7 +5971,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.AgEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse> AgEventoAsync(string p_nom, string p_des, string p_dire, string p_hora, string p_t_eve) {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse> AgEventoAsync(string p_nom, string p_des, string p_dire, string p_hora, int p_t_eve) {
             WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest();
             inValue.p_nom = p_nom;
             inValue.p_des = p_des;

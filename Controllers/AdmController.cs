@@ -203,7 +203,7 @@ namespace WebValdiviaDojo.Controllers
             return View();
         }
 
-        //AGREGAR PRODUCTO GET
+        //AGREGAR EVENTOS GET
         public ActionResult AdmAddEvento()
         {
             List<tipoEvento> tpev = ListarTipoEvento();
@@ -214,7 +214,7 @@ namespace WebValdiviaDojo.Controllers
 
         //AGREGAR EVENTOS POST
         [HttpPost]
-        public ActionResult AdmAddEvento(string p_nom, string p_des, string p_dire, string p_hora, string p_t_eve)
+        public ActionResult AdmAddEvento(string p_nom, string p_des, string p_dire, string p_hora, int p_t_eve)
         {
             WS_DojoClient cliente = new WS_DojoClient();
             try
@@ -261,7 +261,15 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmAddClase");
         }
 
-
+        //ADM USUARIOS GET
+        public ActionResult AdmUsuario()
+        {
+            List<usuario> usu = ListarUsuarios();
+            List<tipoUsuario> tipousu = ListarTipoUsu();
+            ViewBag.Usuario = usu;
+            ViewBag.TipoUsuario = tipousu;
+            return View();
+        }
 
 
 

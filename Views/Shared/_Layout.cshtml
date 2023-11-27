@@ -190,7 +190,13 @@
                         <li>@Html.ActionLink("Administrar Clases", "ClasesDisponibles", "Inscripcion", null, new { @class = "dropdown-item" })</li>
                     </ul>
                 </div>
-
+                <!--Usuario-->
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuUsuario" data-bs-toggle="dropdown" aria-expanded="false">Usuario</button>
+                    <ul class="dropdown-menu" aria-labelledby="MenuProd">
+                        <li>@Html.ActionLink("Administrar Usuarios", "AdmUsuario", "adm", null, new { @class = "dropdown-item" })</li>
+                    </ul>
+                </div>
 
                 <a class="nav-item">@Html.ActionLink("Usuario", "Usuario", "Usuario", null, new { @class = "btn btn-outline-light me-2" })</a>
                 <a class="nav-item">@Html.ActionLink("Credencial", "Index", "Home", null, new { @class = "btn btn-outline-light me-2" })</a>

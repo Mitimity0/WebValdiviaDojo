@@ -429,6 +429,7 @@
     <Content Include="Views\Adm\AdmAddEvento.cshtml" />
     <Content Include="Views\Adm\AdmEvento.cshtml" />
     <Content Include="Views\Adm\AdmAddClase.cshtml" />
+    <Content Include="Views\Adm\AdmUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
