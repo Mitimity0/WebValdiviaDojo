@@ -838,6 +838,22 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmDescuentos");
         }
 
-
+        public ActionResult EliDescuento(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliDescuento(p_id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return RedirectToAction("AdmDescuentos");
+        }
     }
 }
