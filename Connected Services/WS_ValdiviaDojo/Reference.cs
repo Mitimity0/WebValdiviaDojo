@@ -509,6 +509,15 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgTipoSolicitudResponse")]
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> AgTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModObservacionRequest", ReplyAction="http://ws/WS_Dojo/ModObservacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse ModObservacion(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModObservacionRequest", ReplyAction="http://ws/WS_Dojo/ModObservacionResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse> ModObservacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request);
     }
     
     /// <remarks/>
@@ -749,6 +758,8 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         private int mONTO_MATRICULAField;
         
+        private string nombre_estadoField;
+        
         private int rUTField;
         
         /// <remarks/>
@@ -801,6 +812,18 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string nombre_estado {
+            get {
+                return this.nombre_estadoField;
+            }
+            set {
+                this.nombre_estadoField = value;
+                this.RaisePropertyChanged("nombre_estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int RUT {
             get {
                 return this.rUTField;
@@ -975,6 +998,12 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         private int mONTO_PAGARField;
         
+        private string nombreField;
+        
+        private string nombre_estadoField;
+        
+        private string nombre_nivelField;
+        
         private int rUTField;
         
         /// <remarks/>
@@ -1051,6 +1080,42 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string nombre_estado {
+            get {
+                return this.nombre_estadoField;
+            }
+            set {
+                this.nombre_estadoField = value;
+                this.RaisePropertyChanged("nombre_estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string nombre_nivel {
+            get {
+                return this.nombre_nivelField;
+            }
+            set {
+                this.nombre_nivelField = value;
+                this.RaisePropertyChanged("nombre_nivel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public int RUT {
             get {
                 return this.rUTField;
@@ -2379,6 +2444,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         private string nombre_nivelField;
         
+        private string nombre_usField;
+        
+        private int rutField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string comentario {
@@ -2460,6 +2529,30 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             set {
                 this.nombre_nivelField = value;
                 this.RaisePropertyChanged("nombre_nivel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string nombre_us {
+            get {
+                return this.nombre_usField;
+            }
+            set {
+                this.nombre_usField = value;
+                this.RaisePropertyChanged("nombre_us");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int rut {
+            get {
+                return this.rutField;
+            }
+            set {
+                this.rutField = value;
+                this.RaisePropertyChanged("rut");
             }
         }
         
@@ -3207,13 +3300,18 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
+        public string p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_fecha;
         
         public ListadoObserRequest() {
         }
         
-        public ListadoObserRequest(int p_rut) {
+        public ListadoObserRequest(string p_rut, string p_fecha) {
             this.p_rut = p_rut;
+            this.p_fecha = p_fecha;
         }
     }
     
@@ -4212,11 +4310,16 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string p_rut;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_estado;
+        
         public ListaMensualidadRequest() {
         }
         
-        public ListaMensualidadRequest(string p_rut) {
+        public ListaMensualidadRequest(string p_rut, string p_id_estado) {
             this.p_rut = p_rut;
+            this.p_id_estado = p_id_estado;
         }
     }
     
@@ -5016,11 +5119,16 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string p_rut;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_estado;
+        
         public ListaMatriculaRequest() {
         }
         
-        public ListaMatriculaRequest(string p_rut) {
+        public ListaMatriculaRequest(string p_rut, string p_id_estado) {
             this.p_rut = p_rut;
+            this.p_id_estado = p_id_estado;
         }
     }
     
@@ -5293,6 +5401,52 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModObservacion", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModObservacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_observacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id_asistencia;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public ModObservacionRequest() {
+        }
+        
+        public ModObservacionRequest(string p_observacion, int p_id_asistencia, int p_rut) {
+            this.p_observacion = p_observacion;
+            this.p_id_asistencia = p_id_asistencia;
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModObservacionResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModObservacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModObservacionResponse() {
+        }
+        
+        public ModObservacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WS_DojoChannel : WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo, System.ServiceModel.IClientChannel {
     }
@@ -5507,9 +5661,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ListadoObser(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.observacion[] ListadoObser(int p_rut) {
+        public WebValdiviaDojo.WS_ValdiviaDojo.observacion[] ListadoObser(string p_rut, string p_fecha) {
             WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest();
             inValue.p_rut = p_rut;
+            inValue.p_fecha = p_fecha;
             WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoObser(inValue);
             return retVal.@return;
         }
@@ -5519,9 +5674,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ListadoObserAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse> ListadoObserAsync(int p_rut) {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse> ListadoObserAsync(string p_rut, string p_fecha) {
             WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest();
             inValue.p_rut = p_rut;
+            inValue.p_fecha = p_fecha;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoObserAsync(inValue);
         }
         
@@ -6112,9 +6268,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ListaMensualidad(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.mensualidad[] ListaMensualidad(string p_rut) {
+        public WebValdiviaDojo.WS_ValdiviaDojo.mensualidad[] ListaMensualidad(string p_rut, string p_id_estado) {
             WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest();
             inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
             WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMensualidad(inValue);
             return retVal.@return;
         }
@@ -6124,9 +6281,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ListaMensualidadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse> ListaMensualidadAsync(string p_rut) {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse> ListaMensualidadAsync(string p_rut, string p_id_estado) {
             WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest();
             inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMensualidadAsync(inValue);
         }
         
@@ -6602,9 +6760,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ListaMatricula(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.matricula[] ListaMatricula(string p_rut) {
+        public WebValdiviaDojo.WS_ValdiviaDojo.matricula[] ListaMatricula(string p_rut, string p_id_estado) {
             WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest();
             inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
             WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMatricula(inValue);
             return retVal.@return;
         }
@@ -6614,9 +6773,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ListaMatriculaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse> ListaMatriculaAsync(string p_rut) {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse> ListaMatriculaAsync(string p_rut, string p_id_estado) {
             WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest();
             inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMatriculaAsync(inValue);
         }
         
@@ -6781,6 +6941,33 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest();
             inValue.p_nombre = p_nombre;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoSolicitudAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModObservacion(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request) {
+            return base.Channel.ModObservacion(request);
+        }
+        
+        public int ModObservacion(string p_observacion, int p_id_asistencia, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest();
+            inValue.p_observacion = p_observacion;
+            inValue.p_id_asistencia = p_id_asistencia;
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModObservacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModObservacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request) {
+            return base.Channel.ModObservacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse> ModObservacionAsync(string p_observacion, int p_id_asistencia, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest();
+            inValue.p_observacion = p_observacion;
+            inValue.p_id_asistencia = p_id_asistencia;
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModObservacionAsync(inValue);
         }
     }
 }

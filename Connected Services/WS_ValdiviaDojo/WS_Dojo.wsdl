@@ -335,6 +335,12 @@
   <message name="AgTipoSolicitudResponse">
     <part name="parameters" element="tns:AgTipoSolicitudResponse" />
   </message>
+  <message name="ModObservacion">
+    <part name="parameters" element="tns:ModObservacion" />
+  </message>
+  <message name="ModObservacionResponse">
+    <part name="parameters" element="tns:ModObservacionResponse" />
+  </message>
   <portType name="WS_Dojo">
     <operation name="ListadoTipoEvento">
       <input wsam:Action="http://ws/WS_Dojo/ListadoTipoEventoRequest" message="tns:ListadoTipoEvento" />
@@ -555,6 +561,10 @@
     <operation name="AgTipoSolicitud">
       <input wsam:Action="http://ws/WS_Dojo/AgTipoSolicitudRequest" message="tns:AgTipoSolicitud" />
       <output wsam:Action="http://ws/WS_Dojo/AgTipoSolicitudResponse" message="tns:AgTipoSolicitudResponse" />
+    </operation>
+    <operation name="ModObservacion">
+      <input wsam:Action="http://ws/WS_Dojo/ModObservacionRequest" message="tns:ModObservacion" />
+      <output wsam:Action="http://ws/WS_Dojo/ModObservacionResponse" message="tns:ModObservacionResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
@@ -1046,6 +1056,15 @@
       </output>
     </operation>
     <operation name="AgTipoSolicitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModObservacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

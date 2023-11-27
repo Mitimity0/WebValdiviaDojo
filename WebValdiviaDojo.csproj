@@ -164,7 +164,7 @@
     <Content Include="Img\Publicidad\logo.jpeg" />
     <Content Include="Img\Publicidad\logoSinFondo.png" />
     <Content Include="Img\Publicidad\Shihan.jpg" />
-    <Content Include="Img\Usuario\default.png" />
+    <Content Include="Img\Usuario\Default.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.genero.datasource">
@@ -404,6 +404,9 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
@@ -459,6 +462,7 @@
     <Content Include="Views\Adm\AdmTipoEvento.cshtml" />
     <Content Include="Views\Adm\AdmAddTipoSoli.cshtml" />
     <Content Include="Views\Adm\AdmTipoSolicitud.cshtml" />
+    <Content Include="Views\Clase\ComentarAvance.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
