@@ -310,7 +310,7 @@ namespace WebValdiviaDojo.Controllers
 
         //AdM TIPO USUARIO GET
 
-        public ActionResult AdmTipoUsu()
+        public ActionResult AdmTipoUsuario()
         {
             List<tipoUsuario> tipousu = ListarTipoUsu();
 
