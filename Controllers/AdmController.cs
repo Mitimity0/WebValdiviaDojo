@@ -308,6 +308,25 @@ namespace WebValdiviaDojo.Controllers
             return View();
         }
 
+        //AdM TIPO USUARIO GET
+
+        public ActionResult AdmTipoUsu()
+        {
+            List<tipoUsuario> tipousu = ListarTipoUsu();
+
+            ViewBag.TipoUsuario = tipousu;
+            return View();
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 

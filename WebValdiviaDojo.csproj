@@ -436,6 +436,7 @@
     <Content Include="Views\Adm\AdmEvento.cshtml" />
     <Content Include="Views\Adm\AdmAddClase.cshtml" />
     <Content Include="Views\Adm\AdmUsuario.cshtml" />
+    <Content Include="Views\Adm\AdmTipoUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
