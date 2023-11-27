@@ -463,6 +463,7 @@
     <Content Include="Views\Adm\AdmAddTipoSoli.cshtml" />
     <Content Include="Views\Adm\AdmTipoSolicitud.cshtml" />
     <Content Include="Views\Clase\ComentarAvance.cshtml" />
+    <Content Include="Views\Adm\AdmDescuentos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

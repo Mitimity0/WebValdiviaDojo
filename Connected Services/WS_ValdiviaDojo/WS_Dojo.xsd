@@ -630,8 +630,8 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="p_fecha_inicio" type="xs:string" />
       <xs:element minOccurs="0" name="p_fecha_fin" type="xs:string" />
-      <xs:element minOccurs="0" name="p_valor_desc" type="xs:int" />
-      <xs:element minOccurs="0" name="p_porc_desc" type="xs:int" />
+      <xs:element minOccurs="0" name="p_valor_desc" type="xs:string" />
+      <xs:element minOccurs="0" name="p_porc_desc" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="AgreDescuentoResponse">
@@ -725,8 +725,8 @@
       <xs:element minOccurs="0" name="p_id" type="xs:int" />
       <xs:element minOccurs="0" name="p_fecha_inicio" type="xs:string" />
       <xs:element minOccurs="0" name="p_fecha_fin" type="xs:string" />
-      <xs:element minOccurs="0" name="p_valor_desc" type="xs:int" />
-      <xs:element minOccurs="0" name="p_porc_desc" type="xs:int" />
+      <xs:element minOccurs="0" name="p_valor_desc" type="xs:string" />
+      <xs:element minOccurs="0" name="p_porc_desc" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ModDescuentoResponse">
