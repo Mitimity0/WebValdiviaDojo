@@ -40,8 +40,8 @@
                                         }
                                     }
 
-                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
-                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
                                 </tr>
 
                                 <!-- Modal Modificar-->
@@ -106,7 +106,7 @@
                                                     <!--  Enviar informacion  -->
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                        <button type="submit" class="btn btn-primary">Modificar</button>
+                                                        <button type="submit" class="btn btn-danger">Modificar</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -131,7 +131,7 @@
                                                 <!--  BOTONES  -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliEvento", "Adm", new { p_id = @x.ID_EVENTO }, new { @class = "btn btn-primary" })</button>
+                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliEvento", "Adm", new { p_id = @x.ID_EVENTO }, new { @class = "btn btn-danger" })</button>
                                                 </div>
                                             </div>
                                         </div>
