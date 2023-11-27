@@ -459,6 +459,16 @@
     <Content Include="Views\Adm\AdmTipoEvento.cshtml" />
     <Content Include="Views\Adm\AdmAddTipoSoli.cshtml" />
     <Content Include="Views\Adm\AdmTipoSolicitud.cshtml" />
+    <Content Include="Views\Adm\AdmAddTipoProd.cshtml" />
+    <Content Include="Views\Adm\AdmTipoProducto.cshtml" />
+    <Content Include="Views\Adm\AdmTipoClase.cshtml" />
+    <Content Include="Views\Adm\AdmAddTipoClase.cshtml" />
+    <Content Include="Views\Adm\AdmClaseNivel.cshtml" />
+    <Content Include="Views\Adm\AdmAddClaNivel.cshtml" />
+    <Content Include="Views\Adm\AdmCinturon.cshtml" />
+    <Content Include="Views\Adm\AdmAddCinturon.cshtml" />
+    <Content Include="Views\Adm\AdmTipoEncuesta.cshtml" />
+    <Content Include="Views\Adm\AdmAddTipoEncu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

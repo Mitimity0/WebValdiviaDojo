@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Nueva Clase Nivel";
+}
+
+<div class="py-5 col-12">
+    <div class="row justify-content-center">
+        <form class="card col-8" method="post" enctype="multipart/form-data">
+            <!--  Titulo  -->
+            <div class="text-center py-4">
+                <h4 class="display-6">Agregar Nivel de clase</h4>
+            </div>
+
+            <!--  NOMBRE DE LA CLASE NIVEL  -->
+            <div class="row g-2">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_nom" value="" required>
+                        <label for="p_nom">Nivel de clase</label>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <!--  Enviar informacion  -->
+            <div class="py-3"></div>
+            <button class="btn btn-danger mb-4" type="submit">Agregar Nivel de clase</button>
+        </form>
+    </div>
+</div>
+
