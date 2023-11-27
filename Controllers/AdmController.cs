@@ -456,6 +456,12 @@ namespace WebValdiviaDojo.Controllers
 
 
 
+
+
+
+
+
+
             //FUNCIONES
             public ActionResult EliminarSolicitud(int p_id_sol)
         {
