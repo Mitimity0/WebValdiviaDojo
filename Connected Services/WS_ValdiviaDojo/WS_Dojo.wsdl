@@ -59,6 +59,24 @@
   <message name="EliTipoEveResponse">
     <part name="parameters" element="tns:EliTipoEveResponse" />
   </message>
+  <message name="AgTipoSolicitud">
+    <part name="parameters" element="tns:AgTipoSolicitud" />
+  </message>
+  <message name="AgTipoSolicitudResponse">
+    <part name="parameters" element="tns:AgTipoSolicitudResponse" />
+  </message>
+  <message name="EliTipoSoli">
+    <part name="parameters" element="tns:EliTipoSoli" />
+  </message>
+  <message name="EliTipoSoliResponse">
+    <part name="parameters" element="tns:EliTipoSoliResponse" />
+  </message>
+  <message name="ModTipoSoli">
+    <part name="parameters" element="tns:ModTipoSoli" />
+  </message>
+  <message name="ModTipoSoliResponse">
+    <part name="parameters" element="tns:ModTipoSoliResponse" />
+  </message>
   <message name="ListadoProdGen">
     <part name="parameters" element="tns:ListadoProdGen" />
   </message>
@@ -354,6 +372,18 @@
       <input wsam:Action="http://ws/WS_Dojo/EliTipoEveRequest" message="tns:EliTipoEve" />
       <output wsam:Action="http://ws/WS_Dojo/EliTipoEveResponse" message="tns:EliTipoEveResponse" />
     </operation>
+    <operation name="AgTipoSolicitud">
+      <input wsam:Action="http://ws/WS_Dojo/AgTipoSolicitudRequest" message="tns:AgTipoSolicitud" />
+      <output wsam:Action="http://ws/WS_Dojo/AgTipoSolicitudResponse" message="tns:AgTipoSolicitudResponse" />
+    </operation>
+    <operation name="EliTipoSoli">
+      <input wsam:Action="http://ws/WS_Dojo/EliTipoSoliRequest" message="tns:EliTipoSoli" />
+      <output wsam:Action="http://ws/WS_Dojo/EliTipoSoliResponse" message="tns:EliTipoSoliResponse" />
+    </operation>
+    <operation name="ModTipoSoli">
+      <input wsam:Action="http://ws/WS_Dojo/ModTipoSoliRequest" message="tns:ModTipoSoli" />
+      <output wsam:Action="http://ws/WS_Dojo/ModTipoSoliResponse" message="tns:ModTipoSoliResponse" />
+    </operation>
     <operation name="ListadoProdGen">
       <input wsam:Action="http://ws/WS_Dojo/ListadoProdGenRequest" message="tns:ListadoProdGen" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoProdGenResponse" message="tns:ListadoProdGenResponse" />
@@ -602,6 +632,33 @@
       </output>
     </operation>
     <operation name="EliTipoEve">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgTipoSolicitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliTipoSoli">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModTipoSoli">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

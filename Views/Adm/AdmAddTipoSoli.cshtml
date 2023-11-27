@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Nueva Tipo Solicitud";
+}
+
+<div class="py-5 col-12">
+    <div class="row justify-content-center">
+        <form class="card col-8" method="post" enctype="multipart/form-data">
+            <!--  Titulo  -->
+            <div class="text-center py-4">
+                <h4 class="display-6">Agregar Tipo Solicitud</h4>
+            </div>
+
+            <!--  NOMBRE DEL EVENTO  -->
+            <div class="row g-2">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="p_nombre" value="" required>
+                        <label for="p_nombre">Nombre Tipo Solicitud</label>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <!--  Enviar informacion  -->
+            <div class="py-3"></div>
+            <button class="btn btn-danger mb-4" type="submit">Agregar Tipo solicitud</button>
+        </form>
+    </div>
+</div>
+

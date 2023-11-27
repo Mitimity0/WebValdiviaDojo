@@ -383,6 +383,69 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmTipoEvento");
         }
 
+        //ADM TIPO SOLICITUD
+        public ActionResult AdmTipoSolicitud()
+        {
+            List<tipoSolicitud> tipo = ListarTipoSolicitud();
+
+            ViewBag.TipoEvento = tipo;
+            return View();
+        }
+
+
+        //AGREGAR TIPO SOLICITUD GET
+        public ActionResult AdmAddTipoSoli()
+        {
+            return View();
+        }
+        //AGREGAR TIPO SOLICITUD POST
+        [HttpPost]
+        public ActionResult AdmAddTipoSoli(string p_nombre)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgTipoSolicitud(p_nombre);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmAddTipoSoli");
+        }
+        [HttpPost]
+        //MODIFICAR TIPO EVENTO
+        public ActionResult ModTipoSoli(int p_id, string p_nombre)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModTipoSoli(p_id, p_nombre);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoSolicitud");
+        }
+
+        //ELIMINAR TIPO SOLICITUD
+        public ActionResult EliTipoSoli(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliTipoSoli(p_id);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoSolicitud");
+        }
 
 
 
@@ -393,10 +456,8 @@ namespace WebValdiviaDojo.Controllers
 
 
 
-
-
-        //FUNCIONES
-        public ActionResult EliminarSolicitud(int p_id_sol)
+            //FUNCIONES
+            public ActionResult EliminarSolicitud(int p_id_sol)
         {
             WS_DojoClient cliente = new WS_DojoClient();
             try

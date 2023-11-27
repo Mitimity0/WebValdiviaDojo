@@ -97,6 +97,33 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse> EliTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgTipoSolicitudResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse AgTipoSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgTipoSolicitudResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> AgTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/EliTipoSoliResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse EliTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/EliTipoSoliResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> EliTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/ModTipoSoliResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse ModTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/ModTipoSoliResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse> ModTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdGenRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdGenResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -3288,6 +3315,119 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoSolicitudRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nombre;
+        
+        public AgTipoSolicitudRequest() {
+        }
+        
+        public AgTipoSolicitudRequest(string p_nombre) {
+            this.p_nombre = p_nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoSolicitudResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgTipoSolicitudResponse() {
+        }
+        
+        public AgTipoSolicitudResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoSoli", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliTipoSoliRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        public EliTipoSoliRequest() {
+        }
+        
+        public EliTipoSoliRequest(int p_id) {
+            this.p_id = p_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoSoliResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliTipoSoliResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliTipoSoliResponse() {
+        }
+        
+        public EliTipoSoliResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoSoli", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModTipoSoliRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nombre;
+        
+        public ModTipoSoliRequest() {
+        }
+        
+        public ModTipoSoliRequest(int p_id, string p_nombre) {
+            this.p_id = p_id;
+            this.p_nombre = p_nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoSoliResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModTipoSoliResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModTipoSoliResponse() {
+        }
+        
+        public ModTipoSoliResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdGen", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class ListadoProdGenRequest {
         
@@ -5409,6 +5549,77 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest();
             inValue.p_id = p_id;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEveAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request) {
+            return base.Channel.AgTipoSolicitud(request);
+        }
+        
+        public int AgTipoSolicitud(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest();
+            inValue.p_nombre = p_nombre;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoSolicitud(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request) {
+            return base.Channel.AgTipoSolicitudAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> AgTipoSolicitudAsync(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest();
+            inValue.p_nombre = p_nombre;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoSolicitudAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request) {
+            return base.Channel.EliTipoSoli(request);
+        }
+        
+        public int EliTipoSoli(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoSoli(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request) {
+            return base.Channel.EliTipoSoliAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> EliTipoSoliAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoSoliAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest request) {
+            return base.Channel.ModTipoSoli(request);
+        }
+        
+        public int ModTipoSoli(int p_id, string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest();
+            inValue.p_id = p_id;
+            inValue.p_nombre = p_nombre;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoSoli(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest request) {
+            return base.Channel.ModTipoSoliAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse> ModTipoSoliAsync(int p_id, string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest();
+            inValue.p_id = p_id;
+            inValue.p_nombre = p_nombre;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoSoliAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
