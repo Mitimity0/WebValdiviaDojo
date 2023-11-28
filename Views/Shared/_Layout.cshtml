@@ -162,6 +162,9 @@
                 <div class="dropdown">
                     <button class="btn btn-danger dropdown-toggle" type="button" id="MenuProd" data-bs-toggle="dropdown" aria-expanded="false">Productos</button>
                     <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
+                        
+
+                        <li>@Html.ActionLink("Administrar Descuentos", "AdmDescuentos", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                         <li>@Html.ActionLink("Nuevo producto", "AdmAddProd", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                         <li>@Html.ActionLink("Administrar productos", "AdmProducto", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                     </ul>
