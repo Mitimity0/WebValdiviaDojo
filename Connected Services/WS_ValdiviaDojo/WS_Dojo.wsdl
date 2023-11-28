@@ -5,71 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/WS_ValdiviaDojo/WS_Dojo?xsd=1" namespace="http://ws/" />
     </xsd:schema>
   </types>
-  <message name="AgTipoProducto">
-    <part name="parameters" element="tns:AgTipoProducto" />
-  </message>
-  <message name="AgTipoProductoResponse">
-    <part name="parameters" element="tns:AgTipoProductoResponse" />
-  </message>
-  <message name="AgreSolicitud">
-    <part name="parameters" element="tns:AgreSolicitud" />
-  </message>
-  <message name="AgreSolicitudResponse">
-    <part name="parameters" element="tns:AgreSolicitudResponse" />
-  </message>
-  <message name="ModSolicitud">
-    <part name="parameters" element="tns:ModSolicitud" />
-  </message>
-  <message name="ModSolicitudResponse">
-    <part name="parameters" element="tns:ModSolicitudResponse" />
-  </message>
-  <message name="ModTipoSoli">
-    <part name="parameters" element="tns:ModTipoSoli" />
-  </message>
-  <message name="ModTipoSoliResponse">
-    <part name="parameters" element="tns:ModTipoSoliResponse" />
-  </message>
-  <message name="Login">
-    <part name="parameters" element="tns:Login" />
-  </message>
-  <message name="LoginResponse">
-    <part name="parameters" element="tns:LoginResponse" />
-  </message>
-  <message name="AgDetalleCom">
-    <part name="parameters" element="tns:AgDetalleCom" />
-  </message>
-  <message name="AgDetalleComResponse">
-    <part name="parameters" element="tns:AgDetalleComResponse" />
-  </message>
   <message name="ListaComentario">
     <part name="parameters" element="tns:ListaComentario" />
   </message>
   <message name="ListaComentarioResponse">
     <part name="parameters" element="tns:ListaComentarioResponse" />
   </message>
-  <message name="ModObservacion">
-    <part name="parameters" element="tns:ModObservacion" />
+  <message name="ListaMensualidad">
+    <part name="parameters" element="tns:ListaMensualidad" />
   </message>
-  <message name="ModObservacionResponse">
-    <part name="parameters" element="tns:ModObservacionResponse" />
-  </message>
-  <message name="EliSolicitud">
-    <part name="parameters" element="tns:EliSolicitud" />
-  </message>
-  <message name="EliSolicitudResponse">
-    <part name="parameters" element="tns:EliSolicitudResponse" />
-  </message>
-  <message name="EliComentario">
-    <part name="parameters" element="tns:EliComentario" />
-  </message>
-  <message name="EliComentarioResponse">
-    <part name="parameters" element="tns:EliComentarioResponse" />
-  </message>
-  <message name="ModDescuento">
-    <part name="parameters" element="tns:ModDescuento" />
-  </message>
-  <message name="ModDescuentoResponse">
-    <part name="parameters" element="tns:ModDescuentoResponse" />
+  <message name="ListaMensualidadResponse">
+    <part name="parameters" element="tns:ListaMensualidadResponse" />
   </message>
   <message name="ListaMetodoPago">
     <part name="parameters" element="tns:ListaMetodoPago" />
@@ -77,35 +23,11 @@
   <message name="ListaMetodoPagoResponse">
     <part name="parameters" element="tns:ListaMetodoPagoResponse" />
   </message>
-  <message name="ListaEstado">
-    <part name="parameters" element="tns:ListaEstado" />
+  <message name="ModSolicitud">
+    <part name="parameters" element="tns:ModSolicitud" />
   </message>
-  <message name="ListaEstadoResponse">
-    <part name="parameters" element="tns:ListaEstadoResponse" />
-  </message>
-  <message name="ModComentario">
-    <part name="parameters" element="tns:ModComentario" />
-  </message>
-  <message name="ModComentarioResponse">
-    <part name="parameters" element="tns:ModComentarioResponse" />
-  </message>
-  <message name="ModEvento">
-    <part name="parameters" element="tns:ModEvento" />
-  </message>
-  <message name="ModEventoResponse">
-    <part name="parameters" element="tns:ModEventoResponse" />
-  </message>
-  <message name="ListaTipoProd">
-    <part name="parameters" element="tns:ListaTipoProd" />
-  </message>
-  <message name="ListaTipoProdResponse">
-    <part name="parameters" element="tns:ListaTipoProdResponse" />
-  </message>
-  <message name="AgreComentario">
-    <part name="parameters" element="tns:AgreComentario" />
-  </message>
-  <message name="AgreComentarioResponse">
-    <part name="parameters" element="tns:AgreComentarioResponse" />
+  <message name="ModSolicitudResponse">
+    <part name="parameters" element="tns:ModSolicitudResponse" />
   </message>
   <message name="ListaOrdenCompra">
     <part name="parameters" element="tns:ListaOrdenCompra" />
@@ -119,11 +41,47 @@
   <message name="AgPagoResponse">
     <part name="parameters" element="tns:AgPagoResponse" />
   </message>
-  <message name="ModTipoEve">
-    <part name="parameters" element="tns:ModTipoEve" />
+  <message name="ListaSolicitud">
+    <part name="parameters" element="tns:ListaSolicitud" />
   </message>
-  <message name="ModTipoEveResponse">
-    <part name="parameters" element="tns:ModTipoEveResponse" />
+  <message name="ListaSolicitudResponse">
+    <part name="parameters" element="tns:ListaSolicitudResponse" />
+  </message>
+  <message name="ModEvento">
+    <part name="parameters" element="tns:ModEvento" />
+  </message>
+  <message name="ModEventoResponse">
+    <part name="parameters" element="tns:ModEventoResponse" />
+  </message>
+  <message name="AgreComentario">
+    <part name="parameters" element="tns:AgreComentario" />
+  </message>
+  <message name="AgreComentarioResponse">
+    <part name="parameters" element="tns:AgreComentarioResponse" />
+  </message>
+  <message name="AgreSolicitud">
+    <part name="parameters" element="tns:AgreSolicitud" />
+  </message>
+  <message name="AgreSolicitudResponse">
+    <part name="parameters" element="tns:AgreSolicitudResponse" />
+  </message>
+  <message name="EliComentario">
+    <part name="parameters" element="tns:EliComentario" />
+  </message>
+  <message name="EliComentarioResponse">
+    <part name="parameters" element="tns:EliComentarioResponse" />
+  </message>
+  <message name="ModComentario">
+    <part name="parameters" element="tns:ModComentario" />
+  </message>
+  <message name="ModComentarioResponse">
+    <part name="parameters" element="tns:ModComentarioResponse" />
+  </message>
+  <message name="ModObservacion">
+    <part name="parameters" element="tns:ModObservacion" />
+  </message>
+  <message name="ModObservacionResponse">
+    <part name="parameters" element="tns:ModObservacionResponse" />
   </message>
   <message name="ListadoObser">
     <part name="parameters" element="tns:ListadoObser" />
@@ -131,17 +89,35 @@
   <message name="ListadoObserResponse">
     <part name="parameters" element="tns:ListadoObserResponse" />
   </message>
-  <message name="ListaMensualidad">
-    <part name="parameters" element="tns:ListaMensualidad" />
+  <message name="ListaEstado">
+    <part name="parameters" element="tns:ListaEstado" />
   </message>
-  <message name="ListaMensualidadResponse">
-    <part name="parameters" element="tns:ListaMensualidadResponse" />
+  <message name="ListaEstadoResponse">
+    <part name="parameters" element="tns:ListaEstadoResponse" />
   </message>
-  <message name="ListaSolicitud">
-    <part name="parameters" element="tns:ListaSolicitud" />
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
   </message>
-  <message name="ListaSolicitudResponse">
-    <part name="parameters" element="tns:ListaSolicitudResponse" />
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="ModDescuento">
+    <part name="parameters" element="tns:ModDescuento" />
+  </message>
+  <message name="ModDescuentoResponse">
+    <part name="parameters" element="tns:ModDescuentoResponse" />
+  </message>
+  <message name="ListaTipoProd">
+    <part name="parameters" element="tns:ListaTipoProd" />
+  </message>
+  <message name="ListaTipoProdResponse">
+    <part name="parameters" element="tns:ListaTipoProdResponse" />
+  </message>
+  <message name="EliSolicitud">
+    <part name="parameters" element="tns:EliSolicitud" />
+  </message>
+  <message name="EliSolicitudResponse">
+    <part name="parameters" element="tns:EliSolicitudResponse" />
   </message>
   <message name="AgOrdenCompra">
     <part name="parameters" element="tns:AgOrdenCompra" />
@@ -149,47 +125,77 @@
   <message name="AgOrdenCompraResponse">
     <part name="parameters" element="tns:AgOrdenCompraResponse" />
   </message>
+  <message name="ListadoGenero">
+    <part name="parameters" element="tns:ListadoGenero" />
+  </message>
+  <message name="ListadoGeneroResponse">
+    <part name="parameters" element="tns:ListadoGeneroResponse" />
+  </message>
+  <message name="ModClaseNivel">
+    <part name="parameters" element="tns:ModClaseNivel" />
+  </message>
+  <message name="ModClaseNivelResponse">
+    <part name="parameters" element="tns:ModClaseNivelResponse" />
+  </message>
+  <message name="ModProducto">
+    <part name="parameters" element="tns:ModProducto" />
+  </message>
+  <message name="ModProductoResponse">
+    <part name="parameters" element="tns:ModProductoResponse" />
+  </message>
+  <message name="EliHorario">
+    <part name="parameters" element="tns:EliHorario" />
+  </message>
+  <message name="EliHorarioResponse">
+    <part name="parameters" element="tns:EliHorarioResponse" />
+  </message>
+  <message name="ListadoTalla">
+    <part name="parameters" element="tns:ListadoTalla" />
+  </message>
+  <message name="ListadoTallaResponse">
+    <part name="parameters" element="tns:ListadoTallaResponse" />
+  </message>
+  <message name="ModTipoSoli">
+    <part name="parameters" element="tns:ModTipoSoli" />
+  </message>
+  <message name="ModTipoSoliResponse">
+    <part name="parameters" element="tns:ModTipoSoliResponse" />
+  </message>
+  <message name="AgDetalleCom">
+    <part name="parameters" element="tns:AgDetalleCom" />
+  </message>
+  <message name="AgDetalleComResponse">
+    <part name="parameters" element="tns:AgDetalleComResponse" />
+  </message>
   <message name="ListadoProdGen">
     <part name="parameters" element="tns:ListadoProdGen" />
   </message>
   <message name="ListadoProdGenResponse">
     <part name="parameters" element="tns:ListadoProdGenResponse" />
   </message>
-  <message name="AgParticipacion">
-    <part name="parameters" element="tns:AgParticipacion" />
+  <message name="AgHorario">
+    <part name="parameters" element="tns:AgHorario" />
   </message>
-  <message name="AgParticipacionResponse">
-    <part name="parameters" element="tns:AgParticipacionResponse" />
+  <message name="AgHorarioResponse">
+    <part name="parameters" element="tns:AgHorarioResponse" />
   </message>
-  <message name="CrearUsuario">
-    <part name="parameters" element="tns:CrearUsuario" />
+  <message name="ListadoHorario">
+    <part name="parameters" element="tns:ListadoHorario" />
   </message>
-  <message name="CrearUsuarioResponse">
-    <part name="parameters" element="tns:CrearUsuarioResponse" />
+  <message name="ListadoHorarioResponse">
+    <part name="parameters" element="tns:ListadoHorarioResponse" />
   </message>
-  <message name="AgreDescuento">
-    <part name="parameters" element="tns:AgreDescuento" />
+  <message name="ModCinturon">
+    <part name="parameters" element="tns:ModCinturon" />
   </message>
-  <message name="AgreDescuentoResponse">
-    <part name="parameters" element="tns:AgreDescuentoResponse" />
+  <message name="ModCinturonResponse">
+    <part name="parameters" element="tns:ModCinturonResponse" />
   </message>
-  <message name="ListarUsuarios">
-    <part name="parameters" element="tns:ListarUsuarios" />
+  <message name="ListadoCarrito">
+    <part name="parameters" element="tns:ListadoCarrito" />
   </message>
-  <message name="ListarUsuariosResponse">
-    <part name="parameters" element="tns:ListarUsuariosResponse" />
-  </message>
-  <message name="EliEvento">
-    <part name="parameters" element="tns:EliEvento" />
-  </message>
-  <message name="EliEventoResponse">
-    <part name="parameters" element="tns:EliEventoResponse" />
-  </message>
-  <message name="ListarCinturon">
-    <part name="parameters" element="tns:ListarCinturon" />
-  </message>
-  <message name="ListarCinturonResponse">
-    <part name="parameters" element="tns:ListarCinturonResponse" />
+  <message name="ListadoCarritoResponse">
+    <part name="parameters" element="tns:ListadoCarritoResponse" />
   </message>
   <message name="ListadoProdEspe">
     <part name="parameters" element="tns:ListadoProdEspe" />
@@ -203,41 +209,17 @@
   <message name="AgProductoResponse">
     <part name="parameters" element="tns:AgProductoResponse" />
   </message>
-  <message name="AgEvento">
-    <part name="parameters" element="tns:AgEvento" />
+  <message name="EliProducto">
+    <part name="parameters" element="tns:EliProducto" />
   </message>
-  <message name="AgEventoResponse">
-    <part name="parameters" element="tns:AgEventoResponse" />
+  <message name="EliProductoResponse">
+    <part name="parameters" element="tns:EliProductoResponse" />
   </message>
-  <message name="ListadoCarrito">
-    <part name="parameters" element="tns:ListadoCarrito" />
+  <message name="ModTipoEve">
+    <part name="parameters" element="tns:ModTipoEve" />
   </message>
-  <message name="ListadoCarritoResponse">
-    <part name="parameters" element="tns:ListadoCarritoResponse" />
-  </message>
-  <message name="ModProducto">
-    <part name="parameters" element="tns:ModProducto" />
-  </message>
-  <message name="ModProductoResponse">
-    <part name="parameters" element="tns:ModProductoResponse" />
-  </message>
-  <message name="ListadoTalla">
-    <part name="parameters" element="tns:ListadoTalla" />
-  </message>
-  <message name="ListadoTallaResponse">
-    <part name="parameters" element="tns:ListadoTallaResponse" />
-  </message>
-  <message name="AgHorario">
-    <part name="parameters" element="tns:AgHorario" />
-  </message>
-  <message name="AgHorarioResponse">
-    <part name="parameters" element="tns:AgHorarioResponse" />
-  </message>
-  <message name="ListadoGenero">
-    <part name="parameters" element="tns:ListadoGenero" />
-  </message>
-  <message name="ListadoGeneroResponse">
-    <part name="parameters" element="tns:ListadoGeneroResponse" />
+  <message name="ModTipoEveResponse">
+    <part name="parameters" element="tns:ModTipoEveResponse" />
   </message>
   <message name="ModUsuario">
     <part name="parameters" element="tns:ModUsuario" />
@@ -245,71 +227,11 @@
   <message name="ModUsuarioResponse">
     <part name="parameters" element="tns:ModUsuarioResponse" />
   </message>
-  <message name="ListadoEvento">
-    <part name="parameters" element="tns:ListadoEvento" />
+  <message name="AgEvento">
+    <part name="parameters" element="tns:AgEvento" />
   </message>
-  <message name="ListadoEventoResponse">
-    <part name="parameters" element="tns:ListadoEventoResponse" />
-  </message>
-  <message name="EliProducto">
-    <part name="parameters" element="tns:EliProducto" />
-  </message>
-  <message name="EliProductoResponse">
-    <part name="parameters" element="tns:EliProductoResponse" />
-  </message>
-  <message name="ListadoHorario">
-    <part name="parameters" element="tns:ListadoHorario" />
-  </message>
-  <message name="ListadoHorarioResponse">
-    <part name="parameters" element="tns:ListadoHorarioResponse" />
-  </message>
-  <message name="EliHorario">
-    <part name="parameters" element="tns:EliHorario" />
-  </message>
-  <message name="EliHorarioResponse">
-    <part name="parameters" element="tns:EliHorarioResponse" />
-  </message>
-  <message name="ListadoClase">
-    <part name="parameters" element="tns:ListadoClase" />
-  </message>
-  <message name="ListadoClaseResponse">
-    <part name="parameters" element="tns:ListadoClaseResponse" />
-  </message>
-  <message name="EliDescuento">
-    <part name="parameters" element="tns:EliDescuento" />
-  </message>
-  <message name="EliDescuentoResponse">
-    <part name="parameters" element="tns:EliDescuentoResponse" />
-  </message>
-  <message name="EliTipoSoli">
-    <part name="parameters" element="tns:EliTipoSoli" />
-  </message>
-  <message name="EliTipoSoliResponse">
-    <part name="parameters" element="tns:EliTipoSoliResponse" />
-  </message>
-  <message name="EliTipoEve">
-    <part name="parameters" element="tns:EliTipoEve" />
-  </message>
-  <message name="EliTipoEveResponse">
-    <part name="parameters" element="tns:EliTipoEveResponse" />
-  </message>
-  <message name="ListaMatricula">
-    <part name="parameters" element="tns:ListaMatricula" />
-  </message>
-  <message name="ListaMatriculaResponse">
-    <part name="parameters" element="tns:ListaMatriculaResponse" />
-  </message>
-  <message name="AgTipoSolicitud">
-    <part name="parameters" element="tns:AgTipoSolicitud" />
-  </message>
-  <message name="AgTipoSolicitudResponse">
-    <part name="parameters" element="tns:AgTipoSolicitudResponse" />
-  </message>
-  <message name="AgMensualidad">
-    <part name="parameters" element="tns:AgMensualidad" />
-  </message>
-  <message name="AgMensualidadResponse">
-    <part name="parameters" element="tns:AgMensualidadResponse" />
+  <message name="AgEventoResponse">
+    <part name="parameters" element="tns:AgEventoResponse" />
   </message>
   <message name="ListadoDescuento">
     <part name="parameters" element="tns:ListadoDescuento" />
@@ -317,29 +239,155 @@
   <message name="ListadoDescuentoResponse">
     <part name="parameters" element="tns:ListadoDescuentoResponse" />
   </message>
+  <message name="ListaMatricula">
+    <part name="parameters" element="tns:ListaMatricula" />
+  </message>
+  <message name="ListaMatriculaResponse">
+    <part name="parameters" element="tns:ListaMatriculaResponse" />
+  </message>
   <message name="AgTipoEvento">
     <part name="parameters" element="tns:AgTipoEvento" />
   </message>
   <message name="AgTipoEventoResponse">
     <part name="parameters" element="tns:AgTipoEventoResponse" />
   </message>
-  <message name="ModClaseNivel">
-    <part name="parameters" element="tns:ModClaseNivel" />
+  <message name="ListarCinturon">
+    <part name="parameters" element="tns:ListarCinturon" />
   </message>
-  <message name="ModClaseNivelResponse">
-    <part name="parameters" element="tns:ModClaseNivelResponse" />
+  <message name="ListarCinturonResponse">
+    <part name="parameters" element="tns:ListarCinturonResponse" />
+  </message>
+  <message name="EliTipoEve">
+    <part name="parameters" element="tns:EliTipoEve" />
+  </message>
+  <message name="EliTipoEveResponse">
+    <part name="parameters" element="tns:EliTipoEveResponse" />
+  </message>
+  <message name="ModTipoProducto">
+    <part name="parameters" element="tns:ModTipoProducto" />
+  </message>
+  <message name="ModTipoProductoResponse">
+    <part name="parameters" element="tns:ModTipoProductoResponse" />
+  </message>
+  <message name="EliTipoProducto">
+    <part name="parameters" element="tns:EliTipoProducto" />
+  </message>
+  <message name="EliTipoProductoResponse">
+    <part name="parameters" element="tns:EliTipoProductoResponse" />
+  </message>
+  <message name="AgTipoClase">
+    <part name="parameters" element="tns:AgTipoClase" />
+  </message>
+  <message name="AgTipoClaseResponse">
+    <part name="parameters" element="tns:AgTipoClaseResponse" />
+  </message>
+  <message name="ModTipoEncuesta">
+    <part name="parameters" element="tns:ModTipoEncuesta" />
+  </message>
+  <message name="ModTipoEncuestaResponse">
+    <part name="parameters" element="tns:ModTipoEncuestaResponse" />
+  </message>
+  <message name="ListarUsuarios">
+    <part name="parameters" element="tns:ListarUsuarios" />
+  </message>
+  <message name="ListarUsuariosResponse">
+    <part name="parameters" element="tns:ListarUsuariosResponse" />
+  </message>
+  <message name="AgParticipacion">
+    <part name="parameters" element="tns:AgParticipacion" />
+  </message>
+  <message name="AgParticipacionResponse">
+    <part name="parameters" element="tns:AgParticipacionResponse" />
+  </message>
+  <message name="ListadoClase">
+    <part name="parameters" element="tns:ListadoClase" />
+  </message>
+  <message name="ListadoClaseResponse">
+    <part name="parameters" element="tns:ListadoClaseResponse" />
+  </message>
+  <message name="AgreDescuento">
+    <part name="parameters" element="tns:AgreDescuento" />
+  </message>
+  <message name="AgreDescuentoResponse">
+    <part name="parameters" element="tns:AgreDescuentoResponse" />
+  </message>
+  <message name="EliDescuento">
+    <part name="parameters" element="tns:EliDescuento" />
+  </message>
+  <message name="EliDescuentoResponse">
+    <part name="parameters" element="tns:EliDescuentoResponse" />
+  </message>
+  <message name="AgTipoProducto">
+    <part name="parameters" element="tns:AgTipoProducto" />
+  </message>
+  <message name="AgTipoProductoResponse">
+    <part name="parameters" element="tns:AgTipoProductoResponse" />
+  </message>
+  <message name="ModTipoClase">
+    <part name="parameters" element="tns:ModTipoClase" />
+  </message>
+  <message name="ModTipoClaseResponse">
+    <part name="parameters" element="tns:ModTipoClaseResponse" />
+  </message>
+  <message name="CrearUsuario">
+    <part name="parameters" element="tns:CrearUsuario" />
+  </message>
+  <message name="CrearUsuarioResponse">
+    <part name="parameters" element="tns:CrearUsuarioResponse" />
+  </message>
+  <message name="AgTipoSolicitud">
+    <part name="parameters" element="tns:AgTipoSolicitud" />
+  </message>
+  <message name="AgTipoSolicitudResponse">
+    <part name="parameters" element="tns:AgTipoSolicitudResponse" />
+  </message>
+  <message name="ListadoEvento">
+    <part name="parameters" element="tns:ListadoEvento" />
+  </message>
+  <message name="ListadoEventoResponse">
+    <part name="parameters" element="tns:ListadoEventoResponse" />
+  </message>
+  <message name="EliTipoClase">
+    <part name="parameters" element="tns:EliTipoClase" />
+  </message>
+  <message name="EliTipoClaseResponse">
+    <part name="parameters" element="tns:EliTipoClaseResponse" />
+  </message>
+  <message name="EliTipoSoli">
+    <part name="parameters" element="tns:EliTipoSoli" />
+  </message>
+  <message name="EliTipoSoliResponse">
+    <part name="parameters" element="tns:EliTipoSoliResponse" />
+  </message>
+  <message name="AgCinturon">
+    <part name="parameters" element="tns:AgCinturon" />
+  </message>
+  <message name="AgCinturonResponse">
+    <part name="parameters" element="tns:AgCinturonResponse" />
+  </message>
+  <message name="EliEvento">
+    <part name="parameters" element="tns:EliEvento" />
+  </message>
+  <message name="EliEventoResponse">
+    <part name="parameters" element="tns:EliEventoResponse" />
+  </message>
+  <message name="EliCinturon">
+    <part name="parameters" element="tns:EliCinturon" />
+  </message>
+  <message name="EliCinturonResponse">
+    <part name="parameters" element="tns:EliCinturonResponse" />
+  </message>
+  <message name="AgMensualidad">
+    <part name="parameters" element="tns:AgMensualidad" />
+  </message>
+  <message name="AgMensualidadResponse">
+    <part name="parameters" element="tns:AgMensualidadResponse" />
   </message>
   <message name="AgClaseNivel">
     <part name="parameters" element="tns:AgClaseNivel" />
   </message>
   <message name="AgClaseNivelResponse">
     <part name="parameters" element="tns:AgClaseNivelResponse" />
-  </message>
-  <message name="EliClaseNivel">
-    <part name="parameters" element="tns:EliClaseNivel" />
-  </message>
-  <message name="EliClaseNivelResponse">
-    <part name="parameters" element="tns:EliClaseNivelResponse" />
   </message>
   <message name="AgTipoEncuesta">
     <part name="parameters" element="tns:AgTipoEncuesta" />
@@ -353,17 +401,11 @@
   <message name="EliTipoEncuestaResponse">
     <part name="parameters" element="tns:EliTipoEncuestaResponse" />
   </message>
-  <message name="ModTipoEncuesta">
-    <part name="parameters" element="tns:ModTipoEncuesta" />
+  <message name="EliClaseNivel">
+    <part name="parameters" element="tns:EliClaseNivel" />
   </message>
-  <message name="ModTipoEncuestaResponse">
-    <part name="parameters" element="tns:ModTipoEncuestaResponse" />
-  </message>
-  <message name="ListaTipoEncuesta">
-    <part name="parameters" element="tns:ListaTipoEncuesta" />
-  </message>
-  <message name="ListaTipoEncuestaResponse">
-    <part name="parameters" element="tns:ListaTipoEncuestaResponse" />
+  <message name="EliClaseNivelResponse">
+    <part name="parameters" element="tns:EliClaseNivelResponse" />
   </message>
   <message name="ListaTipoSolicitud">
     <part name="parameters" element="tns:ListaTipoSolicitud" />
@@ -371,11 +413,11 @@
   <message name="ListaTipoSolicitudResponse">
     <part name="parameters" element="tns:ListaTipoSolicitudResponse" />
   </message>
-  <message name="ListarTipoUsuarios">
-    <part name="parameters" element="tns:ListarTipoUsuarios" />
+  <message name="ListaTipoEncuesta">
+    <part name="parameters" element="tns:ListaTipoEncuesta" />
   </message>
-  <message name="ListarTipoUsuariosResponse">
-    <part name="parameters" element="tns:ListarTipoUsuariosResponse" />
+  <message name="ListaTipoEncuestaResponse">
+    <part name="parameters" element="tns:ListaTipoEncuestaResponse" />
   </message>
   <message name="ListadoClaseNivel">
     <part name="parameters" element="tns:ListadoClaseNivel" />
@@ -389,122 +431,28 @@
   <message name="ListadoTipoEventoResponse">
     <part name="parameters" element="tns:ListadoTipoEventoResponse" />
   </message>
-  <message name="EliCinturon">
-    <part name="parameters" element="tns:EliCinturon" />
+  <message name="ListarTipoUsuarios">
+    <part name="parameters" element="tns:ListarTipoUsuarios" />
   </message>
-  <message name="EliCinturonResponse">
-    <part name="parameters" element="tns:EliCinturonResponse" />
-  </message>
-  <message name="EliTipoProducto">
-    <part name="parameters" element="tns:EliTipoProducto" />
-  </message>
-  <message name="EliTipoProductoResponse">
-    <part name="parameters" element="tns:EliTipoProductoResponse" />
-  </message>
-  <message name="ModTipoProducto">
-    <part name="parameters" element="tns:ModTipoProducto" />
-  </message>
-  <message name="ModTipoProductoResponse">
-    <part name="parameters" element="tns:ModTipoProductoResponse" />
-  </message>
-  <message name="AgCinturon">
-    <part name="parameters" element="tns:AgCinturon" />
-  </message>
-  <message name="AgCinturonResponse">
-    <part name="parameters" element="tns:AgCinturonResponse" />
-  </message>
-  <message name="AgTipoClase">
-    <part name="parameters" element="tns:AgTipoClase" />
-  </message>
-  <message name="AgTipoClaseResponse">
-    <part name="parameters" element="tns:AgTipoClaseResponse" />
-  </message>
-  <message name="EliTipoClase">
-    <part name="parameters" element="tns:EliTipoClase" />
-  </message>
-  <message name="EliTipoClaseResponse">
-    <part name="parameters" element="tns:EliTipoClaseResponse" />
-  </message>
-  <message name="ModTipoClase">
-    <part name="parameters" element="tns:ModTipoClase" />
-  </message>
-  <message name="ModTipoClaseResponse">
-    <part name="parameters" element="tns:ModTipoClaseResponse" />
-  </message>
-  <message name="ModCinturon">
-    <part name="parameters" element="tns:ModCinturon" />
-  </message>
-  <message name="ModCinturonResponse">
-    <part name="parameters" element="tns:ModCinturonResponse" />
+  <message name="ListarTipoUsuariosResponse">
+    <part name="parameters" element="tns:ListarTipoUsuariosResponse" />
   </message>
   <portType name="WS_Dojo">
-    <operation name="AgTipoProducto">
-      <input wsam:Action="http://ws/WS_Dojo/AgTipoProductoRequest" message="tns:AgTipoProducto" />
-      <output wsam:Action="http://ws/WS_Dojo/AgTipoProductoResponse" message="tns:AgTipoProductoResponse" />
-    </operation>
-    <operation name="AgreSolicitud">
-      <input wsam:Action="http://ws/WS_Dojo/AgreSolicitudRequest" message="tns:AgreSolicitud" />
-      <output wsam:Action="http://ws/WS_Dojo/AgreSolicitudResponse" message="tns:AgreSolicitudResponse" />
-    </operation>
-    <operation name="ModSolicitud">
-      <input wsam:Action="http://ws/WS_Dojo/ModSolicitudRequest" message="tns:ModSolicitud" />
-      <output wsam:Action="http://ws/WS_Dojo/ModSolicitudResponse" message="tns:ModSolicitudResponse" />
-    </operation>
-    <operation name="ModTipoSoli">
-      <input wsam:Action="http://ws/WS_Dojo/ModTipoSoliRequest" message="tns:ModTipoSoli" />
-      <output wsam:Action="http://ws/WS_Dojo/ModTipoSoliResponse" message="tns:ModTipoSoliResponse" />
-    </operation>
-    <operation name="Login">
-      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
-      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
-    </operation>
-    <operation name="AgDetalleCom">
-      <input wsam:Action="http://ws/WS_Dojo/AgDetalleComRequest" message="tns:AgDetalleCom" />
-      <output wsam:Action="http://ws/WS_Dojo/AgDetalleComResponse" message="tns:AgDetalleComResponse" />
-    </operation>
     <operation name="ListaComentario">
       <input wsam:Action="http://ws/WS_Dojo/ListaComentarioRequest" message="tns:ListaComentario" />
       <output wsam:Action="http://ws/WS_Dojo/ListaComentarioResponse" message="tns:ListaComentarioResponse" />
     </operation>
-    <operation name="ModObservacion">
-      <input wsam:Action="http://ws/WS_Dojo/ModObservacionRequest" message="tns:ModObservacion" />
-      <output wsam:Action="http://ws/WS_Dojo/ModObservacionResponse" message="tns:ModObservacionResponse" />
-    </operation>
-    <operation name="EliSolicitud">
-      <input wsam:Action="http://ws/WS_Dojo/EliSolicitudRequest" message="tns:EliSolicitud" />
-      <output wsam:Action="http://ws/WS_Dojo/EliSolicitudResponse" message="tns:EliSolicitudResponse" />
-    </operation>
-    <operation name="EliComentario">
-      <input wsam:Action="http://ws/WS_Dojo/EliComentarioRequest" message="tns:EliComentario" />
-      <output wsam:Action="http://ws/WS_Dojo/EliComentarioResponse" message="tns:EliComentarioResponse" />
-    </operation>
-    <operation name="ModDescuento">
-      <input wsam:Action="http://ws/WS_Dojo/ModDescuentoRequest" message="tns:ModDescuento" />
-      <output wsam:Action="http://ws/WS_Dojo/ModDescuentoResponse" message="tns:ModDescuentoResponse" />
+    <operation name="ListaMensualidad">
+      <input wsam:Action="http://ws/WS_Dojo/ListaMensualidadRequest" message="tns:ListaMensualidad" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaMensualidadResponse" message="tns:ListaMensualidadResponse" />
     </operation>
     <operation name="ListaMetodoPago">
       <input wsam:Action="http://ws/WS_Dojo/ListaMetodoPagoRequest" message="tns:ListaMetodoPago" />
       <output wsam:Action="http://ws/WS_Dojo/ListaMetodoPagoResponse" message="tns:ListaMetodoPagoResponse" />
     </operation>
-    <operation name="ListaEstado">
-      <input wsam:Action="http://ws/WS_Dojo/ListaEstadoRequest" message="tns:ListaEstado" />
-      <output wsam:Action="http://ws/WS_Dojo/ListaEstadoResponse" message="tns:ListaEstadoResponse" />
-    </operation>
-    <operation name="ModComentario">
-      <input wsam:Action="http://ws/WS_Dojo/ModComentarioRequest" message="tns:ModComentario" />
-      <output wsam:Action="http://ws/WS_Dojo/ModComentarioResponse" message="tns:ModComentarioResponse" />
-    </operation>
-    <operation name="ModEvento">
-      <input wsam:Action="http://ws/WS_Dojo/ModEventoRequest" message="tns:ModEvento" />
-      <output wsam:Action="http://ws/WS_Dojo/ModEventoResponse" message="tns:ModEventoResponse" />
-    </operation>
-    <operation name="ListaTipoProd">
-      <input wsam:Action="http://ws/WS_Dojo/ListaTipoProdRequest" message="tns:ListaTipoProd" />
-      <output wsam:Action="http://ws/WS_Dojo/ListaTipoProdResponse" message="tns:ListaTipoProdResponse" />
-    </operation>
-    <operation name="AgreComentario">
-      <input wsam:Action="http://ws/WS_Dojo/AgreComentarioRequest" message="tns:AgreComentario" />
-      <output wsam:Action="http://ws/WS_Dojo/AgreComentarioResponse" message="tns:AgreComentarioResponse" />
+    <operation name="ModSolicitud">
+      <input wsam:Action="http://ws/WS_Dojo/ModSolicitudRequest" message="tns:ModSolicitud" />
+      <output wsam:Action="http://ws/WS_Dojo/ModSolicitudResponse" message="tns:ModSolicitudResponse" />
     </operation>
     <operation name="ListaOrdenCompra">
       <input wsam:Action="http://ws/WS_Dojo/ListaOrdenCompraRequest" message="tns:ListaOrdenCompra" />
@@ -514,53 +462,109 @@
       <input wsam:Action="http://ws/WS_Dojo/AgPagoRequest" message="tns:AgPago" />
       <output wsam:Action="http://ws/WS_Dojo/AgPagoResponse" message="tns:AgPagoResponse" />
     </operation>
-    <operation name="ModTipoEve">
-      <input wsam:Action="http://ws/WS_Dojo/ModTipoEveRequest" message="tns:ModTipoEve" />
-      <output wsam:Action="http://ws/WS_Dojo/ModTipoEveResponse" message="tns:ModTipoEveResponse" />
+    <operation name="ListaSolicitud">
+      <input wsam:Action="http://ws/WS_Dojo/ListaSolicitudRequest" message="tns:ListaSolicitud" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaSolicitudResponse" message="tns:ListaSolicitudResponse" />
+    </operation>
+    <operation name="ModEvento">
+      <input wsam:Action="http://ws/WS_Dojo/ModEventoRequest" message="tns:ModEvento" />
+      <output wsam:Action="http://ws/WS_Dojo/ModEventoResponse" message="tns:ModEventoResponse" />
+    </operation>
+    <operation name="AgreComentario">
+      <input wsam:Action="http://ws/WS_Dojo/AgreComentarioRequest" message="tns:AgreComentario" />
+      <output wsam:Action="http://ws/WS_Dojo/AgreComentarioResponse" message="tns:AgreComentarioResponse" />
+    </operation>
+    <operation name="AgreSolicitud">
+      <input wsam:Action="http://ws/WS_Dojo/AgreSolicitudRequest" message="tns:AgreSolicitud" />
+      <output wsam:Action="http://ws/WS_Dojo/AgreSolicitudResponse" message="tns:AgreSolicitudResponse" />
+    </operation>
+    <operation name="EliComentario">
+      <input wsam:Action="http://ws/WS_Dojo/EliComentarioRequest" message="tns:EliComentario" />
+      <output wsam:Action="http://ws/WS_Dojo/EliComentarioResponse" message="tns:EliComentarioResponse" />
+    </operation>
+    <operation name="ModComentario">
+      <input wsam:Action="http://ws/WS_Dojo/ModComentarioRequest" message="tns:ModComentario" />
+      <output wsam:Action="http://ws/WS_Dojo/ModComentarioResponse" message="tns:ModComentarioResponse" />
+    </operation>
+    <operation name="ModObservacion">
+      <input wsam:Action="http://ws/WS_Dojo/ModObservacionRequest" message="tns:ModObservacion" />
+      <output wsam:Action="http://ws/WS_Dojo/ModObservacionResponse" message="tns:ModObservacionResponse" />
     </operation>
     <operation name="ListadoObser">
       <input wsam:Action="http://ws/WS_Dojo/ListadoObserRequest" message="tns:ListadoObser" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoObserResponse" message="tns:ListadoObserResponse" />
     </operation>
-    <operation name="ListaMensualidad">
-      <input wsam:Action="http://ws/WS_Dojo/ListaMensualidadRequest" message="tns:ListaMensualidad" />
-      <output wsam:Action="http://ws/WS_Dojo/ListaMensualidadResponse" message="tns:ListaMensualidadResponse" />
+    <operation name="ListaEstado">
+      <input wsam:Action="http://ws/WS_Dojo/ListaEstadoRequest" message="tns:ListaEstado" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaEstadoResponse" message="tns:ListaEstadoResponse" />
     </operation>
-    <operation name="ListaSolicitud">
-      <input wsam:Action="http://ws/WS_Dojo/ListaSolicitudRequest" message="tns:ListaSolicitud" />
-      <output wsam:Action="http://ws/WS_Dojo/ListaSolicitudResponse" message="tns:ListaSolicitudResponse" />
+    <operation name="Login">
+      <input wsam:Action="http://ws/WS_Dojo/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://ws/WS_Dojo/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="ModDescuento">
+      <input wsam:Action="http://ws/WS_Dojo/ModDescuentoRequest" message="tns:ModDescuento" />
+      <output wsam:Action="http://ws/WS_Dojo/ModDescuentoResponse" message="tns:ModDescuentoResponse" />
+    </operation>
+    <operation name="ListaTipoProd">
+      <input wsam:Action="http://ws/WS_Dojo/ListaTipoProdRequest" message="tns:ListaTipoProd" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaTipoProdResponse" message="tns:ListaTipoProdResponse" />
+    </operation>
+    <operation name="EliSolicitud">
+      <input wsam:Action="http://ws/WS_Dojo/EliSolicitudRequest" message="tns:EliSolicitud" />
+      <output wsam:Action="http://ws/WS_Dojo/EliSolicitudResponse" message="tns:EliSolicitudResponse" />
     </operation>
     <operation name="AgOrdenCompra">
       <input wsam:Action="http://ws/WS_Dojo/AgOrdenCompraRequest" message="tns:AgOrdenCompra" />
       <output wsam:Action="http://ws/WS_Dojo/AgOrdenCompraResponse" message="tns:AgOrdenCompraResponse" />
     </operation>
+    <operation name="ListadoGenero">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoGeneroRequest" message="tns:ListadoGenero" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoGeneroResponse" message="tns:ListadoGeneroResponse" />
+    </operation>
+    <operation name="ModClaseNivel">
+      <input wsam:Action="http://ws/WS_Dojo/ModClaseNivelRequest" message="tns:ModClaseNivel" />
+      <output wsam:Action="http://ws/WS_Dojo/ModClaseNivelResponse" message="tns:ModClaseNivelResponse" />
+    </operation>
+    <operation name="ModProducto">
+      <input wsam:Action="http://ws/WS_Dojo/ModProductoRequest" message="tns:ModProducto" />
+      <output wsam:Action="http://ws/WS_Dojo/ModProductoResponse" message="tns:ModProductoResponse" />
+    </operation>
+    <operation name="EliHorario">
+      <input wsam:Action="http://ws/WS_Dojo/EliHorarioRequest" message="tns:EliHorario" />
+      <output wsam:Action="http://ws/WS_Dojo/EliHorarioResponse" message="tns:EliHorarioResponse" />
+    </operation>
+    <operation name="ListadoTalla">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoTallaRequest" message="tns:ListadoTalla" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoTallaResponse" message="tns:ListadoTallaResponse" />
+    </operation>
+    <operation name="ModTipoSoli">
+      <input wsam:Action="http://ws/WS_Dojo/ModTipoSoliRequest" message="tns:ModTipoSoli" />
+      <output wsam:Action="http://ws/WS_Dojo/ModTipoSoliResponse" message="tns:ModTipoSoliResponse" />
+    </operation>
+    <operation name="AgDetalleCom">
+      <input wsam:Action="http://ws/WS_Dojo/AgDetalleComRequest" message="tns:AgDetalleCom" />
+      <output wsam:Action="http://ws/WS_Dojo/AgDetalleComResponse" message="tns:AgDetalleComResponse" />
+    </operation>
     <operation name="ListadoProdGen">
       <input wsam:Action="http://ws/WS_Dojo/ListadoProdGenRequest" message="tns:ListadoProdGen" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoProdGenResponse" message="tns:ListadoProdGenResponse" />
     </operation>
-    <operation name="AgParticipacion">
-      <input wsam:Action="http://ws/WS_Dojo/AgParticipacionRequest" message="tns:AgParticipacion" />
-      <output wsam:Action="http://ws/WS_Dojo/AgParticipacionResponse" message="tns:AgParticipacionResponse" />
+    <operation name="AgHorario">
+      <input wsam:Action="http://ws/WS_Dojo/AgHorarioRequest" message="tns:AgHorario" />
+      <output wsam:Action="http://ws/WS_Dojo/AgHorarioResponse" message="tns:AgHorarioResponse" />
     </operation>
-    <operation name="CrearUsuario">
-      <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
-      <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
+    <operation name="ListadoHorario">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoHorarioRequest" message="tns:ListadoHorario" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoHorarioResponse" message="tns:ListadoHorarioResponse" />
     </operation>
-    <operation name="AgreDescuento">
-      <input wsam:Action="http://ws/WS_Dojo/AgreDescuentoRequest" message="tns:AgreDescuento" />
-      <output wsam:Action="http://ws/WS_Dojo/AgreDescuentoResponse" message="tns:AgreDescuentoResponse" />
+    <operation name="ModCinturon">
+      <input wsam:Action="http://ws/WS_Dojo/ModCinturonRequest" message="tns:ModCinturon" />
+      <output wsam:Action="http://ws/WS_Dojo/ModCinturonResponse" message="tns:ModCinturonResponse" />
     </operation>
-    <operation name="ListarUsuarios">
-      <input wsam:Action="http://ws/WS_Dojo/ListarUsuariosRequest" message="tns:ListarUsuarios" />
-      <output wsam:Action="http://ws/WS_Dojo/ListarUsuariosResponse" message="tns:ListarUsuariosResponse" />
-    </operation>
-    <operation name="EliEvento">
-      <input wsam:Action="http://ws/WS_Dojo/EliEventoRequest" message="tns:EliEvento" />
-      <output wsam:Action="http://ws/WS_Dojo/EliEventoResponse" message="tns:EliEventoResponse" />
-    </operation>
-    <operation name="ListarCinturon">
-      <input wsam:Action="http://ws/WS_Dojo/ListarCinturonRequest" message="tns:ListarCinturon" />
-      <output wsam:Action="http://ws/WS_Dojo/ListarCinturonResponse" message="tns:ListarCinturonResponse" />
+    <operation name="ListadoCarrito">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoCarritoRequest" message="tns:ListadoCarrito" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoCarritoResponse" message="tns:ListadoCarritoResponse" />
     </operation>
     <operation name="ListadoProdEspe">
       <input wsam:Action="http://ws/WS_Dojo/ListadoProdEspeRequest" message="tns:ListadoProdEspe" />
@@ -570,97 +574,125 @@
       <input wsam:Action="http://ws/WS_Dojo/AgProductoRequest" message="tns:AgProducto" />
       <output wsam:Action="http://ws/WS_Dojo/AgProductoResponse" message="tns:AgProductoResponse" />
     </operation>
-    <operation name="AgEvento">
-      <input wsam:Action="http://ws/WS_Dojo/AgEventoRequest" message="tns:AgEvento" />
-      <output wsam:Action="http://ws/WS_Dojo/AgEventoResponse" message="tns:AgEventoResponse" />
+    <operation name="EliProducto">
+      <input wsam:Action="http://ws/WS_Dojo/EliProductoRequest" message="tns:EliProducto" />
+      <output wsam:Action="http://ws/WS_Dojo/EliProductoResponse" message="tns:EliProductoResponse" />
     </operation>
-    <operation name="ListadoCarrito">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoCarritoRequest" message="tns:ListadoCarrito" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoCarritoResponse" message="tns:ListadoCarritoResponse" />
-    </operation>
-    <operation name="ModProducto">
-      <input wsam:Action="http://ws/WS_Dojo/ModProductoRequest" message="tns:ModProducto" />
-      <output wsam:Action="http://ws/WS_Dojo/ModProductoResponse" message="tns:ModProductoResponse" />
-    </operation>
-    <operation name="ListadoTalla">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoTallaRequest" message="tns:ListadoTalla" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoTallaResponse" message="tns:ListadoTallaResponse" />
-    </operation>
-    <operation name="AgHorario">
-      <input wsam:Action="http://ws/WS_Dojo/AgHorarioRequest" message="tns:AgHorario" />
-      <output wsam:Action="http://ws/WS_Dojo/AgHorarioResponse" message="tns:AgHorarioResponse" />
-    </operation>
-    <operation name="ListadoGenero">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoGeneroRequest" message="tns:ListadoGenero" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoGeneroResponse" message="tns:ListadoGeneroResponse" />
+    <operation name="ModTipoEve">
+      <input wsam:Action="http://ws/WS_Dojo/ModTipoEveRequest" message="tns:ModTipoEve" />
+      <output wsam:Action="http://ws/WS_Dojo/ModTipoEveResponse" message="tns:ModTipoEveResponse" />
     </operation>
     <operation name="ModUsuario">
       <input wsam:Action="http://ws/WS_Dojo/ModUsuarioRequest" message="tns:ModUsuario" />
       <output wsam:Action="http://ws/WS_Dojo/ModUsuarioResponse" message="tns:ModUsuarioResponse" />
     </operation>
-    <operation name="ListadoEvento">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoEventoRequest" message="tns:ListadoEvento" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoEventoResponse" message="tns:ListadoEventoResponse" />
-    </operation>
-    <operation name="EliProducto">
-      <input wsam:Action="http://ws/WS_Dojo/EliProductoRequest" message="tns:EliProducto" />
-      <output wsam:Action="http://ws/WS_Dojo/EliProductoResponse" message="tns:EliProductoResponse" />
-    </operation>
-    <operation name="ListadoHorario">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoHorarioRequest" message="tns:ListadoHorario" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoHorarioResponse" message="tns:ListadoHorarioResponse" />
-    </operation>
-    <operation name="EliHorario">
-      <input wsam:Action="http://ws/WS_Dojo/EliHorarioRequest" message="tns:EliHorario" />
-      <output wsam:Action="http://ws/WS_Dojo/EliHorarioResponse" message="tns:EliHorarioResponse" />
-    </operation>
-    <operation name="ListadoClase">
-      <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
-      <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
-    </operation>
-    <operation name="EliDescuento">
-      <input wsam:Action="http://ws/WS_Dojo/EliDescuentoRequest" message="tns:EliDescuento" />
-      <output wsam:Action="http://ws/WS_Dojo/EliDescuentoResponse" message="tns:EliDescuentoResponse" />
-    </operation>
-    <operation name="EliTipoSoli">
-      <input wsam:Action="http://ws/WS_Dojo/EliTipoSoliRequest" message="tns:EliTipoSoli" />
-      <output wsam:Action="http://ws/WS_Dojo/EliTipoSoliResponse" message="tns:EliTipoSoliResponse" />
-    </operation>
-    <operation name="EliTipoEve">
-      <input wsam:Action="http://ws/WS_Dojo/EliTipoEveRequest" message="tns:EliTipoEve" />
-      <output wsam:Action="http://ws/WS_Dojo/EliTipoEveResponse" message="tns:EliTipoEveResponse" />
-    </operation>
-    <operation name="ListaMatricula">
-      <input wsam:Action="http://ws/WS_Dojo/ListaMatriculaRequest" message="tns:ListaMatricula" />
-      <output wsam:Action="http://ws/WS_Dojo/ListaMatriculaResponse" message="tns:ListaMatriculaResponse" />
-    </operation>
-    <operation name="AgTipoSolicitud">
-      <input wsam:Action="http://ws/WS_Dojo/AgTipoSolicitudRequest" message="tns:AgTipoSolicitud" />
-      <output wsam:Action="http://ws/WS_Dojo/AgTipoSolicitudResponse" message="tns:AgTipoSolicitudResponse" />
-    </operation>
-    <operation name="AgMensualidad">
-      <input wsam:Action="http://ws/WS_Dojo/AgMensualidadRequest" message="tns:AgMensualidad" />
-      <output wsam:Action="http://ws/WS_Dojo/AgMensualidadResponse" message="tns:AgMensualidadResponse" />
+    <operation name="AgEvento">
+      <input wsam:Action="http://ws/WS_Dojo/AgEventoRequest" message="tns:AgEvento" />
+      <output wsam:Action="http://ws/WS_Dojo/AgEventoResponse" message="tns:AgEventoResponse" />
     </operation>
     <operation name="ListadoDescuento">
       <input wsam:Action="http://ws/WS_Dojo/ListadoDescuentoRequest" message="tns:ListadoDescuento" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoDescuentoResponse" message="tns:ListadoDescuentoResponse" />
     </operation>
+    <operation name="ListaMatricula">
+      <input wsam:Action="http://ws/WS_Dojo/ListaMatriculaRequest" message="tns:ListaMatricula" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaMatriculaResponse" message="tns:ListaMatriculaResponse" />
+    </operation>
     <operation name="AgTipoEvento">
       <input wsam:Action="http://ws/WS_Dojo/AgTipoEventoRequest" message="tns:AgTipoEvento" />
       <output wsam:Action="http://ws/WS_Dojo/AgTipoEventoResponse" message="tns:AgTipoEventoResponse" />
     </operation>
-    <operation name="ModClaseNivel">
-      <input wsam:Action="http://ws/WS_Dojo/ModClaseNivelRequest" message="tns:ModClaseNivel" />
-      <output wsam:Action="http://ws/WS_Dojo/ModClaseNivelResponse" message="tns:ModClaseNivelResponse" />
+    <operation name="ListarCinturon">
+      <input wsam:Action="http://ws/WS_Dojo/ListarCinturonRequest" message="tns:ListarCinturon" />
+      <output wsam:Action="http://ws/WS_Dojo/ListarCinturonResponse" message="tns:ListarCinturonResponse" />
+    </operation>
+    <operation name="EliTipoEve">
+      <input wsam:Action="http://ws/WS_Dojo/EliTipoEveRequest" message="tns:EliTipoEve" />
+      <output wsam:Action="http://ws/WS_Dojo/EliTipoEveResponse" message="tns:EliTipoEveResponse" />
+    </operation>
+    <operation name="ModTipoProducto">
+      <input wsam:Action="http://ws/WS_Dojo/ModTipoProductoRequest" message="tns:ModTipoProducto" />
+      <output wsam:Action="http://ws/WS_Dojo/ModTipoProductoResponse" message="tns:ModTipoProductoResponse" />
+    </operation>
+    <operation name="EliTipoProducto">
+      <input wsam:Action="http://ws/WS_Dojo/EliTipoProductoRequest" message="tns:EliTipoProducto" />
+      <output wsam:Action="http://ws/WS_Dojo/EliTipoProductoResponse" message="tns:EliTipoProductoResponse" />
+    </operation>
+    <operation name="AgTipoClase">
+      <input wsam:Action="http://ws/WS_Dojo/AgTipoClaseRequest" message="tns:AgTipoClase" />
+      <output wsam:Action="http://ws/WS_Dojo/AgTipoClaseResponse" message="tns:AgTipoClaseResponse" />
+    </operation>
+    <operation name="ModTipoEncuesta">
+      <input wsam:Action="http://ws/WS_Dojo/ModTipoEncuestaRequest" message="tns:ModTipoEncuesta" />
+      <output wsam:Action="http://ws/WS_Dojo/ModTipoEncuestaResponse" message="tns:ModTipoEncuestaResponse" />
+    </operation>
+    <operation name="ListarUsuarios">
+      <input wsam:Action="http://ws/WS_Dojo/ListarUsuariosRequest" message="tns:ListarUsuarios" />
+      <output wsam:Action="http://ws/WS_Dojo/ListarUsuariosResponse" message="tns:ListarUsuariosResponse" />
+    </operation>
+    <operation name="AgParticipacion">
+      <input wsam:Action="http://ws/WS_Dojo/AgParticipacionRequest" message="tns:AgParticipacion" />
+      <output wsam:Action="http://ws/WS_Dojo/AgParticipacionResponse" message="tns:AgParticipacionResponse" />
+    </operation>
+    <operation name="ListadoClase">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoClaseRequest" message="tns:ListadoClase" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoClaseResponse" message="tns:ListadoClaseResponse" />
+    </operation>
+    <operation name="AgreDescuento">
+      <input wsam:Action="http://ws/WS_Dojo/AgreDescuentoRequest" message="tns:AgreDescuento" />
+      <output wsam:Action="http://ws/WS_Dojo/AgreDescuentoResponse" message="tns:AgreDescuentoResponse" />
+    </operation>
+    <operation name="EliDescuento">
+      <input wsam:Action="http://ws/WS_Dojo/EliDescuentoRequest" message="tns:EliDescuento" />
+      <output wsam:Action="http://ws/WS_Dojo/EliDescuentoResponse" message="tns:EliDescuentoResponse" />
+    </operation>
+    <operation name="AgTipoProducto">
+      <input wsam:Action="http://ws/WS_Dojo/AgTipoProductoRequest" message="tns:AgTipoProducto" />
+      <output wsam:Action="http://ws/WS_Dojo/AgTipoProductoResponse" message="tns:AgTipoProductoResponse" />
+    </operation>
+    <operation name="ModTipoClase">
+      <input wsam:Action="http://ws/WS_Dojo/ModTipoClaseRequest" message="tns:ModTipoClase" />
+      <output wsam:Action="http://ws/WS_Dojo/ModTipoClaseResponse" message="tns:ModTipoClaseResponse" />
+    </operation>
+    <operation name="CrearUsuario">
+      <input wsam:Action="http://ws/WS_Dojo/CrearUsuarioRequest" message="tns:CrearUsuario" />
+      <output wsam:Action="http://ws/WS_Dojo/CrearUsuarioResponse" message="tns:CrearUsuarioResponse" />
+    </operation>
+    <operation name="AgTipoSolicitud">
+      <input wsam:Action="http://ws/WS_Dojo/AgTipoSolicitudRequest" message="tns:AgTipoSolicitud" />
+      <output wsam:Action="http://ws/WS_Dojo/AgTipoSolicitudResponse" message="tns:AgTipoSolicitudResponse" />
+    </operation>
+    <operation name="ListadoEvento">
+      <input wsam:Action="http://ws/WS_Dojo/ListadoEventoRequest" message="tns:ListadoEvento" />
+      <output wsam:Action="http://ws/WS_Dojo/ListadoEventoResponse" message="tns:ListadoEventoResponse" />
+    </operation>
+    <operation name="EliTipoClase">
+      <input wsam:Action="http://ws/WS_Dojo/EliTipoClaseRequest" message="tns:EliTipoClase" />
+      <output wsam:Action="http://ws/WS_Dojo/EliTipoClaseResponse" message="tns:EliTipoClaseResponse" />
+    </operation>
+    <operation name="EliTipoSoli">
+      <input wsam:Action="http://ws/WS_Dojo/EliTipoSoliRequest" message="tns:EliTipoSoli" />
+      <output wsam:Action="http://ws/WS_Dojo/EliTipoSoliResponse" message="tns:EliTipoSoliResponse" />
+    </operation>
+    <operation name="AgCinturon">
+      <input wsam:Action="http://ws/WS_Dojo/AgCinturonRequest" message="tns:AgCinturon" />
+      <output wsam:Action="http://ws/WS_Dojo/AgCinturonResponse" message="tns:AgCinturonResponse" />
+    </operation>
+    <operation name="EliEvento">
+      <input wsam:Action="http://ws/WS_Dojo/EliEventoRequest" message="tns:EliEvento" />
+      <output wsam:Action="http://ws/WS_Dojo/EliEventoResponse" message="tns:EliEventoResponse" />
+    </operation>
+    <operation name="EliCinturon">
+      <input wsam:Action="http://ws/WS_Dojo/EliCinturonRequest" message="tns:EliCinturon" />
+      <output wsam:Action="http://ws/WS_Dojo/EliCinturonResponse" message="tns:EliCinturonResponse" />
+    </operation>
+    <operation name="AgMensualidad">
+      <input wsam:Action="http://ws/WS_Dojo/AgMensualidadRequest" message="tns:AgMensualidad" />
+      <output wsam:Action="http://ws/WS_Dojo/AgMensualidadResponse" message="tns:AgMensualidadResponse" />
     </operation>
     <operation name="AgClaseNivel">
       <input wsam:Action="http://ws/WS_Dojo/AgClaseNivelRequest" message="tns:AgClaseNivel" />
       <output wsam:Action="http://ws/WS_Dojo/AgClaseNivelResponse" message="tns:AgClaseNivelResponse" />
-    </operation>
-    <operation name="EliClaseNivel">
-      <input wsam:Action="http://ws/WS_Dojo/EliClaseNivelRequest" message="tns:EliClaseNivel" />
-      <output wsam:Action="http://ws/WS_Dojo/EliClaseNivelResponse" message="tns:EliClaseNivelResponse" />
     </operation>
     <operation name="AgTipoEncuesta">
       <input wsam:Action="http://ws/WS_Dojo/AgTipoEncuestaRequest" message="tns:AgTipoEncuesta" />
@@ -670,21 +702,17 @@
       <input wsam:Action="http://ws/WS_Dojo/EliTipoEncuestaRequest" message="tns:EliTipoEncuesta" />
       <output wsam:Action="http://ws/WS_Dojo/EliTipoEncuestaResponse" message="tns:EliTipoEncuestaResponse" />
     </operation>
-    <operation name="ModTipoEncuesta">
-      <input wsam:Action="http://ws/WS_Dojo/ModTipoEncuestaRequest" message="tns:ModTipoEncuesta" />
-      <output wsam:Action="http://ws/WS_Dojo/ModTipoEncuestaResponse" message="tns:ModTipoEncuestaResponse" />
-    </operation>
-    <operation name="ListaTipoEncuesta">
-      <input wsam:Action="http://ws/WS_Dojo/ListaTipoEncuestaRequest" message="tns:ListaTipoEncuesta" />
-      <output wsam:Action="http://ws/WS_Dojo/ListaTipoEncuestaResponse" message="tns:ListaTipoEncuestaResponse" />
+    <operation name="EliClaseNivel">
+      <input wsam:Action="http://ws/WS_Dojo/EliClaseNivelRequest" message="tns:EliClaseNivel" />
+      <output wsam:Action="http://ws/WS_Dojo/EliClaseNivelResponse" message="tns:EliClaseNivelResponse" />
     </operation>
     <operation name="ListaTipoSolicitud">
       <input wsam:Action="http://ws/WS_Dojo/ListaTipoSolicitudRequest" message="tns:ListaTipoSolicitud" />
       <output wsam:Action="http://ws/WS_Dojo/ListaTipoSolicitudResponse" message="tns:ListaTipoSolicitudResponse" />
     </operation>
-    <operation name="ListarTipoUsuarios">
-      <input wsam:Action="http://ws/WS_Dojo/ListarTipoUsuariosRequest" message="tns:ListarTipoUsuarios" />
-      <output wsam:Action="http://ws/WS_Dojo/ListarTipoUsuariosResponse" message="tns:ListarTipoUsuariosResponse" />
+    <operation name="ListaTipoEncuesta">
+      <input wsam:Action="http://ws/WS_Dojo/ListaTipoEncuestaRequest" message="tns:ListaTipoEncuesta" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaTipoEncuestaResponse" message="tns:ListaTipoEncuestaResponse" />
     </operation>
     <operation name="ListadoClaseNivel">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
@@ -694,95 +722,13 @@
       <input wsam:Action="http://ws/WS_Dojo/ListadoTipoEventoRequest" message="tns:ListadoTipoEvento" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoTipoEventoResponse" message="tns:ListadoTipoEventoResponse" />
     </operation>
-    <operation name="EliCinturon">
-      <input wsam:Action="http://ws/WS_Dojo/EliCinturonRequest" message="tns:EliCinturon" />
-      <output wsam:Action="http://ws/WS_Dojo/EliCinturonResponse" message="tns:EliCinturonResponse" />
-    </operation>
-    <operation name="EliTipoProducto">
-      <input wsam:Action="http://ws/WS_Dojo/EliTipoProductoRequest" message="tns:EliTipoProducto" />
-      <output wsam:Action="http://ws/WS_Dojo/EliTipoProductoResponse" message="tns:EliTipoProductoResponse" />
-    </operation>
-    <operation name="ModTipoProducto">
-      <input wsam:Action="http://ws/WS_Dojo/ModTipoProductoRequest" message="tns:ModTipoProducto" />
-      <output wsam:Action="http://ws/WS_Dojo/ModTipoProductoResponse" message="tns:ModTipoProductoResponse" />
-    </operation>
-    <operation name="AgCinturon">
-      <input wsam:Action="http://ws/WS_Dojo/AgCinturonRequest" message="tns:AgCinturon" />
-      <output wsam:Action="http://ws/WS_Dojo/AgCinturonResponse" message="tns:AgCinturonResponse" />
-    </operation>
-    <operation name="AgTipoClase">
-      <input wsam:Action="http://ws/WS_Dojo/AgTipoClaseRequest" message="tns:AgTipoClase" />
-      <output wsam:Action="http://ws/WS_Dojo/AgTipoClaseResponse" message="tns:AgTipoClaseResponse" />
-    </operation>
-    <operation name="EliTipoClase">
-      <input wsam:Action="http://ws/WS_Dojo/EliTipoClaseRequest" message="tns:EliTipoClase" />
-      <output wsam:Action="http://ws/WS_Dojo/EliTipoClaseResponse" message="tns:EliTipoClaseResponse" />
-    </operation>
-    <operation name="ModTipoClase">
-      <input wsam:Action="http://ws/WS_Dojo/ModTipoClaseRequest" message="tns:ModTipoClase" />
-      <output wsam:Action="http://ws/WS_Dojo/ModTipoClaseResponse" message="tns:ModTipoClaseResponse" />
-    </operation>
-    <operation name="ModCinturon">
-      <input wsam:Action="http://ws/WS_Dojo/ModCinturonRequest" message="tns:ModCinturon" />
-      <output wsam:Action="http://ws/WS_Dojo/ModCinturonResponse" message="tns:ModCinturonResponse" />
+    <operation name="ListarTipoUsuarios">
+      <input wsam:Action="http://ws/WS_Dojo/ListarTipoUsuariosRequest" message="tns:ListarTipoUsuarios" />
+      <output wsam:Action="http://ws/WS_Dojo/ListarTipoUsuariosResponse" message="tns:ListarTipoUsuariosResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="AgTipoProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgreSolicitud">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModSolicitud">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModTipoSoli">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="Login">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgDetalleCom">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="ListaComentario">
       <soap:operation soapAction="" />
       <input>
@@ -792,34 +738,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ModObservacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliSolicitud">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliComentario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModDescuento">
+    <operation name="ListaMensualidad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -837,43 +756,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListaEstado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModComentario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListaTipoProd">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgreComentario">
+    <operation name="ModSolicitud">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -900,7 +783,61 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ModTipoEve">
+    <operation name="ListaSolicitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgreComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgreSolicitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModObservacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -918,7 +855,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListaMensualidad">
+    <operation name="ListaEstado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -927,7 +864,34 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListaSolicitud">
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListaTipoProd">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliSolicitud">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -945,6 +909,69 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="ListadoGenero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModClaseNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListadoTalla">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModTipoSoli">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgDetalleCom">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="ListadoProdGen">
       <soap:operation soapAction="" />
       <input>
@@ -954,7 +981,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="AgParticipacion">
+    <operation name="AgHorario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -963,7 +990,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="CrearUsuario">
+    <operation name="ListadoHorario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -972,7 +999,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="AgreDescuento">
+    <operation name="ModCinturon">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -981,25 +1008,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListarUsuarios">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarCinturon">
+    <operation name="ListadoCarrito">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1026,7 +1035,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="AgEvento">
+    <operation name="EliProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1035,43 +1044,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoCarrito">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListadoTalla">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgHorario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListadoGenero">
+    <operation name="ModTipoEve">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1089,97 +1062,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListadoEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListadoHorario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliHorario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListadoClase">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliDescuento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliTipoSoli">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliTipoEve">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListaMatricula">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgTipoSolicitud">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgMensualidad">
+    <operation name="AgEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1197,6 +1080,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="ListaMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="AgTipoEvento">
       <soap:operation soapAction="" />
       <input>
@@ -1206,7 +1098,196 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ModClaseNivel">
+    <operation name="ListarCinturon">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliTipoEve">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModTipoProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliTipoProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgTipoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModTipoEncuesta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgParticipacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListadoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgreDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgTipoProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModTipoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgTipoSolicitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListadoEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliTipoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliTipoSoli">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgCinturon">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliCinturon">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgMensualidad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1216,15 +1297,6 @@
       </output>
     </operation>
     <operation name="AgClaseNivel">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliClaseNivel">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1251,16 +1323,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ModTipoEncuesta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListaTipoEncuesta">
+    <operation name="EliClaseNivel">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1278,7 +1341,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListarTipoUsuarios">
+    <operation name="ListaTipoEncuesta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1305,70 +1368,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="EliCinturon">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliTipoProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModTipoProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgCinturon">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="AgTipoClase">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliTipoClase">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModTipoClase">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ModCinturon">
+    <operation name="ListarTipoUsuarios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
