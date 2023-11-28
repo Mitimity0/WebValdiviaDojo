@@ -33,13 +33,13 @@
                                     <td>@x.NOMBRE</td>
                                     <td>@x.NOM_TIPO_PROD</td>
 
-                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
-                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop_@x.ID_PRODUCTO">Modificar</button></td>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar_@x.ID_PRODUCTO">Eliminar</button></td>
                                 </tr>
 
                                 <!-- Modal Modificar-->
                                 <form asp-action="modSolicitud" asp-controller="Adm" method="post">
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal fade" id="staticBackdrop_@x.ID_PRODUCTO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -143,7 +143,7 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                        <button type="submit" class="btn btn-primary">Modificar</button>
+                                                        <button type="submit" class="btn btn-danger">Modificar</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -152,7 +152,7 @@
                                 </form>
                                 <!--    ELIMINAR PRODUCTO    -->
                                 <form method="post">
-                                    <div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
+                                    <div class="modal fade" id="Eliminar_@x.ID_PRODUCTO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <!--  TITULO  -->
@@ -167,7 +167,7 @@
                                                 <!--  BOTONES  -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliminarProducto", "Adm", new { p_id = @x.ID_PRODUCTO, p_nom = @x.NOMBRE_PRODUCTO }, new { @class = "btn btn-primary" })</button>
+                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliminarProducto", "Adm", new { p_id = @x.ID_PRODUCTO, p_nom = @x.NOMBRE_PRODUCTO }, new { @class = "btn btn-danger" })</button>
                                                 </div>
                                             </div>
                                         </div>

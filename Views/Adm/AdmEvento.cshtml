@@ -40,13 +40,13 @@
                                         }
                                     }
 
-                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
-                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop_@x.ID_EVENTO">Modificar</button></td>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar_@x.ID_EVENTO">Eliminar</button></td>
                                 </tr>
 
                                 <!-- Modal Modificar-->
                                 <form action="@Url.Action("ModEvento", "Adm")" method="post">
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal fade" id="staticBackdrop_@x.ID_EVENTO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -121,12 +121,12 @@
                                 </form>
                                 <!--    ELIMINAR EVENTO    -->
                                 <form asp-action="ElimSolicitud" asp-controller="Adm" method="post">
-                                    <div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
+                                    <div class="modal fade" id="Eliminar_@x.ID_EVENTO" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <!--  TITULO  -->
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="LabelEliminar">Modificar solicitud</h5>
+                                                    <h5 class="modal-title" id="LabelEliminar">Modificar evento</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <!--  CUERPO  -->

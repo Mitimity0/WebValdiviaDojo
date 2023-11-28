@@ -53,14 +53,14 @@
                             <td>@x.celularEmer</td>
                             <td>@x.correo</td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop_@x.rut">Modificar</button>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar_@x.rut">Eliminar</button>
                             </td>
                         </tr>
 
                         <!-- Modal Modificar-->
                         <form action="@Url.Action("ModUsuario", "Adm")" method="post">
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal fade" id="staticBackdrop_@x.rut" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -199,7 +199,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" class="btn btn-primary">Modificar</button>
+                                            <button type="submit" class="btn btn-danger">Modificar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -211,7 +211,7 @@
 
                         <!-- Modal Eliminar-->
                         <form asp-action="ElimSolicitud" asp-controller="Adm" method="post">
-                            <div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
+                            <div class="modal fade" id="Eliminar_@x.rut" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -223,7 +223,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit">@Html.ActionLink("Eliminar", "EliminarProducto", "Adm", null, new { @class = "btn btn-primary" })</button>
+                                            <button type="submit">@Html.ActionLink("Eliminar", "EliminarProducto", "Adm", null, new { @class = "btn btn-danger" })</button>
                                         </div>
                                     </div>
                                 </div>
