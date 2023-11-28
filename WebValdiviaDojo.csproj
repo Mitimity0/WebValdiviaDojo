@@ -525,6 +525,8 @@
     <Content Include="Views\Adm\AdmAddTipoEncu.cshtml" />
     <Content Include="Views\Clase\ComentarAvance.cshtml" />
     <Content Include="Views\Adm\AdmDescuentos.cshtml" />
+    <Content Include="Views\Adm\AdmCredenciales.cshtml" />
+    <Content Include="Views\Adm\AdmParticipacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
