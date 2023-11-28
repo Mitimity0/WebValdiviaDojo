@@ -422,7 +422,7 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmAddTipoSoli");
         }
         [HttpPost]
-        //MODIFICAR TIPO EVENTO
+        //MODIFICAR TIPO SOLICITUD
         public ActionResult ModTipoSoli(int p_id, string p_nombre)
         {
             WS_DojoClient cliente = new WS_DojoClient();
@@ -454,6 +454,323 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmTipoSolicitud");
         }
 
+        //ADM TIPO PRODUCTO
+        public ActionResult AdmTipoProducto()
+        {
+            List<tipoProducto> tipo = ListarTipoProd();
+
+            ViewBag.TipoProducto = tipo;
+            return View();
+        }
+
+        //AGREGAR TIPO PRODUCTO GET
+        public ActionResult AdmAddTipoProd()
+        {
+            return View();
+        }
+
+        //AGREGAR TIPO PRODUCTO POST
+        [HttpPost]
+        public ActionResult AdmAddTipoProd(string p_des)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgTipoProducto(p_des);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmAddTipoProd");
+        }
+        //MODIFICAR TIPO PRODUCTO
+        public ActionResult ModTipoProd(int p_id, string p_des)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModTipoProducto(p_id, p_des);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoProducto");
+        }
+        //ELIMINAR TIPO PRODUCTO
+        public ActionResult EliTipoProd(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliTipoProducto(p_id);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoProducto");
+        }
+
+        //ADM TIPO CLASE
+        public ActionResult AdmTipoClase()
+        {
+            List<clases> tipo = ListarClases();
+
+            ViewBag.Clases = tipo;
+            return View();
+        }
+
+        //AGREGAR TIPO CLASE GET
+        public ActionResult AdmAddTipoClase()
+        {
+            return View();
+        }
+
+        //AGREGAR TIPO CLASE POST
+        [HttpPost]
+        public ActionResult AdmAddTipoClase(string p_nombre)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgTipoClase(p_nombre);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmAddTipoClase");
+        }
+
+        //MODIFICAR TIPO CLASE
+        public ActionResult ModTipoClase(int p_id, string p_nombre)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModTipoClase(p_id, p_nombre);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoClase");
+        }
+
+        //ELIMINAR TIPO CLASE
+        public ActionResult EliTipoClase(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliTipoClase(p_id);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoClase");
+        }
+
+        //ADM CLASE NIVEL
+        public ActionResult AdmClaseNivel()
+        {
+            List<clasesNivel> tipo = ListarClasesNivel();
+
+            ViewBag.ClasesNivel = tipo;
+            return View();
+        }
+
+        //AGREGAR CLASE NIVEL GET
+        public ActionResult AdmAddClaNivel()
+        {
+            return View();
+        }
+
+        //AGREGAR CLASE NIVEL POST
+        [HttpPost]
+        public ActionResult AdmAddClaNivel(string p_nombre)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgClaseNivel(p_nombre);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmAddClaNivel");
+        }
+
+        //MODIFICAR CLASE NIVEL
+        public ActionResult ModClaseNivel(int p_id, string p_nombre)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModClaseNivel(p_id, p_nombre);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmClaseNivel");
+        }
+
+        //ELIMINAR CLASE NIVEL
+        public ActionResult EliClaseNivel(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliClaseNivel(p_id);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmClaseNivel");
+        }
+
+        //ADM CINTURON
+        public ActionResult AdmCinturon()
+        {
+            List<cinturon> tipo = ListarCinturon();
+
+            ViewBag.Cinturon = tipo;
+            return View();
+        }
+
+        //AGREGAR CINTURON GET
+        public ActionResult AdmAddCinturon()
+        {
+            return View();
+        }
+
+        //AGREGAR CINTURON POST
+        [HttpPost]
+        public ActionResult AdmAddCinturon(string p_nombre, string p_color)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgCinturon(p_nombre, p_color);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmAddCinturon");
+        }
+        //MODIFICAR CINTURON
+        public ActionResult ModCinturon(int p_id, string p_nombre, string p_color)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModCinturon(p_id, p_nombre, p_color);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmCinturon");
+        }
+
+        //ELIMINAR CINTURON
+        public ActionResult EliCinturon(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliCinturon(p_id);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmCinturon");
+        }
+
+
+        //ADM TIPO ENCUESTA
+        public ActionResult AdmTipoEncuesta()
+        {
+            List<tipoEncuesta> tipo = ListarTipoEncuesta();
+
+            ViewBag.TipoEncuesta = tipo;
+            return View();
+        }
+
+        //AGREGAR TIPO ENCUESTA GET
+        public ActionResult AdmAddTipoEncu()
+        {
+            return View();
+        }
+
+        //AGREGAR TIPO ENCUESTA POST
+        [HttpPost]
+        public ActionResult AdmAddTipoEncu(string p_nom)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgTipoEncuesta(p_nom);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmAddTipoEncu");
+        }
+
+        //MODIFICAR TIPO ENCUESTA
+        public ActionResult ModTipoEncuesta(int p_id, string p_nom)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModTipoEncuesta(p_id, p_nom);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoEncuesta");
+        }
+
+        //ELIMINAR TIPO ENCUESTA
+        public ActionResult EliTipoEncuesta(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliTipoEncuesta(p_id);
+            }
+            catch
+            {
+                throw;
+            }
+
+            return RedirectToAction("AdmTipoEncuesta");
+        }
 
 
 
@@ -463,14 +780,8 @@ namespace WebValdiviaDojo.Controllers
 
 
 
-
-
-
-
-
-
-            //FUNCIONES
-            public ActionResult EliminarSolicitud(int p_id_sol)
+        //FUNCIONES
+        public ActionResult EliminarSolicitud(int p_id_sol)
         {
             WS_DojoClient cliente = new WS_DojoClient();
             try
@@ -778,6 +1089,28 @@ namespace WebValdiviaDojo.Controllers
 
             return null;
         }
+
+        public List<tipoEncuesta> ListarTipoEncuesta()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaTipoEncuesta().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+
+
+
         /*
          * 
          *                  ADMINISTRAR DESCUENTOS
