@@ -12,24 +12,31 @@
             </div>
             <!--  Dia de la semana  -->
             <div class="row g-2">
-                <div class="col-6">
-                    <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_dia_semana" value="" required>
-                        <label for="p_dia_semana">Dia de la semana</label>
-                    </div>
+                <div class="col-6  mb-4">
+                    <label for="p_id_clase" class="form-label">Dia de la semana</label>
+                    <select class="form-select" name="p_id_clase" aria-label="Clase" required>
+                        <option value="" selected>Seleccione la clase</option>
+                        <option value="Lunes">Lunes</option>
+                        <option value="Martes">Martes</option>
+                        <option value="Miercoles">Miercoles</option>
+                        <option value="Jueves">Jueves</option>
+                        <option value="Viernes">Viernes</option>
+                        <option value="Sabado">Sabado</option>
+                        <option value="Domingo">Domingo</option>
+                    </select>
                 </div>
             </div>
             <!--  Hora inicio / Hora fin -->
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_hora_inicio" value="" required>
+                        <input type="time" class="form-control" name="p_hora_inicio" value="" required>
                         <label for="p_hora_ini">Hora Inicio</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_hora_fin" value="" required>
+                        <input type="time" class="form-control" name="p_hora_fin" value="" required>
                         <label for="p_hora_fin">Hora Fin</label>
                     </div>
                 </div>
@@ -72,4 +79,5 @@
         </form>
     </div>
 </div>
+
 
