@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Evento";
 }
 <div class="py-5 col-md-12">
@@ -13,16 +12,21 @@
                 foreach (var x in ViewBag.even)
                 {
                     <div class="card mb-3">
-                        <img src="" height="100" class="card-img-top" alt="...">
+                        @{
+                            string rutaImagen = System.IO.File.Exists(Server.MapPath(x.IMG_EVENTO)) ? @x.IMG_EVENTO : Server.MapPath("~/Img/GaleriaEvento/Default.png");
+                        }
+
+                        <img src="@Url.Content(rutaImagen)" alt="" class="card-img-top rounded mx-auto d-bloc">
                         <div class="card-body">
                             <h5 class="card-title">@x.NOMBRE_EVENTO</h5>
                             <p class="card-text">@x.DESCRIPCION_EVENTO</p>
                             <p class="card-text"><small class="text-muted">@x.FECHA_HORA</small></p>
+                            <form action="" method="post">
+                                <input type="number" name="p_id_ev" value="@x.ID_EVENTO" class="d-none" />
+                                <button type="submit" class="btn btn-danger">Participar</button>
+                            </form>
                         </div>
-                        <form action="" method="post">
-                            <input type="number" name="p_id_ev" value="@x.ID_EVENTO" class="d-none" />
-                            <button type="submit" class="btn btn-danger">Participar</button>
-                        </form>
+
                     </div>
                 }
             }
@@ -34,4 +38,3 @@
         </div>
     </div>
 </div>
-

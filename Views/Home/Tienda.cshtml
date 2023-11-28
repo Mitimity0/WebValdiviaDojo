@@ -1,4 +1,5 @@
-﻿@{ 
+﻿
+@{
     ViewBag.Title = "Tienda";
     var total = 0;
     var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
@@ -40,13 +41,13 @@
                                                 <p class="card-text">CANTIDAD</p>
                                                 <input class="form-control text-center col-4" type="number" min="0" max="@c.STOCK" value="@c.CANTIDAD">
                                             </div>
-                                            @if (c.VALOR_DESC != 0)
+                                            @if (c.precio_total != c.PRECIO_NORMAL)
                                             {
                                                 <p class="card-text"><small class="text-muted text-decoration-line-through">Precio normal: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small></p>
-                                                <p class="card-text"><small class="text-muted">Precio oferta: @string.Format("${0:N0}", c.VALOR_DESC)</small></p>
+                                                <p class="card-text"><small class="text-muted">Precio oferta: @string.Format("${0:N0}", c.precio_total)</small></p>
                                                 for (int i = 0; i < @c.CANTIDAD; i++)
                                                 {
-                                                    total += c.VALOR_DESC;
+                                                    total += c.precio_total;
                                                 }
 
                                             }

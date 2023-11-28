@@ -219,14 +219,28 @@ namespace WebValdiviaDojo.Controllers
             return View();
         }
 
-
         //AGREGAR EVENTOS POST
         [HttpPost]
-        public ActionResult AdmAddEvento(string p_nom, string p_des, string p_dire, DateTime p_hora, int p_t_eve)
+        public ActionResult AdmAddEvento(HttpPostedFileBase imagen, string p_nom, string p_des, string p_dire, DateTime p_hora, int p_t_eve)
         {
             WS_DojoClient cliente = new WS_DojoClient();
             try
             {
+                if (imagen != null && imagen.ContentLength > 0)
+                {
+                    string nombreArchivo = p_nom + ".png";
+                    string rutaCarpetaProd = Server.MapPath("~/Img/GaleriaEvento/");
+                    if (!Directory.Exists(rutaCarpetaProd))
+                    {
+                        Directory.CreateDirectory(rutaCarpetaProd);
+                    }
+                    string ruta = Path.Combine(rutaCarpetaProd, nombreArchivo);
+                    if (System.IO.File.Exists(ruta))
+                    {
+                        System.IO.File.Delete(ruta);
+                    }
+                    imagen.SaveAs(ruta);
+                }
                 cliente.AgEvento(p_nom, p_des, p_dire, p_hora.ToString("dd/MM/yyyy hh:mm"), p_t_eve);
                 ViewBag.Mensaje = "Evento registrado exitosamente.";
             }
@@ -238,14 +252,30 @@ namespace WebValdiviaDojo.Controllers
 
             return RedirectToAction("AdmAddEvento");
         }
+
         //MODIFICAR EVENTOS
         [HttpPost]
-        public ActionResult ModEvento(int p_id,string p_nom, string p_des, string p_dire, DateTime p_hora, string p_t_eve)
+        public ActionResult ModEvento(HttpPostedFileBase imagen, int p_id, string p_nom, string p_des, string p_dire, DateTime p_hora, string p_t_eve)
         {
             WS_DojoClient cliente = new WS_DojoClient();
             try
             {
-                cliente.ModEvento(p_id,p_nom, p_des, p_dire, p_hora.ToString("dd/MM/yyyy hh:mm"), p_t_eve);
+                if (imagen != null && imagen.ContentLength > 0)
+                {
+                    string nombreArchivo = p_nom + ".png";
+                    string rutaCarpetaProd = Server.MapPath("~/Img/GaleriaEvento/");
+                    if (!Directory.Exists(rutaCarpetaProd))
+                    {
+                        Directory.CreateDirectory(rutaCarpetaProd);
+                    }
+                    string ruta = Path.Combine(rutaCarpetaProd, nombreArchivo);
+                    if (System.IO.File.Exists(ruta))
+                    {
+                        System.IO.File.Delete(ruta);
+                    }
+                    imagen.SaveAs(ruta);
+                }
+                cliente.ModEvento(p_id, p_nom, p_des, p_dire, p_hora.ToString("dd/MM/yyyy hh:mm"), p_t_eve);
             }
             catch
             {

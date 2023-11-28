@@ -54,6 +54,11 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
+                                                    <input type="number" name="p_id" class="d-none" value="@x.ID_EVENTO" />
+                                                    <div class="text-center">
+                                                        <label for="imagen">Imagen del producto (.png)</label>
+                                                        <input type="file" class="align-self-center mx-auto d-block py-3" name="imagen" value="" />
+                                                    </div>
                                                     <!--  NOMBRE DEL EVENTO  -->
                                                     <div class="row g-2">
                                                         <div class="col-6">
@@ -93,7 +98,7 @@
                                                                     <option value="" selected>Seleccione el tipo de evento</option>
                                                                     @foreach (var t in ViewBag.TipoEvento)
                                                                     {
-                                                                        <option value="@t.ID_TIPO_EVENTO" @(t.ID_TIPO_EVENTO.ToString() == @x.ID_TIPO_EVENTO.ToString() ? "selected" : "") >@t.DES_EVENTO</option>
+                                                                        <option value="@t.ID_TIPO_EVENTO" @(t.ID_TIPO_EVENTO.ToString() == @x.ID_TIPO_EVENTO.ToString() ? "selected" : "")>@t.DES_EVENTO</option>
                                                                     }
                                                                 </select>
                                                             </div>
@@ -151,4 +156,3 @@
         </div>
     </div>
 </div>
-
