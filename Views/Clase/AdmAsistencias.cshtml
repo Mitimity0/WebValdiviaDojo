@@ -1,0 +1,226 @@
+﻿@{
+}
+
+
+@using System.Globalization
+<div class="py-5 col-12">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="text-center py-4">
+                <h4 class="display-6">Administrar solicitud</h4>
+                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Agregar">Agregar</button></td>
+            </div>
+            @if (ViewBag.Descuento != null)
+            {
+                <div class="card card-body table-responsive">
+                    <table class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Fecha inicio</th>
+                                <th scope="col">Fecha fin</th>
+                                <th scope="col">Porcentaje de descuento</th>
+                                <th scope="col">Valor de descuento</th>
+                                <th scope="col">Operaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var x in ViewBag.Descuento)
+                            {
+                                <tr>
+                                    <td>@(DateTime.TryParseExact(x.FECHA_INICIO, "yyyy-MM-dd HH:mm:ss.f", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime fechaInicio) ? fechaInicio.ToString("dd/MM/yyyy") : "Fecha inválida")</td>
+                                    <td>@(DateTime.TryParseExact(x.FECHA_FIN, "yyyy-MM-dd HH:mm:ss.f", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime fechaFin) ? fechaFin.ToString("dd/MM/yyyy") : "Fecha inválida")</td>
+
+
+                                    <td>@x.PORC_DESC</td>
+                                    <td>@x.VALOR_DESC</td>
+
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop_@x.ID_DESC_PROD">Modificar</button></td>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar_@x.ID_DESC_PROD">Eliminar</button></td>
+                                </tr>
+                                <!-- Modal Modificar-->
+                                <form action="@Url.Action("ModDescuento", "Adm")" method="post">
+                                    <div class="modal fade" id="staticBackdrop_@x.ID_DESC_PROD" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="LabelEliminar">Modificar Descuento</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <!--input invisibles-->
+                                                <input type="number" name="p_id" id="p_id" value="@x.ID_DESC_PROD" class="d-none" required />
+
+                                                <div class="modal-body">
+                                                    <!-- Fecha inicio -->
+                                                    <div class="mb-3">
+                                                        <label for="p_fecha_inicio" class="form-label">Fecha inicio</label>
+                                                        <input class="form-control" name="p_fecha_inicio" type="date" value="@fechaInicio.ToString("dd/MM/yyyy")" required>
+                                                    </div>
+                                                    <!-- Fecha fin -->
+                                                    <div class="mb-3">
+                                                        <label for="p_fecha_fin" class="form-label">Fecha fin</label>
+                                                        <input class="form-control" name="p_fecha_fin" type="date" value="@fechaFin.ToString("dd/MM/yyyy")" required>
+                                                    </div>
+
+                                                    <!-- Selector de tipo de descuento -->
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Seleccione el tipo de descuento</label>
+                                                        <select class="form-control" id="tipoDescuento" required>
+                                                            <option value="valor">Descuento por valor fijo</option>
+                                                            <option value="porcentaje">Descuento por porcentaje</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <!-- Valor del descuento -->
+                                                    <div class="mb-3" id="valorDescuentoDiv">
+                                                        <label for="p_valor_desc" class="form-label">Valor de descuento</label>
+                                                        <input class="form-control" type="number" name="p_valor_desc" id="p_valor_desc">
+                                                    </div>
+
+                                                    <!-- Porcentaje del descuento -->
+                                                    <div class="mb-3" id="porcentajeDescuentoDiv">
+                                                        <label for="p_porc_desc" class="form-label">Porcentaje de descuento</label>
+                                                        <input class="form-control" type="number" name="p_porc_desc" id="p_porc_desc">
+                                                    </div>
+
+                                                    <script>
+                                                        // Ocultar inicialmente los campos de valor y porcentaje de descuento
+                                                        document.getElementById('valorDescuentoDiv').style.display = 'none';
+                                                        document.getElementById('porcentajeDescuentoDiv').style.display = 'none';
+
+                                                        // Agregar un evento change al selector de tipo de descuento
+                                                        document.getElementById('tipoDescuento').addEventListener('change', function () {
+                                                            // Obtener el valor seleccionado
+                                                            var tipoDescuento = this.value;
+
+                                                            // Mostrar u ocultar los campos según el tipo de descuento seleccionado
+                                                            if (tipoDescuento === 'valor') {
+                                                                document.getElementById('valorDescuentoDiv').style.display = 'block';
+                                                                document.getElementById('porcentajeDescuentoDiv').style.display = 'none';
+                                                                document.getElementById('p_porc_desc').value = ''; // Limpiar el campo de porcentaje de descuento
+                                                            } else if (tipoDescuento === 'porcentaje') {
+                                                                document.getElementById('porcentajeDescuentoDiv').style.display = 'block';
+                                                                document.getElementById('valorDescuentoDiv').style.display = 'none';
+                                                                document.getElementById('p_valor_desc').value = ''; // Limpiar el campo de valor de descuento
+                                                            }
+                                                        });
+                                                    </script>
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="submit" class="btn btn-danger">Modificar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- Modal Eliminar-->
+                                <form asp-action="ElimSolicitud" asp-controller="Adm" method="post">
+                                    <div class="modal fade" id="Eliminar_@x.ID_DESC_PROD" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="LabelEliminar" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="LabelEliminar">Modificar solicitud</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>¿Esta seguro que quiere este descuento?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliDescuento", "Adm", new { p_id = @x.ID_DESC_PROD }, new { @class = "btn btn-danger" })</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <p>No hay solicitudes pendientes</p>
+            }
+        </div>
+    </div>
+</div>
+
+
+<form action="@Url.Action("AgDescuento", "Adm")" method="post">
+    <div class="modal fade" id="Agregar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Agregar" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Agregar">Agregar Descuento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Fecha inicio -->
+                    <div class="mb-3">
+                        <label for="p_fecha_inicio" class="form-label">Fecha inicio</label>
+                        <input class="form-control" name="p_fecha_inicio" type="date" required>
+                    </div>
+                    <!-- Fecha fin -->
+                    <div class="mb-3">
+                        <label for="p_fecha_fin" class="form-label">Fecha fin</label>
+                        <input class="form-control" name="p_fecha_fin" type="date" required>
+                    </div>
+
+                    <!-- Selector de tipo de descuento -->
+                    <div class="mb-3">
+                        <label class="form-label">Seleccione el tipo de descuento</label>
+                        <select class="form-control" id="tipoDescuento" required>
+                            <option value="valor">Valor de descuento</option>
+                            <option value="porcentaje">Porcentaje de descuento</option>
+                        </select>
+                    </div>
+
+                    <!-- Valor del descuento -->
+                    <div class="mb-3" id="valorDescuentoDiv">
+                        <label for="p_valor_desc" class="form-label">Valor de descuento</label>
+                        <input class="form-control" type="number" name="p_valor_desc" id="p_valor_desc">
+                    </div>
+
+                    <!-- Porcentaje del descuento -->
+                    <div class="mb-3" id="porcentajeDescuentoDiv">
+                        <label for="p_porc_desc" class="form-label">Porcentaje de descuento</label>
+                        <input class="form-control" type="number" name="p_porc_desc" id="p_porc_desc">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script>
+    // Ocultar inicialmente los campos de valor y porcentaje de descuento
+    document.getElementById('valorDescuentoDiv').style.display = 'none';
+    document.getElementById('porcentajeDescuentoDiv').style.display = 'none';
+
+    // Agregar un evento change al selector de tipo de descuento
+    document.getElementById('tipoDescuento').addEventListener('change', function () {
+        // Obtener el valor seleccionado
+        var tipoDescuento = this.value;
+
+        // Mostrar u ocultar los campos según el tipo de descuento seleccionado
+        if (tipoDescuento === 'valor') {
+            document.getElementById('valorDescuentoDiv').style.display = 'block';
+            document.getElementById('porcentajeDescuentoDiv').style.display = 'none';
+            document.getElementById('p_porc_desc').value = ''; // Limpiar el campo de porcentaje de descuento
+        } else if (tipoDescuento === 'porcentaje') {
+            document.getElementById('porcentajeDescuentoDiv').style.display = 'block';
+            document.getElementById('valorDescuentoDiv').style.display = 'none';
+            document.getElementById('p_valor_desc').value = ''; // Limpiar el campo de valor de descuento
+        }
+    });
+</script>

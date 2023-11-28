@@ -14,6 +14,10 @@ namespace WebValdiviaDojo.Controllers
         {
             return View();
         }
+        public ActionResult AdmAsistencias()
+        {
+            return View();
+        }
 
         public ActionResult ClaseInscrita(string v_rut)
         {

@@ -318,7 +318,7 @@ namespace WebValdiviaDojo.Controllers
 
         //ADMIN CLASE POST
         [HttpPost]
-        public ActionResult AdmAddClase(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel)
+        public ActionResult AdmAddClase(string p_dia_semana, string p_hora_inicio,string p_hora_fin, int p_id_clase, int p_id_nivel)
         {
             WS_DojoClient cliente = new WS_DojoClient();
             try

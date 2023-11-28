@@ -527,6 +527,7 @@
     <Content Include="Views\Adm\AdmDescuentos.cshtml" />
     <Content Include="Views\Adm\AdmCredenciales.cshtml" />
     <Content Include="Views\Adm\AdmParticipacion.cshtml" />
+    <Content Include="Views\Clase\AdmAsistencias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -534,7 +535,6 @@
     <Folder Include="Img\GaleriaProductos\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Encuesta\" />
-    <Folder Include="Views\Horario\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
