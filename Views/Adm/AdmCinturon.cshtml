@@ -17,6 +17,7 @@
                             <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Cinturon</th>
+                                <th scope="col">Color</th>
                                 <th scope="col">Modificar</th>
                                 <th scope="col">Eliminar</th>
                             </tr>
@@ -24,13 +25,14 @@
                         <tbody>
                             @foreach (var x in ViewBag.Cinturon)
                             {
-                                <tr>
-                                    <td>@x.ID_TIPO_EVENTO</td>
-                                    <td>@x.DES_EVENTO</td>
+                            <tr>
+                                <td>@x.id_cinturon</td>
+                                <td>@x.nombre_cinturon</td>
+                                <td>@x.color_cinturon</td>
 
-                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
-                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
-                                </tr>
+                                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
+                                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
+                            </tr>
 
                                 <!-- Modal Modificar-->
                                 <form action="@Url.Action("ModCinturon", "Adm")" method="post">
@@ -46,14 +48,20 @@
                                                     <div class="row g-2">
                                                         <div class="col-6">
                                                             <div class="form-floating mb-4">
-                                                                <input type="text" class="form-control" name="p_nom" value="@x.DES_EVENTO" required>
-                                                                <label for="p_nom">Nombre del cinturon</label>
+                                                                <input type="text" class="form-control" name="p_nombre" value="@x.nombre_cinturon" required>
+                                                                <label for="p_nombre">Nombre del cinturon</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="form-floating mb-4">
+                                                                <input type="text" class="form-control" name="p_color" value="@x.color_cinturon" required>
+                                                                <label for="p_color">Color del cinturon</label>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <!--input invisibles-->
-                                                    <input type="number" name="p_id" id="p_id" value="@x.ID_TIPO_EVENTO" class="d-none" required />
+                                                    <input type="number" name="p_id" id="p_id" value="@x.id_cinturon" class="d-none" required />
 
                                                     <!--  Enviar informacion  -->
                                                     <div class="modal-footer">
@@ -78,12 +86,12 @@
                                                 </div>
                                                 <!--  CUERPO  -->
                                                 <div class="modal-body">
-                                                    <p>Esta seguro que quiere eliminar el Cinturon @x.DES_EVENTO</p>
+                                                    <p>Esta seguro que quiere eliminar el Cinturon @x.nombre_cinturon</p>
                                                 </div>
                                                 <!--  BOTONES  -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliCinturon", "Adm", new { p_id = @x.ID_TIPO_EVENTO }, new { @class = "btn btn-danger" })</button>
+                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliCinturon", "Adm", new { p_id = @x.id_cinturon }, new { @class = "btn btn-danger" })</button>
                                                 </div>
                                             </div>
                                         </div>

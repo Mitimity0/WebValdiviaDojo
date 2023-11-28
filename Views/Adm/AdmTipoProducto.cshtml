@@ -25,8 +25,8 @@
                             @foreach (var x in ViewBag.TipoProducto)
                             {
                                 <tr>
-                                    <td>@x.ID_TIPO_EVENTO</td>
-                                    <td>@x.DES_EVENTO</td>
+                                    <td>@x.id_tipo_prod</td>
+                                    <td>@x.nombre_tipo_prod</td>
 
                                     <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
                                     <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
@@ -46,14 +46,14 @@
                                                     <div class="row g-2">
                                                         <div class="col-6">
                                                             <div class="form-floating mb-4">
-                                                                <input type="text" class="form-control" name="p_nom" value="@x.DES_EVENTO" required>
-                                                                <label for="p_nom">Nombre Tipo Producto</label>
+                                                                <input type="text" class="form-control" name="p_des" value="@x.nombre_tipo_prod" required>
+                                                                <label for="p_des">Nombre Tipo Producto</label>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <!--input invisibles-->
-                                                    <input type="number" name="p_id" id="p_id" value="@x.ID_TIPO_EVENTO" class="d-none" required />
+                                                    <input type="number" name="p_id" id="p_id" value="@x.id_tipo_prod" class="d-none" required />
 
                                                     <!--  Enviar informacion  -->
                                                     <div class="modal-footer">
@@ -78,12 +78,12 @@
                                                 </div>
                                                 <!--  CUERPO  -->
                                                 <div class="modal-body">
-                                                    <p>Esta seguro que quiere eliminar el tipo de Producto @x.DES_EVENTO</p>
+                                                    <p>Esta seguro que quiere eliminar el tipo de Producto @x.nombre_tipo_prod</p>
                                                 </div>
                                                 <!--  BOTONES  -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliTipoProd", "Adm", new { p_id = @x.ID_TIPO_EVENTO }, new { @class = "btn btn-danger" })</button>
+                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliTipoProd", "Adm", new { p_id = @x.id_tipo_prod }, new { @class = "btn btn-danger" })</button>
                                                 </div>
                                             </div>
                                         </div>

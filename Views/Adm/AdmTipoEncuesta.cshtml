@@ -25,15 +25,15 @@
                             @foreach (var x in ViewBag.TipoEncuesta)
                             {
                                 <tr>
-                                    <td>@x.ID_TIPO_EVENTO</td>
-                                    <td>@x.DES_EVENTO</td>
+                                    <td>@x.ID_TIPO_ENCUESTA</td>
+                                    <td>@x.NOM_TIPO_ENCUESTA</td>
 
                                     <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Modificar</button></td>
                                     <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Eliminar">Eliminar</button></td>
                                 </tr>
 
                                 <!-- Modal Modificar-->
-                                <form action="@Url.Action("ModTipoEncu", "Adm")" method="post">
+                                <form action="@Url.Action("ModTipoEncuesta", "Adm")" method="post">
                                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -46,14 +46,14 @@
                                                     <div class="row g-2">
                                                         <div class="col-6">
                                                             <div class="form-floating mb-4">
-                                                                <input type="text" class="form-control" name="p_nom" value="@x.DES_EVENTO" required>
+                                                                <input type="text" class="form-control" name="p_nom" value="@x.NOM_TIPO_ENCUESTA" required>
                                                                 <label for="p_nom">Nombre Tipo Encuesta</label>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <!--input invisibles-->
-                                                    <input type="number" name="p_id" id="p_id" value="@x.ID_TIPO_EVENTO" class="d-none" required />
+                                                    <input type="number" name="p_id" id="p_id" value="@x.ID_TIPO_ENCUESTA" class="d-none" required />
 
                                                     <!--  Enviar informacion  -->
                                                     <div class="modal-footer">
@@ -78,12 +78,12 @@
                                                 </div>
                                                 <!--  CUERPO  -->
                                                 <div class="modal-body">
-                                                    <p>Esta seguro que quiere eliminar el tipo de encuesta @x.DES_EVENTO</p>
+                                                    <p>Esta seguro que quiere eliminar el tipo de encuesta @x.NOM_TIPO_ENCUESTA</p>
                                                 </div>
                                                 <!--  BOTONES  -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliTipoEncu", "Adm", new { p_id = @x.ID_TIPO_EVENTO }, new { @class = "btn btn-danger" })</button>
+                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliTipoEncuesta", "Adm", new { p_id = @x.ID_TIPO_ENCUESTA }, new { @class = "btn btn-danger" })</button>
                                                 </div>
                                             </div>
                                         </div>
