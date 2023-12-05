@@ -34,32 +34,26 @@
                                             <tbody>
                                                 @foreach (var c in ViewBag.Carrito)
                                                 {
-                                                    <tr>
-                                                        <td>@c.NOMBRE_PRODUCTO</td>
-                                                        <td>@c.NOMBRE</td>
-                                                        <td>@c.CANTIDAD</td>
-                                                        @if (c.precio_total != c.PRECIO_NORMAL)
-                                                        {
-                                                            <td><small class="text-muted text-decoration-line-through">Precio normal: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small></td>
-                                                            <td><small class="text-muted">Precio oferta: @string.Format("${0:N0}", c.precio_total)</small>)</td>
-                                                            { total = (c.precio_total * @c.CANTIDAD); }
-                                                        }
+                                                <tr>
+                                                    <td>@c.NOMBRE_PRODUCTO</td>
+                                                    <td>@c.NOMBRE</td>
+                                                    <td>@c.CANTIDAD</td>
 
-                                                        else
-                                                        {
-                                                            <p class="card-text">
-                                                                <small class="text-muted">Precio: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small>
-                                                            </p>
-                                                            for (int i = 0; i < @c.CANTIDAD; i++)
-                                                            {
-                                                                total += c.PRECIO_NORMAL;
-                                                            }
-                                                            <td>--</td>
-                                                            { total += (c.PRECIO_NORMAL * @c.CANTIDAD); }
-                                                        }
+                                                    @if (c.precio_total != c.PRECIO_NORMAL)
+                                                    {
+                                                        <td><small class="text-muted text-decoration-line-through">Precio normal: @string.Format("${0:N0}", c.PRECIO_NORMAL)</small></td>
+                                                        <td><small class="text-muted">Precio oferta: @string.Format("${0:N0}", c.precio_total)</small>)</td>
+                                                        { total = total+(c.precio_total * @c.CANTIDAD); }
+                                                    }
 
-                                                    </tr>
-                                                }
+                                                    else
+                                                    {
+                                                        <td><small class="text-muted">@string.Format("${0:N0}", c.PRECIO_NORMAL)</small></td>
+                                                        <td><small class="text-muted">--</small></td>
+                                                        { total = total+(c.precio_total * @c.CANTIDAD); }
+                                                    }
+                                                </tr>
+}
                                             </tbody>
                                         </table>
                                     </div>
