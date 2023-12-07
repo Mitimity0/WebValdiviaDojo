@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using WebValdiviaDojo.WS_ValdiviaDojo;
 using System.Security.Cryptography;
 using System.Text;
+using EFTEC;
 
 namespace WebValdiviaDojo.Controllers
 {
@@ -145,13 +146,25 @@ namespace WebValdiviaDojo.Controllers
         }
 
         [HttpPost]
-        public ActionResult NuevoUsuario(string correo, string pass, int rut, string dv, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, DateTime fechanac, int gene, string dire)
+        public ActionResult NuevoUsuario(string correo, string pass, string passCon, int rut, string dv, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, DateTime fechanac, int gene, string dire)
         {
             List<genero> generos = ListarGenero();
             ViewBag.generos = generos;
 
             WS_DojoClient cliente = new WS_DojoClient();
+            // Validar formato del RUT y calcular dígito verificador
+            if (!EsRutValido(rut, dv))
+            {
+                ViewBag.Mensaje = "El RUT ingresado no es válido.";
+                return View();
+            }
 
+            // Validar que la contraseña y la confirmación coincidan
+            if (pass != passCon)
+            {
+                ViewBag.Mensaje = "La contraseña y la confirmación no coinciden.";
+                return View();
+            }
             try
             {
                 var usu = cliente.CrearUsuario(correo, HashMD5(pass), rut, dv, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular, celularemer, dire, null, null, gene, 4, 1);
@@ -239,6 +252,22 @@ namespace WebValdiviaDojo.Controllers
             }
 
             return sb.ToString();
+        }
+        // Validación de RUT
+        public bool EsRutValido(int rut, string dv)
+        {
+            // Formatear el RUT completo
+            string rutCompleto = rut.ToString() + "-" + dv;
+
+            // Validar el RUT usando RutChile
+            if (RutChile.ValidarRut(rutCompleto))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

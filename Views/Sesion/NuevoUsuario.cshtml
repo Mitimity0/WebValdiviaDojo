@@ -4,7 +4,7 @@
 
 <div class="py-5 col-12">
     <div class="row justify-content-center">
-        <form class="card col-8" method="post" enctype="multipart/form-data">
+        <form class="card col-8" method="post" enctype="multipart/form-data" id="registroForm">
             <!--  Titulo  -->
             <div class="text-center py-4">
                 <h4 class="display-6">Nueva cuenta</h4>
@@ -20,13 +20,13 @@
             <div class="row g-2">
                 <div class="col">
                     <div class="form-floating mb-4">
-                        <input type="password" class="form-control" name="pass" placeholder="" required>
+                        <input type="password" class="form-control" name="pass" placeholder="" pattern=".{8,}" title="La contraseña debe tener al menos 8 caracteres" required>
                         <label for="pass">Contraseña</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-floating mb-4">
-                        <input type="password" class="form-control" name="passCon" placeholder="" required>
+                        <input type="password" class="form-control" name="passCon" placeholder="" pattern=".{8,}" title="La contraseña debe tener al menos 8 caracteres" required>
                         <label for="passCon">Confirmar contraseña</label>
                     </div>
                 </div>
@@ -35,13 +35,13 @@
             <div class="row g-2">
                 <div class="col-10">
                     <div class="form-floating mb-4">
-                        <input type="number" class="form-control" name="rut" placeholder="" required>
+                        <input type="number" class="form-control" name="rut" placeholder="" pattern="[0-9]{1,}" title="Ingrese solo números" required>
                         <label for="rut">RUT sin DV ni puntos</label>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="dv" placeholder="" required>
+                        <input type="text" class="form-control" name="dv" placeholder="" pattern="[0-9Kk]{1}" title="Ingrese solo números o 'K'" required>
                         <label for="dv">DV</label>
                     </div>
                 </div>
@@ -51,53 +51,61 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-
-                        <input type="text" class="form-control" name="pnombre" placeholder="" required>
+                        <input type="text" class="form-control" name="pnombre" placeholder=""
+                               pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                         <label for="pnombre">Primer nombre</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="snombre" placeholder="" required>
+                        <input type="text" class="form-control" name="snombre" placeholder=""
+                               pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                         <label for="snombre">Segundo nombre</label>
                     </div>
                 </div>
             </div>
+
             <!--  Apellidos  -->
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="apater" placeholder="" required>
+                        <input type="text" class="form-control" name="apater" placeholder=""
+                               pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                         <label for="appaterno">Apellido paterno</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="amater" placeholder="" required>
+                        <input type="text" class="form-control" name="amater" placeholder=""
+                               pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                         <label for="apmaterno">Apellido materno</label>
                     </div>
                 </div>
             </div>
+
             <!--  Celulares  -->
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="number" class="form-control" name="celular" placeholder="" required>
+                        <input type="tel" class="form-control" name="celular" placeholder="" required>
                         <label for="celular">Celular</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="number" class="form-control" name="celularemer" placeholder="" required>
+                        <input type="tel" class="form-control" name="celularemer" placeholder="" required>
                         <label for="celularemer">Celular Emergencia</label>
                     </div>
                 </div>
             </div>
+
+
             <!--  Fecha Nacimiento-genero  -->
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="date" class="form-control" name="fechanac" placeholder="">
+                        <input type="date" class="form-control" name="fechanac" placeholder=""
+                               max="@DateTime.Now.AddYears(-3).ToString("yyyy-MM-dd")" required>
                         <label for="fechanac">Fecha de nacimiento</label>
                     </div>
                 </div>
@@ -128,8 +136,27 @@
 
             <!--  Enviar informacion  -->
             <div class="py-3"></div>
-            <button class="btn btn-danger mb-4" type="submit">Crear Cuenta</button>
+            <button class="btn btn-danger mb-4" type="submit" id="btnSubmit" disabled>Crear Cuenta</button>
         </form>
     </div>
 </div>
 
+<script>
+    // Función para verificar la validez de los campos y habilitar/deshabilitar el botón
+    function verificarValidez() {
+        var formulario = document.getElementById('registroForm');
+        var botonSubmit = document.getElementById('btnSubmit');
+
+        // Verificar si el formulario es válido
+        if (formulario.checkValidity()) {
+            // Habilitar el botón si el formulario es válido
+            botonSubmit.removeAttribute('disabled');
+        } else {
+            // Deshabilitar el botón si el formulario no es válido
+            botonSubmit.setAttribute('disabled', 'true');
+        }
+    }
+
+    // Agrega un listener para el evento 'input' en cada campo del formulario
+    document.getElementById('registroForm').addEventListener('input', verificarValidez);
+</script>
