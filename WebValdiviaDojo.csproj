@@ -136,7 +136,6 @@
     <Compile Include="Controllers\InscripcionController.cs" />
     <Compile Include="Controllers\SesionController.cs" />
     <Compile Include="Controllers\TipoUsuarioController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

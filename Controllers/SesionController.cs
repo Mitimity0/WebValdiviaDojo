@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebValdiviaDojo.WS_ValdiviaDojo;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace WebValdiviaDojo.Controllers
 {
@@ -35,8 +37,6 @@ namespace WebValdiviaDojo.Controllers
         public ActionResult PerfilUsu(HttpPostedFileBase imagen, int rut, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, string dire, string peso, string altura, DateTime fechanac, int p_gen, int p_t_usu, int p_cin)
         {
             WS_DojoClient cliente = new WS_DojoClient();
-
-            //
             try
             {
                 if (imagen != null && imagen.ContentLength > 0)
@@ -90,7 +90,7 @@ namespace WebValdiviaDojo.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(String p_correo, String p_pass)
+        public ActionResult Login(string p_correo, string p_pass)
         {
             List<usuario> resultado = IniciarSesion(p_correo, p_pass);
 
@@ -101,7 +101,7 @@ namespace WebValdiviaDojo.Controllers
                 return View("~/Views/Home/Index.cshtml");
             }
 
-            ViewBag.Mensaje = "Usuario no encontrado";
+            ViewBag.Mensaje = "Usuario no encontrado ";
             return View();
         }
 
@@ -145,7 +145,7 @@ namespace WebValdiviaDojo.Controllers
         }
 
         [HttpPost]
-        public ActionResult NuevoUsuario(String correo, String pass, int rut, String dv, String pnombre, String snombre, String apater, String amater, String celular, String celularemer, DateTime fechanac, int gene, String dire)
+        public ActionResult NuevoUsuario(string correo, string pass, int rut, string dv, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, DateTime fechanac, int gene, string dire)
         {
             List<genero> generos = ListarGenero();
             ViewBag.generos = generos;
@@ -154,7 +154,7 @@ namespace WebValdiviaDojo.Controllers
 
             try
             {
-                var usu = cliente.CrearUsuario(correo, pass, rut, dv, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular, celularemer, dire, null, null, gene, 4, 1);
+                var usu = cliente.CrearUsuario(correo, HashMD5(pass), rut, dv, pnombre, snombre, apater, amater, fechanac.ToString("dd/MM/yyyy"), celular, celularemer, dire, null, null, gene, 4, 1);
                 // Una vez creado el usuario, intentamos iniciar sesión automáticamente
                 var resultado = IniciarSesion(correo, pass);
                 if (resultado != null && resultado.Any())
@@ -202,10 +202,10 @@ namespace WebValdiviaDojo.Controllers
         public List<usuario> IniciarSesion(string correo, string pass)
         {
             WS_DojoClient cliente = new WS_DojoClient();
-
+            string p_pass = HashMD5(pass);
             try
             {
-                return cliente.Login(correo, pass).ToList();
+                return cliente.Login(correo, p_pass).ToList();
             }
             catch (Exception ex)
             {
@@ -218,5 +218,27 @@ namespace WebValdiviaDojo.Controllers
             }
         }
 
+        //ENCRIPTACION
+        public string HashMD5(string clave)
+        {
+            MD5 md5 = MD5.Create();
+
+            var claveArray = Encoding.UTF8.GetBytes(clave);
+
+            var claveHash = md5.ComputeHash(claveArray);
+
+            return toMd5String(claveHash);
+        }
+        public string toMd5String(byte[] hashArray)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hashArray.Length; i++)
+            {
+                sb.Append(hashArray[i].ToString());
+            }
+
+            return sb.ToString();
+        }
     }
 }
