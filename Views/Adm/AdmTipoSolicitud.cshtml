@@ -8,6 +8,7 @@
         <div class="col-8">
             <div class="text-center py-4">
                 <h4 class="display-6">Administrar Tipo Solicitudes</h4>
+                <button class="btn">@Html.ActionLink("Nuevo tipo de solicitud", "AdmAddTipoSoli", "Adm", null, new { @class = "btn btn-danger" })</button>
             </div>
             @if (ViewBag.TipoSolicitud != null)
             {
@@ -49,7 +50,7 @@
                                                 <div class="modal-body">
                                                     <!--  NOMBRE DEL TIPO SOLICITUD  -->
                                                     <div class="row g-2">
-                                                        <div class="col-6">
+                                                        <div class="col-12">
                                                             <div class="form-floating mb-4">
                                                                 <input type="text" class="form-control" name="p_nombre" value="@x.NOMBRE_TIPO_SOL" required>
                                                                 <label for="p_nombre">Nombre Tipo Solicitud</label>
@@ -88,7 +89,7 @@
                                                 <!--  BOTONES  -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit">@Html.ActionLink("Eliminar", "EliTipoSoli", "Adm", new { p_id = @x.ID_TIPO_SOL }, new { @class = "btn btn-danger" })</button>
+                                                    <button type="submit" class="btn">@Html.ActionLink("Eliminar", "EliTipoSoli", "Adm", new { p_id = @x.ID_TIPO_SOL }, new { @class = "btn btn-danger" })</button>
                                                 </div>
                                             </div>
                                         </div>

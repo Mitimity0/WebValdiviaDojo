@@ -57,7 +57,7 @@
                                                     <option value="" selected>Seleccione el tipo de solicitud</option>
                                                     @foreach (var tp in ViewBag.tpSolicitud)
                                                     {
-                                                        <option value="@tp.ID_TIPO_SOL">@tp.NOMBRE_TIPO_SOL</option>
+                                                        <option value="@tp.ID_TIPO_SOL" @(tp.ID_TIPO_SOL.ToString() == @x.id_tipo_sol.ToString() ? "selected" : "")>@tp.NOMBRE_TIPO_SOL</option>
                                                     }
                                                 </select>
                                             </div>
@@ -68,7 +68,7 @@
                                                     <option value="" selected>Seleccione el estado de la solicitud</option>
                                                     @foreach (var e in ViewBag.estado)
                                                     {
-                                                        <option value="@e.id_estado">@e.nombre_estado</option>
+                                                        <option value="@e.id_estado" @(e.id_estado.ToString() == @x.id_estado.ToString() ? "selected" : "")>@e.nombre_estado</option>
                                                     }
                                                 </select>
                                             </div>

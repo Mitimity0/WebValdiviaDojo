@@ -485,7 +485,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Tienda.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Sesion\NuevoUsuario.cshtml" />
     <Content Include="Views\Sesion\Login.cshtml" />
@@ -528,6 +527,7 @@
     <Content Include="Views\Adm\AdmCredenciales.cshtml" />
     <Content Include="Views\Adm\AdmParticipacion.cshtml" />
     <Content Include="Views\Clase\AdmAsistencias.cshtml" />
+    <Content Include="Views\Alumno\admSolicitudAlumno.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
