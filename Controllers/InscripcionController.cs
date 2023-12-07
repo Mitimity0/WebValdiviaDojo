@@ -9,6 +9,14 @@ namespace WebValdiviaDojo.Controllers
 {
     public class InscripcionController : Controller
     {
+        
+        public ActionResult ValoresInscrip()
+        {
+            List<clases> clases = ListarClases();
+            ViewBag.clases = clases;
+            return View();
+        }
+
         // GET: Inscripcion
         public ActionResult ClasesDisponibles(string p_id_clase, string p_id_nivel, string mens)
         {

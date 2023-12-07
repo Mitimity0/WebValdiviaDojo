@@ -10,6 +10,25 @@ namespace WebValdiviaDojo.Controllers
 {
     public class AdmController : Controller
     {
+        //ADMINISTRAR HORARIO
+        public ActionResult AdmHorario()
+        {
+            List<horario> horarios = Listarhorario(null,null);
+            List<clases> clases = ListarClases();
+            List<clasesNivel> nivel = ListarClasesNivel();
+
+            ViewBag.horarios = horarios;
+            ViewBag.clases = clases;
+            ViewBag.clasesNivel = nivel;
+            return View();
+        }
+
+
+
+
+
+
+
         // ADMINISTRAR PRODUCTO GET
         public ActionResult AdmProducto()
         {
@@ -46,6 +65,8 @@ namespace WebValdiviaDojo.Controllers
 
             return View();
         }
+
+
 
         public ActionResult ModUsuario(int rut, string pnombre, string snombre, string apater, string amater, string celular, string celularemer, string dire, string peso, string altura, DateTime fechanac, int p_gen, int p_t_usu, int p_cin)
         {
@@ -300,40 +321,6 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmEvento");
         }
 
-
-
-
-
-
-        //ADMIN CLASE GET
-        public ActionResult AdmAddClase()
-        {
-            List<clases> cls = ListarClases();
-            List<clasesNivel> clsniv = ListarClasesNivel();
-
-            ViewBag.Clase = cls;
-            ViewBag.ClaseNivel = clsniv;
-            return View();
-        }
-
-        //ADMIN CLASE POST
-        [HttpPost]
-        public ActionResult AdmAddClase(string p_dia_semana, string p_hora_inicio,string p_hora_fin, int p_id_clase, int p_id_nivel)
-        {
-            WS_DojoClient cliente = new WS_DojoClient();
-            try
-            {
-                cliente.AgHorario(p_dia_semana, p_hora_inicio, p_hora_fin, p_id_clase, p_id_nivel);
-                ViewBag.Mensaje = "Horario registrado exitosamente.";
-            }
-            catch
-            {
-                ViewBag.Mensaje = "Ha ocurrido un error al agregar horario";
-                throw;
-            }
-
-            return RedirectToAction("AdmAddClase");
-        }
 
         //ADM USUARIOS GET
         public ActionResult AdmUsuario()
@@ -1088,6 +1075,31 @@ namespace WebValdiviaDojo.Controllers
             }
         }
 
+        public List<tipoEncuesta> ListarTipoEncuesta()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaTipoEncuesta().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+        /*
+         * 
+         * 
+         *                  LISTAR CLASES
+         * 
+         * 
+         * */
         public List<clases> ListarClases()
         {
             WS_DojoClient cliente = new WS_DojoClient();
@@ -1119,26 +1131,80 @@ namespace WebValdiviaDojo.Controllers
 
             return null;
         }
-
-        public List<tipoEncuesta> ListarTipoEncuesta()
+        public List<horario> Listarhorario(string id_clase, string id_nivel)
         {
             WS_DojoClient cliente = new WS_DojoClient();
 
             try
             {
-                return cliente.ListaTipoEncuesta().ToList();
+                return cliente.ListadoHorario(null, null).ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
-                return null;
             }
-            finally
-            {
-                cliente.Close();
-            }
-        }
 
+            return null;
+        }
+        /*
+         
+         
+         ADMINISTRAR HORARIOS
+         
+         
+         */
+
+        //ADMIN CLASE POST
+        [HttpPost]
+        public ActionResult AdmAddHorario(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgHorario(p_dia_semana, p_hora_inicio, p_hora_fin, p_id_clase, p_id_nivel);
+                ViewBag.Mensaje = "Horario registrado exitosamente.";
+            }
+            catch
+            {
+                ViewBag.Mensaje = "Ha ocurrido un error al agregar horario";
+                throw;
+            }
+
+            return RedirectToAction("AdmHorario");
+        }
+        [HttpPost]
+        public ActionResult AdmModHorario(int p_id,string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModHorario(p_id,p_dia_semana, p_hora_inicio, p_hora_fin, p_id_clase, p_id_nivel);
+                ViewBag.Mensaje = "Horario registrado exitosamente.";
+            }
+            catch
+            {
+                ViewBag.Mensaje = "Ha ocurrido un error al agregar horario";
+                throw;
+            }
+
+            return RedirectToAction("AdmHorario");
+        }
+        public ActionResult AdmEliHorario(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliHorario(p_id);
+                ViewBag.Mensaje = "Horario Eliminado exitosamente.";
+            }
+            catch
+            {
+                ViewBag.Mensaje = "Ha ocurrido un error al eliminar horario";
+                throw;
+            }
+
+            return RedirectToAction("AdmHorario");
+        }
 
 
         /*

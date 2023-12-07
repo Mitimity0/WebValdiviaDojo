@@ -184,12 +184,17 @@
                         <li>@Html.ActionLink("Administrar Eventos", "AdmEvento", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                     </ul>
                 </div>
-                <!--Clase (RECORDATORIO, ESTO ES UN HORARIO ) -->
+                <!--Horario (RECORDATORIO, ESTO ES UN HORARIO ) -->
                 <div class="dropdown">
                     <button class="btn btn-danger dropdown-toggle" type="button" id="MenuClase" data-bs-toggle="dropdown" aria-expanded="false">Horario</button>
                     <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
-                        <li>@Html.ActionLink("Nuevo Horario", "AdmAddClase", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                        <li>@Html.ActionLink("Administrar Clases", "ClasesDisponibles", "Inscripcion", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+                        <li>@Html.ActionLink("Administrar Horarios", "AdmHorario", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+                        <!--Tipo de clase-->
+                        <li>@Html.ActionLink("Nuevo Tipo Clase", "AdmAddTipoClase", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+                        <li>@Html.ActionLink("Administrar Tipo de clase", "AdmTipoClase", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+                        <!--Tipo de Nivel-->
+                        <li>@Html.ActionLink("Nuevo rango edad", "AdmAddClaNivel", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+                        <li>@Html.ActionLink("Administrar rangos de edad", "AdmClaseNivel", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                     </ul>
                 </div>
                 <!--Usuario-->
@@ -204,14 +209,6 @@
                     <button class="btn btn-danger dropdown-toggle" type="button" id="MenuTipoUsu" data-bs-toggle="dropdown" aria-expanded="false">Tipo de usuario</button>
                     <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
                         <li>@Html.ActionLink("Administrar Tipo", "AdmTipoUsuario", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                    </ul>
-                </div>
-                <!--Tipo de solicitud-->
-                <div class="dropdown">
-                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuTipoSoli" data-bs-toggle="dropdown" aria-expanded="false">Tipo de solicitud</button>
-                    <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
-                        
-                        
                     </ul>
                 </div>
                 <!--Tipo de evento-->
@@ -230,22 +227,7 @@
                         <li>@Html.ActionLink("Administrar Tipo", "AdmTipoProducto", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                     </ul>
                 </div>
-                <!--Tipo de clase-->
-                <div class="dropdown">
-                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuTipoClase" data-bs-toggle="dropdown" aria-expanded="false">Tipo de clase</button>
-                    <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
-                        <li>@Html.ActionLink("Nuevo Tipo Clase", "AdmAddTipoClase", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                        <li>@Html.ActionLink("Administrar Tipo", "AdmTipoClase", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                    </ul>
-                </div>
-                <!--Clase Nivel-->
-                <div class="dropdown">
-                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuTipoCintu" data-bs-toggle="dropdown" aria-expanded="false">Clase Nivel</button>
-                    <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
-                        <li>@Html.ActionLink("Nueva Clase Nivel", "AdmAddClaNivel", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                        <li>@Html.ActionLink("Administrar Tipo", "AdmClaseNivel", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                    </ul>
-                </div>
+                
                 <!--Tipo de cinturon-->
                 <div class="dropdown">
                     <button class="btn btn-danger dropdown-toggle" type="button" id="MenuTipoCintu" data-bs-toggle="dropdown" aria-expanded="false">Tipo de cinturon</button>

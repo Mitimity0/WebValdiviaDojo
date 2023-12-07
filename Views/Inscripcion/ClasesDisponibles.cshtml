@@ -2,12 +2,87 @@
     ViewBag.Title = "Inscripción";
     var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
 }
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
+    media (min-width: 768px) {
+        .bd-placeholder-img-lg
 
-<section class="container py-3">
-    <div class="container-fluid">
-        <div class="border marketing">
-            <h1 class="display-6 text-center py-3">Horario de nuestras clases</h1>
+    {
+        font-size: 3.5rem;
+    }
+    }
+</style>
+<div class="container body-content py-5">
+    <!--  Titulo  -->
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 ">Nuestros valores</h1>
+        <p class="fs-5 text-muted">Nosotros trabajamos con los mismos valores independiente de la clase en la que se inscriba, las ofertas pueden estar unidas a cuantos alumnos se inscriban al mismo tiempo. (ten en cuenta que primero debes crear las cuentas de los usuarios y luego agregarlos en la parte de familiares)</p>
+    </div>
+    <!-- Informacion -->
+    <section class="py-5 row">
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center justify-content-center g-4">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Matrícula</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$30.000<small class="text-muted fw-light">(Pago único)</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>50% de descuento si ingresas con al menos un familiar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Mensualidad</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$33.000<small class="text-muted fw-light">/mes</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Con un familiar: $31.000<small class="text-muted fw-light">/mes cada uno.</small></li>
+                            <li>Con dos familiares: $29.000<small class="text-muted fw-light">/mes cada uno.</small></li>
+                            <li>Con tres o más familiares: $27.000<small class="text-muted fw-light">/mes cada uno.</small></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Horario  -->
+    <section>
+        <div class="marketing">
+
+            <h1 class="display-4 text-center">Horario de nuestras clases</h1>
+            <form class="py-5 row container d-flex justify-content-center" action="/" method="post">
+
+                @if (usuario != null)
+                {
+                    if (ViewBag.SelectedClase == "" || ViewBag.SelectedNivel == "")
+                    {
+                        <button name="enviar" class="btn btn-danger me-2 col-4 disabled">Inscribirme</button>
+                    }
+                    else
+                    {
+                        <a>@Html.ActionLink("Inscribirme", "AgregarMensual", "Inscripcion", new { p_id_clase = @ViewBag.SelectedClase, p_id_nivel = @ViewBag.SelectedNivel, p_rut = @usuario.rut }, new { @class = "btn btn-danger me-2 col-4" })</a>
+                    }
+
+                }
+                else
+                {
+                    <button name="enviar" type="button" data-bs-toggle="modal" data-bs-target="#ModalInicioSesion" class="btn btn-danger me-2 col-4">Inscribirme</button>
+                }
+                <label for="enviar" class="text-center lead py-3">Para poder inscribirte debes filtrar por clase y el nivel deseados.</label>
+            </form>
             <div class="row py-3">
 
                 <div class="container d-flex justify-content-center mt-2">
@@ -41,35 +116,11 @@
             </div>
         </div>
 
-
-
-
         @if (ViewBag.horarios != null)
         {
             <div class="py-3">
-                <div class="border marketing col-12 ">
-                    <form class="py-5 row container d-flex justify-content-center" action="/" method="post">
+                <div class="marketing col-12 ">
 
-                        @if (usuario != null)
-                        {
-                            if (ViewBag.SelectedClase == "" || ViewBag.SelectedNivel == "")
-                            {
-                                <button name="enviar" class="btn btn-danger me-2 col-4 disabled">Inscribirme</button>
-                            }
-                            else
-                            {
-                                <a>@Html.ActionLink("Inscribirme", "AgregarMensual", "Inscripcion", new { p_id_clase= @ViewBag.SelectedClase, p_id_nivel= @ViewBag.SelectedNivel, p_rut= @usuario.rut }, new { @class = "btn btn-danger me-2 col-4" })</a>
-                            }
-
-                        }
-                        else
-                        {
-                            <button name="enviar" type="button" data-bs-toggle="modal" data-bs-target="#ModalInicioSesion" class="btn btn-danger me-2 col-4">Inscribirme</button>
-                        }
-                        <label for="enviar" class="text-center lead py-3">Para poder inscribirte debes filtrar por clase y el nivel deseados.</label>
-
-
-                    </form>
                     <table class="table table-hover py-5" id="horarioTable">
                         <!-- Cabecera tabla -->
                         <thead>
@@ -80,8 +131,8 @@
                                 <th scope="col">Día</th>
                                 @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
                                 {
-                                <th scope="col">Agregar</th>
-                                <th scope="col">Eliminar</th>
+                                    <th scope="col">Agregar</th>
+                                    <th scope="col">Eliminar</th>
                                 }
 
                             </tr>
@@ -92,26 +143,22 @@
                             {
                                 if (horario != null)
                                 {
-                            <tr data-clase="@horario.id_clase">
-                                <td>@(horario.hora_ini) - @(horario.hora_fin)</td>
-                                <td>@(horario.nom_clase)</td>
-                                <td>@(horario.nom_nivel)</td>
-                                <td>@(horario.dia)</td>
-                                <!--Dentro de esta misma lista podriamos agregar el boton eliminar y agregar,
-    si se elimina se sale de esta lista automaticamente
-    Sino, se agrega y manda al boton agregar-->
+                                    <tr data-clase="@horario.id_clase">
+                                        <td>@(horario.hora_ini) - @(horario.hora_fin)</td>
+                                        <td>@(horario.nom_clase)</td>
+                                        <td>@(horario.nom_nivel)</td>
+                                        <td>@(horario.dia)</td>
+                                        <!--Dentro de esta misma lista podriamos agregar el boton eliminar y agregar,
+                                        si se elimina se sale de esta lista automaticamente
+                                        Sino, se agrega y manda al boton agregar-->
 
-                                @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
-                                {
-                                <td>@Html.ActionLink("Modificar", "AdmAddClase", "Clase", null, new { @class = "btn btn-danger text-light" })</td>
-                                <td>@Html.ActionLink("Eliminar Clase", "", "", null, new { @class = "btn btn-danger text-light" })</td>
-                                }
+                                        @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
+                                        {
+                                            <td>@Html.ActionLink("Modificar", "AdmAddClase", "Clase", null, new { @class = "btn btn-danger text-light" })</td>
+                                            <td>@Html.ActionLink("Eliminar Clase", "", "", null, new { @class = "btn btn-danger text-light" })</td>
+                                        }
 
-
-
-
-
-                            </tr>
+                                    </tr>
                                 }
                             }
                         </tbody>
@@ -124,9 +171,8 @@
             <h4>No hay clases disponibles</h4>
         }
 
-    </div>
-
-</section>
+    </section>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="ModalInicioSesion" tabindex="-1" aria-labelledby="ModalInicioSesion" aria-hidden="true">
@@ -146,3 +192,5 @@
         </div>
     </div>
 </div>
+
+
