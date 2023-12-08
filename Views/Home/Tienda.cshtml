@@ -94,10 +94,9 @@
 
 
 
-<!--  Listado de productos  -->
+<!-- Listado de productos -->
 <article class="py-5">
-
-    <!--    Seccion de productos    -->
+    <!-- Seccion de productos -->
     @{
         // Configuración de paginación
         int productosPorPagina = 15;
@@ -112,49 +111,58 @@
         int endIndex = Math.Min(startIndex + productosPorPagina - 1, totalProductos - 1);
     }
 
-    <div class="container bg-ligth album py-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            @for (int i = startIndex; i <= endIndex; i++)
-            {
-                var x = ViewBag.ProdGen[i];
-                <!--  Carta  -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <!-- Imagen de la tarjeta -->
-                        <img src="@Url.Content(x.IMG_PROD)" class="rounded mx-auto d-block" height="200" />
-                        <!-- Contenido de la tarjeta -->
-                        <div class="card-body">
-                            <p class="card-text">@x.nombre_producto</p>
-                            <p class="text-muted">@x.descripcion</p>
-                            <p class="text-muted">Precio normal: @string.Format("${0:N0}", x.PRECIO_NORMAL)</p>
-                            <div class="pagination justify-content-end">
-                                @Html.ActionLink("Ver detalles", "Producto", "Home", new { v_nom = x.nombre_producto }, new { @class = "py-2 btn btn-sm btn-danger" })
+    <div class="container album py-5">
+        @if (totalProductos > 0)
+        {
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                @for (int i = startIndex; i <= endIndex; i++)
+                {
+                    var x = ViewBag.ProdGen[i];
+                    <!-- Carta -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <!-- Imagen de la tarjeta -->
+                            <img src="@Url.Content(x.IMG_PROD)" class="rounded mx-auto d-block" height="200" />
+                            <!-- Contenido de la tarjeta -->
+                            <div class="card-body">
+                                <p class="card-text">@x.nombre_producto</p>
+                                <p class="text-muted">@x.descripcion</p>
+                                <p class="text-muted">Precio normal: @string.Format("${0:N0}", x.PRECIO_NORMAL)</p>
+                                <div class="pagination justify-content-end">
+                                    @Html.ActionLink("Ver detalles", "Producto", "Home", new { v_nom = x.nombre_producto }, new { @class = "py-2 btn btn-sm btn-danger" })
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            }
-        </div>
+                }
+            </div>
+
+            <!-- Navegación de paginación -->
+            <nav class="p-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item @(paginaActual == 1 ? "disabled" : "")">
+                        <a class="page-link bg-danger text-light" href="?pagina=@(paginaActual - 1)" aria-label="Anterior">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    @for (int i = 1; i <= totalPages; i++)
+                    {
+                        <li class="page-item @(i == paginaActual ? "active" : "")">
+                            <a class="page-link bg-danger text-light" href="?pagina=@i">@i</a>
+                        </li>
+                    }
+                    <li class="page-item @(paginaActual == totalPages ? "disabled" : "")">
+                        <a class="page-link bg-danger text-light" href="?pagina=@(paginaActual + 1)" aria-label="Siguiente">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        }
+        else
+        {
+            <p>No hay productos disponibles.</p>
+        }
     </div>
-    <!-- Navegación de paginación -->
-    <nav class="p-5">
-        <ul class="pagination justify-content-center">
-            <li class="page-item @(paginaActual == 1 ? "disabled" : "")">
-                <a class="page-link bg-danger text-light" href="?pagina=@(paginaActual - 1)" aria-label="Anterior">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            @for (int i = 1; i <= totalPages; i++)
-            {
-                <li class="page-item @(i == paginaActual ? "active" : "")">
-                    <a class="page-link bg-danger text-light" href="?pagina=@i">@i</a>
-                </li>
-            }
-            <li class="page-item @(paginaActual == totalPages ? "disabled" : "")">
-                <a class="page-link bg-danger text-light" href="?pagina=@(paginaActual + 1)" aria-label="Siguiente">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
 </article>
+

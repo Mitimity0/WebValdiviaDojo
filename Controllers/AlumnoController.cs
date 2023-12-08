@@ -33,6 +33,15 @@ namespace WebValdiviaDojo.Controllers
         }
 
 
+        public ActionResult Participacion(string v_rut)
+        {
+            List<participacion> ob = ListarParticipacion(v_rut);
+            ViewBag.participacion = ob;
+            return View();
+        }
+
+
+
 
         public ActionResult admSolicitudAlumno(string v_rut)
         {
@@ -67,7 +76,7 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
-        
+
         public List<referido> ListarReferido(string p_rut)
         {
             WS_DojoClient cliente = new WS_DojoClient();
@@ -75,6 +84,26 @@ namespace WebValdiviaDojo.Controllers
             try
             {
                 return cliente.ListaReferido(p_rut).ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+
+
+        public List<participacion> ListarParticipacion(string p_rut)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListadoParticipacion(p_rut).ToList();
             }
             catch (Exception ex)
             {
@@ -230,6 +259,30 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("Referido", new { v_rut = p_rut_referido });
         }
 
+
+        [HttpPost]
+        public ActionResult ElParticipacion(int p_id_evento, int p_rut)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                cliente.EliParticipacion(p_id_evento, p_rut);
+                ViewBag.Mensaje = "Familiar eliminado";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return RedirectToAction("Referido", new { v_rut = p_rut });
+            }
+            finally
+            {
+                cliente.Close();
+            }
+
+            // Redirigir a la página de inicio
+            return RedirectToAction("Participacion", new { v_rut = p_rut });
+        }
     }
 }
 

@@ -574,6 +574,7 @@
     <Content Include="Views\Adm\AdmHorario.cshtml" />
     <Content Include="Views\Adm\AdmAsistencia.cshtml" />
     <Content Include="Views\Alumno\Referido.cshtml" />
+    <Content Include="Views\Alumno\Participacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

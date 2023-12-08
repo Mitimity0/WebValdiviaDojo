@@ -81,6 +81,7 @@
                         <li>@Html.ActionLink("Mis Clases", "ClaseInscrita", "Clase", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
                         <li>@Html.ActionLink("Solicitud", "admSolicitudAlumno", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
                         <li>@Html.ActionLink("Pendientes de pago", "PagosPendientes", "Compra", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Mis participaciones", "Participacion", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item bg-danger text-light" })</li>
                         <li>@Html.ActionLink("Familiares", "Referido", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
                         <li>@Html.ActionLink("Perfil", "PerfilUsu", "Sesion", null, new { @class = "dropdown-item" })</li>
                         <li><hr class="dropdown-divider"></li>
@@ -95,15 +96,13 @@
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li>@Html.ActionLink("Iniciar Sesión", "Login", "Sesion", null, new { @class = "btn btn-outline-light me-2" })</li>
                                 <li>@Html.ActionLink("Crear Usuario", "NuevoUsuario", "Sesion", null, new { @class = "btn btn-outline-light me-2" })</li>
+                                <!--  Carrito  -->
+                                @if (ViewBag.Title == "Tienda")
+                                {
+                                    <li class="btn btn-danger btn-outline-light me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> Ir al Carrito</li>
+                                }
                             </ul>
                         </div>
-                    }
-                    <!--  Carrito  -->
-                    @if (ViewBag.Title == "Tienda")
-                    {
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="btn btn-danger btn-outline-light me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> Ir al Carrito</li>
-                        </ul>
                     }
                 </div>
             </div>
@@ -169,6 +168,9 @@
                         <li>@Html.ActionLink("Administrar Descuentos", "AdmDescuentos", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                         <li>@Html.ActionLink("Nuevo producto", "AdmAddProd", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                         <li>@Html.ActionLink("Administrar productos", "AdmProducto", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+
+                        <li>@Html.ActionLink("Nuevo Tipo Producto", "AdmAddTipoProd", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+                        <li>@Html.ActionLink("Administrar Tipo", "AdmTipoProducto", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                     </ul>
                 </div>
                 <!--  Solicitud  -->
@@ -205,29 +207,16 @@
                     <button class="btn btn-danger dropdown-toggle" type="button" id="MenuUsuario" data-bs-toggle="dropdown" aria-expanded="false">Usuario</button>
                     <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
                         <li>@Html.ActionLink("Administrar Usuarios", "AdmAlumno", "adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+                        <li>@Html.ActionLink("Administrar tipos de usuario", "AdmTipoUsuario", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                     </ul>
                 </div>
-                <!--Tipo de usuario-->
-                <div class="dropdown">
-                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuTipoUsu" data-bs-toggle="dropdown" aria-expanded="false">Tipo de usuario</button>
-                    <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
-                        <li>@Html.ActionLink("Administrar Tipo", "AdmTipoUsuario", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                    </ul>
-                </div>
+
                 <!--Tipo de evento-->
                 <div class="dropdown">
                     <button class="btn btn-danger dropdown-toggle" type="button" id="MenuTipoEven" data-bs-toggle="dropdown" aria-expanded="false">Tipo de evento</button>
                     <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
                         <li>@Html.ActionLink("Nuevo Tipo Evento", "AdmAddTipoEve", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                         <li>@Html.ActionLink("Administrar Tipo", "AdmTipoEvento", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                    </ul>
-                </div>
-                <!--Tipo de producto-->
-                <div class="dropdown">
-                    <button class="btn btn-danger dropdown-toggle" type="button" id="MenuTipoProd" data-bs-toggle="dropdown" aria-expanded="false">Tipo de Producto</button>
-                    <ul class="dropdown-menu bg-danger text-light" aria-labelledby="MenuProd">
-                        <li>@Html.ActionLink("Nuevo Tipo Producto", "AdmAddTipoProd", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
-                        <li>@Html.ActionLink("Administrar Tipo", "AdmTipoProducto", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                     </ul>
                 </div>
                 
