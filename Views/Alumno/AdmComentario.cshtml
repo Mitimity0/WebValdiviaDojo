@@ -1,0 +1,62 @@
+﻿@{
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+    ViewBag.Title = "Comentario";
+
+    if (usuario == null)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
+}
+
+<!-- Formulario de Comentario -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-10 justify-content-center">
+            <div class="offset-md-3">
+                <h2 class="mb-4">Deja tu comentario</h2>
+                <!-- Formulario -->
+                <form action="@Url.Action("agregarComentario", "Alumno")" method="post">
+
+                    <div class="mb-3">
+                        <label for="p_val" class="form-label">Por favor, evalúe del 1 al 5 su satisfacción con el servicio:</label>
+                        <input type="range" class="form-range" min="1" max="5" name="p_val" id="p_val" value="1" oninput="updateSliderValue(this.value)">
+                        <span id="sliderValue" class="badge bg-primary">1</span>
+                    </div>
+
+                    <script>
+                        function updateSliderValue(value) {
+                            // Actualizar el valor del span
+                            document.getElementById('sliderValue').innerText = value;
+                        }
+                    </script>
+
+
+                    <!-- TIPO DE COMENTARIO -->
+                    <div class="mb-3">
+                        <label for="p_tipo_prod" class="form-label">Tipo de encuesta</label>
+                        <select class="form-select" id="p_tipo" name="p_tipo" aria-label="Tipo de encuesta" required>
+                            <option value="" selected>Seleccione el tipo de encuesta</option>
+                            @foreach (var tp in ViewBag.tp)
+                            {
+                                <option value="@tp.ID_TIPO_ENCUESTA">@tp.NOM_TIPO_ENCUESTA</option>
+                            }
+                        </select>
+                    </div>
+                    <!-- Comentario -->
+                    <div class="form-group py-2">
+                        <label for="comentario">Le invitamos a compartir su opinión.</label>
+                        <textarea class="form-control" id="comentario" name="p_comentario" rows="4" required></textarea>
+                    </div>
+                    <!-- INVISIBLE -->
+                    <input type="number" class="d-none" name="v_rut" value="@usuario.rut" required />
+                    <div class="py-5"></div>
+                    <!-- Botón de enviar -->
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar Comentario</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -608,13 +608,13 @@
     <Content Include="Views\Alumno\Participacion.cshtml" />
     <Content Include="Views\Compra\ListaPagos.cshtml" />
     <Content Include="Views\Compra\Boleta.cshtml" />
+    <Content Include="Views\Alumno\AdmComentario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Img\GaleriaEvento\" />
     <Folder Include="Img\GaleriaProductos\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Encuesta\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

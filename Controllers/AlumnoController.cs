@@ -39,7 +39,41 @@ namespace WebValdiviaDojo.Controllers
             ViewBag.participacion = ob;
             return View();
         }
+        //
 
+
+        public ActionResult AdmComentario(string v_rut)
+        {
+            List<tipoEncuesta> tp = ListarTipoEncuesta();
+            ViewBag.tp = tp;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult agregarComentario(int p_val, int v_rut, string p_comentario, int p_tipo)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                // Obtener la fecha actual y formatearla como "día/mes/año"
+                string fechaActual = DateTime.Now.ToString("dd/MM/yyyy");
+
+                cliente.AgreComentario(p_val, fechaActual, p_tipo, v_rut, p_comentario);
+
+                ViewBag.Mensaje = "Solicitud enviada";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                ViewBag.Mensaje = ex.Message;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+
+            // Redirigir a la página de inicio
+            return RedirectToAction("AdmComentario", new { v_rut = v_rut });
+        }
 
 
 
@@ -65,6 +99,25 @@ namespace WebValdiviaDojo.Controllers
             try
             {
                 return cliente.ListaSolicitud(null, null, p_rut).ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+
+        public List<tipoEncuesta> ListarTipoEncuesta()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaTipoEncuesta().ToList();
             }
             catch (Exception ex)
             {
