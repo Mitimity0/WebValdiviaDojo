@@ -560,6 +560,7 @@
     <Content Include="Views\Clase\AdmAsistencias.cshtml" />
     <Content Include="Views\Alumno\admSolicitudAlumno.cshtml" />
     <Content Include="Views\Adm\AdmHorario.cshtml" />
+    <Content Include="Views\Adm\AdmAsistencia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

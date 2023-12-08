@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebValdiviaDojo.WS_ValdiviaDojo;
+using System.Globalization;
 
 namespace WebValdiviaDojo.Controllers
 {
@@ -23,7 +24,17 @@ namespace WebValdiviaDojo.Controllers
             return View();
         }
 
-
+        //ADMINISTRAR HORARIO
+        public ActionResult AdmAsistencia(string p_id_horario)
+        {
+            List<asistencia> Asis = ListarAsistencia(null, p_id_horario);
+            List<usuario> usus = ListarUsuarios();
+            List<horario> horarios = Listarhorario(null, null);
+            ViewBag.horarios = horarios;
+            ViewBag.Asistencia = Asis;
+            ViewBag.Usuarios = usus;
+            return View();
+        }
 
 
 
@@ -1284,5 +1295,92 @@ namespace WebValdiviaDojo.Controllers
             }
             return RedirectToAction("AdmDescuentos");
         }
+        /*
+         
+         
+                        ADM ASISTENCIA
+         
+         
+         */
+        public List<asistencia> ListarAsistencia(string p_fecha, string p_id_horario)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaAsistencia(p_fecha, p_id_horario).ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+        [HttpPost]
+        public ActionResult AgregarAsistencia(DateTime p_dia_inicio, DateTime p_dia_fin, string p_rut, int p_cupos, int p_id_horario)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.AgregarAsistencia(p_dia_inicio.ToString("dd/MM/yyyy"), p_dia_fin.ToString("dd/MM/yyyy"), p_id_horario, p_rut, p_cupos);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+
+            return RedirectToAction("AdmAsistencia", new { p_id_horario });
+        }
+        [HttpPost]
+        public ActionResult ModAsistencia(int p_id,DateTime p_fecha_asistencia, string p_rut, int p_cupos, int p_id_horario)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ModAsistencia(p_id, p_fecha_asistencia.ToString("dd/MM/yyyy"), p_id_horario, p_rut, p_cupos);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+
+            return RedirectToAction("AdmAsistencia", new { p_id_horario });
+        }
+
+
+
+
+        public ActionResult EliAsistencia(int id_asistencia, string p_id_horario)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.EliAsistencia(id_asistencia);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return RedirectToAction("AdmAsistencia",new { p_id_horario });
+        }
+
+
+
     }
 }

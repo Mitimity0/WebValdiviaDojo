@@ -210,7 +210,7 @@
       <xs:element minOccurs="0" name="p_dia_inicio" type="xs:string" />
       <xs:element minOccurs="0" name="p_dia_fin" type="xs:string" />
       <xs:element name="p_id_clase" type="xs:int" />
-      <xs:element name="p_rut" type="xs:int" />
+      <xs:element minOccurs="0" name="p_rut" type="xs:string" />
       <xs:element name="p_cupos" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
@@ -757,7 +757,7 @@
       <xs:element name="p_id_asistencia" type="xs:int" />
       <xs:element minOccurs="0" name="p_fecha_asistencia" type="xs:string" />
       <xs:element name="p_id_horario" type="xs:int" />
-      <xs:element name="p_rut" type="xs:int" />
+      <xs:element minOccurs="0" name="p_rut" type="xs:string" />
       <xs:element name="p_cupos" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
@@ -849,7 +849,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListaAsistencia">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="p_id_horario" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListaAsistenciaResponse">
     <xs:sequence>

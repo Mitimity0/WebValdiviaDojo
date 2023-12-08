@@ -5041,7 +5041,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
+        public string p_rut;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -5050,7 +5050,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         public ModAsistenciaRequest() {
         }
         
-        public ModAsistenciaRequest(int p_id_asistencia, string p_fecha_asistencia, int p_id_horario, int p_rut, int p_cupos) {
+        public ModAsistenciaRequest(int p_id_asistencia, string p_fecha_asistencia, int p_id_horario, string p_rut, int p_cupos) {
             this.p_id_asistencia = p_id_asistencia;
             this.p_fecha_asistencia = p_fecha_asistencia;
             this.p_id_horario = p_id_horario;
@@ -6193,7 +6193,20 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.ServiceModel.MessageContractAttribute(WrapperName="ListaAsistencia", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class ListaAsistenciaRequest {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_fecha;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_horario;
+        
         public ListaAsistenciaRequest() {
+        }
+        
+        public ListaAsistenciaRequest(string p_fecha, string p_id_horario) {
+            this.p_fecha = p_fecha;
+            this.p_id_horario = p_id_horario;
         }
     }
     
@@ -6776,7 +6789,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
+        public string p_rut;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -6785,7 +6798,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         public AgregarAsistenciaRequest() {
         }
         
-        public AgregarAsistenciaRequest(string p_dia_inicio, string p_dia_fin, int p_id_clase, int p_rut, int p_cupos) {
+        public AgregarAsistenciaRequest(string p_dia_inicio, string p_dia_fin, int p_id_clase, string p_rut, int p_cupos) {
             this.p_dia_inicio = p_dia_inicio;
             this.p_dia_fin = p_dia_fin;
             this.p_id_clase = p_id_clase;
@@ -7855,7 +7868,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ModAsistencia(request);
         }
         
-        public int ModAsistencia(int p_id_asistencia, string p_fecha_asistencia, int p_id_horario, int p_rut, int p_cupos) {
+        public int ModAsistencia(int p_id_asistencia, string p_fecha_asistencia, int p_id_horario, string p_rut, int p_cupos) {
             WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaRequest();
             inValue.p_id_asistencia = p_id_asistencia;
             inValue.p_fecha_asistencia = p_fecha_asistencia;
@@ -7871,7 +7884,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ModAsistenciaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaResponse> ModAsistenciaAsync(int p_id_asistencia, string p_fecha_asistencia, int p_id_horario, int p_rut, int p_cupos) {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaResponse> ModAsistenciaAsync(int p_id_asistencia, string p_fecha_asistencia, int p_id_horario, string p_rut, int p_cupos) {
             WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaRequest();
             inValue.p_id_asistencia = p_id_asistencia;
             inValue.p_fecha_asistencia = p_fecha_asistencia;
@@ -8583,8 +8596,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ListaAsistencia(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.asistencia[] ListaAsistencia() {
+        public WebValdiviaDojo.WS_ValdiviaDojo.asistencia[] ListaAsistencia(string p_fecha, string p_id_horario) {
             WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest();
+            inValue.p_fecha = p_fecha;
+            inValue.p_id_horario = p_id_horario;
             WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaAsistencia(inValue);
             return retVal.@return;
         }
@@ -8594,8 +8609,10 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.ListaAsistenciaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse> ListaAsistenciaAsync() {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse> ListaAsistenciaAsync(string p_fecha, string p_id_horario) {
             WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest();
+            inValue.p_fecha = p_fecha;
+            inValue.p_id_horario = p_id_horario;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaAsistenciaAsync(inValue);
         }
         
@@ -8937,7 +8954,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.AgregarAsistencia(request);
         }
         
-        public int AgregarAsistencia(string p_dia_inicio, string p_dia_fin, int p_id_clase, int p_rut, int p_cupos) {
+        public int AgregarAsistencia(string p_dia_inicio, string p_dia_fin, int p_id_clase, string p_rut, int p_cupos) {
             WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest();
             inValue.p_dia_inicio = p_dia_inicio;
             inValue.p_dia_fin = p_dia_fin;
@@ -8953,7 +8970,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             return base.Channel.AgregarAsistenciaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaResponse> AgregarAsistenciaAsync(string p_dia_inicio, string p_dia_fin, int p_id_clase, int p_rut, int p_cupos) {
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaResponse> AgregarAsistenciaAsync(string p_dia_inicio, string p_dia_fin, int p_id_clase, string p_rut, int p_cupos) {
             WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest();
             inValue.p_dia_inicio = p_dia_inicio;
             inValue.p_dia_fin = p_dia_fin;
