@@ -23,6 +23,29 @@ namespace WebValdiviaDojo.Controllers
         }
 
 
+        
+
+        public ActionResult Boleta(string v_rut, string p_id_matricula, string p_id_mensualidad, string p_id_compra)
+        {
+            List<boleta> bol = ListarBoleta(p_id_matricula, p_id_mensualidad, p_id_compra);
+
+            ViewBag.v_rut = v_rut;
+            ViewBag.Boleta = bol;
+            return View();
+        }
+
+        public ActionResult ListaPagos(string v_rut)
+        {
+            List<matricula> mat = ListarMatricula(v_rut, "1");
+            List<mensualidad> men = ListarMensualidad(v_rut, "1");
+            List<ordenCompra> ord = ListarOrdenCompra(v_rut, "1");
+
+            ViewBag.Matricula = mat;
+            ViewBag.Mensualidad = men;
+            ViewBag.OrdenCompra = ord;
+            return View();
+        }
+
         public ActionResult OrdenCompra(int v_rut)
         {
             List<carrito> car = ListarCarrito(v_rut);
@@ -97,6 +120,25 @@ namespace WebValdiviaDojo.Controllers
             try
             {
                 return cliente.ListaMetodoPago().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+        //Listar Boleta
+        public List<boleta> ListarBoleta(string p_id_matricula,string p_id_mensualidad,string p_id_compra)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaBoleta(p_id_matricula, p_id_mensualidad, p_id_compra).ToList();
             }
             catch (Exception ex)
             {

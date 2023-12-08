@@ -1,0 +1,27 @@
+﻿@{
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+    ViewBag.Title = "Boleta";
+
+    if (usuario == null)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
+}
+
+@foreach (var x in ViewBag.Boleta)
+{
+<ul>
+    <li>@x.FECHA_BOLETA</li>
+    <li>@x.ID_MATRICULA</li>
+    <li>@x.ID_MENSUALIDAD</li>
+    <li>@x.ID_METODO</li>
+    <li>@x.ID_PAGO</li>
+    <li>@x.MONTO_TOTAL</li>
+    <li>@x.NOM_METODO_PAGO</li>
+    <li>@x.NRO_BOLETA</li>
+    <li>@x.NRO_COMPRA</li>
+</ul>
+}
+

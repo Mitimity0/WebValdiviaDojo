@@ -1,0 +1,146 @@
+﻿@{
+    ViewBag.Title = "Lista de pago";
+
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+
+    if (usuario == null)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
+}
+<div class="container col-10 justified-content-center">
+    <h3 class="display-6 text-center py-5">
+        Listado de pagos
+    </h3>
+    <div class="accordion py-5" id="accordionExample">
+        <!--  MATRICULA  -->
+        @if (ViewBag.Matricula != null)
+        {
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Matricula
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Fecha de ingreso</th>
+                                    <th scope="col">Monto a pagar</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var mat in ViewBag.Matricula)
+                                {
+                                <tr>
+                                    <td>@mat.FECHA_MATRICULA</td>
+                                    <td>@mat.MONTO_MATRICULA</td>
+                                    <td>@mat.nombre_estado</td>
+
+                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = @mat.ID_MATRICULA, p_id_mensualidad = "", p_id_compra = "" }, new { @class = "dropdown-item" })</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        }
+        <!--  MENSUALIDAD  -->
+        @if (ViewBag.Mensualidad != null)
+        {
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Mensualidad
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Clase</th>
+                                    <th scope="col">Rango edad</th>
+                                    <th scope="col">Fecha de vencimiento</th>
+                                    <th scope="col">Monto a pagar</th>
+
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var men in ViewBag.Mensualidad)
+                                {
+                                <tr>
+                                    <td>@men.nombre</td>
+                                    <td>@men.nombre_nivel</td>
+                                    <td>@men.FECHA_VENCIMIENTO</td>
+                                    <td>@men.MONTO_PAGAR</td>
+
+
+                                    <td>@men.nombre_estado</td>
+                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = "", p_id_mensualidad = @men.ID_MENSUALIDAD, p_id_compra = "" }, new { @class = "dropdown-item" })</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+        <!--  ORDEN COMPRA  -->
+        @if (ViewBag.OrdenCompra != null)
+        {
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Orden de compra
+                    </button>
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nro de compra</th>
+                                    <th scope="col">Fecha de compra</th>
+                                    <th scope="col">Total a pagar</th>
+                                    <th scope="col">Cantidad total</th>
+                                    <th scope="col">Estado del pago</th>
+                                    <th scope="col">Detalle</th>
+                                    <th scope="col">Operaciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var x in ViewBag.OrdenCompra)
+                                {
+                                <tr>
+                                    <td>@x.NRO_COMPRA</td>
+                                    <td>@x.FECHA</td>
+                                    <td>@x.TOTAL</td>
+                                    <td>@x.cantidad_total</td>
+                                    <td>@x.NOMBRE_ESTADO</td>
+                                    <td>@x.productos</td>
+
+                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = "", p_id_mensualidad = "", p_id_compra = @x.NRO_COMPRA }, new { @class = "dropdown-item" })</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
