@@ -10,18 +10,36 @@
     }
 }
 
-@foreach (var x in ViewBag.Boleta)
-{
-<ul>
-    <li>@x.FECHA_BOLETA</li>
-    <li>@x.ID_MATRICULA</li>
-    <li>@x.ID_MENSUALIDAD</li>
-    <li>@x.ID_METODO</li>
-    <li>@x.ID_PAGO</li>
-    <li>@x.MONTO_TOTAL</li>
-    <li>@x.NOM_METODO_PAGO</li>
-    <li>@x.NRO_BOLETA</li>
-    <li>@x.NRO_COMPRA</li>
-</ul>
-}
+<div class="container col-10 justified-content-center">
+    <h3 class="display-6 text-center py-5">
+        Detalle de la boleta
+    </h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Fecha de la boleta</th>
+                <th scope="col">Id del pago</th>
+                <th scope="col">Total</th>
+                <th scope="col">Descargar Boleta</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var x in ViewBag.Boleta)
+            {
+                <tr>
+                    <td>@x.FECHA_BOLETA</td>
+                    <td>@x.ID_PAGO</td>
+                    <td>@x.MONTO_TOTAL</td>
+
+                    <td>
+                        @Html.ActionLink("Ver boleta", "DescargarPDF", "Compra", new { p_nombre = @usuario.PNombre + " " + @usuario.APaterno, direccion = @usuario.direccion, p_rut = @usuario.rut + "-" + @usuario.DV, p_nboleta = @x.NRO_BOLETA, p_total = @x.MONTO_TOTAL, p_producto = @ViewBag.prod }, new { @class = "dropdown-item" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
 

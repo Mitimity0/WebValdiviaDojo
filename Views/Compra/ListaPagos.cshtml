@@ -43,7 +43,7 @@
                                     <td>@mat.MONTO_MATRICULA</td>
                                     <td>@mat.nombre_estado</td>
 
-                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = @mat.ID_MATRICULA, p_id_mensualidad = "", p_id_compra = "" }, new { @class = "dropdown-item" })</td>
+                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = @mat.ID_MATRICULA, p_id_mensualidad = "", p_id_compra = "",p_producto = "Matricula" }, new { @class = "dropdown-item" })</td>
                                 </tr>
                                 }
                             </tbody>
@@ -88,7 +88,7 @@
 
 
                                     <td>@men.nombre_estado</td>
-                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = "", p_id_mensualidad = @men.ID_MENSUALIDAD, p_id_compra = "" }, new { @class = "dropdown-item" })</td>
+                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = "", p_id_mensualidad = @men.ID_MENSUALIDAD, p_id_compra = "" , p_producto = "Mensualidad" }, new { @class = "dropdown-item" })</td>
                                 </tr>
                                 }
                             </tbody>
@@ -132,7 +132,7 @@
                                     <td>@x.NOMBRE_ESTADO</td>
                                     <td>@x.productos</td>
 
-                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = "", p_id_mensualidad = "", p_id_compra = @x.NRO_COMPRA }, new { @class = "dropdown-item" })</td>
+                                    <td>@Html.ActionLink("Ver boleta", "Boleta", "Compra", new { v_rut = @usuario.rut, p_id_matricula = "", p_id_mensualidad = "", p_id_compra = @x.NRO_COMPRA, p_producto= @x.productos }, new { @class = "dropdown-item" })</td>
                                 </tr>
                                 }
                             </tbody>

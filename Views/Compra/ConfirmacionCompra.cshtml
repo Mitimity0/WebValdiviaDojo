@@ -1,23 +1,30 @@
-﻿
-@{
+﻿@{
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
     ViewBag.Title = "Confirmacion Compra";
+
+    if (usuario == null)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 
 <div class="col-md-12">
     <div class="row justify-content-center py-5">
-        <div class="col-3"></div>
         <div class="col-6">
             <div class="d-flex flex-row justify-content-center alig-items-center">
                 <img src="~/Img/confirmacion.png" height="60px" width="60px" />
             </div>
             <h2 class="d-flex flex-row justify-content-center alig-items-center">
-            Felicitaciones, su compra se realizo con exito
+                Felicitaciones, su compra se realizo con exito
             </h2>
         </div>
-        <div class="col-3"></div>
     </div>
 
 </div>
 
 
-    
+
+
+
