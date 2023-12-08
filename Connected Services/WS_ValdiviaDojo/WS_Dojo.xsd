@@ -20,6 +20,8 @@
   <xs:element name="AgParticipacionResponse" type="tns:AgParticipacionResponse" />
   <xs:element name="AgProducto" type="tns:AgProducto" />
   <xs:element name="AgProductoResponse" type="tns:AgProductoResponse" />
+  <xs:element name="AgReferidos" type="tns:AgReferidos" />
+  <xs:element name="AgReferidosResponse" type="tns:AgReferidosResponse" />
   <xs:element name="AgTipoClase" type="tns:AgTipoClase" />
   <xs:element name="AgTipoClaseResponse" type="tns:AgTipoClaseResponse" />
   <xs:element name="AgTipoEncuesta" type="tns:AgTipoEncuesta" />
@@ -58,6 +60,8 @@
   <xs:element name="EliParticipacionResponse" type="tns:EliParticipacionResponse" />
   <xs:element name="EliProducto" type="tns:EliProducto" />
   <xs:element name="EliProductoResponse" type="tns:EliProductoResponse" />
+  <xs:element name="EliReferidos" type="tns:EliReferidos" />
+  <xs:element name="EliReferidosResponse" type="tns:EliReferidosResponse" />
   <xs:element name="EliSolicitud" type="tns:EliSolicitud" />
   <xs:element name="EliSolicitudResponse" type="tns:EliSolicitudResponse" />
   <xs:element name="EliTipoClase" type="tns:EliTipoClase" />
@@ -84,6 +88,8 @@
   <xs:element name="ListaMetodoPagoResponse" type="tns:ListaMetodoPagoResponse" />
   <xs:element name="ListaOrdenCompra" type="tns:ListaOrdenCompra" />
   <xs:element name="ListaOrdenCompraResponse" type="tns:ListaOrdenCompraResponse" />
+  <xs:element name="ListaReferido" type="tns:ListaReferido" />
+  <xs:element name="ListaReferidoResponse" type="tns:ListaReferidoResponse" />
   <xs:element name="ListaSolicitud" type="tns:ListaSolicitud" />
   <xs:element name="ListaSolicitudResponse" type="tns:ListaSolicitudResponse" />
   <xs:element name="ListaTipoEncuesta" type="tns:ListaTipoEncuesta" />
@@ -443,6 +449,17 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="EliReferidos">
+    <xs:sequence>
+      <xs:element name="p_rut" type="xs:int" />
+      <xs:element name="p_rut_referido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliReferidosResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="AgCinturon">
     <xs:sequence>
       <xs:element minOccurs="0" name="p_nombre" type="xs:string" />
@@ -748,6 +765,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ModTipoProductoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgReferidos">
+    <xs:sequence>
+      <xs:element name="p_rut" type="xs:int" />
+      <xs:element name="p_rut_referido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgReferidosResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -1221,6 +1249,24 @@
     <xs:sequence>
       <xs:element name="id_talla" type="xs:int" />
       <xs:element minOccurs="0" name="nom_talla" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaReferido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="p_rut" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaReferidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:referido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="referido">
+    <xs:sequence>
+      <xs:element name="ID_REFERIDO" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRE_REFERIDO" type="xs:string" />
+      <xs:element name="RUT" type="xs:int" />
+      <xs:element name="RUT_REFERIDO" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ModTipoClase">

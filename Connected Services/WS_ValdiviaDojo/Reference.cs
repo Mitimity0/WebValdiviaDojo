@@ -313,6 +313,15 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse> EliAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaReferidoRequest", ReplyAction="http://ws/WS_Dojo/ListaReferidoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse ListaReferido(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaReferidoRequest", ReplyAction="http://ws/WS_Dojo/ListaReferidoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> ListaReferidoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/EliTipoProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -734,6 +743,24 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/ListadoClaseNivelResponse")]
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelResponse> ListadoClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgReferidosRequest", ReplyAction="http://ws/WS_Dojo/AgReferidosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse AgReferidos(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgReferidosRequest", ReplyAction="http://ws/WS_Dojo/AgReferidosResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> AgReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliReferidosRequest", ReplyAction="http://ws/WS_Dojo/EliReferidosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse EliReferidos(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliReferidosRequest", ReplyAction="http://ws/WS_Dojo/EliReferidosResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> EliReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2218,6 +2245,80 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             set {
                 this.nOMBRE_EVENTOField = value;
                 this.RaisePropertyChanged("NOMBRE_EVENTO");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class referido : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int iD_REFERIDOField;
+        
+        private string nOMBRE_REFERIDOField;
+        
+        private int rUTField;
+        
+        private int rUT_REFERIDOField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int ID_REFERIDO {
+            get {
+                return this.iD_REFERIDOField;
+            }
+            set {
+                this.iD_REFERIDOField = value;
+                this.RaisePropertyChanged("ID_REFERIDO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string NOMBRE_REFERIDO {
+            get {
+                return this.nOMBRE_REFERIDOField;
+            }
+            set {
+                this.nOMBRE_REFERIDOField = value;
+                this.RaisePropertyChanged("NOMBRE_REFERIDO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int RUT {
+            get {
+                return this.rUTField;
+            }
+            set {
+                this.rUTField = value;
+                this.RaisePropertyChanged("RUT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int RUT_REFERIDO {
+            get {
+                return this.rUT_REFERIDOField;
+            }
+            set {
+                this.rUT_REFERIDOField = value;
+                this.RaisePropertyChanged("RUT_REFERIDO");
             }
         }
         
@@ -5116,6 +5217,42 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaReferido", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaReferidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_rut;
+        
+        public ListaReferidoRequest() {
+        }
+        
+        public ListaReferidoRequest(string p_rut) {
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaReferidoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaReferidoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.referido[] @return;
+        
+        public ListaReferidoResponse() {
+        }
+        
+        public ListaReferidoResponse(WebValdiviaDojo.WS_ValdiviaDojo.referido[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class EliTipoProductoRequest {
         
@@ -6945,6 +7082,88 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgReferidos", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgReferidosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut_referido;
+        
+        public AgReferidosRequest() {
+        }
+        
+        public AgReferidosRequest(int p_rut, int p_rut_referido) {
+            this.p_rut = p_rut;
+            this.p_rut_referido = p_rut_referido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgReferidosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgReferidosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgReferidosResponse() {
+        }
+        
+        public AgReferidosResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliReferidos", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliReferidosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut_referido;
+        
+        public EliReferidosRequest() {
+        }
+        
+        public EliReferidosRequest(int p_rut, int p_rut_referido) {
+            this.p_rut = p_rut;
+            this.p_rut_referido = p_rut_referido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliReferidosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliReferidosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliReferidosResponse() {
+        }
+        
+        public EliReferidosResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WS_DojoChannel : WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo, System.ServiceModel.IClientChannel {
     }
@@ -7915,6 +8134,29 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest();
             inValue.p_id = p_id;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliAsistenciaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaReferido(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request) {
+            return base.Channel.ListaReferido(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.referido[] ListaReferido(string p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest();
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaReferido(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaReferidoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request) {
+            return base.Channel.ListaReferidoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> ListaReferidoAsync(string p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest();
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaReferidoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9064,6 +9306,56 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelResponse> ListadoClaseNivelAsync() {
             WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseNivelRequest();
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoClaseNivelAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgReferidos(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request) {
+            return base.Channel.AgReferidos(request);
+        }
+        
+        public int AgReferidos(int p_rut, int p_rut_referido) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_rut_referido = p_rut_referido;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgReferidos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request) {
+            return base.Channel.AgReferidosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> AgReferidosAsync(int p_rut, int p_rut_referido) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_rut_referido = p_rut_referido;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgReferidosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliReferidos(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request) {
+            return base.Channel.EliReferidos(request);
+        }
+        
+        public int EliReferidos(int p_rut, int p_rut_referido) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_rut_referido = p_rut_referido;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliReferidos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request) {
+            return base.Channel.EliReferidosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> EliReferidosAsync(int p_rut, int p_rut_referido) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_rut_referido = p_rut_referido;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliReferidosAsync(inValue);
         }
     }
 }

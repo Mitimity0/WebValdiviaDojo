@@ -23,6 +23,16 @@ namespace WebValdiviaDojo.Controllers
             ViewBag.tpSolicitud = ob;
             return View();
         }
+        public ActionResult Referido(string v_rut)
+        {
+            ViewBag.rut = v_rut;
+
+            List<referido> ob = ListarReferido(v_rut);
+            ViewBag.referido = ob;
+            return View();
+        }
+
+
 
         public ActionResult admSolicitudAlumno(string v_rut)
         {
@@ -57,6 +67,27 @@ namespace WebValdiviaDojo.Controllers
                 cliente.Close();
             }
         }
+        
+        public List<referido> ListarReferido(string p_rut)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaReferido(p_rut).ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+
+
         public List<tipoSolicitud> ListarTipoSolicitud()
         {
             WS_DojoClient cliente = new WS_DojoClient();
@@ -149,6 +180,56 @@ namespace WebValdiviaDojo.Controllers
             // Redirigir a la página de inicio
             return RedirectToAction("admSolicitudAlumno", new { v_rut = v_rut  });
         }
+
+
+        [HttpPost]
+        public ActionResult ElReferido(int p_rut, int p_rut_referido)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                cliente.EliReferidos(p_rut, p_rut_referido);
+                ViewBag.Mensaje = "Familiar eliminado";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return RedirectToAction("Referido", new { v_rut = p_rut_referido });
+            }
+            finally
+            {
+                cliente.Close();
+            }
+
+            // Redirigir a la página de inicio
+            return RedirectToAction("Referido", new { v_rut = p_rut_referido });
+        }
+
+        [HttpPost]
+        public ActionResult AgReferido(int p_rut, int p_rut_referido)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                cliente.AgReferidos(p_rut, p_rut_referido);
+                ViewBag.Mensaje = "Familiar Agregado";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return RedirectToAction("Referido", new { v_rut = p_rut_referido });
+            }
+            finally
+            {
+                cliente.Close();
+            }
+
+            // Redirigir a la página de inicio
+            return RedirectToAction("Referido", new { v_rut = p_rut_referido });
+        }
+
     }
 }
 

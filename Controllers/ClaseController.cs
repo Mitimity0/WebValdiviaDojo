@@ -27,16 +27,15 @@ namespace WebValdiviaDojo.Controllers
 
             return View();
         }
-        public ActionResult ComentarAvance(string v_rut)
+        public ActionResult ComentarAvance()
         {
-            DateTime fechaActual = DateTime.Now;
-            List<observacion> ob = ListarObservacion(v_rut, fechaActual.ToString("dd/MM/yy"));
+            List<observacion> ob = ListarObservacion(null, null);
 
             ViewBag.observacion = ob;
 
             return View();
         }
-
+        [HttpPost]
         public ActionResult ComentarObserva(string p_observacion,int p_id,int p_rut)
         {
 

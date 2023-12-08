@@ -490,6 +490,18 @@
     <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.participacion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WS_ValdiviaDojo\WebValdiviaDojo.WS_ValdiviaDojo.referido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.wsdl" />
     <None Include="Connected Services\WS_ValdiviaDojo\WS_Dojo.xsd">
       <SubType>Designer</SubType>
@@ -561,6 +573,7 @@
     <Content Include="Views\Alumno\admSolicitudAlumno.cshtml" />
     <Content Include="Views\Adm\AdmHorario.cshtml" />
     <Content Include="Views\Adm\AdmAsistencia.cshtml" />
+    <Content Include="Views\Alumno\Referido.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

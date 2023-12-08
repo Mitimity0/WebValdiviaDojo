@@ -203,6 +203,12 @@
   <message name="EliAsistenciaResponse">
     <part name="parameters" element="tns:EliAsistenciaResponse" />
   </message>
+  <message name="ListaReferido">
+    <part name="parameters" element="tns:ListaReferido" />
+  </message>
+  <message name="ListaReferidoResponse">
+    <part name="parameters" element="tns:ListaReferidoResponse" />
+  </message>
   <message name="EliTipoProducto">
     <part name="parameters" element="tns:EliTipoProducto" />
   </message>
@@ -485,6 +491,18 @@
   <message name="ListadoClaseNivelResponse">
     <part name="parameters" element="tns:ListadoClaseNivelResponse" />
   </message>
+  <message name="AgReferidos">
+    <part name="parameters" element="tns:AgReferidos" />
+  </message>
+  <message name="AgReferidosResponse">
+    <part name="parameters" element="tns:AgReferidosResponse" />
+  </message>
+  <message name="EliReferidos">
+    <part name="parameters" element="tns:EliReferidos" />
+  </message>
+  <message name="EliReferidosResponse">
+    <part name="parameters" element="tns:EliReferidosResponse" />
+  </message>
   <portType name="WS_Dojo">
     <operation name="ModUsuario">
       <input wsam:Action="http://ws/WS_Dojo/ModUsuarioRequest" message="tns:ModUsuario" />
@@ -617,6 +635,10 @@
     <operation name="EliAsistencia">
       <input wsam:Action="http://ws/WS_Dojo/EliAsistenciaRequest" message="tns:EliAsistencia" />
       <output wsam:Action="http://ws/WS_Dojo/EliAsistenciaResponse" message="tns:EliAsistenciaResponse" />
+    </operation>
+    <operation name="ListaReferido">
+      <input wsam:Action="http://ws/WS_Dojo/ListaReferidoRequest" message="tns:ListaReferido" />
+      <output wsam:Action="http://ws/WS_Dojo/ListaReferidoResponse" message="tns:ListaReferidoResponse" />
     </operation>
     <operation name="EliTipoProducto">
       <input wsam:Action="http://ws/WS_Dojo/EliTipoProductoRequest" message="tns:EliTipoProducto" />
@@ -805,6 +827,14 @@
     <operation name="ListadoClaseNivel">
       <input wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelRequest" message="tns:ListadoClaseNivel" />
       <output wsam:Action="http://ws/WS_Dojo/ListadoClaseNivelResponse" message="tns:ListadoClaseNivelResponse" />
+    </operation>
+    <operation name="AgReferidos">
+      <input wsam:Action="http://ws/WS_Dojo/AgReferidosRequest" message="tns:AgReferidos" />
+      <output wsam:Action="http://ws/WS_Dojo/AgReferidosResponse" message="tns:AgReferidosResponse" />
+    </operation>
+    <operation name="EliReferidos">
+      <input wsam:Action="http://ws/WS_Dojo/EliReferidosRequest" message="tns:EliReferidos" />
+      <output wsam:Action="http://ws/WS_Dojo/EliReferidosResponse" message="tns:EliReferidosResponse" />
     </operation>
   </portType>
   <binding name="WS_DojoPortBinding" type="tns:WS_Dojo">
@@ -1106,6 +1136,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="ListaReferido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="EliTipoProducto">
       <soap:operation soapAction="" />
       <input>
@@ -1521,6 +1560,24 @@
       </output>
     </operation>
     <operation name="ListadoClaseNivel">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgReferidos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliReferidos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
