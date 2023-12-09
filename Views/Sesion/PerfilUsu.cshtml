@@ -22,13 +22,13 @@
                 <div class="row g-2">
                     <div class="col-10">
                         <div class="form-floating mb-4" style="display: none;">
-                            <input type="number" class="form-control" name="rut" value="@usuario.rut" required>
+                            <input type="number" class="form-control" name="rut"pattern="[0-9]{1,}" title="Ingrese solo números" value="@usuario.rut" required>
                             <label for="rut">RUT</label>
                         </div>
                     </div>
                     <div class="col-2" style="display: none;">
                         <div class="form-floating">
-                            <input type="text" class="form-control" name="dv" value="@usuario.DV" required>
+                            <input type="text" class="form-control" name="dv" pattern="[0-9Kk]{1}" title="Ingrese solo números o 'K'" value="@usuario.DV" required>
                             <label for="dv">DV</label>
                         </div>
                     </div>
@@ -38,13 +38,13 @@
                 <div class="row g-2">
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" name="pnombre" value="@usuario.PNombre" required>
+                            <input type="text" class="form-control" name="pnombre" value="@usuario.PNombre"pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                             <label for="pnombre">Primer nombre</label>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" name="snombre" value="@usuario.SNombre" required>
+                            <input type="text" class="form-control" name="snombre" value="@usuario.SNombre"pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                             <label for="snombre">Segundo nombre</label>
                         </div>
                     </div>
@@ -53,13 +53,13 @@
                 <div class="row g-2">
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" name="apater" value="@usuario.APaterno" required>
+                            <input type="text" class="form-control" name="apater" value="@usuario.APaterno"pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                             <label for="appaterno">Apellido paterno</label>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" name="amater" value="@usuario.AMaterno" required>
+                            <input type="text" class="form-control" name="amater" value="@usuario.AMaterno"pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                             <label for="apmaterno">Apellido materno</label>
                         </div>
                     </div>
@@ -68,13 +68,13 @@
                 <div class="row g-2">
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="number" class="form-control" name="celular" value="@usuario.celular" required>
+                            <input type="number" class="form-control" name="celular" value="@usuario.celular" min="0" maxlength="10"  required>
                             <label for="celular">Celular</label>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="number" class="form-control" name="celularemer" value="@usuario.celularEmer" required>
+                            <input type="number" class="form-control" name="celularemer" value="@usuario.celularEmer" min="0" maxlength="10"  required>
                             <label for="celularemer">Celular Emergencia</label>
                         </div>
                     </div>
@@ -83,7 +83,8 @@
                 <div class="row g-2">
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="datetime-local" class="form-control" name="fechanac" value="@usuario.FNacimiento" required>
+                            <input type="datetime-local" class="form-control" name="fechanac" value="@usuario.FNacimiento" min="@DateTime.Now.AddYears(-80).ToString("yyyy-MM-dd")"
+                               max="@DateTime.Now.AddYears(-3).ToString("yyyy-MM-dd")"required>
                             <label for="fechanac">Fecha de nacimiento</label>
                         </div>
                     </div>
@@ -93,20 +94,20 @@
 
                 <!--  Direccion  -->
                 <div class="form-floating mb-4">
-                    <input type="text" class="form-control" name="dire" value="@usuario.direccion" required>
+                    <input type="text" class="form-control" name="dire" value="@usuario.direccion"pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ]{2,}" title="Ingrese al menos 2 letras en español" required>
                     <label for="direccion">Direccion</label>
                 </div>
                 <!--  Fisico  -->
                 <div class="row g-2">
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" name="peso" value="@usuario.peso">
+                            <input type="text" class="form-control" name="peso"  min="0" maxlength="3"  value="@usuario.peso">
                             <label for="peso">Peso</label>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" name="altura" value="@usuario.altura">
+                            <input type="text" class="form-control" name="altura"  min="0" maxlength="3"  value="@usuario.altura">
                             <label for="altura">Altura</label>
                         </div>
                     </div>

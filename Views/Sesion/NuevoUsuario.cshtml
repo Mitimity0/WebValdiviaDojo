@@ -87,13 +87,13 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="tel" class="form-control" name="celular" placeholder="" required>
+                        <input type="tel" class="form-control" name="celular" placeholder="" min="0" maxlength="10" required>
                         <label for="celular">Celular</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="tel" class="form-control" name="celularemer" placeholder="" required>
+                        <input type="tel" class="form-control" name="celularemer" placeholder=""  min="0" maxlength="10"  required>
                         <label for="celularemer">Celular Emergencia</label>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="date" class="form-control" name="fechanac" placeholder=""
+                        <input type="date" class="form-control" name="fechanac" placeholder="" min="@DateTime.Now.AddYears(-80).ToString("yyyy-MM-dd")"
                                max="@DateTime.Now.AddYears(-3).ToString("yyyy-MM-dd")" required>
                         <label for="fechanac">Fecha de nacimiento</label>
                     </div>
