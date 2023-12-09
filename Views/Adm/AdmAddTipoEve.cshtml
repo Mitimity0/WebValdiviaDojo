@@ -1,6 +1,14 @@
 ﻿
 @{
     ViewBag.Title = "Nuevo Tipo Evento";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+
+    if (usuario == null || usuario.id_tipo_usu != 1)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario o no es administrador ni instructor
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 
 <div class="py-5 col-12">
@@ -16,7 +24,7 @@
                 <div class="col-3"></div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_nom" value="" required>
+                        <input type="text" class="form-control" name="p_nom" value=""pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" required>
                         <label for="p_nom">Nombre Tipo Evento</label>
                     </div>
                 </div>

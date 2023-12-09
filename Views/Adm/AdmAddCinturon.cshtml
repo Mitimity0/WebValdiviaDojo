@@ -1,6 +1,14 @@
 ﻿
 @{
     ViewBag.Title = "Nuevo Cinturon";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+
+    if (usuario == null || usuario.id_tipo_usu != 1)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario o no es administrador ni instructor
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 
 <div class="py-5 col-12">
@@ -15,17 +23,18 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_nombre" value="" required>
-                        <label for="p_nombre">Nombre del cinturon</label>
+                        <input type="text" class="form-control" name="p_nombre" pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ0-9\s]+$" title="Solo se permiten letras, números y espacios" required>
+                        <label for="p_nombre">Nombre del cinturón</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_color" value="" required>
-                        <label for="p_color">Color del cinturon</label>
+                        <input type="text" class="form-control" name="p_color" pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ0-9\s]+$" title="Solo se permiten letras, números y espacios" required>
+                        <label for="p_color">Color del cinturón</label>
                     </div>
                 </div>
             </div>
+
             <!--  Enviar informacion  -->
             <div class="py-3"></div>
             <button class="btn btn-danger mb-4" type="submit">Agregar Cinturon</button>

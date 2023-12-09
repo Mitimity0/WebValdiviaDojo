@@ -1,6 +1,14 @@
 ﻿
 @{
     ViewBag.Title = "Adm TipoSolicitud";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+
+    if (usuario == null || usuario.id_tipo_usu != 1)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario o no es administrador ni instructor
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 
 <div class="py-5 col-md-12">

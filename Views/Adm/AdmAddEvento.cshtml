@@ -1,6 +1,14 @@
 ﻿
 @{
     ViewBag.Title = "Nuevo Evento";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+
+    if (usuario == null || usuario.id_tipo_usu != 1)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario o no es administrador ni instructor
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 
 <div class="py-5 col-12">
@@ -18,13 +26,13 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_nom" value="" required>
+                        <input type="text" class="form-control" name="p_nom" value=""pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" required>
                         <label for="p_nom">Nombre Evento</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_des" value="" required>
+                        <input type="text" class="form-control" name="p_des" value=""pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" required>
                         <label for="p_des">Descripcion</label>
                     </div>
                 </div>
@@ -33,7 +41,7 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_dire" value="" required>
+                        <input type="text" class="form-control" name="p_dire" value=""pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" required>
                         <label for="p_dire">Direccion</label>
                     </div>
                 </div>

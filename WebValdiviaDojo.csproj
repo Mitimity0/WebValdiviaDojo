@@ -599,7 +599,6 @@
     <Content Include="Views\Clase\ComentarAvance.cshtml" />
     <Content Include="Views\Adm\AdmDescuentos.cshtml" />
     <Content Include="Views\Adm\AdmCredenciales.cshtml" />
-    <Content Include="Views\Adm\AdmParticipacion.cshtml" />
     <Content Include="Views\Clase\AdmAsistencias.cshtml" />
     <Content Include="Views\Alumno\admSolicitudAlumno.cshtml" />
     <Content Include="Views\Adm\AdmHorario.cshtml" />

@@ -1,5 +1,14 @@
 ﻿@{
     ViewBag.Title = "Administrar Alumno";
+
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+
+    if (usuario == null || usuario.id_tipo_usu != 1)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario o no es administrador ni instructor
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 <div class="py-5 col-12">
     <div class="row justify-content-center">
@@ -89,13 +98,13 @@
                                             <div class="row g-2">
                                                 <div class="col-6">
                                                     <div class="form-floating mb-4">
-                                                        <input type="text" class="form-control" name="pnombre" value="@x.PNombre" required>
+                                                        <input type="text" class="form-control" name="pnombre" pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" value="@x.PNombre" required>
                                                         <label for="pnombre">Primer nombre</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-floating mb-4">
-                                                        <input type="text" class="form-control" name="snombre" value="@x.SNombre" required>
+                                                        <input type="text" class="form-control" name="snombre" pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" value="@x.SNombre" required>
                                                         <label for="snombre">Segundo nombre</label>
                                                     </div>
                                                 </div>
@@ -104,13 +113,13 @@
                                             <div class="row g-2">
                                                 <div class="col-6">
                                                     <div class="form-floating mb-4">
-                                                        <input type="text" class="form-control" name="apater" value="@x.APaterno" required>
+                                                        <input type="text" class="form-control" name="apater" pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" value="@x.APaterno" required>
                                                         <label for="appaterno">Apellido paterno</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-floating mb-4">
-                                                        <input type="text" class="form-control" name="amater" value="@x.AMaterno" required>
+                                                        <input type="text" class="form-control" name="amater" pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" value="@x.AMaterno" required>
                                                         <label for="apmaterno">Apellido materno</label>
                                                     </div>
                                                 </div>
@@ -119,13 +128,13 @@
                                             <div class="row g-2">
                                                 <div class="col-6">
                                                     <div class="form-floating mb-4">
-                                                        <input type="number" class="form-control" name="celular" value="@x.celular">
+                                                        <input type="number" class="form-control" name="celular" value="@x.celular" min="0" maxlength="10">
                                                         <label for="celular">Celular</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-floating mb-4">
-                                                        <input type="number" class="form-control" name="celularemer" value="@x.celularEmer">
+                                                        <input type="number" class="form-control" name="celularemer" value="@x.celularEmer" min="0" maxlength="10">
                                                         <label for="celularemer">Celular Emergencia</label>
                                                     </div>
                                                 </div>
@@ -144,7 +153,7 @@
 
                                             <!--  Direccion  -->
                                             <div class="form-floating mb-4">
-                                                <input type="text" class="form-control" name="dire" value="@x.direccion" required>
+                                                <input type="text" class="form-control" name="dire" value="@x.direccion"pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" required>
                                                 <label for="direccion">Direccion</label>
                                             </div>
                                             <!--  Fisico  -->

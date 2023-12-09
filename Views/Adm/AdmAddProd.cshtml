@@ -1,6 +1,14 @@
 ﻿
 @{
     ViewBag.Title = "Nuevo producto";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+
+    if (usuario == null || usuario.id_tipo_usu != 1)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario o no es administrador ni instructor
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 <div class="py-5 col-12">
     <div class="row justify-content-center">
@@ -18,13 +26,13 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_nom" value="" required>
+                        <input type="text" class="form-control" name="p_nom" value="" pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" required>
                         <label for="p_nom">Nombre producto</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="text" class="form-control" name="p_des" value="" required>
+                        <input type="text" class="form-control" name="p_des" value="" pattern="[A-Za-z0-9áéíóúÁÉÍÓÚüÜñÑ\s]+" title="Solo se permiten letras del español y números" required>
                         <label for="p_des">Descripcion</label>
                     </div>
                 </div>
@@ -33,17 +41,18 @@
             <div class="row g-2">
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="number" class="form-control" name="p_precio" value="" required>
+                        <input type="number" class="form-control" name="p_precio" value="" required min="0">
                         <label for="p_precio">Precio normal</label>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="number" class="form-control" name="p_stock" value="" required>
+                        <input type="number" class="form-control" name="p_stock" value="" required min="0">
                         <label for="p_stock">Stock</label>
                     </div>
                 </div>
             </div>
+
             <!--  tipos  -->
             <div class="row g-2">
                 <div class="col-6">
