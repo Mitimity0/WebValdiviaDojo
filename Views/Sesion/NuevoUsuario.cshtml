@@ -136,27 +136,8 @@
 
             <!--  Enviar informacion  -->
             <div class="py-3"></div>
-            <button class="btn btn-danger mb-4" type="submit" id="btnSubmit" disabled>Crear Cuenta</button>
+            <button class="btn btn-danger mb-4" type="submit" id="btnSubmit" >Crear Cuenta</button>
         </form>
     </div>
 </div>
 
-<script>
-    // Función para verificar la validez de los campos y habilitar/deshabilitar el botón
-    function verificarValidez() {
-        var formulario = document.getElementById('registroForm');
-        var botonSubmit = document.getElementById('btnSubmit');
-
-        // Verificar si el formulario es válido
-        if (formulario.checkValidity()) {
-            // Habilitar el botón si el formulario es válido
-            botonSubmit.removeAttribute('disabled');
-        } else {
-            // Deshabilitar el botón si el formulario no es válido
-            botonSubmit.setAttribute('disabled', 'true');
-        }
-    }
-
-    // Agrega un listener para el evento 'input' en cada campo del formulario
-    document.getElementById('registroForm').addEventListener('input', verificarValidez);
-</script>
