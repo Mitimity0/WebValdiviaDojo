@@ -1,5 +1,12 @@
 ﻿@{
     ViewBag.Title = "Evento";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+    if (usuario == null)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 <div class="py-5 col-md-12">
     <div class="row py-5 justify-content-center">

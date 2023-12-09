@@ -1,5 +1,12 @@
 ﻿@{
     ViewBag.Title = "Enviar Solicitud";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+    if (usuario == null)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
 }
 <section class="py-5 col-12">
     <!-- Tipo_Solicitud -->

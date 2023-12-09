@@ -2,7 +2,7 @@
     ViewBag.Title = "Observacion de clase";
     var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
 
-    if (usuario == null || (int)usuario.id_tipo_usu != 1 && (int)usuario.id_tipo_usu != 2)
+    if (usuario == null || usuario.id_tipo_usu != "1" && (int)usuario.id_tipo_usu != "2")
     {
         // Redirigir al usuario a la página deseada cuando no hay usuario o no es administrador ni instructor
         Response.RedirectToRoute(new { controller = "Home", action = "Index" });
