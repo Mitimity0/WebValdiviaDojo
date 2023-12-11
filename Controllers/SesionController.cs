@@ -99,7 +99,7 @@ namespace WebValdiviaDojo.Controllers
             {
                 var primerUsuario = resultado.First();
                 HttpContext.Session["Usuario"] = primerUsuario;
-                return View("~/Views/Home/Index.cshtml");
+                return RedirectToAction("Index", "Home");
             }
 
             ViewBag.Mensaje = "Usuario no encontrado ";
