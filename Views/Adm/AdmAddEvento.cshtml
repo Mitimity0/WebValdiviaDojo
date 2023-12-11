@@ -47,7 +47,8 @@
                 </div>
                 <div class="col-6">
                     <div class="form-floating mb-4">
-                        <input type="datetime-local" class="form-control" name="p_hora" value="" required>
+                        <input type="datetime-local" class="form-control" name="p_hora" value="" min="@DateTime.Now.ToString("yyyy-MM-dd")"
+                               max="@DateTime.Now.AddYears(+10).ToString("yyyy-MM-dd")" required>
                         <label for="p_hora">Hora del evento</label>
                     </div>
                 </div>
