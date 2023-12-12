@@ -26,8 +26,13 @@
                         {
                             <div class="card mb-3">
                                 <div class="row g-0">
+                                    @{
+                                        string rutaImagen = System.IO.File.Exists(Server.MapPath(c.IMG_PROD))
+                                            ? c.IMG_PROD
+                                            : Url.Content("~/Img/GaleriaProductos/ProductoDefecto.png");
+                                    }
                                     <div class="col-3">
-                                        <img src="@Url.Content(c.IMG_PROD)" class="img-fluid card-img-top" height="200" width="200" />
+                                        <img src="@Url.Content(rutaImagen)" class="img-fluid card-img-top" height="200" width="200" />
                                     </div>
 
                                     <div class="col-md-8">
