@@ -1426,8 +1426,8 @@ namespace WebValdiviaDojo.Controllers
             {
                 if (imagen != null && imagen.ContentLength > 0)
                 {
-                    string nombreArchivo = "material_" + p_titulo + ".png";
-                    string rutaCarpetaProd = Server.MapPath("~/Img/MaterialAP/");
+                    string nombreArchivo = LimpiarNombreArchivo(p_titulo) + ".png";
+                    string rutaCarpetaProd = Server.MapPath("~/Img/MaterialApoyo/");
                     if (!Directory.Exists(rutaCarpetaProd))
                     {
                         Directory.CreateDirectory(rutaCarpetaProd);
@@ -1454,12 +1454,13 @@ namespace WebValdiviaDojo.Controllers
         public ActionResult AgMaterial(HttpPostedFileBase imagen,string p_titulo, string p_contenido, int p_id_clase)
         {
             WS_DojoClient cliente = new WS_DojoClient();
+
             try
             {
                 if (imagen != null && imagen.ContentLength > 0)
                 {
-                    string nombreArchivo = "material_" + p_titulo + ".png";
-                    string rutaCarpetaProd = Server.MapPath("~/Img/MaterialAP/");
+                    string nombreArchivo = LimpiarNombreArchivo(p_titulo) + ".png";
+                    string rutaCarpetaProd = Server.MapPath("~/Img/MaterialApoyo/");
                     if (!Directory.Exists(rutaCarpetaProd))
                     {
                         Directory.CreateDirectory(rutaCarpetaProd);
@@ -1483,5 +1484,22 @@ namespace WebValdiviaDojo.Controllers
             }
             return RedirectToAction("AdmMaterialAP");
         }
+
+        
+
+        // Función para limpiar el nombre del archivo
+        private string LimpiarNombreArchivo(string nombre)
+        {
+            char[] invalidPathChars = Path.GetInvalidFileNameChars();
+            foreach (char c in invalidPathChars)
+            {
+                nombre = nombre.Replace(c.ToString(), ""); // Elimina caracteres no permitidos
+            }
+            nombre = nombre.Replace(" ", "_"); // Reemplaza espacios por guiones bajos o elimínalos
+                                               // Otros reemplazos o manipulaciones según sea necesario
+
+            return nombre;
+        }
+
     }
 }

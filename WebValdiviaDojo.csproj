@@ -188,6 +188,7 @@
     <Content Include="Img\GaleriaProductos\ProductoDefecto.png" />
     <Content Include="Img\logo.ico" />
     <Content Include="Img\logo_clases.png" />
+    <Content Include="Img\MaterialApoyo\Kiokushin Dojo Kun.png" />
     <Content Include="Img\Publicidad\image.png" />
     <Content Include="Img\Publicidad\logo.jpeg" />
     <Content Include="Img\Publicidad\logoSinFondo.png" />
@@ -633,7 +634,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Img\GaleriaEvento\" />
-    <Folder Include="Img\MaterialAP\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
