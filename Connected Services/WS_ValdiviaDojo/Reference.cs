@@ -25,6 +25,24 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoEncuestaResponse> ListaTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoEncuestaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgregarAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/AgregarAsistenciaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaResponse AgregarAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgregarAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/AgregarAsistenciaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaResponse> AgregarAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoTipoEventoRequest", ReplyAction="http://ws/WS_Dojo/ListadoTipoEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse ListadoTipoEvento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoTipoEventoRequest", ReplyAction="http://ws/WS_Dojo/ListadoTipoEventoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse> ListadoTipoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaTipoSolicitudRequest", ReplyAction="http://ws/WS_Dojo/ListaTipoSolicitudResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -34,13 +52,13 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse> ListaTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgregarAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/AgregarAsistenciaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarTipoUsuariosRequest", ReplyAction="http://ws/WS_Dojo/ListarTipoUsuariosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaResponse AgregarAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse ListarTipoUsuarios(WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgregarAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/AgregarAsistenciaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaResponse> AgregarAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarTipoUsuariosRequest", ReplyAction="http://ws/WS_Dojo/ListarTipoUsuariosResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse> ListarTipoUsuariosAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/ListadoClaseNivelResponse")]
@@ -61,31 +79,31 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoParticipacionResponse> ListadoParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoParticipacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarTipoUsuariosRequest", ReplyAction="http://ws/WS_Dojo/ListarTipoUsuariosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ELMaterialApRequest", ReplyAction="http://ws/WS_Dojo/ELMaterialApResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse ListarTipoUsuarios(WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApResponse ELMaterialAp(WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarTipoUsuariosRequest", ReplyAction="http://ws/WS_Dojo/ListarTipoUsuariosResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse> ListarTipoUsuariosAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ELMaterialApRequest", ReplyAction="http://ws/WS_Dojo/ELMaterialApResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApResponse> ELMaterialApAsync(WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoTipoEventoRequest", ReplyAction="http://ws/WS_Dojo/ListadoTipoEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgMaterialApRequest", ReplyAction="http://ws/WS_Dojo/AgMaterialApResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse ListadoTipoEvento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApResponse AgMaterialAp(WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoTipoEventoRequest", ReplyAction="http://ws/WS_Dojo/ListadoTipoEventoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse> ListadoTipoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgMaterialApRequest", ReplyAction="http://ws/WS_Dojo/AgMaterialApResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApResponse> AgMaterialApAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgreSolicitudResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModMaterialApRequest", ReplyAction="http://ws/WS_Dojo/ModMaterialApResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse AgreSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApResponse ModMaterialAp(WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgreSolicitudResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse> AgreSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModMaterialApRequest", ReplyAction="http://ws/WS_Dojo/ModMaterialApResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApResponse> ModMaterialApAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModComentarioRequest", ReplyAction="http://ws/WS_Dojo/ModComentarioResponse")]
@@ -97,40 +115,13 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModComentarioResponse> ModComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModComentarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreComentarioRequest", ReplyAction="http://ws/WS_Dojo/AgreComentarioResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgreSolicitudResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioResponse AgreComentario(WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse AgreSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreComentarioRequest", ReplyAction="http://ws/WS_Dojo/AgreComentarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioResponse> AgreComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaComentarioRequest", ReplyAction="http://ws/WS_Dojo/ListaComentarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioResponse ListaComentario(WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaComentarioRequest", ReplyAction="http://ws/WS_Dojo/ListaComentarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioResponse> ListaComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModSolicitudRequest", ReplyAction="http://ws/WS_Dojo/ModSolicitudResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudResponse ModSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModSolicitudRequest", ReplyAction="http://ws/WS_Dojo/ModSolicitudResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudResponse> ModSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliSolicitudRequest", ReplyAction="http://ws/WS_Dojo/EliSolicitudResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudResponse EliSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliSolicitudRequest", ReplyAction="http://ws/WS_Dojo/EliSolicitudResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudResponse> EliSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgreSolicitudResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse> AgreSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaSolicitudRequest", ReplyAction="http://ws/WS_Dojo/ListaSolicitudResponse")]
@@ -151,67 +142,22 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse> ListaEstadoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliComentarioRequest", ReplyAction="http://ws/WS_Dojo/EliComentarioResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreComentarioRequest", ReplyAction="http://ws/WS_Dojo/AgreComentarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse EliComentario(WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioResponse AgreComentario(WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliComentarioRequest", ReplyAction="http://ws/WS_Dojo/EliComentarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse> EliComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreComentarioRequest", ReplyAction="http://ws/WS_Dojo/AgreComentarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioResponse> AgreComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreComentarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoEveRequest", ReplyAction="http://ws/WS_Dojo/ModTipoEveResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaComentarioRequest", ReplyAction="http://ws/WS_Dojo/ListaComentarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse ModTipoEve(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioResponse ListaComentario(WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoEveRequest", ReplyAction="http://ws/WS_Dojo/ModTipoEveResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse> ModTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoObserRequest", ReplyAction="http://ws/WS_Dojo/ListadoObserResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse ListadoObser(WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoObserRequest", ReplyAction="http://ws/WS_Dojo/ListadoObserResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse> ListadoObserAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaTipoProdRequest", ReplyAction="http://ws/WS_Dojo/ListaTipoProdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse ListaTipoProd(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaTipoProdRequest", ReplyAction="http://ws/WS_Dojo/ListaTipoProdResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse> ListaTipoProdAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMensualidadRequest", ReplyAction="http://ws/WS_Dojo/ListaMensualidadResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse ListaMensualidad(WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMensualidadRequest", ReplyAction="http://ws/WS_Dojo/ListaMensualidadResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse> ListaMensualidadAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgOrdenCompraRequest", ReplyAction="http://ws/WS_Dojo/AgOrdenCompraResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse AgOrdenCompra(WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgOrdenCompraRequest", ReplyAction="http://ws/WS_Dojo/AgOrdenCompraResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse> AgOrdenCompraAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/LoginRequest", ReplyAction="http://ws/WS_Dojo/LoginResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse Login(WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/LoginRequest", ReplyAction="http://ws/WS_Dojo/LoginResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse> LoginAsync(WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaComentarioRequest", ReplyAction="http://ws/WS_Dojo/ListaComentarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioResponse> ListaComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaComentarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModObservacionRequest", ReplyAction="http://ws/WS_Dojo/ModObservacionResponse")]
@@ -223,40 +169,49 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse> ModObservacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModDescuentoRequest", ReplyAction="http://ws/WS_Dojo/ModDescuentoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/LoginRequest", ReplyAction="http://ws/WS_Dojo/LoginResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse ModDescuento(WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse Login(WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModDescuentoRequest", ReplyAction="http://ws/WS_Dojo/ModDescuentoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse> ModDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/LoginRequest", ReplyAction="http://ws/WS_Dojo/LoginResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse> LoginAsync(WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaOrdenCompraRequest", ReplyAction="http://ws/WS_Dojo/ListaOrdenCompraResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModCredencialRequest", ReplyAction="http://ws/WS_Dojo/ModCredencialResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse ListaOrdenCompra(WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialResponse ModCredencial(WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaOrdenCompraRequest", ReplyAction="http://ws/WS_Dojo/ListaOrdenCompraResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse> ListaOrdenCompraAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModCredencialRequest", ReplyAction="http://ws/WS_Dojo/ModCredencialResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialResponse> ModCredencialAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgPagoRequest", ReplyAction="http://ws/WS_Dojo/AgPagoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliComentarioRequest", ReplyAction="http://ws/WS_Dojo/EliComentarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse AgPago(WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse EliComentario(WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgPagoRequest", ReplyAction="http://ws/WS_Dojo/AgPagoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse> AgPagoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliComentarioRequest", ReplyAction="http://ws/WS_Dojo/EliComentarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse> EliComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaBoletaRequest", ReplyAction="http://ws/WS_Dojo/ListaBoletaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModSolicitudRequest", ReplyAction="http://ws/WS_Dojo/ModSolicitudResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse ListaBoleta(WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudResponse ModSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaBoletaRequest", ReplyAction="http://ws/WS_Dojo/ListaBoletaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse> ListaBoletaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModSolicitudRequest", ReplyAction="http://ws/WS_Dojo/ModSolicitudResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudResponse> ModSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliSolicitudRequest", ReplyAction="http://ws/WS_Dojo/EliSolicitudResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudResponse EliSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliSolicitudRequest", ReplyAction="http://ws/WS_Dojo/EliSolicitudResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudResponse> EliSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModEventoRequest", ReplyAction="http://ws/WS_Dojo/ModEventoResponse")]
@@ -277,148 +232,13 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModHorarioResponse> ModHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModHorarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/ModClaseNivelResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoObserRequest", ReplyAction="http://ws/WS_Dojo/ListadoObserResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse ModClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse ListadoObser(WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/ModClaseNivelResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse> ModClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModCinturonRequest", ReplyAction="http://ws/WS_Dojo/ModCinturonResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModCinturonResponse ModCinturon(WebValdiviaDojo.WS_ValdiviaDojo.ModCinturonRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModCinturonRequest", ReplyAction="http://ws/WS_Dojo/ModCinturonResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModCinturonResponse> ModCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModCinturonRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/ModAsistenciaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaResponse ModAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/ModAsistenciaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaResponse> ModAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/EliAsistenciaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse EliAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/EliAsistenciaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse> EliAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMetodoPagoRequest", ReplyAction="http://ws/WS_Dojo/ListaMetodoPagoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse ListaMetodoPago(WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMetodoPagoRequest", ReplyAction="http://ws/WS_Dojo/ListaMetodoPagoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse> ListaMetodoPagoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/ModTipoSoliResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse ModTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/ModTipoSoliResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse> ModTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoTallaRequest", ReplyAction="http://ws/WS_Dojo/ListadoTallaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse ListadoTalla(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoTallaRequest", ReplyAction="http://ws/WS_Dojo/ListadoTallaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse> ListadoTallaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliHorarioRequest", ReplyAction="http://ws/WS_Dojo/EliHorarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioResponse EliHorario(WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliHorarioRequest", ReplyAction="http://ws/WS_Dojo/EliHorarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioResponse> EliHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoHorarioRequest", ReplyAction="http://ws/WS_Dojo/ListadoHorarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse ListadoHorario(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoHorarioRequest", ReplyAction="http://ws/WS_Dojo/ListadoHorarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse> ListadoHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearUsuarioRequest", ReplyAction="http://ws/WS_Dojo/CrearUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse CrearUsuario(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearUsuarioRequest", ReplyAction="http://ws/WS_Dojo/CrearUsuarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse> CrearUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgProductoRequest", ReplyAction="http://ws/WS_Dojo/AgProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse AgProducto(WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgProductoRequest", ReplyAction="http://ws/WS_Dojo/AgProductoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse> AgProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgHorarioRequest", ReplyAction="http://ws/WS_Dojo/AgHorarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse AgHorario(WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgHorarioRequest", ReplyAction="http://ws/WS_Dojo/AgHorarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse> AgHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModProductoRequest", ReplyAction="http://ws/WS_Dojo/ModProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse ModProducto(WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModProductoRequest", ReplyAction="http://ws/WS_Dojo/ModProductoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse> ModProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoCarritoRequest", ReplyAction="http://ws/WS_Dojo/ListadoCarritoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse ListadoCarrito(WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoCarritoRequest", ReplyAction="http://ws/WS_Dojo/ListadoCarritoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse> ListadoCarritoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaReferidoRequest", ReplyAction="http://ws/WS_Dojo/ListaReferidoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse ListaReferido(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaReferidoRequest", ReplyAction="http://ws/WS_Dojo/ListaReferidoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> ListaReferidoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdEspeRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdEspeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse ListadoProdEspe(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdEspeRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdEspeResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse> ListadoProdEspeAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoObserRequest", ReplyAction="http://ws/WS_Dojo/ListadoObserResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse> ListadoObserAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgDetalleComRequest", ReplyAction="http://ws/WS_Dojo/AgDetalleComResponse")]
@@ -430,22 +250,49 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse> AgDetalleComAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdGenRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdGenResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaOrdenCompraRequest", ReplyAction="http://ws/WS_Dojo/ListaOrdenCompraResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse ListadoProdGen(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse ListaOrdenCompra(WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdGenRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdGenResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse> ListadoProdGenAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaOrdenCompraRequest", ReplyAction="http://ws/WS_Dojo/ListaOrdenCompraResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse> ListaOrdenCompraAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoGeneroRequest", ReplyAction="http://ws/WS_Dojo/ListadoGeneroResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaReferidoRequest", ReplyAction="http://ws/WS_Dojo/ListaReferidoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse ListadoGenero(WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse ListaReferido(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoGeneroRequest", ReplyAction="http://ws/WS_Dojo/ListadoGeneroResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse> ListadoGeneroAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaReferidoRequest", ReplyAction="http://ws/WS_Dojo/ListaReferidoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> ListaReferidoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModDescuentoRequest", ReplyAction="http://ws/WS_Dojo/ModDescuentoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse ModDescuento(WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModDescuentoRequest", ReplyAction="http://ws/WS_Dojo/ModDescuentoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse> ModDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoEveRequest", ReplyAction="http://ws/WS_Dojo/ModTipoEveResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse ModTipoEve(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoEveRequest", ReplyAction="http://ws/WS_Dojo/ModTipoEveResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse> ModTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModProductoRequest", ReplyAction="http://ws/WS_Dojo/ModProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse ModProducto(WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModProductoRequest", ReplyAction="http://ws/WS_Dojo/ModProductoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse> ModProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliProductoRequest", ReplyAction="http://ws/WS_Dojo/EliProductoResponse")]
@@ -457,220 +304,148 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse> EliProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoClaseRequest", ReplyAction="http://ws/WS_Dojo/ListadoClaseResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoCarritoRequest", ReplyAction="http://ws/WS_Dojo/ListadoCarritoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseResponse ListadoClase(WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse ListadoCarrito(WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoClaseRequest", ReplyAction="http://ws/WS_Dojo/ListadoClaseResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseResponse> ListadoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoCarritoRequest", ReplyAction="http://ws/WS_Dojo/ListadoCarritoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse> ListadoCarritoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/AgTipoEncuestaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModCinturonRequest", ReplyAction="http://ws/WS_Dojo/ModCinturonResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse AgTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModCinturonResponse ModCinturon(WebValdiviaDojo.WS_ValdiviaDojo.ModCinturonRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/AgTipoEncuestaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse> AgTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModCinturonRequest", ReplyAction="http://ws/WS_Dojo/ModCinturonResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModCinturonResponse> ModCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModCinturonRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgMensualidadRequest", ReplyAction="http://ws/WS_Dojo/AgMensualidadResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdGenRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdGenResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse AgMensualidad(WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse ListadoProdGen(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgMensualidadRequest", ReplyAction="http://ws/WS_Dojo/AgMensualidadResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse> AgMensualidadAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdGenRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdGenResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse> ListadoProdGenAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/EliTipoEncuestaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgOrdenCompraRequest", ReplyAction="http://ws/WS_Dojo/AgOrdenCompraResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse EliTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse AgOrdenCompra(WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/EliTipoEncuestaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse> EliTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgOrdenCompraRequest", ReplyAction="http://ws/WS_Dojo/AgOrdenCompraResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse> AgOrdenCompraAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgEventoRequest", ReplyAction="http://ws/WS_Dojo/AgEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdEspeRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdEspeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse AgEvento(WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse ListadoProdEspe(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgEventoRequest", ReplyAction="http://ws/WS_Dojo/AgEventoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse> AgEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoProdEspeRequest", ReplyAction="http://ws/WS_Dojo/ListadoProdEspeResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse> ListadoProdEspeAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoEventoRequest", ReplyAction="http://ws/WS_Dojo/ListadoEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMensualidadRequest", ReplyAction="http://ws/WS_Dojo/ListaMensualidadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse ListadoEvento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse ListaMensualidad(WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoEventoRequest", ReplyAction="http://ws/WS_Dojo/ListadoEventoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse> ListadoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMensualidadRequest", ReplyAction="http://ws/WS_Dojo/ListaMensualidadResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse> ListaMensualidadAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgCinturonRequest", ReplyAction="http://ws/WS_Dojo/AgCinturonResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoTallaRequest", ReplyAction="http://ws/WS_Dojo/ListadoTallaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse AgCinturon(WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse ListadoTalla(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgCinturonRequest", ReplyAction="http://ws/WS_Dojo/AgCinturonResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse> AgCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoTallaRequest", ReplyAction="http://ws/WS_Dojo/ListadoTallaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse> ListadoTallaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliParticipacionRequest", ReplyAction="http://ws/WS_Dojo/EliParticipacionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaBoletaRequest", ReplyAction="http://ws/WS_Dojo/ListaBoletaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliParticipacionResponse EliParticipacion(WebValdiviaDojo.WS_ValdiviaDojo.EliParticipacionRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse ListaBoleta(WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliParticipacionRequest", ReplyAction="http://ws/WS_Dojo/EliParticipacionResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliParticipacionResponse> EliParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliParticipacionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaBoletaRequest", ReplyAction="http://ws/WS_Dojo/ListaBoletaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse> ListaBoletaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModUsuarioRequest", ReplyAction="http://ws/WS_Dojo/ModUsuarioResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaTipoProdRequest", ReplyAction="http://ws/WS_Dojo/ListaTipoProdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse ModUsuario(WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse ListaTipoProd(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModUsuarioRequest", ReplyAction="http://ws/WS_Dojo/ModUsuarioResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse> ModUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaTipoProdRequest", ReplyAction="http://ws/WS_Dojo/ListaTipoProdResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse> ListaTipoProdAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/EliTipoProductoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/ModAsistenciaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoProductoResponse EliTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoProductoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaResponse ModAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/EliTipoProductoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoProductoResponse> EliTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoProductoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/ModAsistenciaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaResponse> ModAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModAsistenciaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/AgTipoClaseResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgPagoRequest", ReplyAction="http://ws/WS_Dojo/AgPagoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse AgTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse AgPago(WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/AgTipoClaseResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse> AgTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgPagoRequest", ReplyAction="http://ws/WS_Dojo/AgPagoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse> AgPagoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/AgClaseNivelResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/ModTipoSoliResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse AgClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse ModTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/AgClaseNivelResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse> AgClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/ModTipoSoliResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliResponse> ModTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoSoliRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/ModTipoClaseResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMetodoPagoRequest", ReplyAction="http://ws/WS_Dojo/ListaMetodoPagoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse ModTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse ListaMetodoPago(WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/ModTipoClaseResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse> ModTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMetodoPagoRequest", ReplyAction="http://ws/WS_Dojo/ListaMetodoPagoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse> ListaMetodoPagoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarCinturonRequest", ReplyAction="http://ws/WS_Dojo/ListarCinturonResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/EliAsistenciaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse ListarCinturon(WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse EliAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarCinturonRequest", ReplyAction="http://ws/WS_Dojo/ListarCinturonResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse> ListarCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/EliAsistenciaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse> EliAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/AgTipoProductoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/ModClaseNivelResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse AgTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse ModClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/AgTipoProductoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse> AgTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/ModClaseNivelResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse> ModClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/ListaAsistenciaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgProductoRequest", ReplyAction="http://ws/WS_Dojo/AgProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse ListaAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse AgProducto(WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/ListaAsistenciaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse> ListaAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgReferidosRequest", ReplyAction="http://ws/WS_Dojo/AgReferidosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse AgReferidos(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgReferidosRequest", ReplyAction="http://ws/WS_Dojo/AgReferidosResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> AgReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/ModTipoProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse ModTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/ModTipoProductoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse> ModTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModParticipacionRequest", ReplyAction="http://ws/WS_Dojo/ModParticipacionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse ModParticipacion(WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModParticipacionRequest", ReplyAction="http://ws/WS_Dojo/ModParticipacionResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse> ModParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMatriculaRequest", ReplyAction="http://ws/WS_Dojo/ListaMatriculaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse ListaMatricula(WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMatriculaRequest", ReplyAction="http://ws/WS_Dojo/ListaMatriculaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse> ListaMatriculaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/EliClaseNivelResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse EliClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/EliClaseNivelResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse> EliClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoEventoRequest", ReplyAction="http://ws/WS_Dojo/AgTipoEventoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse AgTipoEvento(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoEventoRequest", ReplyAction="http://ws/WS_Dojo/AgTipoEventoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse> AgTipoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliReferidosRequest", ReplyAction="http://ws/WS_Dojo/EliReferidosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse EliReferidos(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliReferidosRequest", ReplyAction="http://ws/WS_Dojo/EliReferidosResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> EliReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/ModTipoEncuestaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEncuestaResponse ModTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEncuestaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/ModTipoEncuestaResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEncuestaResponse> ModTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEncuestaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgProductoRequest", ReplyAction="http://ws/WS_Dojo/AgProductoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse> AgProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgreDescuentoRequest", ReplyAction="http://ws/WS_Dojo/AgreDescuentoResponse")]
@@ -682,31 +457,31 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse> AgreDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliEventoRequest", ReplyAction="http://ws/WS_Dojo/EliEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModParticipacionRequest", ReplyAction="http://ws/WS_Dojo/ModParticipacionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse EliEvento(WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse ModParticipacion(WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliEventoRequest", ReplyAction="http://ws/WS_Dojo/EliEventoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse> EliEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModParticipacionRequest", ReplyAction="http://ws/WS_Dojo/ModParticipacionResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse> ModParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoEveRequest", ReplyAction="http://ws/WS_Dojo/EliTipoEveResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoEventoRequest", ReplyAction="http://ws/WS_Dojo/ListadoEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse EliTipoEve(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse ListadoEvento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoEveRequest", ReplyAction="http://ws/WS_Dojo/EliTipoEveResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse> EliTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoEventoRequest", ReplyAction="http://ws/WS_Dojo/ListadoEventoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse> ListadoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgTipoSolicitudResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMatriculaRequest", ReplyAction="http://ws/WS_Dojo/ListaMatriculaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse AgTipoSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse ListaMatricula(WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgTipoSolicitudResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> AgTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMatriculaRequest", ReplyAction="http://ws/WS_Dojo/ListaMatriculaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse> ListaMatriculaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliDescuentoRequest", ReplyAction="http://ws/WS_Dojo/EliDescuentoResponse")]
@@ -718,6 +493,51 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse> EliDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliHorarioRequest", ReplyAction="http://ws/WS_Dojo/EliHorarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioResponse EliHorario(WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliHorarioRequest", ReplyAction="http://ws/WS_Dojo/EliHorarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioResponse> EliHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliHorarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarCinturonRequest", ReplyAction="http://ws/WS_Dojo/ListarCinturonResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse ListarCinturon(WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarCinturonRequest", ReplyAction="http://ws/WS_Dojo/ListarCinturonResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse> ListarCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModUsuarioRequest", ReplyAction="http://ws/WS_Dojo/ModUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse ModUsuario(WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModUsuarioRequest", ReplyAction="http://ws/WS_Dojo/ModUsuarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse> ModUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgHorarioRequest", ReplyAction="http://ws/WS_Dojo/AgHorarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse AgHorario(WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgHorarioRequest", ReplyAction="http://ws/WS_Dojo/AgHorarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse> AgHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearUsuarioRequest", ReplyAction="http://ws/WS_Dojo/CrearUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse CrearUsuario(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/CrearUsuarioRequest", ReplyAction="http://ws/WS_Dojo/CrearUsuarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioResponse> CrearUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.CrearUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListarUsuariosRequest", ReplyAction="http://ws/WS_Dojo/ListarUsuariosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -727,22 +547,31 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse> ListarUsuariosAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoDescuentoRequest", ReplyAction="http://ws/WS_Dojo/ListadoDescuentoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoClaseRequest", ReplyAction="http://ws/WS_Dojo/ListadoClaseResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse ListadoDescuento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseResponse ListadoClase(WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoDescuentoRequest", ReplyAction="http://ws/WS_Dojo/ListadoDescuentoResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse> ListadoDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoClaseRequest", ReplyAction="http://ws/WS_Dojo/ListadoClaseResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseResponse> ListadoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoClaseRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/EliTipoSoliResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoGeneroRequest", ReplyAction="http://ws/WS_Dojo/ListadoGeneroResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse EliTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse ListadoGenero(WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/EliTipoSoliResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> EliTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoGeneroRequest", ReplyAction="http://ws/WS_Dojo/ListadoGeneroResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse> ListadoGeneroAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliEventoRequest", ReplyAction="http://ws/WS_Dojo/EliEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse EliEvento(WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliEventoRequest", ReplyAction="http://ws/WS_Dojo/EliEventoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse> EliEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgParticipacionRequest", ReplyAction="http://ws/WS_Dojo/AgParticipacionResponse")]
@@ -754,13 +583,85 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse> AgParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/EliTipoClaseResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoDescuentoRequest", ReplyAction="http://ws/WS_Dojo/ListadoDescuentoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoClaseResponse EliTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoClaseRequest request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse ListadoDescuento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/EliTipoClaseResponse")]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoClaseResponse> EliTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoClaseRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoDescuentoRequest", ReplyAction="http://ws/WS_Dojo/ListadoDescuentoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse> ListadoDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgMensualidadRequest", ReplyAction="http://ws/WS_Dojo/AgMensualidadResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse AgMensualidad(WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgMensualidadRequest", ReplyAction="http://ws/WS_Dojo/AgMensualidadResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadResponse> AgMensualidadAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgMensualidadRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgEventoRequest", ReplyAction="http://ws/WS_Dojo/AgEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse AgEvento(WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgEventoRequest", ReplyAction="http://ws/WS_Dojo/AgEventoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse> AgEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoHorarioRequest", ReplyAction="http://ws/WS_Dojo/ListadoHorarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse ListadoHorario(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListadoHorarioRequest", ReplyAction="http://ws/WS_Dojo/ListadoHorarioResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse> ListadoHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliParticipacionRequest", ReplyAction="http://ws/WS_Dojo/EliParticipacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliParticipacionResponse EliParticipacion(WebValdiviaDojo.WS_ValdiviaDojo.EliParticipacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliParticipacionRequest", ReplyAction="http://ws/WS_Dojo/EliParticipacionResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliParticipacionResponse> EliParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliParticipacionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoEveRequest", ReplyAction="http://ws/WS_Dojo/EliTipoEveResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse EliTipoEve(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoEveRequest", ReplyAction="http://ws/WS_Dojo/EliTipoEveResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse> EliTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/EliTipoProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoProductoResponse EliTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/EliTipoProductoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoProductoResponse> EliTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/EliTipoSoliResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse EliTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoSoliRequest", ReplyAction="http://ws/WS_Dojo/EliTipoSoliResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> EliTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/ModTipoEncuestaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEncuestaResponse ModTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEncuestaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/ModTipoEncuestaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEncuestaResponse> ModTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEncuestaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliCinturonRequest", ReplyAction="http://ws/WS_Dojo/EliCinturonResponse")]
@@ -770,6 +671,150 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliCinturonRequest", ReplyAction="http://ws/WS_Dojo/EliCinturonResponse")]
         System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse> EliCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/EliTipoEncuestaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse EliTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/EliTipoEncuestaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse> EliTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgCinturonRequest", ReplyAction="http://ws/WS_Dojo/AgCinturonResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse AgCinturon(WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgCinturonRequest", ReplyAction="http://ws/WS_Dojo/AgCinturonResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse> AgCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/EliClaseNivelResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse EliClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/EliClaseNivelResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse> EliClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/ModTipoProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse ModTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/ModTipoProductoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse> ModTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/AgClaseNivelResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse AgClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgClaseNivelRequest", ReplyAction="http://ws/WS_Dojo/AgClaseNivelResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse> AgClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/AgTipoEncuestaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse AgTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoEncuestaRequest", ReplyAction="http://ws/WS_Dojo/AgTipoEncuestaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse> AgTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/AgTipoClaseResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse AgTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/AgTipoClaseResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse> AgTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/EliTipoClaseResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoClaseResponse EliTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoClaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/EliTipoClaseResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoClaseResponse> EliTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoClaseRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/ListaAsistenciaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse ListaAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaAsistenciaRequest", ReplyAction="http://ws/WS_Dojo/ListaAsistenciaResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse> ListaAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoEventoRequest", ReplyAction="http://ws/WS_Dojo/AgTipoEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse AgTipoEvento(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoEventoRequest", ReplyAction="http://ws/WS_Dojo/AgTipoEventoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse> AgTipoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/AgTipoProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse AgTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoProductoRequest", ReplyAction="http://ws/WS_Dojo/AgTipoProductoResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse> AgTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgReferidosRequest", ReplyAction="http://ws/WS_Dojo/AgReferidosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse AgReferidos(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgReferidosRequest", ReplyAction="http://ws/WS_Dojo/AgReferidosResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> AgReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgTipoSolicitudResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse AgTipoSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/AgTipoSolicitudRequest", ReplyAction="http://ws/WS_Dojo/AgTipoSolicitudResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> AgTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliReferidosRequest", ReplyAction="http://ws/WS_Dojo/EliReferidosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse EliReferidos(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/EliReferidosRequest", ReplyAction="http://ws/WS_Dojo/EliReferidosResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> EliReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/ModTipoClaseResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse ModTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ModTipoClaseRequest", ReplyAction="http://ws/WS_Dojo/ModTipoClaseResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse> ModTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMaterialApRequest", ReplyAction="http://ws/WS_Dojo/ListaMaterialApResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApResponse ListaMaterialAp(WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws/WS_Dojo/ListaMaterialApRequest", ReplyAction="http://ws/WS_Dojo/ListaMaterialApResponse")]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApResponse> ListaMaterialApAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApRequest request);
     }
     
     /// <remarks/>
@@ -824,177 +869,89 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class descuentoProd : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class materialAP : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string fECHA_FINField;
+        private string contenidoField;
         
-        private string fECHA_INICIOField;
+        private int id_claseField;
         
-        private int iD_DESC_PRODField;
+        private int id_materialField;
         
-        private int pORC_DESCField;
+        private string img_materialField;
         
-        private int vALOR_DESCField;
+        private string nombreField;
+        
+        private string titulo_materialField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string FECHA_FIN {
+        public string contenido {
             get {
-                return this.fECHA_FINField;
+                return this.contenidoField;
             }
             set {
-                this.fECHA_FINField = value;
-                this.RaisePropertyChanged("FECHA_FIN");
+                this.contenidoField = value;
+                this.RaisePropertyChanged("contenido");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string FECHA_INICIO {
+        public int id_clase {
             get {
-                return this.fECHA_INICIOField;
+                return this.id_claseField;
             }
             set {
-                this.fECHA_INICIOField = value;
-                this.RaisePropertyChanged("FECHA_INICIO");
+                this.id_claseField = value;
+                this.RaisePropertyChanged("id_clase");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int ID_DESC_PROD {
+        public int id_material {
             get {
-                return this.iD_DESC_PRODField;
+                return this.id_materialField;
             }
             set {
-                this.iD_DESC_PRODField = value;
-                this.RaisePropertyChanged("ID_DESC_PROD");
+                this.id_materialField = value;
+                this.RaisePropertyChanged("id_material");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int PORC_DESC {
+        public string img_material {
             get {
-                return this.pORC_DESCField;
+                return this.img_materialField;
             }
             set {
-                this.pORC_DESCField = value;
-                this.RaisePropertyChanged("PORC_DESC");
+                this.img_materialField = value;
+                this.RaisePropertyChanged("img_material");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int VALOR_DESC {
+        public string nombre {
             get {
-                return this.vALOR_DESCField;
+                return this.nombreField;
             }
             set {
-                this.vALOR_DESCField = value;
-                this.RaisePropertyChanged("VALOR_DESC");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class matricula : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string fECHA_MATRICULAField;
-        
-        private int iD_ESTADOField;
-        
-        private int iD_MATRICULAField;
-        
-        private int mONTO_MATRICULAField;
-        
-        private string nombre_estadoField;
-        
-        private int rUTField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string FECHA_MATRICULA {
-            get {
-                return this.fECHA_MATRICULAField;
-            }
-            set {
-                this.fECHA_MATRICULAField = value;
-                this.RaisePropertyChanged("FECHA_MATRICULA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int ID_ESTADO {
-            get {
-                return this.iD_ESTADOField;
-            }
-            set {
-                this.iD_ESTADOField = value;
-                this.RaisePropertyChanged("ID_ESTADO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int ID_MATRICULA {
-            get {
-                return this.iD_MATRICULAField;
-            }
-            set {
-                this.iD_MATRICULAField = value;
-                this.RaisePropertyChanged("ID_MATRICULA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int MONTO_MATRICULA {
-            get {
-                return this.mONTO_MATRICULAField;
-            }
-            set {
-                this.mONTO_MATRICULAField = value;
-                this.RaisePropertyChanged("MONTO_MATRICULA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombre_estado {
-            get {
-                return this.nombre_estadoField;
-            }
-            set {
-                this.nombre_estadoField = value;
-                this.RaisePropertyChanged("nombre_estado");
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int RUT {
+        public string titulo_material {
             get {
-                return this.rUTField;
+                return this.titulo_materialField;
             }
             set {
-                this.rUTField = value;
-                this.RaisePropertyChanged("RUT");
+                this.titulo_materialField = value;
+                this.RaisePropertyChanged("titulo_material");
             }
         }
         
@@ -1158,6 +1115,316 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class horario : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string diaField;
+        
+        private string hora_finField;
+        
+        private string hora_iniField;
+        
+        private int id_claseField;
+        
+        private int id_horarioField;
+        
+        private int id_nivelField;
+        
+        private string nom_claseField;
+        
+        private string nom_nivelField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string dia {
+            get {
+                return this.diaField;
+            }
+            set {
+                this.diaField = value;
+                this.RaisePropertyChanged("dia");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string hora_fin {
+            get {
+                return this.hora_finField;
+            }
+            set {
+                this.hora_finField = value;
+                this.RaisePropertyChanged("hora_fin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string hora_ini {
+            get {
+                return this.hora_iniField;
+            }
+            set {
+                this.hora_iniField = value;
+                this.RaisePropertyChanged("hora_ini");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id_clase {
+            get {
+                return this.id_claseField;
+            }
+            set {
+                this.id_claseField = value;
+                this.RaisePropertyChanged("id_clase");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_horario {
+            get {
+                return this.id_horarioField;
+            }
+            set {
+                this.id_horarioField = value;
+                this.RaisePropertyChanged("id_horario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int id_nivel {
+            get {
+                return this.id_nivelField;
+            }
+            set {
+                this.id_nivelField = value;
+                this.RaisePropertyChanged("id_nivel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nom_clase {
+            get {
+                return this.nom_claseField;
+            }
+            set {
+                this.nom_claseField = value;
+                this.RaisePropertyChanged("nom_clase");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string nom_nivel {
+            get {
+                return this.nom_nivelField;
+            }
+            set {
+                this.nom_nivelField = value;
+                this.RaisePropertyChanged("nom_nivel");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class descuentoProd : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fECHA_FINField;
+        
+        private string fECHA_INICIOField;
+        
+        private int iD_DESC_PRODField;
+        
+        private int pORC_DESCField;
+        
+        private int vALOR_DESCField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string FECHA_FIN {
+            get {
+                return this.fECHA_FINField;
+            }
+            set {
+                this.fECHA_FINField = value;
+                this.RaisePropertyChanged("FECHA_FIN");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string FECHA_INICIO {
+            get {
+                return this.fECHA_INICIOField;
+            }
+            set {
+                this.fECHA_INICIOField = value;
+                this.RaisePropertyChanged("FECHA_INICIO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int ID_DESC_PROD {
+            get {
+                return this.iD_DESC_PRODField;
+            }
+            set {
+                this.iD_DESC_PRODField = value;
+                this.RaisePropertyChanged("ID_DESC_PROD");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int PORC_DESC {
+            get {
+                return this.pORC_DESCField;
+            }
+            set {
+                this.pORC_DESCField = value;
+                this.RaisePropertyChanged("PORC_DESC");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int VALOR_DESC {
+            get {
+                return this.vALOR_DESCField;
+            }
+            set {
+                this.vALOR_DESCField = value;
+                this.RaisePropertyChanged("VALOR_DESC");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class genero : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int id_generoField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_genero {
+            get {
+                return this.id_generoField;
+            }
+            set {
+                this.id_generoField = value;
+                this.RaisePropertyChanged("id_genero");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class clases : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int id_claseField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_clase {
+            get {
+                return this.id_claseField;
+            }
+            set {
+                this.id_claseField = value;
+                this.RaisePropertyChanged("id_clase");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
     public partial class cinturon : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string color_cinturonField;
@@ -1199,6 +1466,108 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             set {
                 this.nombre_cinturonField = value;
                 this.RaisePropertyChanged("nombre_cinturon");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class matricula : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fECHA_MATRICULAField;
+        
+        private int iD_ESTADOField;
+        
+        private int iD_MATRICULAField;
+        
+        private int mONTO_MATRICULAField;
+        
+        private string nombre_estadoField;
+        
+        private int rUTField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string FECHA_MATRICULA {
+            get {
+                return this.fECHA_MATRICULAField;
+            }
+            set {
+                this.fECHA_MATRICULAField = value;
+                this.RaisePropertyChanged("FECHA_MATRICULA");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int ID_ESTADO {
+            get {
+                return this.iD_ESTADOField;
+            }
+            set {
+                this.iD_ESTADOField = value;
+                this.RaisePropertyChanged("ID_ESTADO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int ID_MATRICULA {
+            get {
+                return this.iD_MATRICULAField;
+            }
+            set {
+                this.iD_MATRICULAField = value;
+                this.RaisePropertyChanged("ID_MATRICULA");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int MONTO_MATRICULA {
+            get {
+                return this.mONTO_MATRICULAField;
+            }
+            set {
+                this.mONTO_MATRICULAField = value;
+                this.RaisePropertyChanged("MONTO_MATRICULA");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string nombre_estado {
+            get {
+                return this.nombre_estadoField;
+            }
+            set {
+                this.nombre_estadoField = value;
+                this.RaisePropertyChanged("nombre_estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int RUT {
+            get {
+                return this.rUTField;
+            }
+            set {
+                this.rUTField = value;
+                this.RaisePropertyChanged("RUT");
             }
         }
         
@@ -1334,33 +1703,33 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class clases : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class metodoPago : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int id_claseField;
+        private int id_metodoField;
         
-        private string nombreField;
+        private string nOM_METODO_PAGOField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_clase {
+        public int id_metodo {
             get {
-                return this.id_claseField;
+                return this.id_metodoField;
             }
             set {
-                this.id_claseField = value;
-                this.RaisePropertyChanged("id_clase");
+                this.id_metodoField = value;
+                this.RaisePropertyChanged("id_metodo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
+        public string NOM_METODO_PAGO {
             get {
-                return this.nombreField;
+                return this.nOM_METODO_PAGOField;
             }
             set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
+                this.nOM_METODO_PAGOField = value;
+                this.RaisePropertyChanged("NOM_METODO_PAGO");
             }
         }
         
@@ -1380,33 +1749,33 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class genero : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class tipoProducto : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int id_generoField;
+        private int id_tipo_prodField;
         
-        private string nombreField;
+        private string nombre_tipo_prodField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_genero {
+        public int id_tipo_prod {
             get {
-                return this.id_generoField;
+                return this.id_tipo_prodField;
             }
             set {
-                this.id_generoField = value;
-                this.RaisePropertyChanged("id_genero");
+                this.id_tipo_prodField = value;
+                this.RaisePropertyChanged("id_tipo_prod");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
+        public string nombre_tipo_prod {
             get {
-                return this.nombreField;
+                return this.nombre_tipo_prodField;
             }
             set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
+                this.nombre_tipo_prodField = value;
+                this.RaisePropertyChanged("nombre_tipo_prod");
             }
         }
         
@@ -1426,103 +1795,335 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class prodGeneral : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class boleta : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string descripcionField;
+        private string fECHA_BOLETAField;
         
-        private string iMG_PRODField;
+        private int iD_MATRICULAField;
         
-        private string nombre_productoField;
+        private int iD_MENSUALIDADField;
         
-        private int pORC_DESCField;
+        private int iD_METODOField;
         
-        private int pRECIO_NORMALField;
+        private int iD_PAGOField;
         
-        private int sTOCKField;
+        private int mONTO_TOTALField;
         
-        private int vALOR_DESCField;
+        private string nOM_METODO_PAGOField;
+        
+        private int nRO_BOLETAField;
+        
+        private int nRO_COMPRAField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
+        public string FECHA_BOLETA {
             get {
-                return this.descripcionField;
+                return this.fECHA_BOLETAField;
             }
             set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
+                this.fECHA_BOLETAField = value;
+                this.RaisePropertyChanged("FECHA_BOLETA");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string IMG_PROD {
+        public int ID_MATRICULA {
             get {
-                return this.iMG_PRODField;
+                return this.iD_MATRICULAField;
             }
             set {
-                this.iMG_PRODField = value;
-                this.RaisePropertyChanged("IMG_PROD");
+                this.iD_MATRICULAField = value;
+                this.RaisePropertyChanged("ID_MATRICULA");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre_producto {
+        public int ID_MENSUALIDAD {
             get {
-                return this.nombre_productoField;
+                return this.iD_MENSUALIDADField;
             }
             set {
-                this.nombre_productoField = value;
-                this.RaisePropertyChanged("nombre_producto");
+                this.iD_MENSUALIDADField = value;
+                this.RaisePropertyChanged("ID_MENSUALIDAD");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int PORC_DESC {
+        public int ID_METODO {
             get {
-                return this.pORC_DESCField;
+                return this.iD_METODOField;
             }
             set {
-                this.pORC_DESCField = value;
-                this.RaisePropertyChanged("PORC_DESC");
+                this.iD_METODOField = value;
+                this.RaisePropertyChanged("ID_METODO");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int PRECIO_NORMAL {
+        public int ID_PAGO {
             get {
-                return this.pRECIO_NORMALField;
+                return this.iD_PAGOField;
             }
             set {
-                this.pRECIO_NORMALField = value;
-                this.RaisePropertyChanged("PRECIO_NORMAL");
+                this.iD_PAGOField = value;
+                this.RaisePropertyChanged("ID_PAGO");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int STOCK {
+        public int MONTO_TOTAL {
             get {
-                return this.sTOCKField;
+                return this.mONTO_TOTALField;
             }
             set {
-                this.sTOCKField = value;
-                this.RaisePropertyChanged("STOCK");
+                this.mONTO_TOTALField = value;
+                this.RaisePropertyChanged("MONTO_TOTAL");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int VALOR_DESC {
+        public string NOM_METODO_PAGO {
             get {
-                return this.vALOR_DESCField;
+                return this.nOM_METODO_PAGOField;
             }
             set {
-                this.vALOR_DESCField = value;
-                this.RaisePropertyChanged("VALOR_DESC");
+                this.nOM_METODO_PAGOField = value;
+                this.RaisePropertyChanged("NOM_METODO_PAGO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int NRO_BOLETA {
+            get {
+                return this.nRO_BOLETAField;
+            }
+            set {
+                this.nRO_BOLETAField = value;
+                this.RaisePropertyChanged("NRO_BOLETA");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int NRO_COMPRA {
+            get {
+                return this.nRO_COMPRAField;
+            }
+            set {
+                this.nRO_COMPRAField = value;
+                this.RaisePropertyChanged("NRO_COMPRA");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class talla : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int id_tallaField;
+        
+        private string nom_tallaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_talla {
+            get {
+                return this.id_tallaField;
+            }
+            set {
+                this.id_tallaField = value;
+                this.RaisePropertyChanged("id_talla");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nom_talla {
+            get {
+                return this.nom_tallaField;
+            }
+            set {
+                this.nom_tallaField = value;
+                this.RaisePropertyChanged("nom_talla");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class mensualidad : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fECHA_VENCIMIENTOField;
+        
+        private int iD_CLASEField;
+        
+        private int iD_ESTADOField;
+        
+        private int iD_MENSUALIDADField;
+        
+        private int iD_NIVELField;
+        
+        private int mONTO_PAGARField;
+        
+        private string nombreField;
+        
+        private string nombre_estadoField;
+        
+        private string nombre_nivelField;
+        
+        private int rUTField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string FECHA_VENCIMIENTO {
+            get {
+                return this.fECHA_VENCIMIENTOField;
+            }
+            set {
+                this.fECHA_VENCIMIENTOField = value;
+                this.RaisePropertyChanged("FECHA_VENCIMIENTO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int ID_CLASE {
+            get {
+                return this.iD_CLASEField;
+            }
+            set {
+                this.iD_CLASEField = value;
+                this.RaisePropertyChanged("ID_CLASE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int ID_ESTADO {
+            get {
+                return this.iD_ESTADOField;
+            }
+            set {
+                this.iD_ESTADOField = value;
+                this.RaisePropertyChanged("ID_ESTADO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int ID_MENSUALIDAD {
+            get {
+                return this.iD_MENSUALIDADField;
+            }
+            set {
+                this.iD_MENSUALIDADField = value;
+                this.RaisePropertyChanged("ID_MENSUALIDAD");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int ID_NIVEL {
+            get {
+                return this.iD_NIVELField;
+            }
+            set {
+                this.iD_NIVELField = value;
+                this.RaisePropertyChanged("ID_NIVEL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int MONTO_PAGAR {
+            get {
+                return this.mONTO_PAGARField;
+            }
+            set {
+                this.mONTO_PAGARField = value;
+                this.RaisePropertyChanged("MONTO_PAGAR");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string nombre_estado {
+            get {
+                return this.nombre_estadoField;
+            }
+            set {
+                this.nombre_estadoField = value;
+                this.RaisePropertyChanged("nombre_estado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string nombre_nivel {
+            get {
+                return this.nombre_nivelField;
+            }
+            set {
+                this.nombre_nivelField = value;
+                this.RaisePropertyChanged("nombre_nivel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public int RUT {
+            get {
+                return this.rUTField;
+            }
+            set {
+                this.rUTField = value;
+                this.RaisePropertyChanged("RUT");
             }
         }
         
@@ -1770,61 +2371,103 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class referido : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class prodGeneral : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int iD_REFERIDOField;
+        private string descripcionField;
         
-        private string nOMBRE_REFERIDOField;
+        private string iMG_PRODField;
         
-        private int rUTField;
+        private string nombre_productoField;
         
-        private int rUT_REFERIDOField;
+        private int pORC_DESCField;
+        
+        private int pRECIO_NORMALField;
+        
+        private int sTOCKField;
+        
+        private int vALOR_DESCField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int ID_REFERIDO {
+        public string descripcion {
             get {
-                return this.iD_REFERIDOField;
+                return this.descripcionField;
             }
             set {
-                this.iD_REFERIDOField = value;
-                this.RaisePropertyChanged("ID_REFERIDO");
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string NOMBRE_REFERIDO {
+        public string IMG_PROD {
             get {
-                return this.nOMBRE_REFERIDOField;
+                return this.iMG_PRODField;
             }
             set {
-                this.nOMBRE_REFERIDOField = value;
-                this.RaisePropertyChanged("NOMBRE_REFERIDO");
+                this.iMG_PRODField = value;
+                this.RaisePropertyChanged("IMG_PROD");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int RUT {
+        public string nombre_producto {
             get {
-                return this.rUTField;
+                return this.nombre_productoField;
             }
             set {
-                this.rUTField = value;
-                this.RaisePropertyChanged("RUT");
+                this.nombre_productoField = value;
+                this.RaisePropertyChanged("nombre_producto");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int RUT_REFERIDO {
+        public int PORC_DESC {
             get {
-                return this.rUT_REFERIDOField;
+                return this.pORC_DESCField;
             }
             set {
-                this.rUT_REFERIDOField = value;
-                this.RaisePropertyChanged("RUT_REFERIDO");
+                this.pORC_DESCField = value;
+                this.RaisePropertyChanged("PORC_DESC");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int PRECIO_NORMAL {
+            get {
+                return this.pRECIO_NORMALField;
+            }
+            set {
+                this.pRECIO_NORMALField = value;
+                this.RaisePropertyChanged("PRECIO_NORMAL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int STOCK {
+            get {
+                return this.sTOCKField;
+            }
+            set {
+                this.sTOCKField = value;
+                this.RaisePropertyChanged("STOCK");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int VALOR_DESC {
+            get {
+                return this.vALOR_DESCField;
+            }
+            set {
+                this.vALOR_DESCField = value;
+                this.RaisePropertyChanged("VALOR_DESC");
             }
         }
         
@@ -2072,353 +2715,61 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class horario : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class referido : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string diaField;
+        private int iD_REFERIDOField;
         
-        private string hora_finField;
+        private string nOMBRE_REFERIDOField;
         
-        private string hora_iniField;
+        private int rUTField;
         
-        private int id_claseField;
-        
-        private int id_horarioField;
-        
-        private int id_nivelField;
-        
-        private string nom_claseField;
-        
-        private string nom_nivelField;
+        private int rUT_REFERIDOField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string dia {
+        public int ID_REFERIDO {
             get {
-                return this.diaField;
+                return this.iD_REFERIDOField;
             }
             set {
-                this.diaField = value;
-                this.RaisePropertyChanged("dia");
+                this.iD_REFERIDOField = value;
+                this.RaisePropertyChanged("ID_REFERIDO");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string hora_fin {
+        public string NOMBRE_REFERIDO {
             get {
-                return this.hora_finField;
+                return this.nOMBRE_REFERIDOField;
             }
             set {
-                this.hora_finField = value;
-                this.RaisePropertyChanged("hora_fin");
+                this.nOMBRE_REFERIDOField = value;
+                this.RaisePropertyChanged("NOMBRE_REFERIDO");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string hora_ini {
+        public int RUT {
             get {
-                return this.hora_iniField;
+                return this.rUTField;
             }
             set {
-                this.hora_iniField = value;
-                this.RaisePropertyChanged("hora_ini");
+                this.rUTField = value;
+                this.RaisePropertyChanged("RUT");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id_clase {
+        public int RUT_REFERIDO {
             get {
-                return this.id_claseField;
+                return this.rUT_REFERIDOField;
             }
             set {
-                this.id_claseField = value;
-                this.RaisePropertyChanged("id_clase");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_horario {
-            get {
-                return this.id_horarioField;
-            }
-            set {
-                this.id_horarioField = value;
-                this.RaisePropertyChanged("id_horario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int id_nivel {
-            get {
-                return this.id_nivelField;
-            }
-            set {
-                this.id_nivelField = value;
-                this.RaisePropertyChanged("id_nivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string nom_clase {
-            get {
-                return this.nom_claseField;
-            }
-            set {
-                this.nom_claseField = value;
-                this.RaisePropertyChanged("nom_clase");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string nom_nivel {
-            get {
-                return this.nom_nivelField;
-            }
-            set {
-                this.nom_nivelField = value;
-                this.RaisePropertyChanged("nom_nivel");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class talla : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int id_tallaField;
-        
-        private string nom_tallaField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_talla {
-            get {
-                return this.id_tallaField;
-            }
-            set {
-                this.id_tallaField = value;
-                this.RaisePropertyChanged("id_talla");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nom_talla {
-            get {
-                return this.nom_tallaField;
-            }
-            set {
-                this.nom_tallaField = value;
-                this.RaisePropertyChanged("nom_talla");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class metodoPago : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int id_metodoField;
-        
-        private string nOM_METODO_PAGOField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_metodo {
-            get {
-                return this.id_metodoField;
-            }
-            set {
-                this.id_metodoField = value;
-                this.RaisePropertyChanged("id_metodo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string NOM_METODO_PAGO {
-            get {
-                return this.nOM_METODO_PAGOField;
-            }
-            set {
-                this.nOM_METODO_PAGOField = value;
-                this.RaisePropertyChanged("NOM_METODO_PAGO");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class boleta : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string fECHA_BOLETAField;
-        
-        private int iD_MATRICULAField;
-        
-        private int iD_MENSUALIDADField;
-        
-        private int iD_METODOField;
-        
-        private int iD_PAGOField;
-        
-        private int mONTO_TOTALField;
-        
-        private string nOM_METODO_PAGOField;
-        
-        private int nRO_BOLETAField;
-        
-        private int nRO_COMPRAField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string FECHA_BOLETA {
-            get {
-                return this.fECHA_BOLETAField;
-            }
-            set {
-                this.fECHA_BOLETAField = value;
-                this.RaisePropertyChanged("FECHA_BOLETA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int ID_MATRICULA {
-            get {
-                return this.iD_MATRICULAField;
-            }
-            set {
-                this.iD_MATRICULAField = value;
-                this.RaisePropertyChanged("ID_MATRICULA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int ID_MENSUALIDAD {
-            get {
-                return this.iD_MENSUALIDADField;
-            }
-            set {
-                this.iD_MENSUALIDADField = value;
-                this.RaisePropertyChanged("ID_MENSUALIDAD");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int ID_METODO {
-            get {
-                return this.iD_METODOField;
-            }
-            set {
-                this.iD_METODOField = value;
-                this.RaisePropertyChanged("ID_METODO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int ID_PAGO {
-            get {
-                return this.iD_PAGOField;
-            }
-            set {
-                this.iD_PAGOField = value;
-                this.RaisePropertyChanged("ID_PAGO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int MONTO_TOTAL {
-            get {
-                return this.mONTO_TOTALField;
-            }
-            set {
-                this.mONTO_TOTALField = value;
-                this.RaisePropertyChanged("MONTO_TOTAL");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string NOM_METODO_PAGO {
-            get {
-                return this.nOM_METODO_PAGOField;
-            }
-            set {
-                this.nOM_METODO_PAGOField = value;
-                this.RaisePropertyChanged("NOM_METODO_PAGO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int NRO_BOLETA {
-            get {
-                return this.nRO_BOLETAField;
-            }
-            set {
-                this.nRO_BOLETAField = value;
-                this.RaisePropertyChanged("NRO_BOLETA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int NRO_COMPRA {
-            get {
-                return this.nRO_COMPRAField;
-            }
-            set {
-                this.nRO_COMPRAField = value;
-                this.RaisePropertyChanged("NRO_COMPRA");
+                this.rUT_REFERIDOField = value;
+                this.RaisePropertyChanged("RUT_REFERIDO");
             }
         }
         
@@ -2549,6 +2900,150 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             set {
                 this.tOTALField = value;
                 this.RaisePropertyChanged("TOTAL");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class observacion : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string comentarioField;
+        
+        private string dia_semanaField;
+        
+        private string fecha_asistenciaField;
+        
+        private string horaField;
+        
+        private int id_asistenciaField;
+        
+        private string nombreField;
+        
+        private string nombre_nivelField;
+        
+        private string nombre_usField;
+        
+        private int rutField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string comentario {
+            get {
+                return this.comentarioField;
+            }
+            set {
+                this.comentarioField = value;
+                this.RaisePropertyChanged("comentario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string dia_semana {
+            get {
+                return this.dia_semanaField;
+            }
+            set {
+                this.dia_semanaField = value;
+                this.RaisePropertyChanged("dia_semana");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string fecha_asistencia {
+            get {
+                return this.fecha_asistenciaField;
+            }
+            set {
+                this.fecha_asistenciaField = value;
+                this.RaisePropertyChanged("fecha_asistencia");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string hora {
+            get {
+                return this.horaField;
+            }
+            set {
+                this.horaField = value;
+                this.RaisePropertyChanged("hora");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id_asistencia {
+            get {
+                return this.id_asistenciaField;
+            }
+            set {
+                this.id_asistenciaField = value;
+                this.RaisePropertyChanged("id_asistencia");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nombre_nivel {
+            get {
+                return this.nombre_nivelField;
+            }
+            set {
+                this.nombre_nivelField = value;
+                this.RaisePropertyChanged("nombre_nivel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string nombre_us {
+            get {
+                return this.nombre_usField;
+            }
+            set {
+                this.nombre_usField = value;
+                this.RaisePropertyChanged("nombre_us");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int rut {
+            get {
+                return this.rutField;
+            }
+            set {
+                this.rutField = value;
+                this.RaisePropertyChanged("rut");
             }
         }
         
@@ -2852,102 +3347,86 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class mensualidad : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class comentario : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string fECHA_VENCIMIENTOField;
+        private string cOMENTARIOField;
         
-        private int iD_CLASEField;
+        private string fECHA_RESPUESTAField;
         
-        private int iD_ESTADOField;
+        private int iD_ENCUESTAField;
         
-        private int iD_MENSUALIDADField;
+        private int iD_TIPO_ENCUESTAField;
         
-        private int iD_NIVELField;
-        
-        private int mONTO_PAGARField;
+        private string iMG_USUField;
         
         private string nombreField;
         
-        private string nombre_estadoField;
-        
-        private string nombre_nivelField;
-        
         private int rUTField;
+        
+        private int vALORACIONField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string FECHA_VENCIMIENTO {
+        public string COMENTARIO {
             get {
-                return this.fECHA_VENCIMIENTOField;
+                return this.cOMENTARIOField;
             }
             set {
-                this.fECHA_VENCIMIENTOField = value;
-                this.RaisePropertyChanged("FECHA_VENCIMIENTO");
+                this.cOMENTARIOField = value;
+                this.RaisePropertyChanged("COMENTARIO");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int ID_CLASE {
+        public string FECHA_RESPUESTA {
             get {
-                return this.iD_CLASEField;
+                return this.fECHA_RESPUESTAField;
             }
             set {
-                this.iD_CLASEField = value;
-                this.RaisePropertyChanged("ID_CLASE");
+                this.fECHA_RESPUESTAField = value;
+                this.RaisePropertyChanged("FECHA_RESPUESTA");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int ID_ESTADO {
+        public int ID_ENCUESTA {
             get {
-                return this.iD_ESTADOField;
+                return this.iD_ENCUESTAField;
             }
             set {
-                this.iD_ESTADOField = value;
-                this.RaisePropertyChanged("ID_ESTADO");
+                this.iD_ENCUESTAField = value;
+                this.RaisePropertyChanged("ID_ENCUESTA");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int ID_MENSUALIDAD {
+        public int ID_TIPO_ENCUESTA {
             get {
-                return this.iD_MENSUALIDADField;
+                return this.iD_TIPO_ENCUESTAField;
             }
             set {
-                this.iD_MENSUALIDADField = value;
-                this.RaisePropertyChanged("ID_MENSUALIDAD");
+                this.iD_TIPO_ENCUESTAField = value;
+                this.RaisePropertyChanged("ID_TIPO_ENCUESTA");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int ID_NIVEL {
+        public string IMG_USU {
             get {
-                return this.iD_NIVELField;
+                return this.iMG_USUField;
             }
             set {
-                this.iD_NIVELField = value;
-                this.RaisePropertyChanged("ID_NIVEL");
+                this.iMG_USUField = value;
+                this.RaisePropertyChanged("IMG_USU");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int MONTO_PAGAR {
-            get {
-                return this.mONTO_PAGARField;
-            }
-            set {
-                this.mONTO_PAGARField = value;
-                this.RaisePropertyChanged("MONTO_PAGAR");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -2959,31 +3438,7 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string nombre_estado {
-            get {
-                return this.nombre_estadoField;
-            }
-            set {
-                this.nombre_estadoField = value;
-                this.RaisePropertyChanged("nombre_estado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string nombre_nivel {
-            get {
-                return this.nombre_nivelField;
-            }
-            set {
-                this.nombre_nivelField = value;
-                this.RaisePropertyChanged("nombre_nivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int RUT {
             get {
                 return this.rUTField;
@@ -2994,193 +3449,15 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class tipoProducto : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int id_tipo_prodField;
-        
-        private string nombre_tipo_prodField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_tipo_prod {
-            get {
-                return this.id_tipo_prodField;
-            }
-            set {
-                this.id_tipo_prodField = value;
-                this.RaisePropertyChanged("id_tipo_prod");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre_tipo_prod {
-            get {
-                return this.nombre_tipo_prodField;
-            }
-            set {
-                this.nombre_tipo_prodField = value;
-                this.RaisePropertyChanged("nombre_tipo_prod");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class observacion : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string comentarioField;
-        
-        private string dia_semanaField;
-        
-        private string fecha_asistenciaField;
-        
-        private string horaField;
-        
-        private int id_asistenciaField;
-        
-        private string nombreField;
-        
-        private string nombre_nivelField;
-        
-        private string nombre_usField;
-        
-        private int rutField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string comentario {
-            get {
-                return this.comentarioField;
-            }
-            set {
-                this.comentarioField = value;
-                this.RaisePropertyChanged("comentario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string dia_semana {
-            get {
-                return this.dia_semanaField;
-            }
-            set {
-                this.dia_semanaField = value;
-                this.RaisePropertyChanged("dia_semana");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string fecha_asistencia {
-            get {
-                return this.fecha_asistenciaField;
-            }
-            set {
-                this.fecha_asistenciaField = value;
-                this.RaisePropertyChanged("fecha_asistencia");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string hora {
-            get {
-                return this.horaField;
-            }
-            set {
-                this.horaField = value;
-                this.RaisePropertyChanged("hora");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_asistencia {
-            get {
-                return this.id_asistenciaField;
-            }
-            set {
-                this.id_asistenciaField = value;
-                this.RaisePropertyChanged("id_asistencia");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string nombre_nivel {
-            get {
-                return this.nombre_nivelField;
-            }
-            set {
-                this.nombre_nivelField = value;
-                this.RaisePropertyChanged("nombre_nivel");
-            }
-        }
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string nombre_us {
+        public int VALORACION {
             get {
-                return this.nombre_usField;
+                return this.vALORACIONField;
             }
             set {
-                this.nombre_usField = value;
-                this.RaisePropertyChanged("nombre_us");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public int rut {
-            get {
-                return this.rutField;
-            }
-            set {
-                this.rutField = value;
-                this.RaisePropertyChanged("rut");
+                this.vALORACIONField = value;
+                this.RaisePropertyChanged("VALORACION");
             }
         }
         
@@ -3390,228 +3667,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class comentario : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string cOMENTARIOField;
-        
-        private string fECHA_RESPUESTAField;
-        
-        private int iD_ENCUESTAField;
-        
-        private int iD_TIPO_ENCUESTAField;
-        
-        private string iMG_USUField;
-        
-        private string nombreField;
-        
-        private int rUTField;
-        
-        private int vALORACIONField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string COMENTARIO {
-            get {
-                return this.cOMENTARIOField;
-            }
-            set {
-                this.cOMENTARIOField = value;
-                this.RaisePropertyChanged("COMENTARIO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string FECHA_RESPUESTA {
-            get {
-                return this.fECHA_RESPUESTAField;
-            }
-            set {
-                this.fECHA_RESPUESTAField = value;
-                this.RaisePropertyChanged("FECHA_RESPUESTA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int ID_ENCUESTA {
-            get {
-                return this.iD_ENCUESTAField;
-            }
-            set {
-                this.iD_ENCUESTAField = value;
-                this.RaisePropertyChanged("ID_ENCUESTA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int ID_TIPO_ENCUESTA {
-            get {
-                return this.iD_TIPO_ENCUESTAField;
-            }
-            set {
-                this.iD_TIPO_ENCUESTAField = value;
-                this.RaisePropertyChanged("ID_TIPO_ENCUESTA");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string IMG_USU {
-            get {
-                return this.iMG_USUField;
-            }
-            set {
-                this.iMG_USUField = value;
-                this.RaisePropertyChanged("IMG_USU");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int RUT {
-            get {
-                return this.rUTField;
-            }
-            set {
-                this.rUTField = value;
-                this.RaisePropertyChanged("RUT");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int VALORACION {
-            get {
-                return this.vALORACIONField;
-            }
-            set {
-                this.vALORACIONField = value;
-                this.RaisePropertyChanged("VALORACION");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class tipoEvento : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string dES_EVENTOField;
-        
-        private int iD_TIPO_EVENTOField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string DES_EVENTO {
-            get {
-                return this.dES_EVENTOField;
-            }
-            set {
-                this.dES_EVENTOField = value;
-                this.RaisePropertyChanged("DES_EVENTO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int ID_TIPO_EVENTO {
-            get {
-                return this.iD_TIPO_EVENTOField;
-            }
-            set {
-                this.iD_TIPO_EVENTOField = value;
-                this.RaisePropertyChanged("ID_TIPO_EVENTO");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
-    public partial class tipoUsuario : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int id_tipo_usuField;
-        
-        private string nombre_tipo_usuField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id_tipo_usu {
-            get {
-                return this.id_tipo_usuField;
-            }
-            set {
-                this.id_tipo_usuField = value;
-                this.RaisePropertyChanged("id_tipo_usu");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre_tipo_usu {
-            get {
-                return this.nombre_tipo_usuField;
-            }
-            set {
-                this.nombre_tipo_usuField = value;
-                this.RaisePropertyChanged("nombre_tipo_usu");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
     public partial class participacion : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string fecha_horaField;
@@ -3760,6 +3815,52 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class tipoUsuario : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int id_tipo_usuField;
+        
+        private string nombre_tipo_usuField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id_tipo_usu {
+            get {
+                return this.id_tipo_usuField;
+            }
+            set {
+                this.id_tipo_usuField = value;
+                this.RaisePropertyChanged("id_tipo_usu");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre_tipo_usu {
+            get {
+                return this.nombre_tipo_usuField;
+            }
+            set {
+                this.nombre_tipo_usuField = value;
+                this.RaisePropertyChanged("nombre_tipo_usu");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
     public partial class tipoSolicitud : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int iD_TIPO_SOLField;
@@ -3800,6 +3901,52 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws/")]
+    public partial class tipoEvento : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dES_EVENTOField;
+        
+        private int iD_TIPO_EVENTOField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string DES_EVENTO {
+            get {
+                return this.dES_EVENTOField;
+            }
+            set {
+                this.dES_EVENTOField = value;
+                this.RaisePropertyChanged("DES_EVENTO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int ID_TIPO_EVENTO {
+            get {
+                return this.iD_TIPO_EVENTOField;
+            }
+            set {
+                this.iD_TIPO_EVENTOField = value;
+                this.RaisePropertyChanged("ID_TIPO_EVENTO");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3824,34 +3971,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         public ListaTipoEncuestaResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoEncuesta[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaTipoSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaTipoSolicitudRequest {
-        
-        public ListaTipoSolicitudRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaTipoSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaTipoSolicitudResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.tipoSolicitud[] @return;
-        
-        public ListaTipoSolicitudResponse() {
-        }
-        
-        public ListaTipoSolicitudResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoSolicitud[] @return) {
             this.@return = @return;
         }
     }
@@ -3908,6 +4027,90 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         public AgregarAsistenciaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoTipoEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoTipoEventoRequest {
+        
+        public ListadoTipoEventoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoTipoEventoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoTipoEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.tipoEvento[] @return;
+        
+        public ListadoTipoEventoResponse() {
+        }
+        
+        public ListadoTipoEventoResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoEvento[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaTipoSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaTipoSolicitudRequest {
+        
+        public ListaTipoSolicitudRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaTipoSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaTipoSolicitudResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.tipoSolicitud[] @return;
+        
+        public ListaTipoSolicitudResponse() {
+        }
+        
+        public ListaTipoSolicitudResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoSolicitud[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTipoUsuarios", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListarTipoUsuariosRequest {
+        
+        public ListarTipoUsuariosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTipoUsuariosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListarTipoUsuariosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.tipoUsuario[] @return;
+        
+        public ListarTipoUsuariosResponse() {
+        }
+        
+        public ListarTipoUsuariosResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoUsuario[] @return) {
             this.@return = @return;
         }
     }
@@ -3979,101 +4182,132 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTipoUsuarios", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListarTipoUsuariosRequest {
-        
-        public ListarTipoUsuariosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTipoUsuariosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListarTipoUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.tipoUsuario[] @return;
-        
-        public ListarTipoUsuariosResponse() {
-        }
-        
-        public ListarTipoUsuariosResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoUsuario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoTipoEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoTipoEventoRequest {
-        
-        public ListadoTipoEventoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoTipoEventoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoTipoEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.tipoEvento[] @return;
-        
-        public ListadoTipoEventoResponse() {
-        }
-        
-        public ListadoTipoEventoResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoEvento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgreSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgreSolicitudRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ELMaterialAp", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ELMaterialApRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_sol;
+        public int p_id;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_tipo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        public AgreSolicitudRequest() {
+        public ELMaterialApRequest() {
         }
         
-        public AgreSolicitudRequest(string p_sol, int p_tipo, int p_rut) {
-            this.p_sol = p_sol;
-            this.p_tipo = p_tipo;
-            this.p_rut = p_rut;
+        public ELMaterialApRequest(int p_id) {
+            this.p_id = p_id;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgreSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgreSolicitudResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ELMaterialApResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ELMaterialApResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public AgreSolicitudResponse() {
+        public ELMaterialApResponse() {
         }
         
-        public AgreSolicitudResponse(int @return) {
+        public ELMaterialApResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgMaterialAp", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgMaterialApRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_titulo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_contenido;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id_clase;
+        
+        public AgMaterialApRequest() {
+        }
+        
+        public AgMaterialApRequest(string p_titulo, string p_contenido, int p_id_clase) {
+            this.p_titulo = p_titulo;
+            this.p_contenido = p_contenido;
+            this.p_id_clase = p_id_clase;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgMaterialApResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgMaterialApResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgMaterialApResponse() {
+        }
+        
+        public AgMaterialApResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModMaterialAp", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModMaterialApRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_titulo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_contenido;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id_clase;
+        
+        public ModMaterialApRequest() {
+        }
+        
+        public ModMaterialApRequest(int p_id, string p_titulo, string p_contenido, int p_id_clase) {
+            this.p_id = p_id;
+            this.p_titulo = p_titulo;
+            this.p_contenido = p_contenido;
+            this.p_id_clase = p_id_clase;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModMaterialApResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModMaterialApResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModMaterialApResponse() {
+        }
+        
+        public ModMaterialApResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -4135,6 +4369,126 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         public ModComentarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgreSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgreSolicitudRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_sol;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_tipo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public AgreSolicitudRequest() {
+        }
+        
+        public AgreSolicitudRequest(string p_sol, int p_tipo, int p_rut) {
+            this.p_sol = p_sol;
+            this.p_tipo = p_tipo;
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgreSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgreSolicitudResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgreSolicitudResponse() {
+        }
+        
+        public AgreSolicitudResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaSolicitudRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_tipo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_estado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_rut;
+        
+        public ListaSolicitudRequest() {
+        }
+        
+        public ListaSolicitudRequest(string p_id_tipo, string p_estado, string p_rut) {
+            this.p_id_tipo = p_id_tipo;
+            this.p_estado = p_estado;
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaSolicitudResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.solicitud[] @return;
+        
+        public ListaSolicitudResponse() {
+        }
+        
+        public ListaSolicitudResponse(WebValdiviaDojo.WS_ValdiviaDojo.solicitud[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaEstado", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaEstadoRequest {
+        
+        public ListaEstadoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaEstadoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaEstadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.estado[] @return;
+        
+        public ListaEstadoResponse() {
+        }
+        
+        public ListaEstadoResponse(WebValdiviaDojo.WS_ValdiviaDojo.estado[] @return) {
             this.@return = @return;
         }
     }
@@ -4234,6 +4588,175 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModObservacion", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModObservacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_observacion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id_asistencia;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public ModObservacionRequest() {
+        }
+        
+        public ModObservacionRequest(string p_observacion, int p_id_asistencia, int p_rut) {
+            this.p_observacion = p_observacion;
+            this.p_id_asistencia = p_id_asistencia;
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModObservacionResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModObservacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModObservacionResponse() {
+        }
+        
+        public ModObservacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Login", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class LoginRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string pass;
+        
+        public LoginRequest() {
+        }
+        
+        public LoginRequest(string correo, string pass) {
+            this.correo = correo;
+            this.pass = pass;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class LoginResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.usuario[] @return;
+        
+        public LoginResponse() {
+        }
+        
+        public LoginResponse(WebValdiviaDojo.WS_ValdiviaDojo.usuario[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModCredencial", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModCredencialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_cor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_con;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public ModCredencialRequest() {
+        }
+        
+        public ModCredencialRequest(string p_cor, string p_con, int p_rut) {
+            this.p_cor = p_cor;
+            this.p_con = p_con;
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModCredencialResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModCredencialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModCredencialResponse() {
+        }
+        
+        public ModCredencialResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliComentario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliComentarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        public EliComentarioRequest() {
+        }
+        
+        public EliComentarioRequest(int p_id) {
+            this.p_id = p_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliComentarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliComentarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliComentarioResponse() {
+        }
+        
+        public EliComentarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ModSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class ModSolicitudRequest {
         
@@ -4324,589 +4847,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         public EliSolicitudResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaSolicitudRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_tipo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_estado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_rut;
-        
-        public ListaSolicitudRequest() {
-        }
-        
-        public ListaSolicitudRequest(string p_id_tipo, string p_estado, string p_rut) {
-            this.p_id_tipo = p_id_tipo;
-            this.p_estado = p_estado;
-            this.p_rut = p_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaSolicitudResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.solicitud[] @return;
-        
-        public ListaSolicitudResponse() {
-        }
-        
-        public ListaSolicitudResponse(WebValdiviaDojo.WS_ValdiviaDojo.solicitud[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaEstado", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaEstadoRequest {
-        
-        public ListaEstadoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaEstadoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaEstadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.estado[] @return;
-        
-        public ListaEstadoResponse() {
-        }
-        
-        public ListaEstadoResponse(WebValdiviaDojo.WS_ValdiviaDojo.estado[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliComentario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliComentarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
-        
-        public EliComentarioRequest() {
-        }
-        
-        public EliComentarioRequest(int p_id) {
-            this.p_id = p_id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliComentarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliComentarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public EliComentarioResponse() {
-        }
-        
-        public EliComentarioResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoEve", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModTipoEveRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nom;
-        
-        public ModTipoEveRequest() {
-        }
-        
-        public ModTipoEveRequest(int p_id, string p_nom) {
-            this.p_id = p_id;
-            this.p_nom = p_nom;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoEveResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModTipoEveResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public ModTipoEveResponse() {
-        }
-        
-        public ModTipoEveResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoObser", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoObserRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_fecha;
-        
-        public ListadoObserRequest() {
-        }
-        
-        public ListadoObserRequest(string p_rut, string p_fecha) {
-            this.p_rut = p_rut;
-            this.p_fecha = p_fecha;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoObserResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoObserResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.observacion[] @return;
-        
-        public ListadoObserResponse() {
-        }
-        
-        public ListadoObserResponse(WebValdiviaDojo.WS_ValdiviaDojo.observacion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaTipoProd", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaTipoProdRequest {
-        
-        public ListaTipoProdRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaTipoProdResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaTipoProdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.tipoProducto[] @return;
-        
-        public ListaTipoProdResponse() {
-        }
-        
-        public ListaTipoProdResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoProducto[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMensualidad", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaMensualidadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_estado;
-        
-        public ListaMensualidadRequest() {
-        }
-        
-        public ListaMensualidadRequest(string p_rut, string p_id_estado) {
-            this.p_rut = p_rut;
-            this.p_id_estado = p_id_estado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMensualidadResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaMensualidadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.mensualidad[] @return;
-        
-        public ListaMensualidadResponse() {
-        }
-        
-        public ListaMensualidadResponse(WebValdiviaDojo.WS_ValdiviaDojo.mensualidad[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgOrdenCompra", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgOrdenCompraRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        public AgOrdenCompraRequest() {
-        }
-        
-        public AgOrdenCompraRequest(int p_rut) {
-            this.p_rut = p_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgOrdenCompraResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgOrdenCompraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgOrdenCompraResponse() {
-        }
-        
-        public AgOrdenCompraResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Login", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class LoginRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string pass;
-        
-        public LoginRequest() {
-        }
-        
-        public LoginRequest(string correo, string pass) {
-            this.correo = correo;
-            this.pass = pass;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class LoginResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.usuario[] @return;
-        
-        public LoginResponse() {
-        }
-        
-        public LoginResponse(WebValdiviaDojo.WS_ValdiviaDojo.usuario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModObservacion", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModObservacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_observacion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id_asistencia;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        public ModObservacionRequest() {
-        }
-        
-        public ModObservacionRequest(string p_observacion, int p_id_asistencia, int p_rut) {
-            this.p_observacion = p_observacion;
-            this.p_id_asistencia = p_id_asistencia;
-            this.p_rut = p_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModObservacionResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModObservacionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public ModObservacionResponse() {
-        }
-        
-        public ModObservacionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModDescuento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModDescuentoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_fecha_inicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_fecha_fin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_valor_desc;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_porc_desc;
-        
-        public ModDescuentoRequest() {
-        }
-        
-        public ModDescuentoRequest(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
-            this.p_id = p_id;
-            this.p_fecha_inicio = p_fecha_inicio;
-            this.p_fecha_fin = p_fecha_fin;
-            this.p_valor_desc = p_valor_desc;
-            this.p_porc_desc = p_porc_desc;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModDescuentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModDescuentoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public ModDescuentoResponse() {
-        }
-        
-        public ModDescuentoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaOrdenCompra", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaOrdenCompraRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_estado;
-        
-        public ListaOrdenCompraRequest() {
-        }
-        
-        public ListaOrdenCompraRequest(string p_rut, string p_id_estado) {
-            this.p_rut = p_rut;
-            this.p_id_estado = p_id_estado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaOrdenCompraResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaOrdenCompraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.ordenCompra[] @return;
-        
-        public ListaOrdenCompraResponse() {
-        }
-        
-        public ListaOrdenCompraResponse(WebValdiviaDojo.WS_ValdiviaDojo.ordenCompra[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgPago", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgPagoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_metodo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_pagado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_matricula;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_mensualidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nro_compra;
-        
-        public AgPagoRequest() {
-        }
-        
-        public AgPagoRequest(string p_metodo, string p_pagado, string p_id_matricula, string p_id_mensualidad, string p_nro_compra) {
-            this.p_metodo = p_metodo;
-            this.p_pagado = p_pagado;
-            this.p_id_matricula = p_id_matricula;
-            this.p_id_mensualidad = p_id_mensualidad;
-            this.p_nro_compra = p_nro_compra;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgPagoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgPagoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgPagoResponse() {
-        }
-        
-        public AgPagoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaBoleta", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaBoletaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_matricula;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_mensualidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_compra;
-        
-        public ListaBoletaRequest() {
-        }
-        
-        public ListaBoletaRequest(string p_id_matricula, string p_id_mensualidad, string p_id_compra) {
-            this.p_id_matricula = p_id_matricula;
-            this.p_id_mensualidad = p_id_mensualidad;
-            this.p_id_compra = p_id_compra;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaBoletaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaBoletaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.boleta[] @return;
-        
-        public ListaBoletaResponse() {
-        }
-        
-        public ListaBoletaResponse(WebValdiviaDojo.WS_ValdiviaDojo.boleta[] @return) {
             this.@return = @return;
         }
     }
@@ -5036,8 +4976,172 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModClaseNivel", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModClaseNivelRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoObser", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoObserRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_fecha;
+        
+        public ListadoObserRequest() {
+        }
+        
+        public ListadoObserRequest(string p_rut, string p_fecha) {
+            this.p_rut = p_rut;
+            this.p_fecha = p_fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoObserResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoObserResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.observacion[] @return;
+        
+        public ListadoObserResponse() {
+        }
+        
+        public ListadoObserResponse(WebValdiviaDojo.WS_ValdiviaDojo.observacion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgDetalleCom", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgDetalleComRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_prod;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_cantidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public AgDetalleComRequest() {
+        }
+        
+        public AgDetalleComRequest(int p_prod, int p_cantidad, int p_rut) {
+            this.p_prod = p_prod;
+            this.p_cantidad = p_cantidad;
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgDetalleComResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgDetalleComResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgDetalleComResponse() {
+        }
+        
+        public AgDetalleComResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaOrdenCompra", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaOrdenCompraRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_estado;
+        
+        public ListaOrdenCompraRequest() {
+        }
+        
+        public ListaOrdenCompraRequest(string p_rut, string p_id_estado) {
+            this.p_rut = p_rut;
+            this.p_id_estado = p_id_estado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaOrdenCompraResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaOrdenCompraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.ordenCompra[] @return;
+        
+        public ListaOrdenCompraResponse() {
+        }
+        
+        public ListaOrdenCompraResponse(WebValdiviaDojo.WS_ValdiviaDojo.ordenCompra[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaReferido", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaReferidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_rut;
+        
+        public ListaReferidoRequest() {
+        }
+        
+        public ListaReferidoRequest(string p_rut) {
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaReferidoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaReferidoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.referido[] @return;
+        
+        public ListaReferidoResponse() {
+        }
+        
+        public ListaReferidoResponse(WebValdiviaDojo.WS_ValdiviaDojo.referido[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModDescuento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModDescuentoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -5045,31 +5149,230 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nombre;
+        public string p_fecha_inicio;
         
-        public ModClaseNivelRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_fecha_fin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_valor_desc;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_porc_desc;
+        
+        public ModDescuentoRequest() {
         }
         
-        public ModClaseNivelRequest(int p_id, string p_nombre) {
+        public ModDescuentoRequest(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
             this.p_id = p_id;
-            this.p_nombre = p_nombre;
+            this.p_fecha_inicio = p_fecha_inicio;
+            this.p_fecha_fin = p_fecha_fin;
+            this.p_valor_desc = p_valor_desc;
+            this.p_porc_desc = p_porc_desc;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModClaseNivelResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModClaseNivelResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModDescuentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModDescuentoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public ModClaseNivelResponse() {
+        public ModDescuentoResponse() {
         }
         
-        public ModClaseNivelResponse(int @return) {
+        public ModDescuentoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoEve", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModTipoEveRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nom;
+        
+        public ModTipoEveRequest() {
+        }
+        
+        public ModTipoEveRequest(int p_id, string p_nom) {
+            this.p_id = p_id;
+            this.p_nom = p_nom;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoEveResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModTipoEveResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModTipoEveResponse() {
+        }
+        
+        public ModTipoEveResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nom;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_des;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_pre_nor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_strock;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_tipo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_desc;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_talla;
+        
+        public ModProductoRequest() {
+        }
+        
+        public ModProductoRequest(int p_id, string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
+            this.p_id = p_id;
+            this.p_nom = p_nom;
+            this.p_des = p_des;
+            this.p_pre_nor = p_pre_nor;
+            this.p_strock = p_strock;
+            this.p_id_tipo = p_id_tipo;
+            this.p_id_desc = p_id_desc;
+            this.p_talla = p_talla;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModProductoResponse() {
+        }
+        
+        public ModProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        public EliProductoRequest() {
+        }
+        
+        public EliProductoRequest(int p_id) {
+            this.p_id = p_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliProductoResponse() {
+        }
+        
+        public EliProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoCarrito", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoCarritoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public ListadoCarritoRequest() {
+        }
+        
+        public ListadoCarritoRequest(int p_rut) {
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoCarritoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoCarritoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.carrito[] @return;
+        
+        public ListadoCarritoResponse() {
+        }
+        
+        public ListadoCarritoResponse(WebValdiviaDojo.WS_ValdiviaDojo.carrito[] @return) {
             this.@return = @return;
         }
     }
@@ -5116,6 +5419,249 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         public ModCinturonResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdGen", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoProdGenRequest {
+        
+        public ListadoProdGenRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdGenResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoProdGenResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.prodGeneral[] @return;
+        
+        public ListadoProdGenResponse() {
+        }
+        
+        public ListadoProdGenResponse(WebValdiviaDojo.WS_ValdiviaDojo.prodGeneral[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgOrdenCompra", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgOrdenCompraRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public AgOrdenCompraRequest() {
+        }
+        
+        public AgOrdenCompraRequest(int p_rut) {
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgOrdenCompraResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgOrdenCompraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgOrdenCompraResponse() {
+        }
+        
+        public AgOrdenCompraResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdEspe", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoProdEspeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nombre;
+        
+        public ListadoProdEspeRequest() {
+        }
+        
+        public ListadoProdEspeRequest(string p_nombre) {
+            this.p_nombre = p_nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdEspeResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoProdEspeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.prodEspe[] @return;
+        
+        public ListadoProdEspeResponse() {
+        }
+        
+        public ListadoProdEspeResponse(WebValdiviaDojo.WS_ValdiviaDojo.prodEspe[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMensualidad", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaMensualidadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_estado;
+        
+        public ListaMensualidadRequest() {
+        }
+        
+        public ListaMensualidadRequest(string p_rut, string p_id_estado) {
+            this.p_rut = p_rut;
+            this.p_id_estado = p_id_estado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMensualidadResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaMensualidadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.mensualidad[] @return;
+        
+        public ListaMensualidadResponse() {
+        }
+        
+        public ListaMensualidadResponse(WebValdiviaDojo.WS_ValdiviaDojo.mensualidad[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoTalla", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoTallaRequest {
+        
+        public ListadoTallaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoTallaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoTallaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.talla[] @return;
+        
+        public ListadoTallaResponse() {
+        }
+        
+        public ListadoTallaResponse(WebValdiviaDojo.WS_ValdiviaDojo.talla[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaBoleta", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaBoletaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_matricula;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_mensualidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_compra;
+        
+        public ListaBoletaRequest() {
+        }
+        
+        public ListaBoletaRequest(string p_id_matricula, string p_id_mensualidad, string p_id_compra) {
+            this.p_id_matricula = p_id_matricula;
+            this.p_id_mensualidad = p_id_mensualidad;
+            this.p_id_compra = p_id_compra;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaBoletaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaBoletaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.boleta[] @return;
+        
+        public ListaBoletaResponse() {
+        }
+        
+        public ListaBoletaResponse(WebValdiviaDojo.WS_ValdiviaDojo.boleta[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaTipoProd", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaTipoProdRequest {
+        
+        public ListaTipoProdRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaTipoProdResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaTipoProdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.tipoProducto[] @return;
+        
+        public ListaTipoProdResponse() {
+        }
+        
+        public ListaTipoProdResponse(WebValdiviaDojo.WS_ValdiviaDojo.tipoProducto[] @return) {
             this.@return = @return;
         }
     }
@@ -5179,63 +5725,55 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliAsistencia", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliAsistenciaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgPago", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgPagoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
+        public string p_metodo;
         
-        public EliAsistenciaRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_pagado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_matricula;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_mensualidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nro_compra;
+        
+        public AgPagoRequest() {
         }
         
-        public EliAsistenciaRequest(int p_id) {
-            this.p_id = p_id;
+        public AgPagoRequest(string p_metodo, string p_pagado, string p_id_matricula, string p_id_mensualidad, string p_nro_compra) {
+            this.p_metodo = p_metodo;
+            this.p_pagado = p_pagado;
+            this.p_id_matricula = p_id_matricula;
+            this.p_id_mensualidad = p_id_mensualidad;
+            this.p_nro_compra = p_nro_compra;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliAsistenciaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliAsistenciaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgPagoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgPagoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public EliAsistenciaResponse() {
+        public AgPagoResponse() {
         }
         
-        public EliAsistenciaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMetodoPago", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaMetodoPagoRequest {
-        
-        public ListaMetodoPagoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMetodoPagoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaMetodoPagoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.metodoPago[] @return;
-        
-        public ListaMetodoPagoResponse() {
-        }
-        
-        public ListaMetodoPagoResponse(WebValdiviaDojo.WS_ValdiviaDojo.metodoPago[] @return) {
+        public AgPagoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5284,27 +5822,372 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoTalla", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoTallaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMetodoPago", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaMetodoPagoRequest {
         
-        public ListadoTallaRequest() {
+        public ListaMetodoPagoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoTallaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoTallaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMetodoPagoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaMetodoPagoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.talla[] @return;
+        public WebValdiviaDojo.WS_ValdiviaDojo.metodoPago[] @return;
         
-        public ListadoTallaResponse() {
+        public ListaMetodoPagoResponse() {
         }
         
-        public ListadoTallaResponse(WebValdiviaDojo.WS_ValdiviaDojo.talla[] @return) {
+        public ListaMetodoPagoResponse(WebValdiviaDojo.WS_ValdiviaDojo.metodoPago[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliAsistencia", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliAsistenciaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        public EliAsistenciaRequest() {
+        }
+        
+        public EliAsistenciaRequest(int p_id) {
+            this.p_id = p_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliAsistenciaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliAsistenciaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliAsistenciaResponse() {
+        }
+        
+        public EliAsistenciaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModClaseNivel", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModClaseNivelRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nombre;
+        
+        public ModClaseNivelRequest() {
+        }
+        
+        public ModClaseNivelRequest(int p_id, string p_nombre) {
+            this.p_id = p_id;
+            this.p_nombre = p_nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModClaseNivelResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModClaseNivelResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModClaseNivelResponse() {
+        }
+        
+        public ModClaseNivelResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nom;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_des;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_pre_nor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_strock;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_tipo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_desc;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_talla;
+        
+        public AgProductoRequest() {
+        }
+        
+        public AgProductoRequest(string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
+            this.p_nom = p_nom;
+            this.p_des = p_des;
+            this.p_pre_nor = p_pre_nor;
+            this.p_strock = p_strock;
+            this.p_id_tipo = p_id_tipo;
+            this.p_id_desc = p_id_desc;
+            this.p_talla = p_talla;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgProductoResponse() {
+        }
+        
+        public AgProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgreDescuento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgreDescuentoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_fecha_inicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_fecha_fin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_valor_desc;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_porc_desc;
+        
+        public AgreDescuentoRequest() {
+        }
+        
+        public AgreDescuentoRequest(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
+            this.p_fecha_inicio = p_fecha_inicio;
+            this.p_fecha_fin = p_fecha_fin;
+            this.p_valor_desc = p_valor_desc;
+            this.p_porc_desc = p_porc_desc;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgreDescuentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgreDescuentoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgreDescuentoResponse() {
+        }
+        
+        public AgreDescuentoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModParticipacion", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModParticipacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id_evento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_logro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public ModParticipacionRequest() {
+        }
+        
+        public ModParticipacionRequest(int p_id_evento, string p_logro, int p_rut) {
+            this.p_id_evento = p_id_evento;
+            this.p_logro = p_logro;
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModParticipacionResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModParticipacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModParticipacionResponse() {
+        }
+        
+        public ModParticipacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoEventoRequest {
+        
+        public ListadoEventoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoEventoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.evento[] @return;
+        
+        public ListadoEventoResponse() {
+        }
+        
+        public ListadoEventoResponse(WebValdiviaDojo.WS_ValdiviaDojo.evento[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMatricula", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaMatriculaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_estado;
+        
+        public ListaMatriculaRequest() {
+        }
+        
+        public ListaMatriculaRequest(string p_rut, string p_id_estado) {
+            this.p_rut = p_rut;
+            this.p_id_estado = p_id_estado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMatriculaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaMatriculaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.matricula[] @return;
+        
+        public ListaMatriculaResponse() {
+        }
+        
+        public ListaMatriculaResponse(WebValdiviaDojo.WS_ValdiviaDojo.matricula[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliDescuento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliDescuentoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        public EliDescuentoRequest() {
+        }
+        
+        public EliDescuentoRequest(int p_id) {
+            this.p_id = p_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliDescuentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliDescuentoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliDescuentoResponse() {
+        }
+        
+        public EliDescuentoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5348,40 +6231,184 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoHorario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoHorarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarCinturon", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListarCinturonRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_clase;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nivel;
-        
-        public ListadoHorarioRequest() {
-        }
-        
-        public ListadoHorarioRequest(string p_clase, string p_nivel) {
-            this.p_clase = p_clase;
-            this.p_nivel = p_nivel;
+        public ListarCinturonRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoHorarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoHorarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarCinturonResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListarCinturonResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.horario[] @return;
+        public WebValdiviaDojo.WS_ValdiviaDojo.cinturon[] @return;
         
-        public ListadoHorarioResponse() {
+        public ListarCinturonResponse() {
         }
         
-        public ListadoHorarioResponse(WebValdiviaDojo.WS_ValdiviaDojo.horario[] @return) {
+        public ListarCinturonResponse(WebValdiviaDojo.WS_ValdiviaDojo.cinturon[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModUsuario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nom;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string s_nom;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string a_pat;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string a_mat;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string f_nac;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cel;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cel_em;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dire;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string peso;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string alt;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int genero;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int t_usu;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int cint;
+        
+        public ModUsuarioRequest() {
+        }
+        
+        public ModUsuarioRequest(int rut, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, int genero, int t_usu, int cint) {
+            this.rut = rut;
+            this.p_nom = p_nom;
+            this.s_nom = s_nom;
+            this.a_pat = a_pat;
+            this.a_mat = a_mat;
+            this.f_nac = f_nac;
+            this.cel = cel;
+            this.cel_em = cel_em;
+            this.dire = dire;
+            this.peso = peso;
+            this.alt = alt;
+            this.genero = genero;
+            this.t_usu = t_usu;
+            this.cint = cint;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModUsuarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModUsuarioResponse() {
+        }
+        
+        public ModUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgHorario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgHorarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_dia_semana;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_hora_inicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_hora_fin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id_clase;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id_nivel;
+        
+        public AgHorarioRequest() {
+        }
+        
+        public AgHorarioRequest(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel) {
+            this.p_dia_semana = p_dia_semana;
+            this.p_hora_inicio = p_hora_inicio;
+            this.p_hora_fin = p_hora_fin;
+            this.p_id_clase = p_id_clase;
+            this.p_id_nivel = p_id_nivel;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgHorarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgHorarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgHorarioResponse() {
+        }
+        
+        public AgHorarioResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5522,438 +6549,27 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgProductoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarUsuarios", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListarUsuariosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nom;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_des;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_pre_nor;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_strock;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_tipo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_desc;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_talla;
-        
-        public AgProductoRequest() {
-        }
-        
-        public AgProductoRequest(string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
-            this.p_nom = p_nom;
-            this.p_des = p_des;
-            this.p_pre_nor = p_pre_nor;
-            this.p_strock = p_strock;
-            this.p_id_tipo = p_id_tipo;
-            this.p_id_desc = p_id_desc;
-            this.p_talla = p_talla;
+        public ListarUsuariosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgProductoResponse() {
-        }
-        
-        public AgProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgHorario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgHorarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_dia_semana;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_hora_inicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_hora_fin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id_clase;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id_nivel;
-        
-        public AgHorarioRequest() {
-        }
-        
-        public AgHorarioRequest(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel) {
-            this.p_dia_semana = p_dia_semana;
-            this.p_hora_inicio = p_hora_inicio;
-            this.p_hora_fin = p_hora_fin;
-            this.p_id_clase = p_id_clase;
-            this.p_id_nivel = p_id_nivel;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgHorarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgHorarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgHorarioResponse() {
-        }
-        
-        public AgHorarioResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nom;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_des;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_pre_nor;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_strock;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_tipo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_desc;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_talla;
-        
-        public ModProductoRequest() {
-        }
-        
-        public ModProductoRequest(int p_id, string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
-            this.p_id = p_id;
-            this.p_nom = p_nom;
-            this.p_des = p_des;
-            this.p_pre_nor = p_pre_nor;
-            this.p_strock = p_strock;
-            this.p_id_tipo = p_id_tipo;
-            this.p_id_desc = p_id_desc;
-            this.p_talla = p_talla;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public ModProductoResponse() {
-        }
-        
-        public ModProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoCarrito", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoCarritoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        public ListadoCarritoRequest() {
-        }
-        
-        public ListadoCarritoRequest(int p_rut) {
-            this.p_rut = p_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoCarritoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoCarritoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarUsuariosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListarUsuariosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.carrito[] @return;
+        public WebValdiviaDojo.WS_ValdiviaDojo.usuario[] @return;
         
-        public ListadoCarritoResponse() {
+        public ListarUsuariosResponse() {
         }
         
-        public ListadoCarritoResponse(WebValdiviaDojo.WS_ValdiviaDojo.carrito[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaReferido", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaReferidoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_rut;
-        
-        public ListaReferidoRequest() {
-        }
-        
-        public ListaReferidoRequest(string p_rut) {
-            this.p_rut = p_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaReferidoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaReferidoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.referido[] @return;
-        
-        public ListaReferidoResponse() {
-        }
-        
-        public ListaReferidoResponse(WebValdiviaDojo.WS_ValdiviaDojo.referido[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdEspe", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoProdEspeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nombre;
-        
-        public ListadoProdEspeRequest() {
-        }
-        
-        public ListadoProdEspeRequest(string p_nombre) {
-            this.p_nombre = p_nombre;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdEspeResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoProdEspeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.prodEspe[] @return;
-        
-        public ListadoProdEspeResponse() {
-        }
-        
-        public ListadoProdEspeResponse(WebValdiviaDojo.WS_ValdiviaDojo.prodEspe[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgDetalleCom", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgDetalleComRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_prod;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_cantidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        public AgDetalleComRequest() {
-        }
-        
-        public AgDetalleComRequest(int p_prod, int p_cantidad, int p_rut) {
-            this.p_prod = p_prod;
-            this.p_cantidad = p_cantidad;
-            this.p_rut = p_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgDetalleComResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgDetalleComResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgDetalleComResponse() {
-        }
-        
-        public AgDetalleComResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdGen", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoProdGenRequest {
-        
-        public ListadoProdGenRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoProdGenResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoProdGenResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.prodGeneral[] @return;
-        
-        public ListadoProdGenResponse() {
-        }
-        
-        public ListadoProdGenResponse(WebValdiviaDojo.WS_ValdiviaDojo.prodGeneral[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoGenero", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoGeneroRequest {
-        
-        public ListadoGeneroRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoGeneroResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoGeneroResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.genero[] @return;
-        
-        public ListadoGeneroResponse() {
-        }
-        
-        public ListadoGeneroResponse(WebValdiviaDojo.WS_ValdiviaDojo.genero[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
-        
-        public EliProductoRequest() {
-        }
-        
-        public EliProductoRequest(int p_id) {
-            this.p_id = p_id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public EliProductoResponse() {
-        }
-        
-        public EliProductoResponse(int @return) {
+        public ListarUsuariosResponse(WebValdiviaDojo.WS_ValdiviaDojo.usuario[] @return) {
             this.@return = @return;
         }
     }
@@ -5989,35 +6605,137 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoEncuesta", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoEncuestaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoGenero", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoGeneroRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nom;
-        
-        public AgTipoEncuestaRequest() {
-        }
-        
-        public AgTipoEncuestaRequest(string p_nom) {
-            this.p_nom = p_nom;
+        public ListadoGeneroRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoEncuestaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoEncuestaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoGeneroResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoGeneroResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.genero[] @return;
+        
+        public ListadoGeneroResponse() {
+        }
+        
+        public ListadoGeneroResponse(WebValdiviaDojo.WS_ValdiviaDojo.genero[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        public EliEventoRequest() {
+        }
+        
+        public EliEventoRequest(int p_id) {
+            this.p_id = p_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliEventoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public AgTipoEncuestaResponse() {
+        public EliEventoResponse() {
         }
         
-        public AgTipoEncuestaResponse(int @return) {
+        public EliEventoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgParticipacion", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgParticipacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id_evento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_logro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        public AgParticipacionRequest() {
+        }
+        
+        public AgParticipacionRequest(int p_id_evento, string p_logro, int p_rut) {
+            this.p_id_evento = p_id_evento;
+            this.p_logro = p_logro;
+            this.p_rut = p_rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgParticipacionResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgParticipacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgParticipacionResponse() {
+        }
+        
+        public AgParticipacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoDescuento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoDescuentoRequest {
+        
+        public ListadoDescuentoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoDescuentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoDescuentoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.descuentoProd[] @return;
+        
+        public ListadoDescuentoResponse() {
+        }
+        
+        public ListadoDescuentoResponse(WebValdiviaDojo.WS_ValdiviaDojo.descuentoProd[] @return) {
             this.@return = @return;
         }
     }
@@ -6081,42 +6799,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoEncuesta", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliTipoEncuestaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
-        
-        public EliTipoEncuestaRequest() {
-        }
-        
-        public EliTipoEncuestaRequest(int p_id) {
-            this.p_id = p_id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoEncuestaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliTipoEncuestaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public EliTipoEncuestaResponse() {
-        }
-        
-        public EliTipoEncuestaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="AgEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
     public partial class AgEventoRequest {
         
@@ -6173,68 +6855,40 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoEventoRequest {
-        
-        public ListadoEventoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoEventoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.evento[] @return;
-        
-        public ListadoEventoResponse() {
-        }
-        
-        public ListadoEventoResponse(WebValdiviaDojo.WS_ValdiviaDojo.evento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgCinturon", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgCinturonRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoHorario", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoHorarioRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nombre;
+        public string p_clase;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_color;
+        public string p_nivel;
         
-        public AgCinturonRequest() {
+        public ListadoHorarioRequest() {
         }
         
-        public AgCinturonRequest(string p_nombre, string p_color) {
-            this.p_nombre = p_nombre;
-            this.p_color = p_color;
+        public ListadoHorarioRequest(string p_clase, string p_nivel) {
+            this.p_clase = p_clase;
+            this.p_nivel = p_nivel;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgCinturonResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgCinturonResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoHorarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListadoHorarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.horario[] @return;
         
-        public AgCinturonResponse() {
+        public ListadoHorarioResponse() {
         }
         
-        public AgCinturonResponse(int @return) {
+        public ListadoHorarioResponse(WebValdiviaDojo.WS_ValdiviaDojo.horario[] @return) {
             this.@return = @return;
         }
     }
@@ -6283,100 +6937,35 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModUsuario", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModUsuarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoEve", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliTipoEveRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int rut;
+        public int p_id;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nom;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string s_nom;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string a_pat;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string a_mat;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string f_nac;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cel;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string cel_em;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dire;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string peso;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=10)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string alt;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=11)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int genero;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=12)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int t_usu;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=13)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int cint;
-        
-        public ModUsuarioRequest() {
+        public EliTipoEveRequest() {
         }
         
-        public ModUsuarioRequest(int rut, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, int genero, int t_usu, int cint) {
-            this.rut = rut;
-            this.p_nom = p_nom;
-            this.s_nom = s_nom;
-            this.a_pat = a_pat;
-            this.a_mat = a_mat;
-            this.f_nac = f_nac;
-            this.cel = cel;
-            this.cel_em = cel_em;
-            this.dire = dire;
-            this.peso = peso;
-            this.alt = alt;
-            this.genero = genero;
-            this.t_usu = t_usu;
-            this.cint = cint;
+        public EliTipoEveRequest(int p_id) {
+            this.p_id = p_id;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModUsuarioResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModUsuarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoEveResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliTipoEveResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public ModUsuarioResponse() {
+        public EliTipoEveResponse() {
         }
         
-        public ModUsuarioResponse(int @return) {
+        public EliTipoEveResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6420,404 +7009,17 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoClase", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoClaseRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nombre;
-        
-        public AgTipoClaseRequest() {
-        }
-        
-        public AgTipoClaseRequest(string p_nombre) {
-            this.p_nombre = p_nombre;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoClaseResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoClaseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgTipoClaseResponse() {
-        }
-        
-        public AgTipoClaseResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgClaseNivel", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgClaseNivelRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nombre;
-        
-        public AgClaseNivelRequest() {
-        }
-        
-        public AgClaseNivelRequest(string p_nombre) {
-            this.p_nombre = p_nombre;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgClaseNivelResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgClaseNivelResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgClaseNivelResponse() {
-        }
-        
-        public AgClaseNivelResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoClase", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModTipoClaseRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoSoli", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliTipoSoliRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int p_id;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nombre;
-        
-        public ModTipoClaseRequest() {
+        public EliTipoSoliRequest() {
         }
         
-        public ModTipoClaseRequest(int p_id, string p_nombre) {
-            this.p_id = p_id;
-            this.p_nombre = p_nombre;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoClaseResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModTipoClaseResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public ModTipoClaseResponse() {
-        }
-        
-        public ModTipoClaseResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarCinturon", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListarCinturonRequest {
-        
-        public ListarCinturonRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarCinturonResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListarCinturonResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.cinturon[] @return;
-        
-        public ListarCinturonResponse() {
-        }
-        
-        public ListarCinturonResponse(WebValdiviaDojo.WS_ValdiviaDojo.cinturon[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_des;
-        
-        public AgTipoProductoRequest() {
-        }
-        
-        public AgTipoProductoRequest(string p_des) {
-            this.p_des = p_des;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgTipoProductoResponse() {
-        }
-        
-        public AgTipoProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaAsistencia", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaAsistenciaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_fecha;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_horario;
-        
-        public ListaAsistenciaRequest() {
-        }
-        
-        public ListaAsistenciaRequest(string p_fecha, string p_id_horario) {
-            this.p_fecha = p_fecha;
-            this.p_id_horario = p_id_horario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaAsistenciaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaAsistenciaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.asistencia[] @return;
-        
-        public ListaAsistenciaResponse() {
-        }
-        
-        public ListaAsistenciaResponse(WebValdiviaDojo.WS_ValdiviaDojo.asistencia[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgReferidos", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgReferidosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut_referido;
-        
-        public AgReferidosRequest() {
-        }
-        
-        public AgReferidosRequest(int p_rut, int p_rut_referido) {
-            this.p_rut = p_rut;
-            this.p_rut_referido = p_rut_referido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgReferidosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgReferidosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgReferidosResponse() {
-        }
-        
-        public AgReferidosResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModTipoProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_des;
-        
-        public ModTipoProductoRequest() {
-        }
-        
-        public ModTipoProductoRequest(int p_id, string p_des) {
-            this.p_id = p_id;
-            this.p_des = p_des;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModTipoProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public ModTipoProductoResponse() {
-        }
-        
-        public ModTipoProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModParticipacion", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModParticipacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id_evento;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_logro;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        public ModParticipacionRequest() {
-        }
-        
-        public ModParticipacionRequest(int p_id_evento, string p_logro, int p_rut) {
-            this.p_id_evento = p_id_evento;
-            this.p_logro = p_logro;
-            this.p_rut = p_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModParticipacionResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ModParticipacionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public ModParticipacionResponse() {
-        }
-        
-        public ModParticipacionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMatricula", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaMatriculaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_id_estado;
-        
-        public ListaMatriculaRequest() {
-        }
-        
-        public ListaMatriculaRequest(string p_rut, string p_id_estado) {
-            this.p_rut = p_rut;
-            this.p_id_estado = p_id_estado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMatriculaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListaMatriculaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.matricula[] @return;
-        
-        public ListaMatriculaResponse() {
-        }
-        
-        public ListaMatriculaResponse(WebValdiviaDojo.WS_ValdiviaDojo.matricula[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliClaseNivel", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliClaseNivelRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
-        
-        public EliClaseNivelRequest() {
-        }
-        
-        public EliClaseNivelRequest(int p_id) {
+        public EliTipoSoliRequest(int p_id) {
             this.p_id = p_id;
         }
     }
@@ -6825,94 +7027,17 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliClaseNivelResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliClaseNivelResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoSoliResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliTipoSoliResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public EliClaseNivelResponse() {
+        public EliTipoSoliResponse() {
         }
         
-        public EliClaseNivelResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoEventoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_nom;
-        
-        public AgTipoEventoRequest() {
-        }
-        
-        public AgTipoEventoRequest(string p_nom) {
-            this.p_nom = p_nom;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoEventoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgTipoEventoResponse() {
-        }
-        
-        public AgTipoEventoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliReferidos", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliReferidosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut_referido;
-        
-        public EliReferidosRequest() {
-        }
-        
-        public EliReferidosRequest(int p_rut, int p_rut_referido) {
-            this.p_rut = p_rut;
-            this.p_rut_referido = p_rut_referido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliReferidosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliReferidosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public EliReferidosResponse() {
-        }
-        
-        public EliReferidosResponse(int @return) {
+        public EliTipoSoliResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6961,68 +7086,17 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgreDescuento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgreDescuentoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_fecha_inicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_fecha_fin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_valor_desc;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_porc_desc;
-        
-        public AgreDescuentoRequest() {
-        }
-        
-        public AgreDescuentoRequest(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
-            this.p_fecha_inicio = p_fecha_inicio;
-            this.p_fecha_fin = p_fecha_fin;
-            this.p_valor_desc = p_valor_desc;
-            this.p_porc_desc = p_porc_desc;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgreDescuentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgreDescuentoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgreDescuentoResponse() {
-        }
-        
-        public AgreDescuentoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliCinturon", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliCinturonRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int p_id;
         
-        public EliEventoRequest() {
+        public EliCinturonRequest() {
         }
         
-        public EliEventoRequest(int p_id) {
+        public EliCinturonRequest(int p_id) {
             this.p_id = p_id;
         }
     }
@@ -7030,17 +7104,17 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliEventoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliCinturonResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliCinturonResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public EliEventoResponse() {
+        public EliCinturonResponse() {
         }
         
-        public EliEventoResponse(int @return) {
+        public EliCinturonResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -7048,17 +7122,17 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoEve", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliTipoEveRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoEncuesta", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliTipoEncuestaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int p_id;
         
-        public EliTipoEveRequest() {
+        public EliTipoEncuestaRequest() {
         }
         
-        public EliTipoEveRequest(int p_id) {
+        public EliTipoEncuestaRequest(int p_id) {
             this.p_id = p_id;
         }
     }
@@ -7066,17 +7140,17 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoEveResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliTipoEveResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoEncuestaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliTipoEncuestaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public EliTipoEveResponse() {
+        public EliTipoEncuestaResponse() {
         }
         
-        public EliTipoEveResponse(int @return) {
+        public EliTipoEncuestaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -7084,17 +7158,135 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoSolicitudRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgCinturon", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgCinturonRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string p_nombre;
         
-        public AgTipoSolicitudRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_color;
+        
+        public AgCinturonRequest() {
         }
         
-        public AgTipoSolicitudRequest(string p_nombre) {
+        public AgCinturonRequest(string p_nombre, string p_color) {
+            this.p_nombre = p_nombre;
+            this.p_color = p_color;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgCinturonResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgCinturonResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgCinturonResponse() {
+        }
+        
+        public AgCinturonResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliClaseNivel", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliClaseNivelRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        public EliClaseNivelRequest() {
+        }
+        
+        public EliClaseNivelRequest(int p_id) {
+            this.p_id = p_id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliClaseNivelResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliClaseNivelResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliClaseNivelResponse() {
+        }
+        
+        public EliClaseNivelResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModTipoProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_des;
+        
+        public ModTipoProductoRequest() {
+        }
+        
+        public ModTipoProductoRequest(int p_id, string p_des) {
+            this.p_id = p_id;
+            this.p_des = p_des;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModTipoProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModTipoProductoResponse() {
+        }
+        
+        public ModTipoProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgClaseNivel", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgClaseNivelRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nombre;
+        
+        public AgClaseNivelRequest() {
+        }
+        
+        public AgClaseNivelRequest(string p_nombre) {
             this.p_nombre = p_nombre;
         }
     }
@@ -7102,17 +7294,17 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgTipoSolicitudResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgClaseNivelResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgClaseNivelResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public AgTipoSolicitudResponse() {
+        public AgClaseNivelResponse() {
         }
         
-        public AgTipoSolicitudResponse(int @return) {
+        public AgClaseNivelResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -7120,35 +7312,35 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliDescuento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliDescuentoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoEncuesta", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoEncuestaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
+        public string p_nom;
         
-        public EliDescuentoRequest() {
+        public AgTipoEncuestaRequest() {
         }
         
-        public EliDescuentoRequest(int p_id) {
-            this.p_id = p_id;
+        public AgTipoEncuestaRequest(string p_nom) {
+            this.p_nom = p_nom;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliDescuentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliDescuentoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoEncuestaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoEncuestaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public EliDescuentoResponse() {
+        public AgTipoEncuestaResponse() {
         }
         
-        public EliDescuentoResponse(int @return) {
+        public AgTipoEncuestaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -7156,137 +7348,35 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarUsuarios", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListarUsuariosRequest {
-        
-        public ListarUsuariosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarUsuariosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListarUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.usuario[] @return;
-        
-        public ListarUsuariosResponse() {
-        }
-        
-        public ListarUsuariosResponse(WebValdiviaDojo.WS_ValdiviaDojo.usuario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoDescuento", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoDescuentoRequest {
-        
-        public ListadoDescuentoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListadoDescuentoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class ListadoDescuentoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WebValdiviaDojo.WS_ValdiviaDojo.descuentoProd[] @return;
-        
-        public ListadoDescuentoResponse() {
-        }
-        
-        public ListadoDescuentoResponse(WebValdiviaDojo.WS_ValdiviaDojo.descuentoProd[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoSoli", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliTipoSoliRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoClase", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoClaseRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
+        public string p_nombre;
         
-        public EliTipoSoliRequest() {
+        public AgTipoClaseRequest() {
         }
         
-        public EliTipoSoliRequest(int p_id) {
-            this.p_id = p_id;
+        public AgTipoClaseRequest(string p_nombre) {
+            this.p_nombre = p_nombre;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliTipoSoliResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliTipoSoliResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoClaseResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoClaseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public EliTipoSoliResponse() {
+        public AgTipoClaseResponse() {
         }
         
-        public EliTipoSoliResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgParticipacion", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgParticipacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id_evento;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string p_logro;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_rut;
-        
-        public AgParticipacionRequest() {
-        }
-        
-        public AgParticipacionRequest(int p_id_evento, string p_logro, int p_rut) {
-            this.p_id_evento = p_id_evento;
-            this.p_logro = p_logro;
-            this.p_rut = p_rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="AgParticipacionResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class AgParticipacionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public AgParticipacionResponse() {
-        }
-        
-        public AgParticipacionResponse(int @return) {
+        public AgTipoClaseResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -7330,35 +7420,299 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliCinturon", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliCinturonRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaAsistencia", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaAsistenciaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int p_id;
+        public string p_fecha;
         
-        public EliCinturonRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_id_horario;
+        
+        public ListaAsistenciaRequest() {
         }
         
-        public EliCinturonRequest(int p_id) {
-            this.p_id = p_id;
+        public ListaAsistenciaRequest(string p_fecha, string p_id_horario) {
+            this.p_fecha = p_fecha;
+            this.p_id_horario = p_id_horario;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliCinturonResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
-    public partial class EliCinturonResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaAsistenciaResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaAsistenciaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.asistencia[] @return;
+        
+        public ListaAsistenciaResponse() {
+        }
+        
+        public ListaAsistenciaResponse(WebValdiviaDojo.WS_ValdiviaDojo.asistencia[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoEvento", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nom;
+        
+        public AgTipoEventoRequest() {
+        }
+        
+        public AgTipoEventoRequest(string p_nom) {
+            this.p_nom = p_nom;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoEventoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public EliCinturonResponse() {
+        public AgTipoEventoResponse() {
         }
         
-        public EliCinturonResponse(int @return) {
+        public AgTipoEventoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoProducto", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_des;
+        
+        public AgTipoProductoRequest() {
+        }
+        
+        public AgTipoProductoRequest(string p_des) {
+            this.p_des = p_des;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoProductoResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgTipoProductoResponse() {
+        }
+        
+        public AgTipoProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgReferidos", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgReferidosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut_referido;
+        
+        public AgReferidosRequest() {
+        }
+        
+        public AgReferidosRequest(int p_rut, int p_rut_referido) {
+            this.p_rut = p_rut;
+            this.p_rut_referido = p_rut_referido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgReferidosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgReferidosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgReferidosResponse() {
+        }
+        
+        public AgReferidosResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoSolicitud", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoSolicitudRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nombre;
+        
+        public AgTipoSolicitudRequest() {
+        }
+        
+        public AgTipoSolicitudRequest(string p_nombre) {
+            this.p_nombre = p_nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AgTipoSolicitudResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class AgTipoSolicitudResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public AgTipoSolicitudResponse() {
+        }
+        
+        public AgTipoSolicitudResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliReferidos", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliReferidosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_rut_referido;
+        
+        public EliReferidosRequest() {
+        }
+        
+        public EliReferidosRequest(int p_rut, int p_rut_referido) {
+            this.p_rut = p_rut;
+            this.p_rut_referido = p_rut_referido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliReferidosResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class EliReferidosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliReferidosResponse() {
+        }
+        
+        public EliReferidosResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoClase", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModTipoClaseRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int p_id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string p_nombre;
+        
+        public ModTipoClaseRequest() {
+        }
+        
+        public ModTipoClaseRequest(int p_id, string p_nombre) {
+            this.p_id = p_id;
+            this.p_nombre = p_nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModTipoClaseResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ModTipoClaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModTipoClaseResponse() {
+        }
+        
+        public ModTipoClaseResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMaterialAp", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaMaterialApRequest {
+        
+        public ListaMaterialApRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListaMaterialApResponse", WrapperNamespace="http://ws/", IsWrapped=true)]
+    public partial class ListaMaterialApResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WebValdiviaDojo.WS_ValdiviaDojo.materialAP[] @return;
+        
+        public ListaMaterialApResponse() {
+        }
+        
+        public ListaMaterialApResponse(WebValdiviaDojo.WS_ValdiviaDojo.materialAP[] @return) {
             this.@return = @return;
         }
     }
@@ -7412,27 +7766,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaTipoSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest request) {
-            return base.Channel.ListaTipoSolicitud(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.tipoSolicitud[] ListaTipoSolicitud() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaTipoSolicitud(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest request) {
-            return base.Channel.ListaTipoSolicitudAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse> ListaTipoSolicitudAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaTipoSolicitudAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgregarAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.AgregarAsistenciaRequest request) {
             return base.Channel.AgregarAsistencia(request);
         }
@@ -7461,6 +7794,69 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             inValue.p_rut = p_rut;
             inValue.p_cupos = p_cupos;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgregarAsistenciaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoTipoEvento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest request) {
+            return base.Channel.ListadoTipoEvento(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.tipoEvento[] ListadoTipoEvento() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoTipoEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoTipoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest request) {
+            return base.Channel.ListadoTipoEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse> ListadoTipoEventoAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoTipoEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaTipoSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest request) {
+            return base.Channel.ListaTipoSolicitud(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.tipoSolicitud[] ListaTipoSolicitud() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaTipoSolicitud(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest request) {
+            return base.Channel.ListaTipoSolicitudAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudResponse> ListaTipoSolicitudAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoSolicitudRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaTipoSolicitudAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarTipoUsuarios(WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest request) {
+            return base.Channel.ListarTipoUsuarios(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.tipoUsuario[] ListarTipoUsuarios() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarTipoUsuarios(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarTipoUsuariosAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest request) {
+            return base.Channel.ListarTipoUsuariosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse> ListarTipoUsuariosAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarTipoUsuariosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7508,72 +7904,82 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarTipoUsuarios(WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest request) {
-            return base.Channel.ListarTipoUsuarios(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ELMaterialAp(WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApRequest request) {
+            return base.Channel.ELMaterialAp(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.tipoUsuario[] ListarTipoUsuarios() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarTipoUsuarios(inValue);
+        public int ELMaterialAp(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ELMaterialAp(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarTipoUsuariosAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest request) {
-            return base.Channel.ListarTipoUsuariosAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ELMaterialApAsync(WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApRequest request) {
+            return base.Channel.ELMaterialApAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosResponse> ListarTipoUsuariosAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarTipoUsuariosRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarTipoUsuariosAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApResponse> ELMaterialApAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ELMaterialApRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ELMaterialApAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoTipoEvento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest request) {
-            return base.Channel.ListadoTipoEvento(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgMaterialAp(WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApRequest request) {
+            return base.Channel.AgMaterialAp(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.tipoEvento[] ListadoTipoEvento() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoTipoEvento(inValue);
+        public int AgMaterialAp(string p_titulo, string p_contenido, int p_id_clase) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApRequest();
+            inValue.p_titulo = p_titulo;
+            inValue.p_contenido = p_contenido;
+            inValue.p_id_clase = p_id_clase;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgMaterialAp(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoTipoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest request) {
-            return base.Channel.ListadoTipoEventoAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgMaterialApAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApRequest request) {
+            return base.Channel.AgMaterialApAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoResponse> ListadoTipoEventoAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoTipoEventoRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoTipoEventoAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApResponse> AgMaterialApAsync(string p_titulo, string p_contenido, int p_id_clase) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgMaterialApRequest();
+            inValue.p_titulo = p_titulo;
+            inValue.p_contenido = p_contenido;
+            inValue.p_id_clase = p_id_clase;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgMaterialApAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgreSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest request) {
-            return base.Channel.AgreSolicitud(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModMaterialAp(WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApRequest request) {
+            return base.Channel.ModMaterialAp(request);
         }
         
-        public int AgreSolicitud(string p_sol, int p_tipo, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest();
-            inValue.p_sol = p_sol;
-            inValue.p_tipo = p_tipo;
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgreSolicitud(inValue);
+        public int ModMaterialAp(int p_id, string p_titulo, string p_contenido, int p_id_clase) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApRequest();
+            inValue.p_id = p_id;
+            inValue.p_titulo = p_titulo;
+            inValue.p_contenido = p_contenido;
+            inValue.p_id_clase = p_id_clase;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModMaterialAp(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgreSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest request) {
-            return base.Channel.AgreSolicitudAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModMaterialApAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApRequest request) {
+            return base.Channel.ModMaterialApAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse> AgreSolicitudAsync(string p_sol, int p_tipo, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest();
-            inValue.p_sol = p_sol;
-            inValue.p_tipo = p_tipo;
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgreSolicitudAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApResponse> ModMaterialApAsync(int p_id, string p_titulo, string p_contenido, int p_id_clase) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModMaterialApRequest();
+            inValue.p_id = p_id;
+            inValue.p_titulo = p_titulo;
+            inValue.p_contenido = p_contenido;
+            inValue.p_id_clase = p_id_clase;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModMaterialApAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7607,6 +8013,81 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             inValue.p_rut = p_rut;
             inValue.p_comentario = p_comentario;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModComentarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgreSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest request) {
+            return base.Channel.AgreSolicitud(request);
+        }
+        
+        public int AgreSolicitud(string p_sol, int p_tipo, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest();
+            inValue.p_sol = p_sol;
+            inValue.p_tipo = p_tipo;
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgreSolicitud(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgreSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest request) {
+            return base.Channel.AgreSolicitudAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudResponse> AgreSolicitudAsync(string p_sol, int p_tipo, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreSolicitudRequest();
+            inValue.p_sol = p_sol;
+            inValue.p_tipo = p_tipo;
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgreSolicitudAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest request) {
+            return base.Channel.ListaSolicitud(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.solicitud[] ListaSolicitud(string p_id_tipo, string p_estado, string p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest();
+            inValue.p_id_tipo = p_id_tipo;
+            inValue.p_estado = p_estado;
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaSolicitud(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest request) {
+            return base.Channel.ListaSolicitudAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse> ListaSolicitudAsync(string p_id_tipo, string p_estado, string p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest();
+            inValue.p_id_tipo = p_id_tipo;
+            inValue.p_estado = p_estado;
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaSolicitudAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaEstado(WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest request) {
+            return base.Channel.ListaEstado(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.estado[] ListaEstado() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaEstado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaEstadoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest request) {
+            return base.Channel.ListaEstadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse> ListaEstadoAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaEstadoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7664,6 +8145,108 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModObservacion(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request) {
+            return base.Channel.ModObservacion(request);
+        }
+        
+        public int ModObservacion(string p_observacion, int p_id_asistencia, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest();
+            inValue.p_observacion = p_observacion;
+            inValue.p_id_asistencia = p_id_asistencia;
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModObservacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModObservacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request) {
+            return base.Channel.ModObservacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse> ModObservacionAsync(string p_observacion, int p_id_asistencia, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest();
+            inValue.p_observacion = p_observacion;
+            inValue.p_id_asistencia = p_id_asistencia;
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModObservacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.Login(WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest request) {
+            return base.Channel.Login(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.usuario[] Login(string correo, string pass) {
+            WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest();
+            inValue.correo = correo;
+            inValue.pass = pass;
+            WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).Login(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.LoginAsync(WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest request) {
+            return base.Channel.LoginAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse> LoginAsync(string correo, string pass) {
+            WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest();
+            inValue.correo = correo;
+            inValue.pass = pass;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).LoginAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModCredencial(WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialRequest request) {
+            return base.Channel.ModCredencial(request);
+        }
+        
+        public int ModCredencial(string p_cor, string p_con, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialRequest();
+            inValue.p_cor = p_cor;
+            inValue.p_con = p_con;
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModCredencial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModCredencialAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialRequest request) {
+            return base.Channel.ModCredencialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialResponse> ModCredencialAsync(string p_cor, string p_con, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModCredencialRequest();
+            inValue.p_cor = p_cor;
+            inValue.p_con = p_con;
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModCredencialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliComentario(WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest request) {
+            return base.Channel.EliComentario(request);
+        }
+        
+        public int EliComentario(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliComentario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest request) {
+            return base.Channel.EliComentarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse> EliComentarioAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliComentarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.ModSolicitudRequest request) {
             return base.Channel.ModSolicitud(request);
         }
@@ -7717,362 +8300,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliSolicitudRequest();
             inValue.p_id = p_id;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliSolicitudAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest request) {
-            return base.Channel.ListaSolicitud(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.solicitud[] ListaSolicitud(string p_id_tipo, string p_estado, string p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest();
-            inValue.p_id_tipo = p_id_tipo;
-            inValue.p_estado = p_estado;
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaSolicitud(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest request) {
-            return base.Channel.ListaSolicitudAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudResponse> ListaSolicitudAsync(string p_id_tipo, string p_estado, string p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaSolicitudRequest();
-            inValue.p_id_tipo = p_id_tipo;
-            inValue.p_estado = p_estado;
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaSolicitudAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaEstado(WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest request) {
-            return base.Channel.ListaEstado(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.estado[] ListaEstado() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaEstado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaEstadoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest request) {
-            return base.Channel.ListaEstadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoResponse> ListaEstadoAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaEstadoRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaEstadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliComentario(WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest request) {
-            return base.Channel.EliComentario(request);
-        }
-        
-        public int EliComentario(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest();
-            inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliComentario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliComentarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest request) {
-            return base.Channel.EliComentarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioResponse> EliComentarioAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliComentarioRequest();
-            inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliComentarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoEve(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest request) {
-            return base.Channel.ModTipoEve(request);
-        }
-        
-        public int ModTipoEve(int p_id, string p_nom) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest();
-            inValue.p_id = p_id;
-            inValue.p_nom = p_nom;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoEve(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest request) {
-            return base.Channel.ModTipoEveAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse> ModTipoEveAsync(int p_id, string p_nom) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest();
-            inValue.p_id = p_id;
-            inValue.p_nom = p_nom;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoEveAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoObser(WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest request) {
-            return base.Channel.ListadoObser(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.observacion[] ListadoObser(string p_rut, string p_fecha) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_fecha = p_fecha;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoObser(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoObserAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest request) {
-            return base.Channel.ListadoObserAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse> ListadoObserAsync(string p_rut, string p_fecha) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_fecha = p_fecha;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoObserAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaTipoProd(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest request) {
-            return base.Channel.ListaTipoProd(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.tipoProducto[] ListaTipoProd() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaTipoProd(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaTipoProdAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest request) {
-            return base.Channel.ListaTipoProdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse> ListaTipoProdAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaTipoProdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMensualidad(WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest request) {
-            return base.Channel.ListaMensualidad(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.mensualidad[] ListaMensualidad(string p_rut, string p_id_estado) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_id_estado = p_id_estado;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMensualidad(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMensualidadAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest request) {
-            return base.Channel.ListaMensualidadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse> ListaMensualidadAsync(string p_rut, string p_id_estado) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_id_estado = p_id_estado;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMensualidadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgOrdenCompra(WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest request) {
-            return base.Channel.AgOrdenCompra(request);
-        }
-        
-        public int AgOrdenCompra(int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest();
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgOrdenCompra(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgOrdenCompraAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest request) {
-            return base.Channel.AgOrdenCompraAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse> AgOrdenCompraAsync(int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest();
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgOrdenCompraAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.Login(WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest request) {
-            return base.Channel.Login(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.usuario[] Login(string correo, string pass) {
-            WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest();
-            inValue.correo = correo;
-            inValue.pass = pass;
-            WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).Login(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.LoginAsync(WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest request) {
-            return base.Channel.LoginAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.LoginResponse> LoginAsync(string correo, string pass) {
-            WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.LoginRequest();
-            inValue.correo = correo;
-            inValue.pass = pass;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).LoginAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModObservacion(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request) {
-            return base.Channel.ModObservacion(request);
-        }
-        
-        public int ModObservacion(string p_observacion, int p_id_asistencia, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest();
-            inValue.p_observacion = p_observacion;
-            inValue.p_id_asistencia = p_id_asistencia;
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModObservacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModObservacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest request) {
-            return base.Channel.ModObservacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionResponse> ModObservacionAsync(string p_observacion, int p_id_asistencia, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModObservacionRequest();
-            inValue.p_observacion = p_observacion;
-            inValue.p_id_asistencia = p_id_asistencia;
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModObservacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModDescuento(WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest request) {
-            return base.Channel.ModDescuento(request);
-        }
-        
-        public int ModDescuento(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest();
-            inValue.p_id = p_id;
-            inValue.p_fecha_inicio = p_fecha_inicio;
-            inValue.p_fecha_fin = p_fecha_fin;
-            inValue.p_valor_desc = p_valor_desc;
-            inValue.p_porc_desc = p_porc_desc;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModDescuento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest request) {
-            return base.Channel.ModDescuentoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse> ModDescuentoAsync(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest();
-            inValue.p_id = p_id;
-            inValue.p_fecha_inicio = p_fecha_inicio;
-            inValue.p_fecha_fin = p_fecha_fin;
-            inValue.p_valor_desc = p_valor_desc;
-            inValue.p_porc_desc = p_porc_desc;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModDescuentoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaOrdenCompra(WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest request) {
-            return base.Channel.ListaOrdenCompra(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.ordenCompra[] ListaOrdenCompra(string p_rut, string p_id_estado) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_id_estado = p_id_estado;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaOrdenCompra(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaOrdenCompraAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest request) {
-            return base.Channel.ListaOrdenCompraAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse> ListaOrdenCompraAsync(string p_rut, string p_id_estado) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_id_estado = p_id_estado;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaOrdenCompraAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgPago(WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest request) {
-            return base.Channel.AgPago(request);
-        }
-        
-        public int AgPago(string p_metodo, string p_pagado, string p_id_matricula, string p_id_mensualidad, string p_nro_compra) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest();
-            inValue.p_metodo = p_metodo;
-            inValue.p_pagado = p_pagado;
-            inValue.p_id_matricula = p_id_matricula;
-            inValue.p_id_mensualidad = p_id_mensualidad;
-            inValue.p_nro_compra = p_nro_compra;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgPago(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgPagoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest request) {
-            return base.Channel.AgPagoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse> AgPagoAsync(string p_metodo, string p_pagado, string p_id_matricula, string p_id_mensualidad, string p_nro_compra) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest();
-            inValue.p_metodo = p_metodo;
-            inValue.p_pagado = p_pagado;
-            inValue.p_id_matricula = p_id_matricula;
-            inValue.p_id_mensualidad = p_id_mensualidad;
-            inValue.p_nro_compra = p_nro_compra;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgPagoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaBoleta(WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest request) {
-            return base.Channel.ListaBoleta(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.boleta[] ListaBoleta(string p_id_matricula, string p_id_mensualidad, string p_id_compra) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest();
-            inValue.p_id_matricula = p_id_matricula;
-            inValue.p_id_mensualidad = p_id_mensualidad;
-            inValue.p_id_compra = p_id_compra;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaBoleta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaBoletaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest request) {
-            return base.Channel.ListaBoletaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse> ListaBoletaAsync(string p_id_matricula, string p_id_mensualidad, string p_id_compra) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest();
-            inValue.p_id_matricula = p_id_matricula;
-            inValue.p_id_mensualidad = p_id_mensualidad;
-            inValue.p_id_compra = p_id_compra;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaBoletaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8142,28 +8369,242 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest request) {
-            return base.Channel.ModClaseNivel(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoObser(WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest request) {
+            return base.Channel.ListadoObser(request);
         }
         
-        public int ModClaseNivel(int p_id, string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest();
-            inValue.p_id = p_id;
-            inValue.p_nombre = p_nombre;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModClaseNivel(inValue);
+        public WebValdiviaDojo.WS_ValdiviaDojo.observacion[] ListadoObser(string p_rut, string p_fecha) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_fecha = p_fecha;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoObser(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest request) {
-            return base.Channel.ModClaseNivelAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoObserAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest request) {
+            return base.Channel.ListadoObserAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse> ModClaseNivelAsync(int p_id, string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest();
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserResponse> ListadoObserAsync(string p_rut, string p_fecha) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoObserRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_fecha = p_fecha;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoObserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgDetalleCom(WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest request) {
+            return base.Channel.AgDetalleCom(request);
+        }
+        
+        public int AgDetalleCom(int p_prod, int p_cantidad, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest();
+            inValue.p_prod = p_prod;
+            inValue.p_cantidad = p_cantidad;
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgDetalleCom(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgDetalleComAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest request) {
+            return base.Channel.AgDetalleComAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse> AgDetalleComAsync(int p_prod, int p_cantidad, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest();
+            inValue.p_prod = p_prod;
+            inValue.p_cantidad = p_cantidad;
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgDetalleComAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaOrdenCompra(WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest request) {
+            return base.Channel.ListaOrdenCompra(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.ordenCompra[] ListaOrdenCompra(string p_rut, string p_id_estado) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaOrdenCompra(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaOrdenCompraAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest request) {
+            return base.Channel.ListaOrdenCompraAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraResponse> ListaOrdenCompraAsync(string p_rut, string p_id_estado) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaOrdenCompraRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaOrdenCompraAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaReferido(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request) {
+            return base.Channel.ListaReferido(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.referido[] ListaReferido(string p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest();
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaReferido(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaReferidoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request) {
+            return base.Channel.ListaReferidoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> ListaReferidoAsync(string p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest();
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaReferidoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModDescuento(WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest request) {
+            return base.Channel.ModDescuento(request);
+        }
+        
+        public int ModDescuento(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest();
             inValue.p_id = p_id;
-            inValue.p_nombre = p_nombre;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModClaseNivelAsync(inValue);
+            inValue.p_fecha_inicio = p_fecha_inicio;
+            inValue.p_fecha_fin = p_fecha_fin;
+            inValue.p_valor_desc = p_valor_desc;
+            inValue.p_porc_desc = p_porc_desc;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModDescuento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest request) {
+            return base.Channel.ModDescuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoResponse> ModDescuentoAsync(int p_id, string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModDescuentoRequest();
+            inValue.p_id = p_id;
+            inValue.p_fecha_inicio = p_fecha_inicio;
+            inValue.p_fecha_fin = p_fecha_fin;
+            inValue.p_valor_desc = p_valor_desc;
+            inValue.p_porc_desc = p_porc_desc;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModDescuentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoEve(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest request) {
+            return base.Channel.ModTipoEve(request);
+        }
+        
+        public int ModTipoEve(int p_id, string p_nom) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest();
+            inValue.p_id = p_id;
+            inValue.p_nom = p_nom;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoEve(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest request) {
+            return base.Channel.ModTipoEveAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveResponse> ModTipoEveAsync(int p_id, string p_nom) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoEveRequest();
+            inValue.p_id = p_id;
+            inValue.p_nom = p_nom;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoEveAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModProducto(WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest request) {
+            return base.Channel.ModProducto(request);
+        }
+        
+        public int ModProducto(int p_id, string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest();
+            inValue.p_id = p_id;
+            inValue.p_nom = p_nom;
+            inValue.p_des = p_des;
+            inValue.p_pre_nor = p_pre_nor;
+            inValue.p_strock = p_strock;
+            inValue.p_id_tipo = p_id_tipo;
+            inValue.p_id_desc = p_id_desc;
+            inValue.p_talla = p_talla;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest request) {
+            return base.Channel.ModProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse> ModProductoAsync(int p_id, string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest();
+            inValue.p_id = p_id;
+            inValue.p_nom = p_nom;
+            inValue.p_des = p_des;
+            inValue.p_pre_nor = p_pre_nor;
+            inValue.p_strock = p_strock;
+            inValue.p_id_tipo = p_id_tipo;
+            inValue.p_id_desc = p_id_desc;
+            inValue.p_talla = p_talla;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliProducto(WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest request) {
+            return base.Channel.EliProducto(request);
+        }
+        
+        public int EliProducto(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest request) {
+            return base.Channel.EliProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse> EliProductoAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoCarrito(WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest request) {
+            return base.Channel.ListadoCarrito(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.carrito[] ListadoCarrito(int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest();
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoCarrito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoCarritoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest request) {
+            return base.Channel.ListadoCarritoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse> ListadoCarritoAsync(int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest();
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoCarritoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8191,6 +8632,167 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
             inValue.p_nombre = p_nombre;
             inValue.p_color = p_color;
             return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModCinturonAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoProdGen(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest request) {
+            return base.Channel.ListadoProdGen(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.prodGeneral[] ListadoProdGen() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoProdGen(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoProdGenAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest request) {
+            return base.Channel.ListadoProdGenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse> ListadoProdGenAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoProdGenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgOrdenCompra(WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest request) {
+            return base.Channel.AgOrdenCompra(request);
+        }
+        
+        public int AgOrdenCompra(int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest();
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgOrdenCompra(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgOrdenCompraAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest request) {
+            return base.Channel.AgOrdenCompraAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraResponse> AgOrdenCompraAsync(int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgOrdenCompraRequest();
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgOrdenCompraAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoProdEspe(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest request) {
+            return base.Channel.ListadoProdEspe(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.prodEspe[] ListadoProdEspe(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest();
+            inValue.p_nombre = p_nombre;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoProdEspe(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoProdEspeAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest request) {
+            return base.Channel.ListadoProdEspeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse> ListadoProdEspeAsync(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest();
+            inValue.p_nombre = p_nombre;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoProdEspeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMensualidad(WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest request) {
+            return base.Channel.ListaMensualidad(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.mensualidad[] ListaMensualidad(string p_rut, string p_id_estado) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMensualidad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMensualidadAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest request) {
+            return base.Channel.ListaMensualidadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadResponse> ListaMensualidadAsync(string p_rut, string p_id_estado) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMensualidadRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMensualidadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoTalla(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest request) {
+            return base.Channel.ListadoTalla(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.talla[] ListadoTalla() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoTalla(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoTallaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest request) {
+            return base.Channel.ListadoTallaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse> ListadoTallaAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoTallaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaBoleta(WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest request) {
+            return base.Channel.ListaBoleta(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.boleta[] ListaBoleta(string p_id_matricula, string p_id_mensualidad, string p_id_compra) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest();
+            inValue.p_id_matricula = p_id_matricula;
+            inValue.p_id_mensualidad = p_id_mensualidad;
+            inValue.p_id_compra = p_id_compra;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaBoleta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaBoletaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest request) {
+            return base.Channel.ListaBoletaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaResponse> ListaBoletaAsync(string p_id_matricula, string p_id_mensualidad, string p_id_compra) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaBoletaRequest();
+            inValue.p_id_matricula = p_id_matricula;
+            inValue.p_id_mensualidad = p_id_mensualidad;
+            inValue.p_id_compra = p_id_compra;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaBoletaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaTipoProd(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest request) {
+            return base.Channel.ListaTipoProd(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.tipoProducto[] ListaTipoProd() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaTipoProd(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaTipoProdAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest request) {
+            return base.Channel.ListaTipoProdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdResponse> ListaTipoProdAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaTipoProdRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaTipoProdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8225,47 +8827,34 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request) {
-            return base.Channel.EliAsistencia(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgPago(WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest request) {
+            return base.Channel.AgPago(request);
         }
         
-        public int EliAsistencia(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest();
-            inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliAsistencia(inValue);
+        public int AgPago(string p_metodo, string p_pagado, string p_id_matricula, string p_id_mensualidad, string p_nro_compra) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest();
+            inValue.p_metodo = p_metodo;
+            inValue.p_pagado = p_pagado;
+            inValue.p_id_matricula = p_id_matricula;
+            inValue.p_id_mensualidad = p_id_mensualidad;
+            inValue.p_nro_compra = p_nro_compra;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgPago(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request) {
-            return base.Channel.EliAsistenciaAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgPagoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest request) {
+            return base.Channel.AgPagoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse> EliAsistenciaAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest();
-            inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliAsistenciaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMetodoPago(WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest request) {
-            return base.Channel.ListaMetodoPago(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.metodoPago[] ListaMetodoPago() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMetodoPago(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMetodoPagoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest request) {
-            return base.Channel.ListaMetodoPagoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse> ListaMetodoPagoAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMetodoPagoAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgPagoResponse> AgPagoAsync(string p_metodo, string p_pagado, string p_id_matricula, string p_id_mensualidad, string p_nro_compra) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgPagoRequest();
+            inValue.p_metodo = p_metodo;
+            inValue.p_pagado = p_pagado;
+            inValue.p_id_matricula = p_id_matricula;
+            inValue.p_id_mensualidad = p_id_mensualidad;
+            inValue.p_nro_compra = p_nro_compra;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgPagoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8294,24 +8883,232 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoTalla(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest request) {
-            return base.Channel.ListadoTalla(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMetodoPago(WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest request) {
+            return base.Channel.ListaMetodoPago(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.talla[] ListadoTalla() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoTalla(inValue);
+        public WebValdiviaDojo.WS_ValdiviaDojo.metodoPago[] ListaMetodoPago() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMetodoPago(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoTallaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest request) {
-            return base.Channel.ListadoTallaAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMetodoPagoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest request) {
+            return base.Channel.ListaMetodoPagoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaResponse> ListadoTallaAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoTallaRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoTallaAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoResponse> ListaMetodoPagoAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMetodoPagoRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMetodoPagoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request) {
+            return base.Channel.EliAsistencia(request);
+        }
+        
+        public int EliAsistencia(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliAsistencia(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest request) {
+            return base.Channel.EliAsistenciaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaResponse> EliAsistenciaAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliAsistenciaRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliAsistenciaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest request) {
+            return base.Channel.ModClaseNivel(request);
+        }
+        
+        public int ModClaseNivel(int p_id, string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest();
+            inValue.p_id = p_id;
+            inValue.p_nombre = p_nombre;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModClaseNivel(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest request) {
+            return base.Channel.ModClaseNivelAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelResponse> ModClaseNivelAsync(int p_id, string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModClaseNivelRequest();
+            inValue.p_id = p_id;
+            inValue.p_nombre = p_nombre;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModClaseNivelAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgProducto(WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest request) {
+            return base.Channel.AgProducto(request);
+        }
+        
+        public int AgProducto(string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest();
+            inValue.p_nom = p_nom;
+            inValue.p_des = p_des;
+            inValue.p_pre_nor = p_pre_nor;
+            inValue.p_strock = p_strock;
+            inValue.p_id_tipo = p_id_tipo;
+            inValue.p_id_desc = p_id_desc;
+            inValue.p_talla = p_talla;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest request) {
+            return base.Channel.AgProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse> AgProductoAsync(string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest();
+            inValue.p_nom = p_nom;
+            inValue.p_des = p_des;
+            inValue.p_pre_nor = p_pre_nor;
+            inValue.p_strock = p_strock;
+            inValue.p_id_tipo = p_id_tipo;
+            inValue.p_id_desc = p_id_desc;
+            inValue.p_talla = p_talla;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgreDescuento(WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest request) {
+            return base.Channel.AgreDescuento(request);
+        }
+        
+        public int AgreDescuento(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest();
+            inValue.p_fecha_inicio = p_fecha_inicio;
+            inValue.p_fecha_fin = p_fecha_fin;
+            inValue.p_valor_desc = p_valor_desc;
+            inValue.p_porc_desc = p_porc_desc;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgreDescuento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgreDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest request) {
+            return base.Channel.AgreDescuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse> AgreDescuentoAsync(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest();
+            inValue.p_fecha_inicio = p_fecha_inicio;
+            inValue.p_fecha_fin = p_fecha_fin;
+            inValue.p_valor_desc = p_valor_desc;
+            inValue.p_porc_desc = p_porc_desc;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgreDescuentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModParticipacion(WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest request) {
+            return base.Channel.ModParticipacion(request);
+        }
+        
+        public int ModParticipacion(int p_id_evento, string p_logro, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest();
+            inValue.p_id_evento = p_id_evento;
+            inValue.p_logro = p_logro;
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModParticipacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest request) {
+            return base.Channel.ModParticipacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse> ModParticipacionAsync(int p_id_evento, string p_logro, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest();
+            inValue.p_id_evento = p_id_evento;
+            inValue.p_logro = p_logro;
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModParticipacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoEvento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest request) {
+            return base.Channel.ListadoEvento(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.evento[] ListadoEvento() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest request) {
+            return base.Channel.ListadoEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse> ListadoEventoAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMatricula(WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest request) {
+            return base.Channel.ListaMatricula(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.matricula[] ListaMatricula(string p_rut, string p_id_estado) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMatricula(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMatriculaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest request) {
+            return base.Channel.ListaMatriculaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse> ListaMatriculaAsync(string p_rut, string p_id_estado) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_id_estado = p_id_estado;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMatriculaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliDescuento(WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest request) {
+            return base.Channel.EliDescuento(request);
+        }
+        
+        public int EliDescuento(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliDescuento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest request) {
+            return base.Channel.EliDescuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse> EliDescuentoAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliDescuentoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8338,28 +9135,104 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoHorario(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request) {
-            return base.Channel.ListadoHorario(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarCinturon(WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest request) {
+            return base.Channel.ListarCinturon(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.horario[] ListadoHorario(string p_clase, string p_nivel) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest();
-            inValue.p_clase = p_clase;
-            inValue.p_nivel = p_nivel;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoHorario(inValue);
+        public WebValdiviaDojo.WS_ValdiviaDojo.cinturon[] ListarCinturon() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarCinturon(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request) {
-            return base.Channel.ListadoHorarioAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest request) {
+            return base.Channel.ListarCinturonAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse> ListadoHorarioAsync(string p_clase, string p_nivel) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest();
-            inValue.p_clase = p_clase;
-            inValue.p_nivel = p_nivel;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoHorarioAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse> ListarCinturonAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarCinturonAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModUsuario(WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest request) {
+            return base.Channel.ModUsuario(request);
+        }
+        
+        public int ModUsuario(int rut, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, int genero, int t_usu, int cint) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest();
+            inValue.rut = rut;
+            inValue.p_nom = p_nom;
+            inValue.s_nom = s_nom;
+            inValue.a_pat = a_pat;
+            inValue.a_mat = a_mat;
+            inValue.f_nac = f_nac;
+            inValue.cel = cel;
+            inValue.cel_em = cel_em;
+            inValue.dire = dire;
+            inValue.peso = peso;
+            inValue.alt = alt;
+            inValue.genero = genero;
+            inValue.t_usu = t_usu;
+            inValue.cint = cint;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest request) {
+            return base.Channel.ModUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse> ModUsuarioAsync(int rut, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, int genero, int t_usu, int cint) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest();
+            inValue.rut = rut;
+            inValue.p_nom = p_nom;
+            inValue.s_nom = s_nom;
+            inValue.a_pat = a_pat;
+            inValue.a_mat = a_mat;
+            inValue.f_nac = f_nac;
+            inValue.cel = cel;
+            inValue.cel_em = cel_em;
+            inValue.dire = dire;
+            inValue.peso = peso;
+            inValue.alt = alt;
+            inValue.genero = genero;
+            inValue.t_usu = t_usu;
+            inValue.cint = cint;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgHorario(WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest request) {
+            return base.Channel.AgHorario(request);
+        }
+        
+        public int AgHorario(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest();
+            inValue.p_dia_semana = p_dia_semana;
+            inValue.p_hora_inicio = p_hora_inicio;
+            inValue.p_hora_fin = p_hora_fin;
+            inValue.p_id_clase = p_id_clase;
+            inValue.p_id_nivel = p_id_nivel;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgHorario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest request) {
+            return base.Channel.AgHorarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse> AgHorarioAsync(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest();
+            inValue.p_dia_semana = p_dia_semana;
+            inValue.p_hora_inicio = p_hora_inicio;
+            inValue.p_hora_fin = p_hora_fin;
+            inValue.p_id_clase = p_id_clase;
+            inValue.p_id_nivel = p_id_nivel;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgHorarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8452,267 +9325,24 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgProducto(WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest request) {
-            return base.Channel.AgProducto(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarUsuarios(WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest request) {
+            return base.Channel.ListarUsuarios(request);
         }
         
-        public int AgProducto(string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest();
-            inValue.p_nom = p_nom;
-            inValue.p_des = p_des;
-            inValue.p_pre_nor = p_pre_nor;
-            inValue.p_strock = p_strock;
-            inValue.p_id_tipo = p_id_tipo;
-            inValue.p_id_desc = p_id_desc;
-            inValue.p_talla = p_talla;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgProducto(inValue);
+        public WebValdiviaDojo.WS_ValdiviaDojo.usuario[] ListarUsuarios() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarUsuarios(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest request) {
-            return base.Channel.AgProductoAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarUsuariosAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest request) {
+            return base.Channel.ListarUsuariosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgProductoResponse> AgProductoAsync(string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgProductoRequest();
-            inValue.p_nom = p_nom;
-            inValue.p_des = p_des;
-            inValue.p_pre_nor = p_pre_nor;
-            inValue.p_strock = p_strock;
-            inValue.p_id_tipo = p_id_tipo;
-            inValue.p_id_desc = p_id_desc;
-            inValue.p_talla = p_talla;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgHorario(WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest request) {
-            return base.Channel.AgHorario(request);
-        }
-        
-        public int AgHorario(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest();
-            inValue.p_dia_semana = p_dia_semana;
-            inValue.p_hora_inicio = p_hora_inicio;
-            inValue.p_hora_fin = p_hora_fin;
-            inValue.p_id_clase = p_id_clase;
-            inValue.p_id_nivel = p_id_nivel;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgHorario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest request) {
-            return base.Channel.AgHorarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioResponse> AgHorarioAsync(string p_dia_semana, string p_hora_inicio, string p_hora_fin, int p_id_clase, int p_id_nivel) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgHorarioRequest();
-            inValue.p_dia_semana = p_dia_semana;
-            inValue.p_hora_inicio = p_hora_inicio;
-            inValue.p_hora_fin = p_hora_fin;
-            inValue.p_id_clase = p_id_clase;
-            inValue.p_id_nivel = p_id_nivel;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgHorarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModProducto(WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest request) {
-            return base.Channel.ModProducto(request);
-        }
-        
-        public int ModProducto(int p_id, string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest();
-            inValue.p_id = p_id;
-            inValue.p_nom = p_nom;
-            inValue.p_des = p_des;
-            inValue.p_pre_nor = p_pre_nor;
-            inValue.p_strock = p_strock;
-            inValue.p_id_tipo = p_id_tipo;
-            inValue.p_id_desc = p_id_desc;
-            inValue.p_talla = p_talla;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest request) {
-            return base.Channel.ModProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModProductoResponse> ModProductoAsync(int p_id, string p_nom, string p_des, int p_pre_nor, int p_strock, string p_id_tipo, string p_id_desc, string p_talla) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModProductoRequest();
-            inValue.p_id = p_id;
-            inValue.p_nom = p_nom;
-            inValue.p_des = p_des;
-            inValue.p_pre_nor = p_pre_nor;
-            inValue.p_strock = p_strock;
-            inValue.p_id_tipo = p_id_tipo;
-            inValue.p_id_desc = p_id_desc;
-            inValue.p_talla = p_talla;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoCarrito(WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest request) {
-            return base.Channel.ListadoCarrito(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.carrito[] ListadoCarrito(int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest();
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoCarrito(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoCarritoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest request) {
-            return base.Channel.ListadoCarritoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoResponse> ListadoCarritoAsync(int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoCarritoRequest();
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoCarritoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaReferido(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request) {
-            return base.Channel.ListaReferido(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.referido[] ListaReferido(string p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest();
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaReferido(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaReferidoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest request) {
-            return base.Channel.ListaReferidoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoResponse> ListaReferidoAsync(string p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaReferidoRequest();
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaReferidoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoProdEspe(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest request) {
-            return base.Channel.ListadoProdEspe(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.prodEspe[] ListadoProdEspe(string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest();
-            inValue.p_nombre = p_nombre;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoProdEspe(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoProdEspeAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest request) {
-            return base.Channel.ListadoProdEspeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeResponse> ListadoProdEspeAsync(string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdEspeRequest();
-            inValue.p_nombre = p_nombre;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoProdEspeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgDetalleCom(WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest request) {
-            return base.Channel.AgDetalleCom(request);
-        }
-        
-        public int AgDetalleCom(int p_prod, int p_cantidad, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest();
-            inValue.p_prod = p_prod;
-            inValue.p_cantidad = p_cantidad;
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgDetalleCom(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgDetalleComAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest request) {
-            return base.Channel.AgDetalleComAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComResponse> AgDetalleComAsync(int p_prod, int p_cantidad, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgDetalleComRequest();
-            inValue.p_prod = p_prod;
-            inValue.p_cantidad = p_cantidad;
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgDetalleComAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoProdGen(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest request) {
-            return base.Channel.ListadoProdGen(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.prodGeneral[] ListadoProdGen() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoProdGen(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoProdGenAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest request) {
-            return base.Channel.ListadoProdGenAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenResponse> ListadoProdGenAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoProdGenRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoProdGenAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoGenero(WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest request) {
-            return base.Channel.ListadoGenero(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.genero[] ListadoGenero() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoGenero(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoGeneroAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest request) {
-            return base.Channel.ListadoGeneroAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse> ListadoGeneroAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoGeneroAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliProducto(WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest request) {
-            return base.Channel.EliProducto(request);
-        }
-        
-        public int EliProducto(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest();
-            inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest request) {
-            return base.Channel.EliProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliProductoResponse> EliProductoAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliProductoRequest();
-            inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliProductoAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse> ListarUsuariosAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarUsuariosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8737,26 +9367,95 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest request) {
-            return base.Channel.AgTipoEncuesta(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoGenero(WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest request) {
+            return base.Channel.ListadoGenero(request);
         }
         
-        public int AgTipoEncuesta(string p_nom) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest();
-            inValue.p_nom = p_nom;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoEncuesta(inValue);
+        public WebValdiviaDojo.WS_ValdiviaDojo.genero[] ListadoGenero() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoGenero(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest request) {
-            return base.Channel.AgTipoEncuestaAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoGeneroAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest request) {
+            return base.Channel.ListadoGeneroAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse> AgTipoEncuestaAsync(string p_nom) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest();
-            inValue.p_nom = p_nom;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoEncuestaAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroResponse> ListadoGeneroAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoGeneroRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoGeneroAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliEvento(WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest request) {
+            return base.Channel.EliEvento(request);
+        }
+        
+        public int EliEvento(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest request) {
+            return base.Channel.EliEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse> EliEventoAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgParticipacion(WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest request) {
+            return base.Channel.AgParticipacion(request);
+        }
+        
+        public int AgParticipacion(int p_id_evento, string p_logro, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest();
+            inValue.p_id_evento = p_id_evento;
+            inValue.p_logro = p_logro;
+            inValue.p_rut = p_rut;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgParticipacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest request) {
+            return base.Channel.AgParticipacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse> AgParticipacionAsync(int p_id_evento, string p_logro, int p_rut) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest();
+            inValue.p_id_evento = p_id_evento;
+            inValue.p_logro = p_logro;
+            inValue.p_rut = p_rut;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgParticipacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoDescuento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest request) {
+            return base.Channel.ListadoDescuento(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.descuentoProd[] ListadoDescuento() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoDescuento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest request) {
+            return base.Channel.ListadoDescuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse> ListadoDescuentoAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoDescuentoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8791,29 +9490,6 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest request) {
-            return base.Channel.EliTipoEncuesta(request);
-        }
-        
-        public int EliTipoEncuesta(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest();
-            inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEncuesta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest request) {
-            return base.Channel.EliTipoEncuestaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse> EliTipoEncuestaAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest();
-            inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEncuestaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WebValdiviaDojo.WS_ValdiviaDojo.AgEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgEvento(WebValdiviaDojo.WS_ValdiviaDojo.AgEventoRequest request) {
             return base.Channel.AgEvento(request);
         }
@@ -8845,49 +9521,28 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoEvento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest request) {
-            return base.Channel.ListadoEvento(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoHorario(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request) {
+            return base.Channel.ListadoHorario(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.evento[] ListadoEvento() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoEvento(inValue);
+        public WebValdiviaDojo.WS_ValdiviaDojo.horario[] ListadoHorario(string p_clase, string p_nivel) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest();
+            inValue.p_clase = p_clase;
+            inValue.p_nivel = p_nivel;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoHorario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest request) {
-            return base.Channel.ListadoEventoAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoHorarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest request) {
+            return base.Channel.ListadoHorarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoResponse> ListadoEventoAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoEventoRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgCinturon(WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest request) {
-            return base.Channel.AgCinturon(request);
-        }
-        
-        public int AgCinturon(string p_nombre, string p_color) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest();
-            inValue.p_nombre = p_nombre;
-            inValue.p_color = p_color;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgCinturon(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest request) {
-            return base.Channel.AgCinturonAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse> AgCinturonAsync(string p_nombre, string p_color) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest();
-            inValue.p_nombre = p_nombre;
-            inValue.p_color = p_color;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgCinturonAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioResponse> ListadoHorarioAsync(string p_clase, string p_nivel) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoHorarioRequest();
+            inValue.p_clase = p_clase;
+            inValue.p_nivel = p_nivel;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoHorarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8916,52 +9571,26 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModUsuario(WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest request) {
-            return base.Channel.ModUsuario(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoEve(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request) {
+            return base.Channel.EliTipoEve(request);
         }
         
-        public int ModUsuario(int rut, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, int genero, int t_usu, int cint) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest();
-            inValue.rut = rut;
-            inValue.p_nom = p_nom;
-            inValue.s_nom = s_nom;
-            inValue.a_pat = a_pat;
-            inValue.a_mat = a_mat;
-            inValue.f_nac = f_nac;
-            inValue.cel = cel;
-            inValue.cel_em = cel_em;
-            inValue.dire = dire;
-            inValue.peso = peso;
-            inValue.alt = alt;
-            inValue.genero = genero;
-            inValue.t_usu = t_usu;
-            inValue.cint = cint;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModUsuario(inValue);
+        public int EliTipoEve(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEve(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModUsuarioAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest request) {
-            return base.Channel.ModUsuarioAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request) {
+            return base.Channel.EliTipoEveAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioResponse> ModUsuarioAsync(int rut, string p_nom, string s_nom, string a_pat, string a_mat, string f_nac, string cel, string cel_em, string dire, string peso, string alt, int genero, int t_usu, int cint) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModUsuarioRequest();
-            inValue.rut = rut;
-            inValue.p_nom = p_nom;
-            inValue.s_nom = s_nom;
-            inValue.a_pat = a_pat;
-            inValue.a_mat = a_mat;
-            inValue.f_nac = f_nac;
-            inValue.cel = cel;
-            inValue.cel_em = cel_em;
-            inValue.dire = dire;
-            inValue.peso = peso;
-            inValue.alt = alt;
-            inValue.genero = genero;
-            inValue.t_usu = t_usu;
-            inValue.cint = cint;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModUsuarioAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse> EliTipoEveAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEveAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8988,316 +9617,26 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest request) {
-            return base.Channel.AgTipoClase(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request) {
+            return base.Channel.EliTipoSoli(request);
         }
         
-        public int AgTipoClase(string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest();
-            inValue.p_nombre = p_nombre;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoClase(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest request) {
-            return base.Channel.AgTipoClaseAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse> AgTipoClaseAsync(string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest();
-            inValue.p_nombre = p_nombre;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoClaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest request) {
-            return base.Channel.AgClaseNivel(request);
-        }
-        
-        public int AgClaseNivel(string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest();
-            inValue.p_nombre = p_nombre;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgClaseNivel(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest request) {
-            return base.Channel.AgClaseNivelAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse> AgClaseNivelAsync(string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest();
-            inValue.p_nombre = p_nombre;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgClaseNivelAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest request) {
-            return base.Channel.ModTipoClase(request);
-        }
-        
-        public int ModTipoClase(int p_id, string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest();
+        public int EliTipoSoli(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest();
             inValue.p_id = p_id;
-            inValue.p_nombre = p_nombre;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoClase(inValue);
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoSoli(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest request) {
-            return base.Channel.ModTipoClaseAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request) {
+            return base.Channel.EliTipoSoliAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse> ModTipoClaseAsync(int p_id, string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest();
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> EliTipoSoliAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest();
             inValue.p_id = p_id;
-            inValue.p_nombre = p_nombre;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoClaseAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarCinturon(WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest request) {
-            return base.Channel.ListarCinturon(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.cinturon[] ListarCinturon() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarCinturon(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest request) {
-            return base.Channel.ListarCinturonAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonResponse> ListarCinturonAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarCinturonRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarCinturonAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest request) {
-            return base.Channel.AgTipoProducto(request);
-        }
-        
-        public int AgTipoProducto(string p_des) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest();
-            inValue.p_des = p_des;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest request) {
-            return base.Channel.AgTipoProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse> AgTipoProductoAsync(string p_des) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest();
-            inValue.p_des = p_des;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest request) {
-            return base.Channel.ListaAsistencia(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.asistencia[] ListaAsistencia(string p_fecha, string p_id_horario) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest();
-            inValue.p_fecha = p_fecha;
-            inValue.p_id_horario = p_id_horario;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaAsistencia(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest request) {
-            return base.Channel.ListaAsistenciaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse> ListaAsistenciaAsync(string p_fecha, string p_id_horario) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest();
-            inValue.p_fecha = p_fecha;
-            inValue.p_id_horario = p_id_horario;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaAsistenciaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgReferidos(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request) {
-            return base.Channel.AgReferidos(request);
-        }
-        
-        public int AgReferidos(int p_rut, int p_rut_referido) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_rut_referido = p_rut_referido;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgReferidos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request) {
-            return base.Channel.AgReferidosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> AgReferidosAsync(int p_rut, int p_rut_referido) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_rut_referido = p_rut_referido;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgReferidosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest request) {
-            return base.Channel.ModTipoProducto(request);
-        }
-        
-        public int ModTipoProducto(int p_id, string p_des) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest();
-            inValue.p_id = p_id;
-            inValue.p_des = p_des;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest request) {
-            return base.Channel.ModTipoProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse> ModTipoProductoAsync(int p_id, string p_des) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest();
-            inValue.p_id = p_id;
-            inValue.p_des = p_des;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModParticipacion(WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest request) {
-            return base.Channel.ModParticipacion(request);
-        }
-        
-        public int ModParticipacion(int p_id_evento, string p_logro, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest();
-            inValue.p_id_evento = p_id_evento;
-            inValue.p_logro = p_logro;
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModParticipacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest request) {
-            return base.Channel.ModParticipacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionResponse> ModParticipacionAsync(int p_id_evento, string p_logro, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModParticipacionRequest();
-            inValue.p_id_evento = p_id_evento;
-            inValue.p_logro = p_logro;
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModParticipacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMatricula(WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest request) {
-            return base.Channel.ListaMatricula(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.matricula[] ListaMatricula(string p_rut, string p_id_estado) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_id_estado = p_id_estado;
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMatricula(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMatriculaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest request) {
-            return base.Channel.ListaMatriculaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaResponse> ListaMatriculaAsync(string p_rut, string p_id_estado) {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMatriculaRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_id_estado = p_id_estado;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMatriculaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest request) {
-            return base.Channel.EliClaseNivel(request);
-        }
-        
-        public int EliClaseNivel(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest();
-            inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliClaseNivel(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest request) {
-            return base.Channel.EliClaseNivelAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse> EliClaseNivelAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest();
-            inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliClaseNivelAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoEvento(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest request) {
-            return base.Channel.AgTipoEvento(request);
-        }
-        
-        public int AgTipoEvento(string p_nom) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest();
-            inValue.p_nom = p_nom;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest request) {
-            return base.Channel.AgTipoEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse> AgTipoEventoAsync(string p_nom) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest();
-            inValue.p_nom = p_nom;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliReferidos(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request) {
-            return base.Channel.EliReferidos(request);
-        }
-        
-        public int EliReferidos(int p_rut, int p_rut_referido) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_rut_referido = p_rut_referido;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliReferidos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request) {
-            return base.Channel.EliReferidosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> EliReferidosAsync(int p_rut, int p_rut_referido) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest();
-            inValue.p_rut = p_rut;
-            inValue.p_rut_referido = p_rut_referido;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliReferidosAsync(inValue);
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoSoliAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9326,216 +9665,191 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgreDescuento(WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest request) {
-            return base.Channel.AgreDescuento(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliCinturon(WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest request) {
+            return base.Channel.EliCinturon(request);
         }
         
-        public int AgreDescuento(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest();
-            inValue.p_fecha_inicio = p_fecha_inicio;
-            inValue.p_fecha_fin = p_fecha_fin;
-            inValue.p_valor_desc = p_valor_desc;
-            inValue.p_porc_desc = p_porc_desc;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgreDescuento(inValue);
+        public int EliCinturon(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest();
+            inValue.p_id = p_id;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliCinturon(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgreDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest request) {
-            return base.Channel.AgreDescuentoAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest request) {
+            return base.Channel.EliCinturonAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoResponse> AgreDescuentoAsync(string p_fecha_inicio, string p_fecha_fin, string p_valor_desc, string p_porc_desc) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgreDescuentoRequest();
-            inValue.p_fecha_inicio = p_fecha_inicio;
-            inValue.p_fecha_fin = p_fecha_fin;
-            inValue.p_valor_desc = p_valor_desc;
-            inValue.p_porc_desc = p_porc_desc;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgreDescuentoAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse> EliCinturonAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest();
+            inValue.p_id = p_id;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliCinturonAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliEvento(WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest request) {
-            return base.Channel.EliEvento(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest request) {
+            return base.Channel.EliTipoEncuesta(request);
         }
         
-        public int EliEvento(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest();
+        public int EliTipoEncuesta(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest();
             inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliEvento(inValue);
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEncuesta(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest request) {
-            return base.Channel.EliEventoAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest request) {
+            return base.Channel.EliTipoEncuestaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliEventoResponse> EliEventoAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliEventoRequest();
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaResponse> EliTipoEncuestaAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEncuestaRequest();
             inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliEventoAsync(inValue);
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEncuestaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoEve(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request) {
-            return base.Channel.EliTipoEve(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgCinturon(WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest request) {
+            return base.Channel.AgCinturon(request);
         }
         
-        public int EliTipoEve(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest();
-            inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEve(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoEveAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest request) {
-            return base.Channel.EliTipoEveAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveResponse> EliTipoEveAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoEveRequest();
-            inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoEveAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request) {
-            return base.Channel.AgTipoSolicitud(request);
-        }
-        
-        public int AgTipoSolicitud(string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest();
+        public int AgCinturon(string p_nombre, string p_color) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest();
             inValue.p_nombre = p_nombre;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoSolicitud(inValue);
+            inValue.p_color = p_color;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgCinturon(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request) {
-            return base.Channel.AgTipoSolicitudAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest request) {
+            return base.Channel.AgCinturonAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> AgTipoSolicitudAsync(string p_nombre) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest();
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonResponse> AgCinturonAsync(string p_nombre, string p_color) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgCinturonRequest();
             inValue.p_nombre = p_nombre;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoSolicitudAsync(inValue);
+            inValue.p_color = p_color;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgCinturonAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliDescuento(WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest request) {
-            return base.Channel.EliDescuento(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest request) {
+            return base.Channel.EliClaseNivel(request);
         }
         
-        public int EliDescuento(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest();
+        public int EliClaseNivel(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest();
             inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliDescuento(inValue);
+            WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliClaseNivel(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest request) {
-            return base.Channel.EliDescuentoAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest request) {
+            return base.Channel.EliClaseNivelAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoResponse> EliDescuentoAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliDescuentoRequest();
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelResponse> EliClaseNivelAsync(int p_id) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliClaseNivelRequest();
             inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliDescuentoAsync(inValue);
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliClaseNivelAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarUsuarios(WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest request) {
-            return base.Channel.ListarUsuarios(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest request) {
+            return base.Channel.ModTipoProducto(request);
         }
         
-        public WebValdiviaDojo.WS_ValdiviaDojo.usuario[] ListarUsuarios() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarUsuarios(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListarUsuariosAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest request) {
-            return base.Channel.ListarUsuariosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosResponse> ListarUsuariosAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListarUsuariosRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListarUsuariosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoDescuento(WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest request) {
-            return base.Channel.ListadoDescuento(request);
-        }
-        
-        public WebValdiviaDojo.WS_ValdiviaDojo.descuentoProd[] ListadoDescuento() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest();
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoDescuento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListadoDescuentoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest request) {
-            return base.Channel.ListadoDescuentoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoResponse> ListadoDescuentoAsync() {
-            WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListadoDescuentoRequest();
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListadoDescuentoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoSoli(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request) {
-            return base.Channel.EliTipoSoli(request);
-        }
-        
-        public int EliTipoSoli(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest();
+        public int ModTipoProducto(int p_id, string p_des) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest();
             inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoSoli(inValue);
+            inValue.p_des = p_des;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoProducto(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliTipoSoliAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest request) {
-            return base.Channel.EliTipoSoliAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest request) {
+            return base.Channel.ModTipoProductoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliResponse> EliTipoSoliAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliTipoSoliRequest();
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoResponse> ModTipoProductoAsync(int p_id, string p_des) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoProductoRequest();
             inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliTipoSoliAsync(inValue);
+            inValue.p_des = p_des;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoProductoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgParticipacion(WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest request) {
-            return base.Channel.AgParticipacion(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgClaseNivel(WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest request) {
+            return base.Channel.AgClaseNivel(request);
         }
         
-        public int AgParticipacion(int p_id_evento, string p_logro, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest();
-            inValue.p_id_evento = p_id_evento;
-            inValue.p_logro = p_logro;
-            inValue.p_rut = p_rut;
-            WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgParticipacion(inValue);
+        public int AgClaseNivel(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest();
+            inValue.p_nombre = p_nombre;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgClaseNivel(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgParticipacionAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest request) {
-            return base.Channel.AgParticipacionAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgClaseNivelAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest request) {
+            return base.Channel.AgClaseNivelAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionResponse> AgParticipacionAsync(int p_id_evento, string p_logro, int p_rut) {
-            WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgParticipacionRequest();
-            inValue.p_id_evento = p_id_evento;
-            inValue.p_logro = p_logro;
-            inValue.p_rut = p_rut;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgParticipacionAsync(inValue);
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelResponse> AgClaseNivelAsync(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgClaseNivelRequest();
+            inValue.p_nombre = p_nombre;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgClaseNivelAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoEncuesta(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest request) {
+            return base.Channel.AgTipoEncuesta(request);
+        }
+        
+        public int AgTipoEncuesta(string p_nom) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest();
+            inValue.p_nom = p_nom;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoEncuesta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoEncuestaAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest request) {
+            return base.Channel.AgTipoEncuestaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaResponse> AgTipoEncuestaAsync(string p_nom) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEncuestaRequest();
+            inValue.p_nom = p_nom;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoEncuestaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest request) {
+            return base.Channel.AgTipoClase(request);
+        }
+        
+        public int AgTipoClase(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest();
+            inValue.p_nombre = p_nombre;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoClase(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest request) {
+            return base.Channel.AgTipoClaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseResponse> AgTipoClaseAsync(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoClaseRequest();
+            inValue.p_nombre = p_nombre;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoClaseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9562,26 +9876,193 @@ namespace WebValdiviaDojo.WS_ValdiviaDojo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliCinturon(WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest request) {
-            return base.Channel.EliCinturon(request);
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaAsistencia(WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest request) {
+            return base.Channel.ListaAsistencia(request);
         }
         
-        public int EliCinturon(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest();
-            inValue.p_id = p_id;
-            WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliCinturon(inValue);
+        public WebValdiviaDojo.WS_ValdiviaDojo.asistencia[] ListaAsistencia(string p_fecha, string p_id_horario) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest();
+            inValue.p_fecha = p_fecha;
+            inValue.p_id_horario = p_id_horario;
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaAsistencia(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliCinturonAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest request) {
-            return base.Channel.EliCinturonAsync(request);
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaAsistenciaAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest request) {
+            return base.Channel.ListaAsistenciaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonResponse> EliCinturonAsync(int p_id) {
-            WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliCinturonRequest();
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaResponse> ListaAsistenciaAsync(string p_fecha, string p_id_horario) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaAsistenciaRequest();
+            inValue.p_fecha = p_fecha;
+            inValue.p_id_horario = p_id_horario;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaAsistenciaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoEvento(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest request) {
+            return base.Channel.AgTipoEvento(request);
+        }
+        
+        public int AgTipoEvento(string p_nom) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest();
+            inValue.p_nom = p_nom;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoEventoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest request) {
+            return base.Channel.AgTipoEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoResponse> AgTipoEventoAsync(string p_nom) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoEventoRequest();
+            inValue.p_nom = p_nom;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoProducto(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest request) {
+            return base.Channel.AgTipoProducto(request);
+        }
+        
+        public int AgTipoProducto(string p_des) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest();
+            inValue.p_des = p_des;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoProductoAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest request) {
+            return base.Channel.AgTipoProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoResponse> AgTipoProductoAsync(string p_des) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoProductoRequest();
+            inValue.p_des = p_des;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgReferidos(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request) {
+            return base.Channel.AgReferidos(request);
+        }
+        
+        public int AgReferidos(int p_rut, int p_rut_referido) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_rut_referido = p_rut_referido;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgReferidos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest request) {
+            return base.Channel.AgReferidosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosResponse> AgReferidosAsync(int p_rut, int p_rut_referido) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgReferidosRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_rut_referido = p_rut_referido;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgReferidosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoSolicitud(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request) {
+            return base.Channel.AgTipoSolicitud(request);
+        }
+        
+        public int AgTipoSolicitud(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest();
+            inValue.p_nombre = p_nombre;
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoSolicitud(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.AgTipoSolicitudAsync(WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest request) {
+            return base.Channel.AgTipoSolicitudAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudResponse> AgTipoSolicitudAsync(string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.AgTipoSolicitudRequest();
+            inValue.p_nombre = p_nombre;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).AgTipoSolicitudAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliReferidos(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request) {
+            return base.Channel.EliReferidos(request);
+        }
+        
+        public int EliReferidos(int p_rut, int p_rut_referido) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_rut_referido = p_rut_referido;
+            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliReferidos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.EliReferidosAsync(WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest request) {
+            return base.Channel.EliReferidosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosResponse> EliReferidosAsync(int p_rut, int p_rut_referido) {
+            WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.EliReferidosRequest();
+            inValue.p_rut = p_rut;
+            inValue.p_rut_referido = p_rut_referido;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliReferidosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoClase(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest request) {
+            return base.Channel.ModTipoClase(request);
+        }
+        
+        public int ModTipoClase(int p_id, string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest();
             inValue.p_id = p_id;
-            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).EliCinturonAsync(inValue);
+            inValue.p_nombre = p_nombre;
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoClase(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ModTipoClaseAsync(WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest request) {
+            return base.Channel.ModTipoClaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseResponse> ModTipoClaseAsync(int p_id, string p_nombre) {
+            WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ModTipoClaseRequest();
+            inValue.p_id = p_id;
+            inValue.p_nombre = p_nombre;
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ModTipoClaseAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApResponse WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMaterialAp(WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApRequest request) {
+            return base.Channel.ListaMaterialAp(request);
+        }
+        
+        public WebValdiviaDojo.WS_ValdiviaDojo.materialAP[] ListaMaterialAp() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApRequest();
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApResponse retVal = ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMaterialAp(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApResponse> WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo.ListaMaterialApAsync(WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApRequest request) {
+            return base.Channel.ListaMaterialApAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApResponse> ListaMaterialApAsync() {
+            WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApRequest inValue = new WebValdiviaDojo.WS_ValdiviaDojo.ListaMaterialApRequest();
+            return ((WebValdiviaDojo.WS_ValdiviaDojo.WS_Dojo)(this)).ListaMaterialApAsync(inValue);
         }
     }
 }

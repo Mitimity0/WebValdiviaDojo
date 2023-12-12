@@ -234,8 +234,7 @@ namespace WebValdiviaDojo.Controllers
             }
         }
         //PDF
-
-        public ActionResult DescargarPDF(string p_nombre, string direccion, string p_nboleta, string p_rut, string p_total,string p_producto)
+        public ActionResult DescargarPDF(string p_nombre, string direccion, string p_nboleta, string p_rut, string p_total, string p_producto)
         {
             try
             {
@@ -362,5 +361,8 @@ namespace WebValdiviaDojo.Controllers
                 throw;
             }
         }
+        
     }
+
+
 }

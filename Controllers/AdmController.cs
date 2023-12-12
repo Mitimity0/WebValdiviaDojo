@@ -1372,7 +1372,116 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmAsistencia",new { p_id_horario });
         }
 
+        //
+        public ActionResult AdmMaterialAP()
+        {
+            List<clases> clases = ListarClases();
+            List<materialAP> material = ListarMaterialAP();
 
+            ViewBag.material = material;
+            ViewBag.clases = clases;
 
+            return View();
+        }
+
+        public List<materialAP> ListarMaterialAP()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaMaterialAp().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
+        public ActionResult EliMaterial(int p_id)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                cliente.ELMaterialAp(p_id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return RedirectToAction("AdmMaterialAP");
+        }
+        public ActionResult ModMaterial(HttpPostedFileBase imagen,int p_id, string p_titulo, string p_contenido, int p_id_clase)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                if (imagen != null && imagen.ContentLength > 0)
+                {
+                    string nombreArchivo = "material_" + p_titulo + ".png";
+                    string rutaCarpetaProd = Server.MapPath("~/Img/MaterialAP/");
+                    if (!Directory.Exists(rutaCarpetaProd))
+                    {
+                        Directory.CreateDirectory(rutaCarpetaProd);
+                    }
+                    string ruta = Path.Combine(rutaCarpetaProd, nombreArchivo);
+                    if (System.IO.File.Exists(ruta))
+                    {
+                        System.IO.File.Delete(ruta);
+                    }
+                    imagen.SaveAs(ruta);
+                }
+                cliente.ModMaterialAp(p_id, p_titulo, p_contenido, p_id_clase);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return RedirectToAction("AdmMaterialAP");
+        }
+        public ActionResult AgMaterial(HttpPostedFileBase imagen,string p_titulo, string p_contenido, int p_id_clase)
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+            try
+            {
+                if (imagen != null && imagen.ContentLength > 0)
+                {
+                    string nombreArchivo = "material_" + p_titulo + ".png";
+                    string rutaCarpetaProd = Server.MapPath("~/Img/MaterialAP/");
+                    if (!Directory.Exists(rutaCarpetaProd))
+                    {
+                        Directory.CreateDirectory(rutaCarpetaProd);
+                    }
+                    string ruta = Path.Combine(rutaCarpetaProd, nombreArchivo);
+                    if (System.IO.File.Exists(ruta))
+                    {
+                        System.IO.File.Delete(ruta);
+                    }
+                    imagen.SaveAs(ruta);
+                }
+                cliente.AgMaterialAp(p_titulo, p_contenido, p_id_clase);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+            }
+            finally
+            {
+                cliente.Close();
+            }
+            return RedirectToAction("AdmMaterialAP");
+        }
     }
 }

@@ -54,7 +54,7 @@
                             <li class="nav-item">@Html.ActionLink("Eventos", "Evento", "Evento", new { v_rut = @usuario.rut }, new { @class = (ViewBag.Title == "Evento" ? "nav-link active" : "nav-link") })</li>
                         }
                         <!--  Menu administrador  -->
-                        @if (usuario != null && (usuario.id_tipo_usu == "1" ))
+                        @if (usuario != null && (usuario.id_tipo_usu == "1"))
                         {
                             <li class="nav-item nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
                                 Menu Administrador
@@ -63,7 +63,11 @@
                         }
                         @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
                         {
-                            <li class="nav-item">@Html.ActionLink("Observacion en clase", "ComentarAvance", "Clase", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
+                            <li class="nav-item">@Html.ActionLink("Observacion en clase", "ComentarAvance", "Clase", null, new { @class = (ViewBag.Title == "Observacion de clase" ? "nav-link active" : "nav-link") })</li>
+                        }
+                        @if (usuario != null && (usuario.id_tipo_usu =="3" || usuario.id_tipo_usu == "2" || usuario.id_tipo_usu == "1"))
+                        {
+                            <li class="nav-item">@Html.ActionLink("Material de clase", "VistaMaterialApoyo", "Alumno", null, new { @class = (ViewBag.Title == "Material" ? "nav-link active" : "nav-link") })</li>
                         }
 
                     </ul>
@@ -167,8 +171,8 @@
                 <ul class="nav col-6 justify-content-end list-unstyled d-flex">
                     <li class="ms-3"><a href="https://www.instagram.com/valdivia__gym/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="><i class="bi fa-brands fa-instagram" width="36" height="36"></i></a>valdivia_gym</li>
                     <li class="ms-3"><a href="https://web.facebook.com/ValdiviaDojo/?locale=es_LA&_rdc=1&_rdr"><i class="fa-brands fa-facebook" width="36" height="36"></i></a>Valdivia Gym</li>
-                    <li class="ms-3"><a href=""><i class="bi fa-brands fa-whatsapp" width="36" height="36"></a></i> +569 9931 5803</li>
-                    <li class="ms-3"><a href=""><i class="bi fa-solid fa-envelope" width="36" height="36"></a></i> Shihanvaldivia03@gmail.com</li>
+                    <li class="ms-3"><a href=""><i class="bi fa-brands fa-whatsapp" width="36" height="36"></i></a> +569 9931 5803</li>
+                    <li class="ms-3"><a href=""><i class="bi fa-solid fa-envelope" width="36" height="36"></i></a> Shihanvaldivia03@gmail.com</li>
                 </ul>
             </div>
         </div>
@@ -232,6 +236,8 @@
                     <!--Tipo de Nivel-->
                     <li>@Html.ActionLink("Nuevo rango edad", "AdmAddClaNivel", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                     <li>@Html.ActionLink("Administrar rangos de edad", "AdmClaseNivel", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
+                    <!--MATERIAL-->
+                    <li>@Html.ActionLink("Administrar material de apoyo", "AdmMaterialAP", "Adm", null, new { @class = "dropdown-item bg-danger text-light" })</li>
                 </ul>
             </div>
             <!--Usuario-->

@@ -336,6 +336,33 @@ namespace WebValdiviaDojo.Controllers
             // Redirigir a la página de inicio
             return RedirectToAction("Participacion", new { v_rut = p_rut });
         }
+
+        public ActionResult VistaMaterialApoyo()
+        {
+            List<materialAP> material = ListarMaterialAP();
+            ViewBag.material = material;
+
+            return View();
+        }
+
+        public List<materialAP> ListarMaterialAP()
+        {
+            WS_DojoClient cliente = new WS_DojoClient();
+
+            try
+            {
+                return cliente.ListaMaterialAp().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al llamar al servicio web: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                cliente.Close();
+            }
+        }
     }
 }
 

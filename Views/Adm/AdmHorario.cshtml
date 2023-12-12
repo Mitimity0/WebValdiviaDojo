@@ -10,6 +10,10 @@
     }
 }
 
+
+
+
+
 <div class="py-5 col-12">
     <div class="row justify-content-center">
         <div class="col-8">
@@ -35,17 +39,17 @@
                         <tbody>
                             @foreach (var x in ViewBag.horarios)
                             {
-                            <tr>
-                                <td>@x.id_horario</td>
-                                <td>@x.dia</td>
-                                <td>@x.hora_ini - @x.hora_fin</td>
-                                <td>@x.nom_clase</td>
-                                <td>@x.nom_nivel</td>
+                                <tr>
+                                    <td>@x.id_horario</td>
+                                    <td>@x.dia</td>
+                                    <td>@x.hora_ini - @x.hora_fin</td>
+                                    <td>@x.nom_clase</td>
+                                    <td>@x.nom_nivel</td>
 
-                                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop_@x.id_horario">Modificar</button></td>
-                                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Borrar_@x.id_horario">Eliminar</button></td>
-                                <td><button type="button" class="btn">@Html.ActionLink("Ver clases", "AdmAsistencia", "Adm", new { p_id_horario = @x.id_horario }, new { @class = "btn btn-danger" })</button></td>
-                            </tr>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop_@x.id_horario">Modificar</button></td>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Borrar_@x.id_horario">Eliminar</button></td>
+                                    <td><button type="button" class="btn">@Html.ActionLink("Ver clases", "AdmAsistencia", "Adm", new { p_id_horario = @x.id_horario }, new { @class = "btn btn-danger" })</button></td>
+                                </tr>
                                 <!-- Modal Eliminar-->
                                 <form action="@Url.Action("AdmEliHorario", "Adm")" method="post">
                                     <div class="modal fade" id="Borrar_@x.id_horario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -151,6 +155,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </form>
                             }
                         </tbody>
@@ -247,4 +252,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </form>

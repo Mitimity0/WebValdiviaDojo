@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Material";
+    var usuario = HttpContext.Current.Session["Usuario"] as dynamic;
+    if (usuario == null)
+    {
+        // Redirigir al usuario a la página deseada cuando no hay usuario
+        Response.RedirectToRoute(new { controller = "Home", action = "Index" });
+        Response.End();
+    }
+}
+<div class="py-5 col-md-12">
+    <div class="row py-5 justify-content-center">
+        <div class="col-6">
+            <div class="text-center py-4">
+                <h4 class="display-6">Material de apoyo</h4>
+            </div>
+            @if (ViewBag.material != null)
+            {
+                foreach (var x in ViewBag.material)
+                {
+                    <div class="card mb-3">
+                        @{
+                            string rutaImagen = System.IO.File.Exists(Server.MapPath(@x.img_material)) ? @x.img_material : Server.MapPath("~/Img/GaleriaProductos/ProductoDefecto.png");
+                        }
+
+                        <img src="@rutaImagen" alt="" class="card-img-top rounded mx-auto d-bloc">
+                        <div class="card-body">
+                            <h5 class="card-title">@x.titulo_material</h5>
+                            <p class="card-text">@x.contenido</p>
+                            <p class="card-text">Categoria: <small class="text-muted">@x.nombre</small></p>
+                        </div>
+
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No hay Material para mostrar</p>
+            }
+
+        </div>
+    </div>
+</div>
