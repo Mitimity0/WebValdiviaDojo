@@ -800,14 +800,6 @@ namespace WebValdiviaDojo.Controllers
             return RedirectToAction("AdmTipoEncuesta");
         }
 
-
-
-
-
-
-
-
-
         //FUNCIONES
         public ActionResult EliminarSolicitud(int p_id_sol)
         {

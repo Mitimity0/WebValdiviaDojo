@@ -66,32 +66,34 @@
                     <!--  Sesion  -->
                     @if (usuario != null)
                     {
-                        <div class="flex-shrink-0 dropdown">
+                <div class="flex-shrink-0 dropdown">
 
-                            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                                @{
-                                    string rutaImagen = System.IO.File.Exists(Server.MapPath(@usuario.rutaIma)) ? @usuario.rutaIma : Server.MapPath("~/Img/Usuario/Default.png");
-                                }
+                    @{
+                        string rutaImagen = System.IO.File.Exists(Server.MapPath(@usuario.rutaIma))
+                            ? @usuario.rutaIma
+                            : Url.Content("~/Img/Usuario/Default.png");
+                    }
 
-                                <img src="@Url.Content(rutaImagen)" alt="" width="32" height="32" class="rounded-circle">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="@rutaImagen" alt="" width="32" height="32" class="rounded-circle">
+                        <span class="navbar-text">¡Hola, @usuario.PNombre!</span>
+                    </a>
 
-                                <span class="navbar-text">¡Hola, @usuario.PNombre!</span>
-                            </a>
 
-                            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                                <li>@Html.ActionLink("Mis Clases", "ClaseInscrita", "Clase", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
-                                <li>@Html.ActionLink("Solicitud", "admSolicitudAlumno", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
-                                <li>@Html.ActionLink("Pendientes de pago", "PagosPendientes", "Compra", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
-                                <li>@Html.ActionLink("Mis pagos", "ListaPagos", "Compra", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
-                                <li>@Html.ActionLink("Mis participaciones", "Participacion", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
-                                <li>@Html.ActionLink("Comentarios", "AdmComentario", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
-                                <li>@Html.ActionLink("Familiares", "Referido", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
-                                <li>@Html.ActionLink("Perfil", "PerfilUsu", "Sesion", null, new { @class = "dropdown-item" })</li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li>@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "Sesion", null, new { @class = "dropdown-item" })</li>
+                    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        <li>@Html.ActionLink("Mis Clases", "ClaseInscrita", "Clase", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Solicitud", "admSolicitudAlumno", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Pendientes de pago", "PagosPendientes", "Compra", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Mis pagos", "ListaPagos", "Compra", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Mis participaciones", "Participacion", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Comentarios", "AdmComentario", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Familiares", "Referido", "Alumno", new { v_rut = @usuario.rut }, new { @class = "dropdown-item" })</li>
+                        <li>@Html.ActionLink("Perfil", "PerfilUsu", "Sesion", null, new { @class = "dropdown-item" })</li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>@Html.ActionLink("Cerrar Sesión", "CerrarSesion", "Sesion", null, new { @class = "dropdown-item" })</li>
 
-                            </ul>
-                        </div>
+                    </ul>
+                </div>
                     }
                     else
                     {
@@ -106,7 +108,7 @@
                     <!--  Carrito  -->
                     @if (ViewBag.Title == "Tienda")
                     {
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav mb-2">
                             <li class="btn btn-danger btn-outline-light me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#SeccionCarrito" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> Ir al Carrito</li>
                         </ul>
                     }
@@ -167,9 +169,6 @@
                 </ul>
             </div>
         </div>
-
-
-
     </footer>
 
     <!-- Scripts de Bootstrap -->
