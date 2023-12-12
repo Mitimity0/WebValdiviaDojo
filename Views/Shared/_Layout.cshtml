@@ -54,30 +54,33 @@
                             <li class="nav-item">@Html.ActionLink("Eventos", "Evento", "Evento", new { v_rut = @usuario.rut }, new { @class = (ViewBag.Title == "Evento" ? "nav-link active" : "nav-link") })</li>
                         }
                         <!--  Menu administrador  -->
-                        @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
+                        @if (usuario != null && (usuario.id_tipo_usu == "1" ))
                         {
                             <li class="nav-item nav-link btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
                                 Menu Administrador
                             </li>
-                            <li class="nav-item">@Html.ActionLink("Observacion en clase", "ComentarAvance", "Clase", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
 
                         }
+                        @if (usuario != null && (usuario.id_tipo_usu == "1" || usuario.id_tipo_usu == "2"))
+                        {
+                            <li class="nav-item">@Html.ActionLink("Observacion en clase", "ComentarAvance", "Clase", null, new { @class = (ViewBag.Title == "Contacto" ? "nav-link active" : "nav-link") })</li>
+                        }
+
                     </ul>
                     <!--  Sesion  -->
                     @if (usuario != null)
                     {
                 <div class="flex-shrink-0 dropdown">
-
-                    @{
-                        string rutaImagen = System.IO.File.Exists(Server.MapPath(@usuario.rutaIma))
-                            ? @usuario.rutaIma
-                            : Url.Content("~/Img/Usuario/Default.png");
-                    }
-
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="@rutaImagen" alt="" width="32" height="32" class="rounded-circle">
+                        @{
+                            string rutaImagen = System.IO.File.Exists(Server.MapPath(@usuario.rutaIma)) ? @usuario.rutaIma : Server.MapPath("~/Img/Usuario/Default.png");
+                        }
+
+                        <img src="@Url.Content(rutaImagen)" alt="" width="32" height="32" class="rounded-circle">
+
                         <span class="navbar-text">¡Hola, @usuario.PNombre!</span>
                     </a>
+
 
 
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
